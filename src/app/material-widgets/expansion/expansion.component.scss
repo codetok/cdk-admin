@@ -1,0 +1,18 @@
+.mat-card-header-text {
+	margin: 0!important;
+}
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+.widgetHolder{
+	margin: 0 auto;
+	.widgetHolder-content {
+		padding: 20px;
+	}
+}

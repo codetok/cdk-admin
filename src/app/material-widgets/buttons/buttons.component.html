@@ -1,0 +1,155 @@
+
+    <div fxLayout="column" class="widgetHolder-content" style="background-color: white">
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  Basic Buttons
+                  <span class="spacer"></span>
+                  <button mat-icon-button (click)="showNavListCode = !showNavListCode">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showNavListCode">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="htmlsource_basic" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="tssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+
+            <div  fxLayoutAlign="space-around stretch"  fxLayoutWrap class="button-container" >
+
+                <button mat-button>Basic</button>
+                <button mat-button color="primary">Primary</button>
+                <button mat-button color="accent">Accent</button>
+                <button mat-button color="warn">Warn</button>
+                <button mat-button disabled>Disabled</button>
+                <a mat-button routerLink=".">Link</a>
+            </div>
+        </div>
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  Raised Buttons
+                  <span class="spacer"></span>
+                  <button mat-icon-button  (click)="showNavListCode1 = !showNavListCode1">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showNavListCode1">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="htmlsource_raised" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="tssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            <div fxLayoutAlign="space-around stretch"  fxLayoutWrap class="button-container">
+                <button mat-raised-button>Basic</button>
+                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="accent">Accent</button>
+                <button mat-raised-button color="warn">Warn</button>
+                <button mat-raised-button disabled>Disabled</button>
+                <a mat-raised-button routerLink=".">Link</a>
+            </div>
+        </div>
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  Icon Buttons
+                  <span class="spacer"></span>
+                  <button mat-icon-button (click)="showNavListCode2 = !showNavListCode2">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showNavListCode2">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="htmlsource_icon" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="tssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            <div fxLayoutAlign="space-around stretch"  fxLayoutWrap class="button-container">
+                <button mat-icon-button>
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <button mat-icon-button color="primary">
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <button mat-icon-button color="accent">
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <button mat-icon-button disabled>
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  Fab Buttons
+                  <span class="spacer"></span>
+                  <button mat-icon-button (click)="showNavListCode3 = !showNavListCode3">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showNavListCode3">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="htmlsource_fab" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="tssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            <div fxLayoutAlign="space-around stretch"  fxLayoutWrap class="button-container">
+                <button mat-fab>Basic</button>
+                <button mat-fab color="primary">Primary</button>
+                <button mat-fab color="accent">Accent</button>
+                <button mat-fab color="warn">Warn</button>
+                <button mat-fab disabled>Disabled</button>
+                <button mat-fab>
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <a mat-fab routerLink=".">Link</a>
+            </div>
+        </div>
+         <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  MiniFab Buttons
+                  <span class="spacer"></span>
+                  <button mat-icon-button (click)="showNavListCode4 = !showNavListCode4">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showNavListCode4">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="htmlsource_mini" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="tssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            <div fxLayoutAlign="space-around stretch"  fxLayoutWrap class="button-container">
+                <button mat-mini-fab>Basic</button>
+                <button mat-mini-fab color="primary">Primary</button>
+                <button mat-mini-fab color="accent">Accent</button>
+                <button mat-mini-fab color="warn">Warn</button>
+                <button mat-mini-fab disabled>Disabled</button>
+                <button mat-mini-fab>
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <a mat-mini-fab routerLink=".">Link</a>
+            </div>
+        </div>
+    </div>

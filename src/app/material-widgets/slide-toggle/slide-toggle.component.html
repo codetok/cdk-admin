@@ -1,0 +1,89 @@
+ 
+    
+<div fxLayout="column" class="widgetHolder-content" style="background-color: white" >
+<!-- Basic select section start -->
+
+    <div fxLayout="column" class=" mat-elevation-z4" >
+        <mat-toolbar>
+            Configurable slider
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="showBasicSelectCode = !showBasicSelectCode">
+            <mat-icon class="refresh">code</mat-icon>    
+            </button>
+        </mat-toolbar>
+        <div *ngIf="showBasicSlidetoggleCode">
+            <mat-tab-group>
+            <mat-tab label="HTML">
+            <pre><code mwlHighlightJs [source]="basicSlidetogglehtmlsource" language="html"></code></pre>
+            </mat-tab>
+            <mat-tab label="TS">
+            <pre><code mwlHighlightJs [source]="basicSlidetoggletssource" language="typescript"></code></pre>
+            </mat-tab>
+            <mat-tab label="CSS">
+            <pre><code mwlHighlightJs [source]="basicSlidetogglecsssource" language="typescript"></code></pre>
+            </mat-tab>
+            </mat-tab-group>
+        </div>
+        <div>
+            <mat-slide-toggle>Slide me!</mat-slide-toggle>
+        </div>
+
+
+
+        <div *ngIf="showConfigureSliderCode">
+            <mat-tab-group>
+            <mat-tab label="HTML">
+            <pre><code mwlHighlightJs [source]="configureSlidetogglehtmlsource" language="html"></code></pre>
+            </mat-tab>
+            <mat-tab label="TS">
+            <pre><code mwlHighlightJs [source]="configureSlidetoggletssource" language="typescript"></code></pre>
+            </mat-tab>
+            <mat-tab label="CSS">
+            <pre><code mwlHighlightJs [source]="configureSlidetogglecsssource" language="typescript"></code></pre>
+            </mat-tab>
+        </mat-tab-group>
+        </div>
+      
+  <div>
+            <mat-toolbar>
+            Slider configuration
+            </mat-toolbar>
+            <section class="example-section">
+            <label class="example-margin">Color:</label>
+            <mat-radio-group [(ngModel)]="color">
+            <mat-radio-button class="example-margin" value="primary">
+            Primary
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="accent">
+            Accent
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="warn">
+            Warn
+            </mat-radio-button>
+            </mat-radio-group>
+            </section>
+
+            <section class="example-section">
+            <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+            </section>
+
+            <section class="example-section">
+            <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+            </section>
+
+
+            <mat-toolbar>Result </mat-toolbar>
+            <section class="example-section">
+            <mat-slide-toggle
+            class="example-margin"
+            [color]="color"
+            [checked]="checked"
+            [disabled]="disabled">
+            Slide me!
+            </mat-slide-toggle>
+            </section>
+
+        </div>
+
+    </div>
+</div>

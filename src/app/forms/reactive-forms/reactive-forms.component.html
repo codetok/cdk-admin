@@ -1,0 +1,27 @@
+<div fxLayout="column" fxFlex="70" fxLayoutAlign="space-around stretch" class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px"  >
+    <mat-toolbar >
+        Reactive  Form
+        <span class="spacer"></span>
+    </mat-toolbar>
+    <div fxLayout="column"  class="widgetHolder-content" fxLayoutAlign="space-around stretch" >
+        <mat-toolbar>
+			User Profile
+		</mat-toolbar>
+        <form [formGroup]="profileForm" fxLayout="column" fxFlex="100" >
+			<mat-form-field class="width">
+				<input matInput placeholder="username"  formControlName="displayName" >
+			
+			</mat-form-field>
+			
+			<mat-form-field  class="width">
+				<input type="email" matInput placeholder="email"  formControlName="email"  required
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" >
+			</mat-form-field>
+			<mat-form-field  class="width">
+				<input type="number" matInput placeholder="number"  formControlName="number" >
+			</mat-form-field>
+			
+			<button mat-raised-button type="submit"    >Save </button>
+		</form>
+    </div>
+</div>

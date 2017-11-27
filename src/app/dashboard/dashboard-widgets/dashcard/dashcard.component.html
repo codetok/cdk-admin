@@ -1,0 +1,15 @@
+<div fxLayout="row" class="dashcard  mat-elevation-z4"  >
+  <div fxFlex="40" fxLayout="row"  fxLayoutAlign="center center" [style.background]="colorLight">
+    <mat-icon  class="cardIcon">{{icon}}</mat-icon>
+  </div>
+
+  <div  fxFlex="60" fxLayout="column" fxLayoutAlign="center center" [style.background]="colorDark" >
+     <h1 class="no-margin mat-headline">
+        {{number}}
+      </h1>
+      <p class="mat-body-1 no-margin border-top" >
+        {{title}}
+      </p>
+      
+  </div>
+</div>

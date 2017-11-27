@@ -1,0 +1,40 @@
+<form *ngIf="data?.edit==true" class="example-form" [formGroup]="dataForm">
+	<table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+      <mat-hint>Name</mat-hint>
+    </mat-form-field></td>
+    <td><mat-form-field>
+      <input matInput placeholder="Name" formControlName="progress">
+      <mat-hint>Progress</mat-hint>
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput  placeholder="Color" formControlName="color">
+      <mat-hint>Color</mat-hint>
+    </mat-form-field></td>
+  </tr></table>
+  	<button mat-raised-button color="primary" (click)="SaveChanges()">Sve Changes</button>
+</form>
+<table *ngIf="data?.edit!=true">
+	<thead>
+		<tr>
+			<th   scope="col" *ngFor="let th of displayedColumns" >{{th}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr >
+			<td style="text-align: center;word-wrap: break-word;">
+				{{data.id}}
+			</td>
+			<td style="text-align: center;word-wrap: break-word;">
+				{{data.name}}
+			</td>
+			<td style="text-align: center;word-wrap: break-word;">
+				{{data.progress}}%
+			</td>
+			<td style="text-align: center;word-wrap: break-word;">
+				{{data.color}}
+			</td>
+		</tr>
+	</tbody>
+</table>

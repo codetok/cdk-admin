@@ -1,0 +1,22 @@
+h3 {
+  margin: 0 0 10px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+.widgetHolder{
+  margin: 0 auto;
+  .widgetHolder-content {
+    padding: 20px;
+  }
+}
+
+cdk-calendar {
+	.viewDate {
+		margin: 5px 0;
+	    font-weight: 100;
+	}
+}
+

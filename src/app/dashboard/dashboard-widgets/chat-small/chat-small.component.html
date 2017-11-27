@@ -1,0 +1,22 @@
+<div  class="mat-elevation-z4 chat-small" >
+    <mat-toolbar color="primary" >
+        Chat
+    </mat-toolbar>
+    <div class="chatHolder"   fxLayoutGap="20px">
+        <cdk-chat-reciever-block [message]="'this is a test message, hope you are fine...'"></cdk-chat-reciever-block>
+        <cdk-chat-sender-block [message]="'this is a test message, hope you are fine...'"></cdk-chat-sender-block>
+        <cdk-chat-reciever-block [message]="'this is a test message, hope you are fine...'"></cdk-chat-reciever-block>
+        <cdk-chat-sender-block [message]="'this is a test message, hope you are fine...'"></cdk-chat-sender-block>
+        <cdk-chat-reciever-block [message]="'this is a test message, hope you are fine...'"></cdk-chat-reciever-block>
+        <cdk-chat-sender-block [message]="'this is a test message, hope you are fine...'"></cdk-chat-sender-block>
+    </div>
+    <div  fxLayout="row" fxLayoutAlign="space-around center" color="primary" class="chatmessage">
+        <mat-form-field     >
+            <input matInput  placeholder="message">
+        </mat-form-field >   
+        <button  mat-mini-fab color="accent">
+             <mat-icon>send</mat-icon>
+        </button>
+        
+    </div>
+</div>

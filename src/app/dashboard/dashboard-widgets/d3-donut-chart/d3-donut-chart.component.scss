@@ -1,0 +1,16 @@
+cdk-nvd3-donut-chart {
+	.nvd3 text {
+	  font: normal 12px sans-serif !important;
+	  color: white !important;
+	}
+	.nvd3 .title {
+	  font: normal 12px sans-serif !important;
+	}
+	.nvtooltip {
+	  font-family: sans-serif !important;
+	}
+	.nvtooltip.xy-tooltip {
+	    background-color: lightblue;
+	    color: darkred;
+	}
+}

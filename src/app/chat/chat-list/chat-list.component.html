@@ -1,0 +1,42 @@
+<div fxLayout="column" fxFill fxFlexFill style=" z-index: 2000; border-right: 1px solid #d3d6d8;">
+	<div fxFlex="10" class="list-container"  style="z-index: 2000;">
+		
+		<mat-toolbar>
+
+			<img class="avatar" src="../assets/Images/lady.jpg" />
+
+	      	<span class="spacer"></span>
+	      	<button mat-icon-button >
+			    	<mat-icon>add</mat-icon>    
+				</button>  
+				<button mat-icon-button [matMenuTriggerFor]="appChatMenu">
+			    	<mat-icon class="refresh">more_vert</mat-icon>    
+				</button>  
+	    </mat-toolbar>
+
+	    <mat-menu #appChatMenu="matMenu">
+		  <button mat-menu-item> 
+		  	<mat-icon>account_circle</mat-icon>
+		  Profile </button>
+		  <button mat-menu-item><mat-icon>settings</mat-icon> Settings </button>
+		  <button mat-menu-item><mat-icon>help</mat-icon> Help </button>
+		  <button mat-menu-item><mat-icon>exit_to_app</mat-icon> Logout </button>
+		</mat-menu>
+
+	</div>
+		
+	<div fxFlex="90" id="contact-list">
+		
+		<mat-nav-list>
+			<mat-list-item *ngFor="let message of messages" (click)="viewMesage(message)">
+				<img matListAvatar [src]="message?.profile_pic" alt="...">
+				<h3 matLine style="font-weight: 400;
+    font-size: inherit;"> {{message.contact}} </h3>
+				<p matLine style="color: #888;">
+					<span> {{message.messages[0]?.message}} </span>
+				</p>
+			</mat-list-item>
+		</mat-nav-list>
+
+	</div>
+</div>

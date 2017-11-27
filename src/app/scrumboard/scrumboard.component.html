@@ -1,0 +1,61 @@
+<div fxLayout="column" fxFlex="70" fxFlex.xs="100"  fxFlex.sm="90" fxLayoutAlign="space-around stretch" class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px"  >
+	<mat-toolbar >
+	Move items between multi list sortable containers
+	</mat-toolbar>
+	<div fxLayout="column" class="widgetHolder-content">
+		<div class="row">
+			<div class="col-sm-3">
+			Drag Containers <input type="checkbox" [(ngModel)]="dragOperation"/>
+				<div dnd-sortable-container [sortableData]="containers" [dropZones]="['container-dropZone']">
+					<div class="col-sm3"
+					*ngFor="let container of containers; let i = index"
+					dnd-sortable [sortableIndex]="i" [dragEnabled]="dragOperation">
+						<div class="panel panel-warning"
+						dnd-sortable-container [sortableData]="container.widgets" [dropZones]="['widget-dropZone']">
+							<div class="panel-heading">
+								{{container.id}} - {{container.name}}
+							</div>
+							<div class="panel-body">
+								<ul class="list-group">
+									<li *ngFor="let widget of container.widgets; let x = index" class="list-group-item"
+									dnd-sortable [sortableIndex]="x" [dragEnabled]="!dragOperation"
+									[dragData]="widget">{{widget.name}}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel panel-info">
+					<div class="panel-heading">Widgets</div>
+					<div class="panel-body" dnd-droppable (onDropSuccess)="addTo($event)" [dropZones]="['widget-dropZone']">
+						<div *ngFor="let widget of widgets" class="panel panel-default">
+							<div class="panel-body">
+							{{widget.name}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

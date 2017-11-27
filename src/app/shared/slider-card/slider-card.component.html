@@ -1,0 +1,12 @@
+<div #ele >    
+    <ngx-carousel [inputs]="carouselOne" >
+          <ngx-item NgxCarouselItem *ngFor="let image of imagelist" >
+            <div   [style.width]="width+'px'" [style.height]="'220px'">
+                <img   [src]="'assets/slider/' + image"    [style.width]="width+'px'" [style.height]="'220px'"/>
+            </div>
+          </ngx-item>
+          
+          <span NgxCarouselPrev class='leftRs'></span>
+          <span NgxCarouselNext class='rightRs'></span>
+    </ngx-carousel>
+</div>

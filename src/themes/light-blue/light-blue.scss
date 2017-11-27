@@ -1,0 +1,109 @@
+@import '~@angular/material/theming';
+@import '~app/core/side-menu/side-menu.component.scss';
+@import '~app/core/logo-bar/logo-bar.component.scss';
+@import '~app/core/user-menu/user-menu.component.scss';
+@import '~app/core/search-components/search-components.component.scss';
+
+
+@import '~app/shared/feeds/feeds.component.scss';
+@import '~app/shared/weather-card/weather-card.component.scss';
+@import '~app/shared/customer-satisfaction/customer-satisfaction.component.scss';
+@import '~app/dashboard/dashboard-widgets/chat-small/chat-small.component.scss';
+@import '~app/dashboard/dashboard-widgets/dashcard/dashcard.component.scss';
+@import '~app/shared/chat/chat-reciever-block/chat-reciever-block.component.scss';
+@import '~app/shared/chat/chat-sender-block/chat-sender-block.component.scss';
+
+
+@import '~app/app.component.scss';
+
+@include mat-core();
+
+
+
+$primary : $mat-indigo  ;
+$accent  : $mat-orange;
+$warn    : $mat-red;
+
+.sidemenuHolder{
+    $sidebar-app-primary: mat-palette($primary,900);
+    $sidebar-app-accent:  mat-palette($accent, A200, A100, A400);
+    $sidebar-app-warn:  mat-palette($warn, A200, A100, A400);
+    $sidebar-app-theme:   mat-dark-theme($sidebar-app-primary, $sidebar-app-accent,$sidebar-app-warn);
+    @include sidemenu($sidebar-app-theme);
+    @include mat-list-theme($sidebar-app-theme);
+}
+
+cdk-user-menu {
+    $usermenu-primary: mat-palette($primary,900);
+    $usermenu-accent:  mat-palette($accent, A200, A100, A400);
+    $usermenu-warn:    mat-palette($warn, A200, A100, A400);
+    $usermenu-theme:   mat-light-theme($usermenu-primary, $usermenu-accent,$usermenu-warn);
+    @include usermenu($usermenu-theme);    
+    @include mat-list-theme($usermenu-theme);
+}
+cdk-search-components {
+    $searchcomponents-primary: mat-palette($primary,900);
+    $searchcomponents-accent:  mat-palette($accent, A200, A100, A400);
+    $searchcomponents-warn:    mat-palette($warn, A200, A100, A400);
+    $searchcomponents-theme:   mat-light-theme($searchcomponents-primary, $searchcomponents-accent,$searchcomponents-warn);
+    @include searchcomponents($searchcomponents-theme);    
+    @include mat-list-theme($searchcomponents-theme);
+}
+cdk-feeds {
+    $feeds-app-primary: mat-palette($primary,700);
+    $feeds-app-accent:  mat-palette($accent, A200, A100, A400);
+    $feeds-app-warn:  mat-palette($warn, A200, A100, A400);
+    $feeds-app-theme:   mat-light-theme($feeds-app-primary, $feeds-app-accent,$feeds-app-warn);
+    @include mat-list-theme($feeds-app-theme);
+}
+
+cdk-weather-card {
+    $searchcomponents-primary: mat-palette($primary,900);
+    $searchcomponents-accent:  mat-palette($accent, A200, A100, A400);
+    $searchcomponents-warn:    mat-palette($warn, A200, A100, A400);
+    $searchcomponents-theme:   mat-light-theme($searchcomponents-primary, $searchcomponents-accent,$searchcomponents-warn);
+    @include weathercard($searchcomponents-theme);    
+} 
+
+
+
+
+$toolbar-primary: mat-palette( $mat-grey , 50);
+$toolbar-accent:  mat-palette($accent , 900);
+$toolbar-warn:    mat-palette($warn );
+$toolbar-theme:   mat-light-theme($toolbar-primary, $toolbar-accent,$toolbar-warn);
+
+$chat-receiver-primary: mat-palette( $mat-deep-purple , 900);
+$chat-receiver-accent:  mat-palette($accent , 900);
+$chat-receiver-warn:    mat-palette($warn );
+$chat-receiver-theme:   mat-light-theme($chat-receiver-primary, $chat-receiver-accent,$chat-receiver-warn);
+
+$chat-sender-primary: mat-palette( $mat-teal , 900);
+$chat-sender-accent:  mat-palette($accent , 900);
+$chat-sender-warn:    mat-palette($warn );
+$chat-sender-theme:   mat-light-theme($chat-sender-primary, $chat-sender-accent,$chat-sender-warn);
+
+
+
+$primary-app-primary: mat-palette($primary , 900);
+$primary-app-accent:  mat-palette($accent , 900);
+$primary-app-warn:    mat-palette($warn );
+$primary-app-theme:   mat-light-theme($primary-app-primary, $primary-app-accent,$primary-app-warn);
+
+@include angular-material-theme($primary-app-theme);
+
+
+@include appcomponent($primary-app-theme);
+
+@include feeds($primary-app-theme);
+@include customerSatisafation($primary-app-theme);
+@include dashcard($primary-app-theme);
+@include chatsmall($primary-app-theme);
+@include mat-toolbar-theme($toolbar-theme);
+@include chatreciever($chat-receiver-theme);
+@include chatsender($chat-sender-theme);
+@include logobar($primary-app-theme);
+
+
+
+

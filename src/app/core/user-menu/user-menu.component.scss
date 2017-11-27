@@ -1,0 +1,37 @@
+@import '~@angular/material/theming';
+
+@mixin usermenu($theme) {
+    .personelMenu{
+        position : absolute;
+        background:white;
+        transition:  max-height .5s ease;
+        max-height: 0px; 
+        top: 56px;
+        animation-duration: 200ms;
+        animation-timing-function: ease;
+        width: 180px;
+        padding-top: 0px;
+        display:block;
+        overflow:hidden;
+        left: 0px;
+    }
+    .personelMenu mat-list-item:hover {
+         background: mat-color($primary,200);
+    } 
+    .open{
+        max-height: 600px; 
+        animation-duration: 200ms;
+        animation-timing-function: ease;
+    } 
+    .userMenuHolder{
+        cursor: pointer;
+        
+    } 
+
+}
+cdk-user-menu {
+    .mat-list {
+        padding-top: 0!important;
+    }
+}
+

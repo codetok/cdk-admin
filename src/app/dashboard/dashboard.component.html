@@ -1,0 +1,78 @@
+<div fxLayoutAlign="space-around stretch" fxLayoutWrap fxLayout="row"  fxLayout.lt-sm="column"   fxLayoutGap.lt-sm="10px" fxLayoutGap.gt-xm="10">   
+     <cdk-dashcard fxFlex="24"[colorDark]="'#5C6BC0'" [colorLight]="'#7986CB'" [progress]="20" [title]="'SALES'" [number]="2123|numberAnimator|async" [icon]="'local_grocery_store'"></cdk-dashcard>
+    <cdk-dashcard fxFlex="24" [colorDark]="'#42A5F5'" [colorLight]="'#64B5F6'" [progress]="40" [title]="'LEADS'" [number]="23432|numberAnimator|async" [icon]="'new_releases'"></cdk-dashcard>
+    <cdk-dashcard fxFlex="24" [colorDark]="'#26A69A'" [colorLight]="'#4DB6AC'" [progress]="300" [title]="'ASSIGNMENTS'" [number]="762|numberAnimator|async" [icon]="'assignments'"></cdk-dashcard>
+    <cdk-dashcard fxFlex="24" [colorDark]="'#66BB6A'" [colorLight]="'#81C784'" [progress]="70" [title]="'BANKING'" [number]="987|numberAnimator|async" [icon]="'account_balance'"></cdk-dashcard>
+</div>
+
+
+<div fxLayout="row" fxLayout.lt-sm="column" fxHide.lt-sm  fxLayoutWrap class="margintop" fxLayoutAlign="space-around stretch"   fxLayoutGap.lt-sm="10px" fxLayoutGap.gt-xm="10">
+    <div fxFlex="74" fxFlex.lt-sm="100" fxFlexFill  fxLayout="column"  fxLayoutGap="10px"   fxLayoutAlign="start stretch">
+        <cdk-line-chart-small></cdk-line-chart-small>
+    </div>
+
+    <div fxFlex="24" fxHide.lt-sm fxFlex.lt-sm="100" fxLayout="column"  fxLayoutGap="10px">
+        <div class="mat-elevation-z4">
+            <cdk-weather-card></cdk-weather-card>
+        </div>
+        <cdk-slider-card></cdk-slider-card>
+    </div>
+
+</div>
+
+<div  fxLayout="row" fxLayout.lt-sm="column"   class="margintop" fxLayoutWrap fxLayoutAlign="space-between start">
+
+    <cdk-chat-small fxFlex="33" fxFlex.lt-sm="100" ></cdk-chat-small>
+    <cdk-to-do-list fxFlex="33" fxFlex.lt-sm="100" fxHide.lt-sm></cdk-to-do-list>
+    <cdk-new-messages fxFlex="33" fxFlex.lt-sm="100" fxHide.lt-sm></cdk-new-messages>
+
+</div>
+<div fxLayout="row"  fxLayout.lt-sm="column" class="margintop" fxLayoutAlign="space-between start" fxLayoutGap.lt-sm="10px" fxLayoutGap.gt-xm="10" fxLayoutWrap>
+    <div fxFlex="75"  fxLayout="column"  fxFlex.lt-sm="100"   fxLayoutAlign="start stretch">
+        <cdk-line-chart-wide></cdk-line-chart-wide>
+    </div>
+    <div fxFlex="24" fxLayout="column" fxFlex.lt-sm="100" >
+        <div class="mat-elevation-z4">
+             <cdk-doughnut-chart></cdk-doughnut-chart>
+        </div>
+        <cdk-slider-card fxHide.lt-sm></cdk-slider-card>
+    </div>
+</div>
+
+<!-- 
+<div fxLayoutAlign="space-around stretch" fxLayoutWrap fxLayout="row"  fxLayout.lt-sm="column"   fxLayoutGap="10">   
+    <cdk-dashcard fxFlex=24 fxFlex.sm=48  fxFlex.xs=90  [colorDark]="'#5C6BC0' | hexToRgb" [colorLight]="'#7986CB'| hexToRgb" [progress]="40" [title]="'LEADS'" [number]="'212'" [icon]="'new_releases'"></cdk-dashcard>
+    <cdk-dashcard  fxFlex=24 fxFlex.sm=48  fxFlex.xs=90 [colorDark]="'#42A5F5' | hexToRgb" [colorLight]="'#64B5F6' | hexToRgb" [progress]="300" [title]="'ASSIGNMENTS'" [number]="'2123'" [icon]="'assignments'"></cdk-dashcard>
+
+    <cdk-dashcard  fxFlex=24 fxFlex.sm=48 fxFlex.xs=90  [colorDark]="'#26A69A' | hexToRgb" [colorLight]="'#4DB6AC' | hexToRgb" [progress]="70" [title]="'BANKING'" [number]="'2123'" [icon]="'account_balance'"></cdk-dashcard>
+    <cdk-dashcard   fxFlex=24 fxFlex.sm=48 fxFlex.xs=90 [colorDark]="'#66BB6A' | hexToRgb" [colorLight]="'#81C784' | hexToRgb" [progress]="20" [title]="'SALES'" [number]="'21'" [icon]="'local_grocery_store'"></cdk-dashcard>
+    
+</div>
+<div fxLayout="row" class="margintop" fxLayoutAlign="space-around stretch"  >
+    <div fxFlex="74" fxFlex.lt-sm=100   fxLayout="column"     fxLayoutAlign="start stretch"  >
+        <cdk-line-chart-small></cdk-line-chart-small>
+    </div>
+    <div fxFlex="24" fxHide.lt-sm  fxLayout="column"  fxLayoutGap="20px">
+        <div class="mat-elevation-z4">
+            <cdk-weather-card></cdk-weather-card>
+        </div>
+        <cdk-slider-card></cdk-slider-card>
+    </div>
+</div>
+<div  fxLayout="row" class="margintop" fxLayoutWrap fxLayoutAlign="space-between start">
+    <cdk-chat-small fxFlex="33" fxFlex.lt-sm=48></cdk-chat-small>
+    <cdk-to-do-list fxFlex="33" fxFlex.lt-sm=48 ></cdk-to-do-list>
+    <cdk-new-messages fxFlex="33" fxFlex.lt-sm=100 fxFlexAlign.lt-sm="end"></cdk-new-messages>
+</div>
+<div fxLayout="row" class="margintop" fxLayoutAlign="space-between start"  >
+    <div fxFlex="74"  fxLayout="column"  fxFlex.lt-sm=100   fxLayoutAlign="start stretch">
+        <cdk-line-chart-wide></cdk-line-chart-wide>
+    </div>
+    <div fxFlex="24" fxLayout="column"   fxLayoutGap="20px">
+        <div class="mat-elevation-z4">
+             <cdk-doughnut-chart fxHide.lt-sm ></cdk-doughnut-chart> 
+        </div>
+        <cdk-slider-card fxHide.lt-sm ></cdk-slider-card>
+    </div>
+</div>
+ -->

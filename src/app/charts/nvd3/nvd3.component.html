@@ -1,0 +1,24 @@
+
+<div  fxLayout="column"   fxLayoutGap="10px" fxFlex=90 fxLayoutAlign="center stretch" class="container" >
+    <div fxFlex="49" fxLayout="row">
+        <div  fxFlex="49"  class="mat-elevation-z4 " fxLayoutGap="10px"  fxLayout="column"  fxLayoutAlign="space-around center"  [ngStyle]="{margin: 'auto', 'height':'350px'}">
+            <p >PIE CHART</p>
+           <app-pie-chart ></app-pie-chart>
+        </div>
+        <div  fxFlex="49" class="mat-elevation-z4 " fxLayoutGap="10px"  fxLayout="column"  fxLayoutAlign="space-around center" [ngStyle]="{margin: 'auto', 'height':'350px'}">
+            <p >HISTORICAL BAR GRAPH</p>
+            <nvd3-bar-chart ></nvd3-bar-chart>
+        </div>
+    </div>
+    <div fxFlex="49"  fxLayout="row">
+        <div fxFlex="49" fxFlex.xs=60 class="mat-elevation-z4 "  fxLayoutGap="10px"  fxLayout="column" [ngStyle]="{margin: 'auto', 'height':'350px'}">
+            <p >SUN BURST CHART</p>
+            <app-sunburst-chart></app-sunburst-chart>
+        </div>
+        
+        <div fxFlex="49" class="mat-elevation-z4 "  fxLayoutGap="10px"  fxLayout="column" [ngStyle]="{margin: 'auto',  'height':'350px'}">
+            <p >BAR CHART</p>
+            <app-multibar-chart></app-multibar-chart>
+        </div>
+    </div>
+</div>

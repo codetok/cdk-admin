@@ -1,0 +1,75 @@
+<div fxLayout="column" class="widgetHolder-content" style="background-color: white">
+	<div fxLayout="column" class=" mat-elevation-z4">
+		<mat-toolbar>
+			Progress bar configuration
+			<span class="spacer"></span>
+			<button mat-icon-button (click)="showSimpleListCode = !showSimpleListCode">
+				<mat-icon class="refresh">code</mat-icon>    
+			</button>
+		</mat-toolbar>
+		<div *ngIf="showProgressBarCode">
+			<mat-tab-group>
+				<mat-tab label="HTML">
+					<pre><code mwlHighlightJs [source]="progressBarhtmlsource" language="html"></code></pre>
+				</mat-tab>
+				<mat-tab label="TS">
+					<pre><code mwlHighlightJs [source]="progressBartssource" language="typescript"></code></pre>
+				</mat-tab>
+				<mat-tab label="CSS">
+					<pre><code mwlHighlightJs [source]="progressBarcsssource" language="typescript"></code></pre>
+				</mat-tab>
+			</mat-tab-group>
+		</div>
+		<div>
+			<section class="example-section">
+				<label class="example-margin">Color:</label>
+				<mat-radio-group [(ngModel)]="color">
+					<mat-radio-button class="example-margin" value="primary">
+						Primary
+					</mat-radio-button>
+					<mat-radio-button class="example-margin" value="accent">
+						Accent
+					</mat-radio-button>
+					<mat-radio-button class="example-margin" value="warn">
+						Warn
+					</mat-radio-button>
+				</mat-radio-group>
+			</section>
+			<section class="example-section">
+				<label class="example-margin">Mode:</label>
+				<mat-radio-group [(ngModel)]="mode">
+					<mat-radio-button class="example-margin" value="determinate">
+						Determinate
+					</mat-radio-button>
+					<mat-radio-button class="example-margin" value="indeterminate">
+						Indeterminate
+					</mat-radio-button>
+					<mat-radio-button class="example-margin" value="buffer">
+						Buffer
+					</mat-radio-button>
+					<mat-radio-button class="example-margin" value="query">
+						Query
+					</mat-radio-button>
+				</mat-radio-group>
+			</section>
+			<section class="example-section" *ngIf="mode == 'determinate' || mode == 'buffer'">
+				<label class="example-margin">Progress:</label>
+				<mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+			</section>
+			<section class="example-section" *ngIf="mode == 'buffer'">
+				<label class="example-margin">Buffer:</label>
+				<mat-slider class="example-margin" [(ngModel)]="bufferValue"></mat-slider>
+			</section>
+			<mat-toolbar> Result</mat-toolbar>
+			<section class="example-section">
+				<mat-progress-bar
+				class="example-margin"
+				[color]="color"
+				[mode]="mode"
+				[value]="value"
+				[bufferValue]="bufferValue">
+				</mat-progress-bar>
+			</section>
+		</div>
+	</div>
+</div>

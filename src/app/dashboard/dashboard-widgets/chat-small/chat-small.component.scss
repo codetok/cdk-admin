@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+@mixin chatsmall($theme) {
+    $primary: map-get($theme, primary);
+
+    .chat-small{
+	    height: 400px;
+        background:white;
+	    .chatHolder{
+	        margin: 10px 0px;   
+	        overflow-x:hidden;
+	        overflow-y:scroll;
+	        height: 260px;        
+	    }
+	    .chatmessage {
+	    	background: mat-color($primary,500);    
+	    }
+    }
+}

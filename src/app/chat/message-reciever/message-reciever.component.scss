@@ -1,0 +1,24 @@
+cdk-message-reciever {
+    .message {
+        background: #fff;
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 8px;
+        position: relative;
+        width: fit-content;
+        word-wrap: break-word;
+        word-break: break-word;
+
+    }
+     .message::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 0;
+        border-color: transparent #fff transparent transparent;
+        top: 0;
+        left: -10px;
+    }
+}

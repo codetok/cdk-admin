@@ -1,0 +1,10 @@
+<div  class="mat-elevation-z4 todo-small" >
+    <mat-toolbar color="primary" >
+        Todo
+    </mat-toolbar>
+    <mat-selection-list #shoes>
+      <mat-list-option *ngFor="let shoe of typesOfShoes">
+        {{shoe}}
+      </mat-list-option>
+    </mat-selection-list>
+</div>

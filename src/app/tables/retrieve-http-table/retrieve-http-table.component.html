@@ -1,0 +1,87 @@
+<div fxLayout="column" fxFlex="70" fxFlex.xs="100"  fxFlex.sm="90" fxLayoutAlign="space-around stretch" class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px"  >
+    <mat-toolbar >
+        Tables
+        <span class="spacer"></span>
+    </mat-toolbar>
+    <div fxLayout="column" class="widgetHolder-content">
+        
+         
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  Table retrieving data through HTTP
+                  <span class="spacer"></span>
+                  <button mat-icon-button (click)="showRetrieveTableCode = !showRetrieveTableCode">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showRetrieveTableCode">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="retrieveHttpServ?.retrieveTablehtmlsource" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="retrieveHttpServ?.retrieveTabletssource" language="typescript"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="CSS">
+                        <pre><code mwlHighlightJs [source]="retrieveHttpServ?.retrieveTablecsssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+			<div fxLayout="column" fxLayoutAlign="space-around stretch" fxFlex.lt-sm=22 fxLayoutWrap fxFlex="auto" fxFlex.gt-xs="33" fxFlex.gt-sm="100" >
+				
+				<div class="example-container mat-elevation-z8">
+					<div class="example-loading-shade"
+					*ngIf="dataSource.isLoadingResults || dataSource.isRateLimitReached">
+						<mat-spinner *ngIf="dataSource.isLoadingResults"></mat-spinner>
+						<div class="example-rate-limit-reached" *ngIf="dataSource.isRateLimitReached">
+						GitHub's API rate limit has been reached. It will be reset in one minute.
+						</div>
+					</div>
+
+					<mat-table #table [dataSource]="dataSource" class="example-table"
+					matSort matSortActive="created_at" matSortDisableClear matSortDirection="asc">
+
+						<!--- Note that these columns can be defined in any order.
+						The actual rendered columns are set as a property on the row definition" -->
+
+						<!-- Number Column -->
+						<ng-container matColumnDef="number">
+							<mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+							<mat-cell *matCellDef="let row">{{ row.number }}</mat-cell>
+						</ng-container>
+
+						<!-- Title Column -->
+						<ng-container matColumnDef="title">
+							<mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+							<mat-cell *matCellDef="let row">{{ row.title }}</mat-cell>
+						</ng-container>
+
+						<!-- State Column -->
+						<ng-container matColumnDef="state">
+							<mat-header-cell *matHeaderCellDef>State</mat-header-cell>
+							<mat-cell *matCellDef="let row">{{ row.state }}</mat-cell>
+						</ng-container>
+
+						<!-- Created Column -->
+						<ng-container matColumnDef="created_at">
+							<mat-header-cell *matHeaderCellDef
+							  mat-sort-header
+							  disableClear="true">
+							Created
+							</mat-header-cell>
+							<mat-cell *matCellDef="let row">{{ row.created_at | date }}</mat-cell>
+						</ng-container>
+
+						<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+						<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+					</mat-table>
+
+					<mat-paginator [length]="dataSource.resultsLength"
+					[pageSize]="30">
+					</mat-paginator>
+				</div>
+
+            </div>
+        </div>
+    </div>
+</div>

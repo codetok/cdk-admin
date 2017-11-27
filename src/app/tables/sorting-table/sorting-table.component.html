@@ -1,0 +1,70 @@
+<div fxLayout="column" fxFlex="70" fxFlex.xs="100"  fxFlex.sm="90" fxLayoutAlign="space-around stretch" class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px"  >
+    <mat-toolbar >
+        Tables
+        <span class="spacer"></span>
+    </mat-toolbar>
+    <div fxLayout="column" class="widgetHolder-content">
+        
+         
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                Table with Sorting
+                <span class="spacer"></span>
+                <button mat-icon-button (click)="showSortingTableCode = !showSortingTableCode">
+                    <mat-icon class="refresh">code</mat-icon>    
+                </button>
+            </mat-toolbar>
+            <div *ngIf="showSortingTableCode">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="sortingServ?.sortingTablehtmlsource" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="sortingServ?.sortingTabletssource" language="typescript"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="CSS">
+                        <pre><code mwlHighlightJs [source]="sortingServ?.sortingTablecsssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-around stretch" fxFlex.lt-sm=22 fxLayoutWrap fxFlex="auto" fxFlex.gt-xs="33" fxFlex.gt-sm="100" >
+                
+                <div class="example-container mat-elevation-z8">
+                    <mat-table #table [dataSource]="dataSource" matSort>
+
+                        <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+
+                        <!-- ID Column -->
+                        <ng-container matColumnDef="userId">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                            <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+                        </ng-container>
+
+                        <!-- Progress Column -->
+                        <ng-container matColumnDef="progress">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
+                            <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="userName">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                            <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+                        </ng-container>
+
+                        <!-- Color Column -->
+                        <ng-container matColumnDef="color">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
+                            <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

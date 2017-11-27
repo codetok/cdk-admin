@@ -1,0 +1,17 @@
+.example-card {
+  width: 500px;
+   	
+}
+
+.example-header-image {
+  background-image: url('../../../assets/cards/shibainu.jpg');
+  background-size: cover;
+}
+.widgetHolder{
+	margin: 0 auto;
+	.widgetHolder-content {
+		padding: 20px;
+	}
+}
+
+.mat-card-header-text {	margin: 0!important;}

@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+
+@mixin logobar($theme) {
+    .companyname{
+        font-size: 27px;
+        color:white;
+        margin-top: 8px;
+        margin-left: 0px;
+    }
+    .logobar{
+         background-color: mat-color($primary,400) ;
+         color:white;
+    }
+    .com{
+    	font-size: 17px;
+    }
+    .sitetitle{
+        font-size: 25px;
+        line-height: 47px;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,26 @@
+
+<div class="sidemenuHolder" id="sideMenu">
+    <div fxLayoutAlign="space-around center" [style.margin]="'10px 0px'" >
+      <img width="100" [style.borderRadius]="'50%'" src="./assets/user-image.jpg">
+    </div>
+    <mat-nav-list  *ngFor="let menu of menus" class="primary  " > 
+        <a mat-list-item (click)="menu.open = !menu.open"    >
+            <mat-icon class="small" mat-list-icon>{{menu?.icon}}</mat-icon>
+            <p mat-line  class="mat-body-1">
+                {{menu?.name}}
+            </p>
+            <mat-chip-list *ngIf="menu?.chip?.value" >
+                <mat-chip selected="true" [color]='menu?.chip?.color'>{{menu?.chip?.value}}</mat-chip>
+            </mat-chip-list>
+            <mat-icon mat-icon-button [ngClass]="{'openButton':menu.open,'closeButton':!menu.open}" >
+                keyboard_arrow_down
+            </mat-icon>            
+        </a>
+        <mat-nav-list class="secondarymenu"  [ngClass]="{'open':menu.open,'close':!menu.open}"> 
+            <a mat-list-item  (click)="menuChange(row)" *ngFor="let row of menu?.sub" [routerLink]="[row.link]"    [ngClass]="{active:row.open}">    
+                <mat-icon class="small" mat-list-icon>{{row?.icon}}</mat-icon>
+                <h4 mat-line class="mat-headline">{{row?.name}}</h4>
+            </a>
+        </mat-nav-list >
+    </mat-nav-list>
+</div>

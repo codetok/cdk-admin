@@ -1,0 +1,102 @@
+
+@import '~@angular/material/theming';
+
+@mixin sidemenu($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    
+    .sidemenuHolder{
+        margin-top: 30px;
+    }
+    .primary-sidemenu{
+        overflow:hidden;
+        background: mat-color($primary,400);  
+    }
+    .primary {
+        overflow:hidden;
+        padding-top:0px;
+        
+    }
+    .primary:hover {
+        color: white;
+    }
+    .ripple{
+        position:relative;
+    }
+    .secondarymenu{
+        background: mat-color($primary,300);  
+        padding-top:0px;
+    }
+    
+    .mat-list{
+        padding-top: 1px;
+        cursor: pointer;
+    }
+    .mat-chip:not(.mat-basic-chip){
+        padding: 1px 7px !important;
+        border-radius: 5px !important;
+    }
+    .openButton{
+        transform: rotate(180deg);
+        animation-duration: 200ms;
+        animation-timing-function: ease;
+    }
+    .closeButton{
+        transform: rotate(360deg);
+        animation-duration: 200ms;
+        animation-timing-function: ease;
+    }
+    mat-list-item:focus {
+        outline:none;
+    }
+    .mat-list-item.mat-list-item-focus {
+        background-color: #3492f7 !important;
+    }
+    mat-icon{
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 20px !important;
+    }
+    .open{
+        transition:  max-height .5s ease;
+        max-height: 1200px;
+        width:100%;
+    }   
+    .close {
+        transition:  max-height .5s ease;
+        max-height: 0px; 
+        width:100%;
+    } 
+    .active {
+        background-color: #3492f7;
+    }
+    .green{
+        color: #00ff0a;
+    }
+    mat-icon.small{
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+    }
+    mat-icon-button{
+        animation-name: spin;
+    }
+}
+    #sideMenu {
+        height:     100% ;
+        overflow-y: auto;
+    }
+    #sideMenu::-webkit-scrollbar-track {
+        background: rgba(222, 222, 222, .75);
+        opacity: 0;
+        border-radius: 0;
+        transition: opacity 0.5s 0.5s ease-out;
+    }
+    #sideMenu::-webkit-scrollbar{
+        width: 1px;
+    }
+    #sideMenu::-webkit-scrollbar-thumb {
+        transform: translate3d(0px, 196.787px, 0px);
+        background: rgba(0,0,0,0.2);
+        border-radius: 0;
+    }

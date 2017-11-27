@@ -1,0 +1,112 @@
+<div fxLayout="column" fxFlex="75" fxFlex.xs="100"  fxFlex.sm="90"class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px">
+	<div fxLayout="row" class="" fxLayoutAlign="space-around stretch">
+		<div fxLayout="column" fxLayoutGap="20px">
+			<div fxFlex="60" fxFlex.lt-sm=100   fxLayout="column" fxLayoutAlign="start stretch">
+				<mat-toolbar>
+					Contacts
+					<span class="spacer"></span>
+				</mat-toolbar>
+				
+				<mat-card class="example-card">
+					<div fxLayout="row">
+						<mat-form-field class="example-full-width">
+		                    <input matInput placeholder="Search contact by Name or Tag">
+		                    <mat-icon class="space" disabled="True">search</mat-icon>
+		                </mat-form-field>
+
+		                <mat-card-actions>
+				            <button mat-raised-button color="primary">ADD EMPLOYEE</button>
+				        </mat-card-actions>
+                
+            
+					</div>
+					
+					<mat-card-content>
+					<div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+		                <mat-list>
+		                	<mat-list-item *ngFor="let employee of employees">
+							    <img matListAvatar src="assets/chatlist/man.jpeg" alt="...">
+							    <mat-checkbox class="example-margin"></mat-checkbox>
+							    <h3 matLine> {{employee.select}} </h3>
+							    <p matLine>
+							      <span matSubheader> {{employee.position}} </span>
+							    </p>
+						  </mat-list-item>
+						</mat-list>
+            		</div>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+
+		
+		<!-- <div fxLayout="column" class="" fxLayoutAlign="space-around stretch"  > -->
+		<div fxFlex="60" fxFlex.lt-sm=100   fxLayout="column" fxLayoutAlign="start stretch">
+			<mat-card class="example-card">
+				<mat-toolbar>
+					 New Contact
+					<span class="spacer"></span>
+				</mat-toolbar>
+					
+				<form class="example-form">        
+					<div fxLayout="row" fxLayoutGap="20px">
+						<img  mat-card-avatar src="assets/chatlist/man.jpeg"/>
+	                    	<p>Sujith</p>
+				    </div>  
+									
+					                	
+	            	<div fxLayout="row" fxLayoutGap="20px" >
+	            		<mat-form-field class="example-full-width">
+							<p>Phone</p>					
+							<input  matInput placeholder="">
+						</mat-form-field>
+						<mat-form-field class="example-full-width">
+							<p>Office</p>
+				            <input type="address" matInput placeholder="">
+				        </mat-form-field>
+				    </div>
+			        <div fxLayout="row" fxLayoutGap="20px" >
+	            		<mat-form-field class="example-full-width">
+	            			<p>Skype</p>
+	            			<input  matInput placeholder="">
+						</mat-form-field>
+						<mat-form-field class="example-full-width">
+							<p>Email</p>
+				            <input type="address" matInput placeholder="">
+				        </mat-form-field>
+					</div>
+					<div fxLayout="row">
+						<mat-icon class="space" disabled="True">delete</mat-icon>
+		                <mat-card-actions>
+		                	<button mat-button disabled>Delete Contacts</button>
+		                	<button mat-button color="black">CANCEL</button>
+				            <button mat-raised-button color="primary">SAVE</button>
+				        </mat-card-actions>
+					</div>
+				</form>
+			</mat-card>
+		</div>
+	</div>
+</div>
+												
+							
+					
+				  
+													
+						                			
+						                		
+						                		                          	
+		                		
+				            
+						
+					
+				
+		
+		
+
+
+			                			
+		                			
+		            			
+								
+							

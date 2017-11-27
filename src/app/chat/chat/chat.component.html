@@ -1,0 +1,19 @@
+
+
+<div fxLayout="row" fxFlex.xs="100%" fxFlex.md="100%" fxFlex.lg="80%" fxLayoutAlign="space-between stretch" class="mat-elevation-z4 chat-container">
+
+	<div fxFlex="35">
+		<cdk-chat-list  (view)="message=$event" [messages]="messages"></cdk-chat-list>
+	</div>
+
+	<div fxFlex="75" >
+		<cdk-chat-body  [message]="message" *ngIf="message"></cdk-chat-body>
+		<div fxFlexFill fxLayout="row" fxLayoutAlign="center center" *ngIf="!message" class="none">
+			<div style="font-size: 25px;
+    color: #cecec8;">
+				No messages to display
+			</div>
+		</div>
+	</div>
+
+</div>

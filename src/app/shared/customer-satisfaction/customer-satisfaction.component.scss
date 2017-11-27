@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+
+@mixin customerSatisafation($theme) {
+
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    .toolbar-customer-satisfation{
+        color:rgba(0,0,0,.87)
+    }
+    .satisfaction-level{
+        color: mat-color($primary,900);    
+        font-family: Roboto;
+        font-size:30px;
+    }
+    .satisfaction-number{
+        color: mat-color($primary,500);    
+        font-family: Roboto;
+        top: 20px;
+    }
+}
+.satisfaction-level{
+    font-family: roboto;
+}

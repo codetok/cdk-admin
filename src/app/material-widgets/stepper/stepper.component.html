@@ -1,0 +1,59 @@
+
+<div fxLayout="column" class=" mat-elevation-z4" style="background-color: white">
+	<mat-toolbar>
+        Basic Stepper
+    	<span class="spacer"></span>
+    	<button mat-icon-button (click)="showSource = !showSource">
+        	<mat-icon class="refresh">code</mat-icon>    
+    	</button>
+	</mat-toolbar>
+        
+    <div *ngIf="showSource">
+        <mat-tab-group>
+          <mat-tab label="HTML" >
+              <pre ><code mwlHighlightJs [source]="htmlsource" language="html"></code></pre>
+          </mat-tab>
+          <mat-tab label="TS">
+              <pre><code mwlHighlightJs [source]="tssource" language="typescript"></code></pre>
+          </mat-tab>
+          <mat-tab label="CSS"></mat-tab>
+        </mat-tab-group>
+    </div>
+           
+    
+
+    <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+
+	<mat-horizontal-stepper [linear]="isLinear" fxFlexfill>
+	  <mat-step [stepControl]="firstFormGroup">
+	    <form [formGroup]="firstFormGroup">
+	      <ng-template matStepLabel >Fill out your name</ng-template>
+	      <mat-form-field>
+	        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+	      </mat-form-field>
+	      <div>
+	        <button mat-button matStepperNext>Next</button>
+	      </div>
+	    </form>
+	  </mat-step>
+	  <mat-step [stepControl]="secondFormGroup">
+	    <form [formGroup]="secondFormGroup">
+	      <ng-template matStepLabel>Fill out your address</ng-template>
+	      <mat-form-field>
+	        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+	      </mat-form-field>
+	      <div>
+	        <button mat-button matStepperPrevious>Back</button>
+	        <button mat-button matStepperNext>Next</button>
+	      </div>
+	    </form>
+	  </mat-step>
+	  <mat-step>
+	    <ng-template matStepLabel>Done</ng-template>
+	    You are now done.
+	    <div>
+	      <button mat-button matStepperPrevious>Back</button>
+	    </div>
+	  </mat-step>
+	</mat-horizontal-stepper>
+</div>

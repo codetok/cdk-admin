@@ -1,0 +1,54 @@
+
+	<div fxLayout="column" class="widgetHolder-content"  fxLayoutAlign="space-around stretch" style="background-color: white">
+        <!-- Basic Radios section start -->
+                
+        <div fxLayout="column" class=" mat-elevation-z4">
+	
+			<mat-toolbar>
+				Basic Radios
+				<span class="spacer"></span>
+				<button mat-icon-button (click)="showRadioCode = !showRadioCode">
+					<mat-icon class="refresh">code</mat-icon>    
+				</button>
+			</mat-toolbar>
+		
+			<div *ngIf="showRadioCode">
+				<mat-tab-group>
+					<mat-tab label="HTML">
+						<pre><code mwlHighlightJs [source]="radiohtmlsource" language="html"></code></pre>
+					</mat-tab>
+					<mat-tab label="TS">
+						<pre><code mwlHighlightJs [source]="radiotssource" language="typescript"></code></pre>
+					</mat-tab>
+					<mat-tab label="CSS">
+						<pre><code mwlHighlightJs [source]="radiocsssource" language="typescript"></code></pre>
+					</mat-tab>
+				</mat-tab-group>
+			</div>
+			<div  fxLayoutAlign="space-around stretch" >
+
+				<section class="example-section">
+					<label class="example-margin">Season:</label>
+						<mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+							<mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+							{{season}}
+								</mat-radio-button>
+						</mat-radio-group>
+						<div class="example-selected-value">Your favorite season is: {{favoriteSeason}}
+						</div>
+				</section>
+			</div>
+		</div>
+		<!-- Basic Radios section end -->
+	</div>
+
+
+					
+						
+
+								
+					
+				
+			
+		
+

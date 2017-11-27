@@ -1,0 +1,124 @@
+
+<div fxLayout="column" class="widgetHolder-content" style="background-color: white">
+    
+    <!-- Basic slider section start -->
+    <div fxLayout="column" class=" mat-elevation-z4">
+        
+        <mat-toolbar>
+            Basic Slider
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="showBasicSliderCode = !showBasicSliderCode">
+                <mat-icon class="refresh">code</mat-icon>    
+            </button>
+        </mat-toolbar>
+            
+        <div *ngIf="showBasicSliderCode">
+            <mat-tab-group>
+                <mat-tab label="HTML">
+                    <pre><code mwlHighlightJs [source]="basicSliderhtmlsource" language="html"></code></pre>
+                </mat-tab>
+                <mat-tab label="TS">
+                    <pre><code mwlHighlightJs [source]="basicSlidertssource" language="typescript"></code></pre>
+                </mat-tab>
+                <mat-tab label="CSS">
+                    <pre><code mwlHighlightJs [source]="basicSlidercsssource" language="typescript"></code></pre>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+        <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+            <mat-slider></mat-slider>
+        </div>
+        <!-- Basic slider section start -->
+        <!-- Configurable slider section start -->
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+               Slider configuration
+                <span class="spacer"></span>
+                <button mat-icon-button (click)="showConfigureSliderCode = !showConfigureSliderCode">
+                <mat-icon class="refresh">code</mat-icon>    
+                </button>
+            </mat-toolbar>
+        
+            <div *ngIf="showConfigureSliderCode">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                        <pre><code mwlHighlightJs [source]="configureSliderhtmlsource" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="configureSlidertssource" language="typescript"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="CSS">
+                        <pre><code mwlHighlightJs [source]="configureSlidercsssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+
+            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+               
+                <div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutWrap >
+
+                    <section class="example-section">
+                      <mat-form-field class="example-margin">
+                        <input matInput type="number" placeholder="Value" [(ngModel)]="value">
+                      </mat-form-field>
+                      <mat-form-field class="example-margin">
+                        <input matInput type="number" placeholder="Min value" [(ngModel)]="min">
+                      </mat-form-field>
+                      <mat-form-field class="example-margin">
+                        <input matInput type="number" placeholder="Max value" [(ngModel)]="max">
+                      </mat-form-field>
+                      <mat-form-field class="example-margin">
+                        <input matInput type="number" placeholder="Step size" [(ngModel)]="step">
+                      </mat-form-field>
+                    </section>
+                </div>
+            </div>
+               
+                
+             <div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutWrap >
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+                  <mat-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+                    Auto ticks
+                  </mat-checkbox>
+                  <mat-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
+                    <input matInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
+                  </mat-form-field>
+                </section>
+                <br>
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
+                </section>
+
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</mat-checkbox>
+                  <mat-checkbox class="example-margin" [(ngModel)]="invert">Inverted</mat-checkbox>
+                </section>
+
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+                </section>
+            </div>
+            
+
+            <section>
+                <h2 class="example-h2">Result</h2>
+
+                <mat-slider
+                    class="example-margin"
+                    [disabled]="disabled"
+                    [invert]="invert"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumb-label]="thumbLabel"
+                    [tick-interval]="tickInterval"
+                    [value]="value"
+                    [vertical]="vertical">
+                </mat-slider>
+            </section>
+        </div>
+    </div>
+     <!-- Configurable slider section end -->
+</div>
+

@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin feeds($theme) {
+    $primary: map-get($theme, primary);
+    
+    cdk-feeds {
+        .spacer{
+           flex: 1 1 auto;
+        }
+        mat-list-item{
+           cursor:pointer;
+        }
+        mat-list-item:hover {
+             background: mat-color($primary,100);
+        }
+        mat-chip {
+            padding: 1px 7px !important;
+            border-radius: 5px !important;
+        }
+        .sub-toolbar {
+            color:rgba(0,0,0,.87)
+        }
+        .refresh{
+            cursor: pointer;
+        }
+    }
+    
+
+    
+}
+      

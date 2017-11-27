@@ -1,0 +1,67 @@
+<div fxLayout="column" fxFlex="70" fxLayoutAlign="space-around stretch" class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px"  >
+	<mat-toolbar >
+		Template Driven Form
+		<span class="spacer"></span>
+	</mat-toolbar>
+	<div fxLayout="column"  class="widgetHolder-content" fxLayoutAlign="space-around stretch" >
+		<mat-toolbar>
+		User Profile
+		</mat-toolbar>
+
+		<div [hidden]="submitted">
+
+			<form (ngSubmit)="onSubmit()"   fxLayout="column" >
+				<mat-form-field class="width">
+					<input matInput type="text"   [(ngModel)]="model.name"  name="name" #name="ngModel" required minlength="4">
+
+				</mat-form-field>
+				<div  style="color:red" *ngIf="name.invalid && (name.dirty || name.touched)">
+
+					<div *ngIf="name.errors.required">
+						Name is required.
+					</div>
+					<div *ngIf="name.errors.minlength">
+						Name must be at least 4 characters long.
+					</div>
+				</div>
+				<mat-form-field class="width">
+					<input matInput type="number"  [(ngModel)]="model.number"  name="number" #number="ngModel" required minlength="10">
+				</mat-form-field>
+				<div  style="color:red" *ngIf="number.invalid && (number.dirty || number.touched)"
+				>
+
+					<div *ngIf="number.errors.required">
+						number is required.
+					</div>
+					<div *ngIf="number.errors.minlength">
+						number must be at least 10 characters long.
+					</div>
+
+
+				</div>
+				<button mat-raised-button type="submit"  >Submit</button>
+			</form>
+		</div>
+
+			<div [hidden]="!submitted"  >
+				<div fxLayout="column" fxLayoutAlign="space-around stretch" >
+				<h2>You submitted the following:</h2>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div >Name</div>
+					<div>{{ model.name }}</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px" >
+					<div>Number</div>
+					<div>{{ model.number }}</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div >District</div>
+					<div>{{ model.district }}</div>
+				</div>
+				<br>
+				<button mat-raised-button type="submit" (click)="submitted=false">Edit</button>
+			</div>
+			</div>
+
+	</div>
+</div>

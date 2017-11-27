@@ -1,0 +1,297 @@
+
+		 <!-- Simple list section start -->
+	<div fxLayout="column" class="widgetHolder-content" style="background-color: white">
+                
+        <div fxLayout="column" class=" mat-elevation-z4">
+    		<mat-toolbar>
+		      	Simple lists
+		        <span class="spacer"></span>
+		        <button mat-icon-button (click)="showSimpleListCode = !showSimpleListCode">
+		            <mat-icon class="refresh">code</mat-icon>    
+		        </button>
+		    </mat-toolbar>
+           	<div *ngIf="showSimpleListCode">
+        		<mat-tab-group>
+          			<mat-tab label="HTML">
+              			<pre><code mwlHighlightJs [source]="simpleListhtmlsource" language="html"></code></pre>
+          			</mat-tab>
+          			<mat-tab label="TS">
+              			<pre><code mwlHighlightJs [source]="simpleListtssource" language="typescript"></code></pre>
+          			</mat-tab>
+          			<mat-tab label="CSS"></mat-tab>
+        		</mat-tab-group>
+    		</div>
+
+            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+            <mat-list>
+				 <mat-list-item> Pepper </mat-list-item>
+				 <mat-list-item> Salt </mat-list-item>
+				 <mat-list-item> Paprika </mat-list-item>
+			</mat-list>
+            </div>
+       
+	<!-- Simple list section end -->
+	<!-- Navigation lists section start -->
+
+
+	<div fxLayout="column" class=" mat-elevation-z4">
+		<mat-toolbar>
+	      	Navigation lists
+	        <span class="spacer"></span>
+	        <button mat-icon-button (click)="showNavListCode = !showNavListCode">
+	            <mat-icon class="refresh">code</mat-icon>    
+	        </button>
+	    </mat-toolbar>
+    	
+    	<div *ngIf="showNavListCode">
+    		<mat-tab-group>
+      			<mat-tab label="HTML">
+          			<pre><code mwlHighlightJs [source]="navListhtmlsource" language="html"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="TS">
+          			<pre><code mwlHighlightJs [source]="navListtssource" language="typescript"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="CSS"></mat-tab>
+    		</mat-tab-group>
+		</div>
+		<div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+            <mat-nav-list>
+			  	<mat-list-item *ngFor="let link of links">
+			     	<a matLine href="...">{{ link }}</a>
+			     	<button mat-icon-button>
+			        	<mat-icon>info</mat-icon>
+			     	</button>
+			  	</mat-list-item>
+			</mat-nav-list>
+            </div>
+
+    <!-- Navigation lists section end -->
+	<!-- Selection lists section start -->
+
+	<div fxLayout="column" class=" mat-elevation-z4">
+		<mat-toolbar>
+	      	Selection lists
+	        <span class="spacer"></span>
+	        <button mat-icon-button (click)="showSelListCode = !showSelListCode">
+	            <mat-icon class="refresh">code</mat-icon>    
+	        </button>
+	    </mat-toolbar>
+     	<div *ngIf="showSelListCode">
+    		<mat-tab-group>
+      			<mat-tab label="HTML">
+          			<pre><code mwlHighlightJs [source]="selListhtmlsource" language="html"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="TS">
+          			<pre><code mwlHighlightJs [source]="selListtssource" language="typescript"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="CSS"></mat-tab>
+    		</mat-tab-group>
+		</div>
+
+        <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+            <mat-selection-list #shoes>
+			  	<mat-list-option *ngFor="let shoe of ['Boots', 'Sneaker', 'Casual']">
+			    {{shoe}}
+			  	</mat-list-option>
+			</mat-selection-list>
+
+			<p>
+			  Options selected: {{shoes.selectedOptions.selected.length}}
+			</p>
+        </div>
+
+       	<!-- Selection lists section end -->
+		<!-- Multi line lists section start -->
+
+		<div fxLayout="column" class=" mat-elevation-z4">
+			<mat-toolbar>
+		      	Multi-line lists
+		        <span class="spacer"></span>
+		        <button mat-icon-button (click)="showMultiListCode = !showMultiListCode">
+		            <mat-icon class="refresh">code</mat-icon>    
+		        </button>
+		    </mat-toolbar>
+	    	<div *ngIf="showMultiListCode">
+	    		<mat-tab-group>
+	      			<mat-tab label="HTML">
+	          			<pre><code mwlHighlightJs [source]="multiListhtmlsource" language="html"></code></pre>
+	      			</mat-tab>
+	      			<mat-tab label="TS">
+	          			<pre><code mwlHighlightJs [source]="multiListtssource" language="typescript"></code></pre>
+	      			</mat-tab>
+	      			<mat-tab label="CSS"></mat-tab>
+	    		</mat-tab-group>
+			</div>
+
+            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+                <!-- two line list -->
+					<mat-list>
+						<h3>Two line</h3>
+					  <mat-list-item *ngFor="let message of messages">
+					    <h3 matLine> {{message.from}} </h3>
+					    <p matLine>
+					      <span> {{message.subject}} </span>
+					      <span class="demo-2"> -- {{message.content}} </span>
+					    </p>
+					  </mat-list-item>
+					</mat-list>
+
+					<!-- three line list -->
+					<mat-list>
+						<h3>Three line</h3>
+					  <mat-list-item *ngFor="let message of messages">
+					    <h3 matLine> {{message.from}} </h3>
+					    <p matLine> {{message.subject}} </p>
+					    <p matLine class="demo-2"> {{message.content}} </p>
+					  </mat-list-item>
+					</mat-list>
+            </div>
+           
+	<!-- Multi line lists section start -->
+	<!-- List with icons section start -->
+
+	<div fxLayout="column" class=" mat-elevation-z4">
+		<mat-toolbar>
+	      	Lists with icons
+	        <span class="spacer"></span>
+	        <button mat-icon-button (click)="showIconListCode = !showIconListCode">
+	            <mat-icon class="refresh">code</mat-icon>    
+	        </button>
+	    </mat-toolbar>
+        <div *ngIf="showIconListCode">
+    		<mat-tab-group>
+      			<mat-tab label="HTML">
+          			<pre><code mwlHighlightJs [source]="iconListhtmlsource" language="html"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="TS">
+          			<pre><code mwlHighlightJs [source]="iconListtssource" language="typescript"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="CSS"></mat-tab>
+    		</mat-tab-group>
+		</div>
+
+        <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+            <mat-list>
+			  <mat-list-item *ngFor="let message of messages">
+			    <mat-icon matListIcon>folder</mat-icon>
+			    <h3 matLine> {{message.from}} </h3>
+			    <p matLine>
+			      <span> {{message.subject}} </span>
+			      <span class="demo-2"> -- {{message.content}} </span>
+			    </p>
+			  </mat-list-item>
+			</mat-list>
+        </div>
+
+    <!-- Icon  lists section end -->
+	<!-- Avatarlists section start -->
+		<div fxLayout="column" class=" mat-elevation-z4">
+    		<mat-toolbar>
+		      	Lists with avatar
+		        <span class="spacer"></span>
+		        <button mat-icon-button (click)="showAvatarListCode = !showAvatarListCode">
+		            <mat-icon class="refresh">code</mat-icon>    
+		        </button>
+		    </mat-toolbar>
+           	<div *ngIf="showAvatarListCode">
+        		<mat-tab-group>
+          			<mat-tab label="HTML">
+              			<pre><code mwlHighlightJs [source]="avatarListhtmlsource" language="html"></code></pre>
+          			</mat-tab>
+          			<mat-tab label="TS">
+              			<pre><code mwlHighlightJs [source]="avatarListtssource" language="typescript"></code></pre>
+          			</mat-tab>
+          			<mat-tab label="CSS"></mat-tab>
+        		</mat-tab-group>
+    		</div>
+
+            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+                <mat-list>
+				  <mat-list-item *ngFor="let message of messages">
+				    <img matListAvatar src="assets/chatlist/man.jpeg" alt="...">
+				    <h3 matLine> {{message.from}} </h3>
+				    <p matLine>
+				      <span> {{message.subject}} </span>
+				      <span class="demo-2"> -- {{message.content}} </span>
+				    </p>
+				  </mat-list-item>
+				</mat-list>
+            </div>
+
+       	<!-- Avatarlists section end -->
+		<!-- Dense lists section start -->
+
+		<div fxLayout="column" class=" mat-elevation-z4">
+			<mat-toolbar>
+		      	Dense lists
+		        <span class="spacer"></span>
+		        <button mat-icon-button (click)="showDenseListCode = !showDenseListCode">
+		            <mat-icon class="refresh">code</mat-icon>    
+		        </button>
+		    </mat-toolbar>
+	         <div *ngIf="showDenseListCode">
+	    		<mat-tab-group>
+	      			<mat-tab label="HTML">
+	          			<pre><code mwlHighlightJs [source]="denseListhtmlsource" language="html"></code></pre>
+	      			</mat-tab>
+	      			<mat-tab label="TS">
+	          			<pre><code mwlHighlightJs [source]="denseListtssource" language="typescript"></code></pre>
+	      			</mat-tab>
+	      			<mat-tab label="CSS"></mat-tab>
+	    		</mat-tab-group>
+			</div>
+
+            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+                <mat-list dense>
+				 <mat-list-item> Pepper </mat-list-item>
+				 <mat-list-item> Salt </mat-list-item>
+				 <mat-list-item> Paprika </mat-list-item>
+				</mat-list>
+            </div>
+
+
+	<!-- Dense lists section end -->
+	<!-- Multiple section lists section start -->
+
+	<div fxLayout="column" class=" mat-elevation-z4">
+		<mat-toolbar>
+	      	Lists with multiple sections
+	        <span class="spacer"></span>
+	        <button mat-icon-button (click)="showmultipleSectionListCode = !showmultipleSectionListCode">
+	            <mat-icon class="refresh">code</mat-icon>    
+	        </button>
+	    </mat-toolbar>
+  
+    	<div *ngIf="showmultipleSectionListCode">
+    		<mat-tab-group>
+      			<mat-tab label="HTML">
+          			<pre><code mwlHighlightJs [source]="multipleSectionListhtmlsource" language="html"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="TS">
+          			<pre><code mwlHighlightJs [source]="multipleSectionListtssource" language="typescript"></code></pre>
+      			</mat-tab>
+      			<mat-tab label="CSS"></mat-tab>
+    		</mat-tab-group>
+		</div>
+
+       <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+            <mat-list>
+			   	<h3 matSubheader>Folders</h3>
+			   	<mat-list-item *ngFor="let folder of folders">
+			      <mat-icon matListIcon>folder</mat-icon>
+			      <h4 matLine>{{folder.name}}</h4>
+			      <p matLine class="demo-2"> {{folder.updated}} </p>
+			   	</mat-list-item>
+			   	<mat-divider></mat-divider>
+			   	<h3 matSubheader>Notes</h3>
+			   	<mat-list-item *ngFor="let note of notes">
+			      <mat-icon matListIcon>note</mat-icon>
+			      <h4 matLine>{{note.name}}</h4>
+			      <p matLine class="demo-2"> {{note.updated}} </p>
+			   	</mat-list-item>
+			</mat-list>
+        </div>
+
+		<!-- Multiple section lists section end -->
+
+      </div>         

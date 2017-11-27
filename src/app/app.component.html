@@ -1,0 +1,61 @@
+<mat-sidenav-container #container fullscreen #sideNav>
+    <mat-sidenav class="sidenav" [mode]="mode" #ele [opened]="opened">
+        <cdk-logo-bar></cdk-logo-bar>
+        <cdk-side-menu></cdk-side-menu>
+    </mat-sidenav>
+    <mat-toolbar class=" mat-elevation-z4" style="position: relative;">
+        <button mat-icon-button (click)="open= !open;ele.toggle();">
+            <i class="material-icons app-toolbar-menu">menu </i>
+        </button>
+      <!--   <mat-form-field class="search-input">
+            <input matInput placeholder="Search" >
+        </mat-form-field> -->
+        <span class="spacer"></span>
+        <button mat-icon-button>
+            <i class="material-icons">fullscreen</i>
+        </button>
+
+        <button fxHide.lt-sm mat-icon-button (click)="searchOpen = !searchOpen">
+            <i class="material-icons">search</i>
+        </button>
+        <cdk-search-components fxHide.lt-sm [open]="searchOpen"></cdk-search-components>
+
+        <button mat-icon-button>
+            <i class="material-icons">add_alert</i>
+        </button>
+        <cdk-user-menu></cdk-user-menu>
+        <button mat-icon-button (click)="notification.toggle()">
+            <i class="material-icons app-toolbar-menu">menu</i>
+        </button>
+    </mat-toolbar>
+    <mat-sidenav #notification align="end">
+        <mat-tab-group>
+            <mat-tab label="Notifications">
+                <cdk-new-messages fxFlex="33" fxFlex.lt-sm=100 fxFlexAlign.lt-sm="end">
+
+                </cdk-new-messages>
+                <cdk-to-do-list fxFlex="33" fxFlex.lt-sm=48></cdk-to-do-list>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav>
+
+    <!-- <mat-toolbar   class=" mat-elevation-z4">
+    <button mat-icon-button>
+      <i class="material-icons">search</i>
+    </button>
+    <cdk-search-components [open]="true"></cdk-search-components>
+  </mat-toolbar> -->
+
+    <div class="appHolder" id="appHolder">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>
+
+<!-- loader -->
+<!-- <div class="loader-container" >
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div> -->

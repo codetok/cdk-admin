@@ -1,0 +1,52 @@
+
+@import '~@angular/material/theming';
+
+@mixin weathercard($theme) {
+    
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+   
+    .weather{
+        height: 220px;
+        color:white;
+        .weatherimage{
+            background-image: url('http://www.adventuresaroundscotland.com/uploads/2/4/2/9/24290443/20160707-114148-2_orig.jpg');
+            background-size: cover;
+            height: 220px;
+            box-shadow:inset 0 0 0 2000px rgba(63,81,181,.4);      
+        }
+        
+    }
+    .place{
+        font-size:15px;
+        text-align:center;
+        margin: 0 auto;
+    }
+    .temperature{
+        text-align:center;
+        margin: 0 auto;
+    }
+    .weathericons{
+        height: 40px;
+        width: 40px;
+        font-size: 40px;
+        color: white;
+        margin: 0 auto;
+    }
+    .weather-series {
+        color: rgb(63,81,181);
+        height: 40px;
+        width: 40px;
+        font-size: 40px;
+    }
+    .weather-next {
+        color: #cfcfcf ;
+        margin: auto;
+    }
+    
+    
+    
+}
+.head{
+    font-size:20px;
+}

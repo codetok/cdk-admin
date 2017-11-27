@@ -1,0 +1,71 @@
+<div fxLayout="column" fxFlexFill fxFill fxLayoutAlign="space-between stretch">
+     <!-- <mat-toolbar fxFlex="10">
+	      	<h2>{{message?.contact}}</h2>
+	      	<span class="spacer"></span>
+	      		        <img class="avatar" src="assets/chatlist/man.jpeg" alt="...">
+
+			<button mat-icon-button >
+			    <mat-icon class="refresh">menu</mat-icon>    
+			</button>   
+	 </mat-toolbar> -->
+	 	<mat-list>
+	 		<mat-list-item >
+				<img matListAvatar [src]="message?.profile_pic" alt="...">
+				<h3 matLine> {{message?.contact}} </h3>
+				<p matLine>
+					<span> {{message?.status}} </span>
+				</p>
+				<button mat-icon-button >
+			    	<mat-icon>attachment</mat-icon>    
+				</button>  
+				<button mat-icon-button [matMenuTriggerFor]="appChatBodyMenu">
+			    	<mat-icon>more_vert</mat-icon>    
+				</button>  
+			</mat-list-item>
+		</mat-list>
+
+		<mat-menu #appChatBodyMenu="matMenu">
+		  <button mat-menu-item> 
+		  	<mat-icon>account_circle</mat-icon>
+		  Contact info </button>
+		  <button mat-menu-item><mat-icon>volume_mute</mat-icon> Mute </button>
+		  <button mat-menu-item><mat-icon>clear_all</mat-icon> Clear Messages </button>
+		</mat-menu>
+
+	<div fxFlex="75" fxFlexFill id="chat-body">
+
+		<div  *ngFor="let msg of message?.messages">
+
+			<cdk-message-sender *ngIf="msg.self" [message]="msg.message"></cdk-message-sender>
+
+			<cdk-message-reciever *ngIf="!msg.self" [message]="msg.message"></cdk-message-reciever>
+
+		</div>
+
+		<div  *ngIf="!message || message?.messages.length == 0">
+			no messages
+		</div>
+	 	
+	</div>
+
+	 <div fxFlex="15" fxlayout="row" class="mat-elevation-z1" style="padding: 12px 0 2px 20px;" fxLayoutAlign="space-between stretch">
+	 		
+	 		<form class="example-form" fxFlex="80" >
+			  	<mat-form-field fxFlexFill>
+				  	<textarea matInput placeholder="Type and hit enter to send your message" matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="3" [(ngModel)]="text" [ngModelOptions]="{standalone: true}" (keydown)="keyDown($event)" style="resize: none !important"></textarea>
+				</mat-form-field>
+			</form>
+
+			<div fxFlex="20" style="text-align: -webkit-center;">
+				
+				<button mat-fab color="primary"  (click)="send()">
+					<mat-icon role="img">send</mat-icon>
+				</button>
+
+			</div>
+
+			
+
+	 </div>
+             
+</div> 

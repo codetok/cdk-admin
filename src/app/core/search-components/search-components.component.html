@@ -1,0 +1,18 @@
+<!-- <mat-list *ngIf="bigMenu" class="secondarymenu"  >
+   <div fxLayout="row">
+    <mat-list fxFlex="49"  >
+      <mat-list-item *ngFor="let folder of [1,2,3,4,5]">
+        <mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>Forms</h4>
+      </mat-list-item>              
+    </mat-list>
+    <mat-list fxFlex="49"  >
+      <mat-list-item *ngFor="let folder of [1,2,3,4,5]">
+        <mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>Forms</h4>
+      </mat-list-item>
+    </mat-list>      
+  </div>
+</mat-list>
+  -->
+  <mat-form-field class="search"  [ngClass]="{'search-open': open == true}"> 
+  <input matInput placeholder="Search" autocomplete="off" (focus)="bigMenu = true" (focusout)="bigMenu = false">
+</mat-form-field>

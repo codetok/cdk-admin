@@ -1,0 +1,51 @@
+<!-- 
+<div  fxLayout="column"   fxLayoutGap="10px" fxFlex=90  >
+    <div fxFlex="49" fxLayout="row">
+        <div  fxFlex="49"  class="mat-elevation-z4 " fxLayoutAlign="space-around center" fxLayout="column"  [ngStyle]="{margin: 'auto', 'height':'350px'}">
+            <p >AREA CHART</p> 
+           <cdk-area-chart> </cdk-area-chart>
+
+        </div>
+        <div  fxFlex="49" class="mat-elevation-z4 "  fxLayoutAlign="space-around center" fxLayout="column" [ngStyle]="{margin: 'auto', 'height':'350px'}">
+           <p >DOUGHNUT CHART</p>
+<cdk-doughnut-chart ></cdk-doughnut-chart>
+
+        </div>
+    </div>
+    <div fxFlex="49"  fxLayout="row">
+        <div fxFlex="49" class="mat-elevation-z4 " fxLayoutAlign="space-around center" fxLayout="column" [ngStyle]="{margin: 'auto', 'height':'350px'}">
+         <p >PIE CHART</p>
+<cdk-pie-chart></cdk-pie-chart>
+        </div>
+        
+        <div fxFlex="49" class="mat-elevation-z4 "  fxLayout="column" fxLayoutAlign="space-around center"  [ngStyle]="{margin: 'auto',  'height':'350px'}">
+          <p fxFlex=20 fxLayoutAlign="space-around center">GUAGE CHART</p>
+<cdk-gauge-chart fxFlex=80 ></cdk-gauge-chart>
+        </div>
+    </div>
+</div> -->
+<div  fxLayout="column"   fxLayoutGap="10px" fxFlex=90 class="container" >
+    <div fxFlex="49" fxLayout="row" fxLayoutWrap >
+        <div  fxFlex="49"  fxFlex.lt-sm="100" class="mat-elevation-z4 " fxLayoutAlign="space-around center"  fxLayout="column"  [ngStyle]="{ 'height':'350px'}">
+            <p >AREA CHART</p> 
+            <cdk-area-chart > </cdk-area-chart>
+
+        </div>
+        <div  fxFlex="49"  fxFlex.lt-sm="100" class="mat-elevation-z4 "   fxLayoutAlign="space-around center" fxLayout="column" [ngStyle]="{ 'height':'350px'}">
+            <p >DOUGHNUT CHART</p>
+            <cdk-doughnut-chart ></cdk-doughnut-chart>
+
+        </div>
+    </div>
+    <div fxFlex="49"  fxLayout="row" fxLayoutWrap>
+        <div fxFlex="49" fxFlex.lt-sm="100" class="mat-elevation-z4 " fxLayoutAlign="space-around center" fxLayout="column" [ngStyle]="{ 'height':'350px'}">
+            <p >PIE CHART</p>
+            <cdk-pie-chart></cdk-pie-chart>
+        </div>
+        
+        <div fxFlex="49"  fxFlex.lt-sm="100" class="mat-elevation-z4 "  fxLayout="column" fxLayoutAlign="space-around center"  [ngStyle]="{  'height':'350px'}">
+            <p fxFlex=20 fxLayoutAlign="space-around center">GUAGE CHART</p>
+            <cdk-horizontal-chart></cdk-horizontal-chart>
+        </div>
+    </div>
+</div>

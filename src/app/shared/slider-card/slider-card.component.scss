@@ -1,0 +1,23 @@
+.leftRs {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 999px;
+        left: 0;
+        display:none
+    }
+
+    .rightRs {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 999px;
+        right: 0;
+        display:none
+    }

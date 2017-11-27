@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+@import '~app/core/side-menu/side-menu.component.scss';
+
+$config: mat-typography-config();
+
+$custom-typography: mat-typography-config(
+    $font-family: Roboto,  
+    $headline: mat-typography-level(32px, 48px, 300),
+    $body-1: mat-typography-level(14px, 48px, 300),
+    $body-2: mat-typography-level(14px, 24px, 300),
+    $subheading-1:mat-typography-level(14px, 14px, 300),
+    $subheading-2 :mat-typography-level(14px, 14px, 300),
+    $button:mat-typography-level(14px, 14px, 300)
+);
+
+@include mat-list-typography($custom-typography);
+
+
+
+@include angular-material-typography($custom-typography)
+
+

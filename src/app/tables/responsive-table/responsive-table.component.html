@@ -1,0 +1,84 @@
+<div fxLayout="column" fxFlex="70" fxFlex.xs="100"  fxFlex.sm="90" fxLayoutAlign="space-around stretch" class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px"  >
+    <mat-toolbar >
+        Tables
+        <span class="spacer"></span>
+    </mat-toolbar>
+    <div fxLayout="column" class="widgetHolder-content">
+        
+         
+        <div fxLayout="column" class=" mat-elevation-z4">
+            <mat-toolbar>
+                  Table with pagination
+                  <span class="spacer"></span>
+                  <button mat-icon-button (click)="showResponsiveTableCode = !showResponsiveTableCode">
+                  <mat-icon class="refresh">code</mat-icon>    
+                  </button>
+            </mat-toolbar>
+            <div *ngIf="showResponsiveTableCode">
+                <mat-tab-group>
+                    <mat-tab label="HTML">
+                            <pre><code mwlHighlightJs [source]="responsiveServ?.responsiveTablehtmlsource" language="html"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="TS">
+                        <pre><code mwlHighlightJs [source]="responsiveServ?.responsiveTabletssource" language="typescript"></code></pre>
+                    </mat-tab>
+                    <mat-tab label="CSS">
+                        <pre><code mwlHighlightJs [source]="responsiveServ?.responsiveTablecsssource" language="typescript"></code></pre>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+			<div fxLayout="column" fxLayoutAlign="space-around stretch" fxFlex.lt-sm=22 fxLayoutWrap fxFlex="auto" fxFlex.gt-xs="33" fxFlex.gt-sm="100" >
+
+				<table  matSort (matSortChange)="sortData($event)">
+					<thead>
+						<tr>
+							<th mat-sort-header="{{th.key}}" scope="col" *ngFor="let th of responsiveServ?.header">{{th.name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let row of rows let i=index" >
+							<td [attr.data-label]="th.name" *ngFor="let th of responsiveServ?.header" style="text-align: center;word-wrap: break-word;">
+
+								<span *ngIf="th.key!='action'">
+
+									{{row[th.key]}}
+
+									<mat-chip  (click)="findDuplicates(row)"
+									selected="true"
+									color="warn"  matTooltip="{{row['duplicate_applications'].length}} duplicate entries" matTooltipPosition="right" *ngIf="th.key=='applicationNumber' && row['duplicate_applications'] != 'undefined' && row['duplicate_applications'] && row['duplicate_applications'].length > 0" >
+									{{row['duplicate_applications'].length }}
+									</mat-chip>
+
+								</span>
+
+								<mat-button-toggle-group *ngIf="th.key=='action'">
+									<mat-button-toggle  value="left" (click)="editRow(row)">
+									<mat-icon>mode_edit</mat-icon>
+									</mat-button-toggle>
+									<mat-button-toggle  value="right" (click)="deleteRow(i)">
+									<mat-icon>delete</mat-icon>
+									</mat-button-toggle>
+									<mat-button-toggle  value="right" (click)="viewRow(row)">
+									<mat-icon>visibility</mat-icon>
+									</mat-button-toggle>
+								</mat-button-toggle-group>            
+							</td>
+							</tr>
+							<tr *ngIf="rows?.length==0 && status==false">
+								<td [colSpan]="header.length" style="text-align: center;">
+								No records found
+								</td>
+							</tr>
+					</tbody>
+					<thead *matHeaderRowDef="displayedColumns"></thead>
+					<tr *matRowDef="let row; columns: displayedColumns;"></tr>
+				</table>
+				<mat-paginator [length]="pageLength"
+		              [pageSize]="pageSize"
+		              [pageSizeOptions]="[1, 5, 10, 25, 100, 150, 200]"  (page)="next($event)">
+				</mat-paginator>
+
+            </div>
+        </div>
+    </div>
+</div>
