@@ -1,0 +1,33 @@
+.profile-card-holder{
+    margin: 10px;
+    height:auto;
+    background-color: #36e2be;
+    box-sizing: border-box;
+    & .banner-content{
+        height: auto;
+        background-color: #36e2be;
+        
+    }
+    & .banner {
+        background-image: url('/assets/banner-profile.jpeg');
+        background-size: contain;
+
+        background-repeat: no-repeat;
+        &:before {
+            content: '';
+            display: block;
+            position: relative;
+            right: 0%;
+            top: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-right-color: #36e2be;
+            border-width: 0 100px 100px 100px;
+            z-index: 0;
+        }
+        
+    }
+    .profile-card-content{
+        padding: 10px;
+    }
+}

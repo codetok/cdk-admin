@@ -1,0 +1,33 @@
+<mat-sidenav-container class="container" fullscreen  >
+    <mat-sidenav   mode="side" class="sidenav" #sidenav opened="true" style="overflow: hidden;">
+        <mat-toolbar>
+         <img src="./assets/logo.codetok.png" width="36px">
+             Codetok
+        </mat-toolbar>
+        <cdk-sidemenu></cdk-sidemenu>
+    </mat-sidenav>
+    <mat-sidenav-content  >
+        <mat-drawer-container fullscreen style="overflow: hidden;">
+            <mat-drawer mode="side" #drawer class="drawer" opened="false">
+                <mat-toolbar>
+                    <img src="./assets/logo.codetok.png" width="36px">
+                </mat-toolbar>
+                <cdk-sidemenu [iconOnly]="true"></cdk-sidemenu>
+            </mat-drawer>
+            <mat-drawer-content style="overflow: hidden;">
+                <mat-toolbar >                            
+                    <button mat-icon-button (click)="sidenav.toggle();drawer.toggle();">
+                        <i class="material-icons app-toolbar-menu">menu </i>
+                    </button> 
+                </mat-toolbar>
+                <perfect-scrollbar  >
+                    <div style="position: relative;" >
+                        <router-outlet>
+
+                        </router-outlet>
+                    </div>
+                </perfect-scrollbar>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </mat-sidenav-content>
+</mat-sidenav-container>

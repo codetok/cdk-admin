@@ -1,0 +1,33 @@
+
+<div fxLayout="row" fxLayoutWrap>
+    <div  *ngFor="let dash of dashCard"   fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25" >
+        <cdk-dashcard  [dashData]="dash" ></cdk-dashcard>
+    </div>
+</div>
+<div fxLayout="row" fxLayoutWrap>
+    <div  fxFlex="75" fxFlex.lt-sm="100"  fxFlex.sm="75" fxFlex.md="75"  >
+        <div fxLayout="row" >
+            <cdk-bar-graph fxFlex="50"></cdk-bar-graph>
+            <cdk-doughnut-graph fxFlex="50"></cdk-doughnut-graph>
+        </div>
+        <cdk-line-graph></cdk-line-graph>
+    </div>
+    <div   fxFlex="25" fxFlex.lt-sm="100"  fxFlex.sm="25" fxFlex.md="25" >
+        <div fxLayout="column" >
+            <cdk-weather></cdk-weather>
+            <cdk-weather></cdk-weather>
+        </div>
+    </div>
+</div>
+
+<div fxLayout="row" >
+    <div fxFlex.lt-sm="100"  fxFlex.sm="33" fxFlex.md="33">
+        <cdk-profile-card ></cdk-profile-card>
+    </div>
+    <div fxFlex.lt-sm="100"  fxFlex.sm="33" fxFlex.md="33">
+        <cdk-pricing-plan></cdk-pricing-plan>
+    </div>
+    <div fxFlex.lt-sm="100"  fxFlex.sm="33" fxFlex.md="33">
+        <cdk-pricing-plan></cdk-pricing-plan>
+    </div>    
+</div>
