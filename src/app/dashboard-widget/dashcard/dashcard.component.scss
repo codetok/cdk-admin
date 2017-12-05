@@ -1,4 +1,32 @@
-.dashcard{
-    margin: 10px;
-    height: 100px;
+@mixin mat-icon($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+    color:white;
+}
+
+@mixin mat-headline {
+    margin: 0px;
+    color: white;
+}
+
+@mixin dashcard($theme) {
+
+    .dashcard {
+        margin: 10px 5px;
+        height: 100px;
+        background-color:white;
+    }
+    .mat-icon {
+        @include mat-icon(40px);
+    }
+    .border-top {
+        border-top: 1px solid white;
+    }
+    .mat-headline {
+        @include mat-headline();
+    }
+    .mat-body-1{
+        @include mat-headline();
+    }
 }

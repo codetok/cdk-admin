@@ -1,33 +1,25 @@
-.profile-card-holder{
-    margin: 10px;
-    height:auto;
-    background-color: #36e2be;
-    box-sizing: border-box;
-    & .banner-content{
-        height: auto;
-        background-color: #36e2be;
-        
-    }
-    & .banner {
-        background-image: url('/assets/banner-profile.jpeg');
-        background-size: contain;
+@mixin dashboard-profile($theme) {
 
-        background-repeat: no-repeat;
-        &:before {
-            content: '';
-            display: block;
-            position: relative;
-            right: 0%;
-            top: 0;
-            border-style: solid;
-            border-color: transparent;
-            border-right-color: #36e2be;
-            border-width: 0 100px 100px 100px;
-            z-index: 0;
+    .profile-card-holder{
+        margin: 10px 5px;
+        min-height: 300px;
+        padding: 5px;
+        background:white;
+        box-sizing: border-box;
+        color:white;
+        background-image: -webkit-linear-gradient(45deg, mat-color($primary,400) 45%, mat-color($primary,300)  45%);
+        & .banner-content{
+            height: auto;           
         }
         
-    }
-    .profile-card-content{
-        padding: 10px;
+        & .banner {
+            background-size: screen;
+            min-height: 56px;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .profile-card-content{
+            padding: 10px;
+        }
     }
 }

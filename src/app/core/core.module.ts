@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -23,7 +23,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatIconModule,
     MatChipsModule,
     RouterModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    FlexLayoutModule    
   ],
   declarations: [SidemenuComponent, SidemenuItemComponent],
   exports: [SidemenuComponent, SidemenuItemComponent],

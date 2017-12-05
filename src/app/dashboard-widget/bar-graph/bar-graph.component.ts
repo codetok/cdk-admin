@@ -14,7 +14,7 @@ export class BarGraphComponent implements OnInit {
   ngOnInit() {
       setTimeout(() => {
           this.createBarGraph();
-      },1000)
+      },500)
   }
 
   createBarGraph() {

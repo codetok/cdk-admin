@@ -1,0 +1,19 @@
+.round-progressbar {
+     margin: 10px 5px;
+     padding: 10px;
+     background-color:white;
+     min-height: 300px;
+
+     & .header {
+        text-align: center;
+        color:white;
+     }
+     & .roundholder{
+        position: absolute;
+        
+        & .current{
+            position: relative;
+        }
+     }
+
+}

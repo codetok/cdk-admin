@@ -13,7 +13,7 @@ export class LineGraphComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
         this.createLineChart();  
-    },1000)
+    },500)
   }
   createLineChart() {
       new Chart('line-graph', {

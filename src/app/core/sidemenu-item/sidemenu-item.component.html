@@ -1,9 +1,9 @@
 <mat-nav-list  [style.height]="getHeight()">
     <mat-list-item  (click)="menu.open = !menu.open"   [routerLink]="[menu.link]">
-        <mat-icon   matListIcon>{{menu.icon}} </mat-icon>
+        <mat-icon matListIcon iconsmall  >{{menu.icon}} </mat-icon>
         <h3 matLine *ngIf="!iconOnly">{{ menu.name }} </h3>
         <mat-chip-list *ngIf="menu?.chip && !iconOnly">
-            <mat-chip>{{menu?.chip?.value}} </mat-chip>
+            <mat-chip >{{menu?.chip?.value}} </mat-chip>
         </mat-chip-list>        
         <mat-icon *ngIf="chechForChildMenu()" class="sidenav-dropdown-indicator rotate " [ngClass]="{'indicateOpen':menu.open}"> expand_more</mat-icon>
     </mat-list-item>

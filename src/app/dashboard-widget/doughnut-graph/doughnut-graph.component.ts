@@ -13,7 +13,7 @@ export class DoughnutGraphComponent implements OnInit {
   ngOnInit() {
       setTimeout(() => {
           this.createDoughnutGraph();    
-      },1000)
+      },500)
       
   }
     randomNumber(min=0, max=0) {

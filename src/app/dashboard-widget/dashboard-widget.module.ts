@@ -13,7 +13,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { MatListModule } from '@angular/material/list';
 import { WeatherComponent } from './weather/weather.component';
-
+import { Ng2OdometerModule } from 'ng2-odometer';
+import { SharePriceComponent } from './share-price/share-price.component';
+import { AirportGraphComponent } from './airport-graph/airport-graph.component';
+import { RoundProgressbarComponent } from './round-progressbar/round-progressbar.component'; 
+import {RoundProgressModule} from 'angular-svg-round-progressbar'; 
 
 @NgModule({
   imports: [
@@ -23,7 +27,9 @@ import { WeatherComponent } from './weather/weather.component';
     MatIconModule,
     MatTabsModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    Ng2OdometerModule,
+    RoundProgressModule
   ],
   declarations: [
       DashcardComponent, 
@@ -32,7 +38,11 @@ import { WeatherComponent } from './weather/weather.component';
       DoughnutGraphComponent, 
       ProfileCardComponent,
       PricingPlanComponent,
-      WeatherComponent
+      WeatherComponent,
+      SharePriceComponent,
+      AirportGraphComponent,
+      RoundProgressbarComponent,
+
       ],
   exports: [
       DashcardComponent, 
@@ -41,7 +51,10 @@ import { WeatherComponent } from './weather/weather.component';
       DoughnutGraphComponent, 
       ProfileCardComponent,
       PricingPlanComponent,
-      WeatherComponent
-    ]
+      WeatherComponent,
+      SharePriceComponent,
+      AirportGraphComponent,
+      RoundProgressbarComponent
+      
 })
 export class DashboardWidgetModule { }

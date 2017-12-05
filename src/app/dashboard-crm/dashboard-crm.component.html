@@ -15,19 +15,24 @@
     <div   fxFlex="25" fxFlex.lt-sm="100"  fxFlex.sm="25" fxFlex.md="25" >
         <div fxLayout="column" >
             <cdk-weather></cdk-weather>
-            <cdk-weather></cdk-weather>
+            
+            <cdk-share-price></cdk-share-price>
         </div>
     </div>
 </div>
 
-<div fxLayout="row" >
-    <div fxFlex.lt-sm="100"  fxFlex.sm="33" fxFlex.md="33">
-        <cdk-profile-card ></cdk-profile-card>
+<div fxLayout="row" fxLayoutWrap>
+    <div  fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
+       <cdk-round-progressbar [title]="'SALES'"  [current]="'23'" [max]="'100'" [background]="'#32CDCD'" [color]="'#0cd397'" [boxcolor]="'#7986CB'"  ></cdk-round-progressbar>
     </div>
-    <div fxFlex.lt-sm="100"  fxFlex.sm="33" fxFlex.md="33">
-        <cdk-pricing-plan></cdk-pricing-plan>
+    <div fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
+       <cdk-round-progressbar  [title]="'LEADS'" [current]="'23'" [max]="'100'" [background]="'#45ccce'" [color]="'#0cd397'" [boxcolor]="'#64B5F6'"  ></cdk-round-progressbar>
     </div>
-    <div fxFlex.lt-sm="100"  fxFlex.sm="33" fxFlex.md="33">
-        <cdk-pricing-plan></cdk-pricing-plan>
+    <div fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
+      <cdk-round-progressbar  [title]="'ASSETS'" [current]="'23'" [max]="'100'" [background]="'#45ccce'" [color]="'#0cd397'" [boxcolor]="'#4DB6AC'"  ></cdk-round-progressbar>
+    </div>
+    <div fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
+        <cdk-round-progressbar  [title]="'BANKING'" [current]="'23'" [max]="'100'" [background]="'#1f91ef'" [color]="'#15a6ea'" [boxcolor]="'#81C784'"  ></cdk-round-progressbar>
     </div>    
 </div>
+<app-airport-graph></app-airport-graph>

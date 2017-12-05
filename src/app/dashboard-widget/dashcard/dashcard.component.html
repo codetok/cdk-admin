@@ -3,10 +3,11 @@
         <mat-icon  class="cardIcon">{{dashData?.icon}}</mat-icon>
     </div>
     <div  fxFlex="60" fxLayout="column" fxLayoutAlign="center center" [style.background]="dashData?.colorDark" >
-        <h1 class="no-margin mat-headline">
-            {{dashData?.number}}
-        </h1>
-        <p class="mat-body-1 no-margin border-top" >
+         
+        <div style="color: white;font-size: 40px">
+            <ng2-odometer [number]="dashData?.number" [config]="{ }"></ng2-odometer>
+        </div>
+        <p class="mat-body-1 border-top">
             {{dashData?.title}}
         </p>
     </div>
