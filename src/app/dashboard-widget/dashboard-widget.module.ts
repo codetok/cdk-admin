@@ -17,7 +17,7 @@ import { Ng2OdometerModule } from 'ng2-odometer';
 import { SharePriceComponent } from './share-price/share-price.component';
 import { AirportGraphComponent } from './airport-graph/airport-graph.component';
 import { RoundProgressbarComponent } from './round-progressbar/round-progressbar.component'; 
-import {RoundProgressModule} from 'angular-svg-round-progressbar'; 
+import { RoundProgressModule } from 'angular-svg-round-progressbar'; 
 
 @NgModule({
   imports: [
@@ -55,6 +55,7 @@ import {RoundProgressModule} from 'angular-svg-round-progressbar';
       SharePriceComponent,
       AirportGraphComponent,
       RoundProgressbarComponent
+    ]
       
 })
 export class DashboardWidgetModule { }
