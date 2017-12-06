@@ -17,7 +17,7 @@ export class RoundProgressbarComponent implements OnInit {
 
 
 
-    public radius       =    "250";
+    public radius       =    250;
     public stroke       =    "20" ;
     public semicircle   =    false;
     public rounded      =    true;
@@ -30,6 +30,19 @@ export class RoundProgressbarComponent implements OnInit {
 
     ngOnInit() {
     }
-     
+    getOverlayStyle() {
+        let isSemi = this.semicircle;
+        let transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
+
+        return {
+          'top': isSemi ? 'auto' : '50%',
+          'bottom': isSemi ? '5%' : 'auto',
+          'left': '50%',
+          'transform': transform,
+          '-moz-transform': transform,
+          '-webkit-transform': transform,
+          'font-size': this.radius / 7 + 'px'
+        };
+    }
 
 }

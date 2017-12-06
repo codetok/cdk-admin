@@ -7,9 +7,9 @@
         <div fxFlex="10">
         </div>
         <div fxFlex="80" >
-            <div class="roundholder">
-                <div class="current mat-headline" >{{ current }}/{{ max }}</div>    
-                <round-progress fxFlexFill style="width:100%;height: 100%;" [current]="current"
+              <div class="progress-wrapper">
+                    <div class="current mat-headline " [ngStyle]="getOverlayStyle()">{{ current }}/{{ max }}</div>
+                    <round-progress  [current]="current"
                     [max]="max"
                     [color]="color"
                     [background]="background"
@@ -23,7 +23,8 @@
                     [animation]="animation"
                     [animationDelay]="1"
                      ></round-progress>
-            </div>
+              </div>
+           
         </div>
         <div  fxFlex="10"></div>
     </div>

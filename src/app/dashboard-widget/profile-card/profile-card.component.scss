@@ -3,20 +3,33 @@
     .profile-card-holder{
         margin: 10px 5px;
         min-height: 300px;
-        padding: 5px;
-        background:white;
         box-sizing: border-box;
-        color:white;
-        background-image: -webkit-linear-gradient(45deg, mat-color($primary,400) 45%, mat-color($primary,300)  45%);
-        & .banner-content{
-            height: auto;           
-        }
+        color:#f5f0f0f2;
         
+        .profile-details{
+            background-image: -webkit-linear-gradient(45deg, mat-color($primary,400) 45%, mat-color($primary,300)  45%);
+            margin-top:-50px;
+            min-height: 242px;
+            
+            & .profile-details-holder{
+                margin-top: 70px;
+            }
+        }
+        .center-align{
+            text-align: center;
+        }
+        .Follow{
+            width: 70%;
+        }
         & .banner {
             background-size: screen;
             min-height: 56px;
             background-repeat: no-repeat;
             color: white;
+            & img {
+                position: relative;
+                z-index: 1;
+            }
         }
         .profile-card-content{
             padding: 10px;

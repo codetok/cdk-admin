@@ -28,7 +28,7 @@ export const menus = [
         "sub"    :  [
                         {
                             "name": "Buttons",
-                            "link": "buttons",
+                            "link": "material-widgets/buttons",
                             "icon": "indeterminate_check_box",
                             "chip"   : false,
                             "open"   : false,

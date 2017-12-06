@@ -1,0 +1,18 @@
+@mixin sales-list($theme) {
+    
+    .sales-list{
+        margin: 10px 5px;
+        background: white;
+    }
+    .pull-right{
+        flex: 1 1 auto;
+    }
+    mat-list-item:hover {
+        background: #e8eaf6;
+        cursor: pointer;
+    }
+    .mat-chip {
+        padding: 1px 13px;
+    }
+    
+}

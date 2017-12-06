@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AirportGraphComponent } from './airport-graph.component';
+import { D3UsaComponent } from './d3-usa.component';
 
-describe('AirportGraphComponent', () => {
-  let component: AirportGraphComponent;
-  let fixture: ComponentFixture<AirportGraphComponent>;
+describe('D3UsaComponent', () => {
+  let component: D3UsaComponent;
+  let fixture: ComponentFixture<D3UsaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AirportGraphComponent ]
+      declarations: [ D3UsaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AirportGraphComponent);
+    fixture = TestBed.createComponent(D3UsaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
