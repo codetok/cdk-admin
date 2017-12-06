@@ -8,11 +8,12 @@ import { MatListDivider } from '@angular/material/list';
   styleUrls: ['./buttons.component.scss']
 })
 export class ButtonsComponent implements OnInit {
+
 	buttonHelpers: any = BUTTON_HELPERS;
   	constructor() { }
 
   	ngOnInit() {
-  		console.log(this.buttonHelpers);
+  		
   	}
 
 }
