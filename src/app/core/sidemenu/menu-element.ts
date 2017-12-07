@@ -49,7 +49,7 @@ export const menus = [
                         },
                         {
                             "name": "Expansion",
-                            "link": "expansion",
+                            "link": "material-widgets/expansion",
                             "icon": "web_aaset",
                             "chip"   : false,
                             "open"   : false,

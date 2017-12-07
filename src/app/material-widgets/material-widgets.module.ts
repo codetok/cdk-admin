@@ -10,6 +10,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
 
 import { ButtonsComponent } from './buttons/buttons.component';
 
@@ -19,6 +22,7 @@ import * as hljs from 'highlight.js';
 import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
 import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { StepperComponent } from './stepper/stepper.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
@@ -39,6 +43,9 @@ export function highlightJsFactory(): any {
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,
       useFactory: highlightJsFactory
@@ -47,7 +54,8 @@ export function highlightJsFactory(): any {
   ],
   declarations: [
     ButtonsComponent,
-    StepperComponent],
+    StepperComponent,
+    ExpansionPanelComponent],
   exports: [
     ]
       
