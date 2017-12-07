@@ -22,7 +22,8 @@ export const appRoutes: Routes = [{
       path:'',component: AuthComponent, children: [
         {path: 'dashboard', loadChildren: '../dashboard-crm/dashboard-crm.module#DashboardCrmModule'},
         {path: 'dashboard-account', loadChildren: '../dashboard-accounts/dashboard-accounts.module#DashboardAccountsModule'},
-        {path: 'material-widgets', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule'}
+        {path: 'material-widgets', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule'},
+        {path: 'tables', loadChildren: '../tables/tables.module#TablesModule'},
       ]}
   ]
 

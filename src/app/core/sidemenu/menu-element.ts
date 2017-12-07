@@ -164,7 +164,7 @@ export const menus = [
                         {
                             "name": "Filtering",
                             "icon": "filter_list",
-                            "link": "filter-table",
+                            "link": "tables/filter",
                             "open"   : false,
                         },
                         {
