@@ -4,12 +4,14 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { ListComponent } from './list/list.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
     { path: 'list', component:  ListComponent },
     { path: 'stepper', component: StepperComponent},
     { path: 'expansion', component: ExpansionPanelComponent},
+    { path: 'spinner', component: SpinnerComponent},
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 

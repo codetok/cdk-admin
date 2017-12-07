@@ -50,18 +50,18 @@ export const menus = [
 
                         },
                         {
-                            "name": "Expansion",
-                            "link": "material-widgets/expansion",
-                            "icon": "web_aaset",
-                            "chip"   : false,
-                            "open"   : false,
+                            "name"    : "Expansion",
+                            "link"    : "material-widgets/expansion",
+                            "icon"    : "web_aaset",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
-                            "name": "Progress Spinner",
-                            "link": "spinner",
-                            "icon": "cached",
-                            "chip"   : false,
-                            "open"   : false,
+                            "name"    : "Progress Spinner",
+                            "link"    : "material-widgets/spinner",
+                            "icon"    : "cached",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "Cards",

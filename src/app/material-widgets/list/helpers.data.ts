@@ -1,4 +1,5 @@
 export const LIST_HELPERS: any = {
+	
 	tsSourceSelectionList:`
 import { Component, OnInit } from '@angular/core';
 
@@ -27,12 +28,12 @@ export class ListComponent implements OnInit {
 		Options selected: {{shoes.selectedOptions.selected.length}}
 	</p>
 	`.trim(),
-}
 
-export const Messages: Array<any> = [
+	export const Messages: Array =[
 		{from: 'codetok', subject: 'client', content: 'hi there'},
-        {from: 'client', subject: 'codetok', content: 'yes'},
-        {from: 'jay', subject: 'tom', content: 'yes please'}
-    ];
+		{from: 'client', subject: 'codetok', content: 'yes'},
+		{from: 'jay', subject: 'tom', content: 'yes please'}
+	];
 
-export const Links: Array<any> = ['/home', '/admin'];
+	export const Links: Array = ['/home', '/admin'];
+}
