@@ -42,7 +42,7 @@ export const menus = [
                         },
                         {
                             "name": "Stepper",
-                            "link": "stepper",
+                            "link": "material-widgets/stepper",
                             "icon": "view_week",
                             "chip"   : false,
                             "open"   : false,
