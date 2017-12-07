@@ -41,15 +41,17 @@ export const menus = [
                             "open"  : false,
                         },
                         {
-                            "name"  : "Stepper",
-                            "link"  : "stepper",
-                            "icon"  : "view_week",
-                            "chip"  : false,
-                            "open"  : false,
+
+                            "name": "Stepper",
+                            "link": "material-widgets/stepper",
+                            "icon": "view_week",
+                            "chip"   : false,
+                            "open"   : false,
+
                         },
                         {
                             "name": "Expansion",
-                            "link": "expansion",
+                            "link": "material-widgets/expansion",
                             "icon": "web_aaset",
                             "chip"   : false,
                             "open"   : false,
