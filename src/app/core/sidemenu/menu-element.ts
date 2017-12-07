@@ -27,25 +27,27 @@ export const menus = [
         "open"   : false,
         "sub"    :  [
                         {
-                            "name": "Buttons",
-                            "link": "material-widgets/buttons",
-                            "icon": "indeterminate_check_box",
-                            "chip"   : false,
-                            "open"   : false,
+                            "name"  : "Buttons",
+                            "link"  : "material-widgets/buttons",
+                            "icon"  : "indeterminate_check_box",
+                            "chip"  : false,
+                            "open"  : false,
                         },
                         {
-                            "name": "List",
-                            "link": "list",
-                            "icon": "list",
-                            "chip"   : false,
-                            "open"   : false,
+                            "name"  : "List",
+                            "link"  : "material-widgets/list",
+                            "icon"  : "list",
+                            "chip"  : false,
+                            "open"  : false,
                         },
                         {
+
                             "name": "Stepper",
                             "link": "material-widgets/stepper",
                             "icon": "view_week",
                             "chip"   : false,
                             "open"   : false,
+
                         },
                         {
                             "name": "Expansion",
