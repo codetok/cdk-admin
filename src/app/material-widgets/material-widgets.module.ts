@@ -13,6 +13,7 @@ import { MaterialWidgetsRouterModule } from './material-widgets.router';
 import * as hljs from 'highlight.js';
 import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
 import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
+import { ListComponent } from './list/list.component';
 
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
@@ -35,7 +36,8 @@ export function highlightJsFactory(): any {
     MaterialWidgetsRouterModule
   ],
   declarations: [
-    ButtonsComponent],
+    ButtonsComponent,
+    ListComponent],
   exports: [
     ]
       

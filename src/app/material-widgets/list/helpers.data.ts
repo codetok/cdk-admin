@@ -1,0 +1,30 @@
+export const LIST_HELPERS: any = {
+	tsSourceSelectionList:`
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'cdk-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
+})
+export class ListComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+ }
+	`.trim(),
+
+
+	htmlSourceSelectionList:`
+	<mat-selection-list #shoes>
+		<mat-list-option *ngFor="let shoe of ['Boots', 'Sneaker', 'Casual']">
+			{{shoe}}
+		</mat-list-option>
+	</mat-selection-list>
+	<p>
+		Options selected: {{shoes.selectedOptions.selected.length}}
+	</p>
+	`.trim(),
+}
