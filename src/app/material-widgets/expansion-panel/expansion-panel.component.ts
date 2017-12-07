@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EXPANSION_HELPERS } from './helpers.data';
 
 @Component({
-  selector: 'app-expansion-panel',
+  selector: 'cdk-expansion-panel',
   templateUrl: './expansion-panel.component.html',
   styleUrls: ['./expansion-panel.component.scss']
 })

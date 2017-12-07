@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { STEPPER_HELPERS } from './helpers.data';
 
 @Component({
-  selector: 'app-stepper',
+  selector: 'cdk-stepper',
   templateUrl: './stepper.component.html',
   styleUrls: ['./stepper.component.scss']
 })
