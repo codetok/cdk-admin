@@ -4,6 +4,8 @@
 @import '~app/core/sidemenu-item/sidemenu-item.component.scss';
 @import '~app/dashboard-widget/dashcard/dashcard.component.scss';
 @import '~app/dashboard-widget/profile-card/profile-card.component.scss';
+@import '~app/dashboard-widget/round-progressbar/round-progressbar.component.scss';
+@import '~app/dashboard-widget/sales-list/sales-list.component.scss';
 
 $mat-light-theme-background: (
   status-bar: map_get($mat-grey, 300),
@@ -65,10 +67,11 @@ cdk-profile-card{
     @include dashboard-profile($cdk-dashboard-profile-theme); 
     @include mat-tabs-theme($cdk-dashboard-profile-theme); 
 }
-
-
 @include angular-material-theme($cdk-theme);
 @include auth($cdk-theme);
+@include round-progressbar($cdk-theme);
+@include sales-list($cdk-theme);
+
 
 
 

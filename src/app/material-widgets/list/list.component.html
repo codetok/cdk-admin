@@ -1,0 +1,150 @@
+<div fxLayout="column"   style="background-color: white; border: 1px solid #E91E63;">
+
+	<div class="list-header">
+		<h3>Lists</h3>
+	</div>
+	
+	<div class="list-container">
+		
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #E91E63;margin: 14px 0;">Simple List</h4>
+					<mat-divider></mat-divider>
+					<mat-list>
+						<mat-list-item> Pepper </mat-list-item>
+						<mat-list-item> Salt </mat-list-item>
+						<mat-list-item> Paprika </mat-list-item>
+					</mat-list>
+			</div>
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #E91E63;margin: 14px 0;">Navigation list</h4>
+				<mat-divider></mat-divider>
+
+				<mat-nav-list>
+				  	<mat-list-item *ngFor="let link of links">
+				     	<a matLine href="...">{{ link }}</a>
+				     	<button mat-icon-button>
+				        	<mat-icon>info</mat-icon>
+				     	</button>
+				  	</mat-list-item>
+				</mat-nav-list>
+			</div>
+		</div>
+
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+
+				<h4 style="color: #E91E63;margin: 14px 0;">Selection list</h4>
+				<mat-divider></mat-divider>
+		
+				<mat-selection-list #shoes>
+				  	<mat-list-option *ngFor="let shoe of ['Boots', 'Sneaker', 'Casual']">
+				    {{shoe}}
+				  	</mat-list-option>
+				</mat-selection-list>
+
+			<p>
+			  Options selected: {{shoes.selectedOptions.selected.length}}
+			</p>
+						           
+
+			</div>
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #E91E63;margin: 14px 0;">Multi-line lists</h4>
+				<mat-divider></mat-divider>
+				<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<!-- two line list -->
+					<mat-list>
+						<h3>Two line</h3>
+					  <mat-list-item *ngFor="let message of messages">
+					    <h3 matLine> {{message.from}} </h3>
+					    <p matLine>
+					      <span> {{message.subject}} </span>
+					      <span class="demo-2"> -- {{message.content}} </span>
+					    </p>
+					  </mat-list-item>
+					</mat-list>
+
+					<!-- three line list -->
+					<mat-list>
+						<h3>Three line</h3>
+					  <mat-list-item *ngFor="let message of messages">
+					    <h3 matLine> {{message.from}} </h3>
+					    <p matLine> {{message.subject}} </p>
+					    <p matLine class="demo-2"> {{message.content}} </p>
+					  </mat-list-item>
+					</mat-list>		           
+				</div>
+			</div>
+		</div>
+
+
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+
+				<h4 style="color: #E91E63;margin: 14px 0;">Lists with icons</h4>
+				<mat-divider></mat-divider>
+		
+				<mat-list>
+				  <mat-list-item *ngFor="let message of messages">
+				    <mat-icon matListIcon>folder</mat-icon>
+				    <h3 matLine> {{message.from}} </h3>
+				    <p matLine>
+				      <span> {{message.subject}} </span>
+				      <span class="demo-2"> -- {{message.content}} </span>
+				    </p>
+				  </mat-list-item>
+				</mat-list>
+						           
+
+			</div>
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #E91E63;margin: 14px 0;">Lists with avatar</h4>
+				<mat-divider></mat-divider>
+		
+				<mat-list>
+				  <mat-list-item *ngFor="let message of messages">
+				    <img matListAvatar src="assets/man.jpeg" alt="...">
+				    <h3 matLine> {{message.from}} </h3>
+				    <p matLine>
+				      <span> {{message.subject}} </span>
+				      <span class="demo-2"> -- {{message.content}} </span>
+				    </p>
+				  </mat-list-item>
+				</mat-list>
+			</div>
+		</div>
+	</div>
+
+	<div class="list-header" style="    margin-top: 10px;">
+		<h3>Exapmles</h3>
+	</div>
+
+	<mat-tab-group fxFlexFill>
+		<mat-tab label="TS">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="listHelpers?.tsSourceSelectionList" language="typescript"></code></pre>
+        </mat-tab>
+        <mat-tab label="HTML">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="listHelpers?.htmlSourceSelectionList" language="html"></code></pre>
+        </mat-tab>
+
+        <mat-tab label="PREVIEW">
+        	<div style="padding: 20px;">
+	        	<mat-selection-list #shoes>
+				  	<mat-list-option *ngFor="let shoe of ['Boots', 'Sneaker', 'Casual']">
+				    {{shoe}}
+				  	</mat-list-option>
+				</mat-selection-list>
+
+			<p>
+			  Options selected: {{shoes.selectedOptions.selected.length}}
+			</p>
+		  	</div>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>

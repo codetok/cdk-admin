@@ -1,0 +1,114 @@
+
+<div fxLayout="column"  style="background: white;     border: 1px solid #0a79d4">
+
+	<div class="stepper-header">
+		<h3>Stepper</h3>
+	</div>
+	
+	<div class="stepper-container">
+		
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+			<div fxFlexLayoutWrap >
+
+				<h4 style="color: #0a79d4;margin: 14px 05px;">Basic Stepper</h4>
+
+				<mat-divider></mat-divider>
+		
+				<button mat-raised-button color="accent" (click)="isLinear = !isLinear" id="toggle-linear">Toggle linear mode</button> 
+				<span *ngIf="isLinear">Linear mode enabled</span>
+
+				<mat-horizontal-stepper [linear]="isLinear" fxFlexfill>
+				  <mat-step [stepControl]="firstFormGroup">
+				    <form [formGroup]="firstFormGroup">
+				      <ng-template matStepLabel >Fill out your name</ng-template>
+				      <mat-form-field>
+				        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+				      </mat-form-field>
+				      <div>
+				        <button mat-button matStepperNext>Next</button>
+				      </div>
+				    </form>
+				  </mat-step>
+				  <mat-step [stepControl]="secondFormGroup">
+				    <form [formGroup]="secondFormGroup">
+				      <ng-template matStepLabel>Fill out your address</ng-template>
+				      <mat-form-field>
+				        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+				      </mat-form-field>
+				      <div>
+				        <button mat-button matStepperPrevious>Back</button>
+				        <button mat-button matStepperNext>Next</button>
+				      </div>
+				    </form>
+				  </mat-step>
+				  <mat-step>
+					<ng-template matStepLabel>Done</ng-template>
+				    You are now done.
+				    <div>
+				      <button mat-button matStepperPrevious>Back</button>
+				    </div>
+				  </mat-step>
+				</mat-horizontal-stepper>	           
+
+			</div>
+			
+		</div>
+
+					
+
+	</div>
+
+
+	<div class="stepper-header" style="    margin-top: 10px;">
+		<h3>Exapmles</h3>
+	</div>
+
+	<mat-tab-group fxFlexFill>
+		<mat-tab label="TS">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="stepperHelpers?.tsSourceRaisedButton" language="typescript"></code></pre>
+        </mat-tab>
+        <mat-tab label="HTML">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="stepperHelpers?.htmlSourceRaisedButton" language="html"></code></pre>
+        </mat-tab>
+
+        <mat-tab label="PREVIEW">
+        	<div style="padding: 20px;">
+	        	<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+				<mat-horizontal-stepper [linear]="isLinear">
+				  <mat-step [stepControl]="firstFormGroup">
+				    <form [formGroup]="firstFormGroup">
+				      <ng-template matStepLabel>Fill out your name</ng-template>
+				      <mat-form-field>
+				        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+				      </mat-form-field>
+				      <div>
+				        <button mat-button matStepperNext>Next</button>
+				      </div>
+				    </form>
+				  </mat-step>
+				  <mat-step [stepControl]="secondFormGroup">
+				    <form [formGroup]="secondFormGroup">
+				      <ng-template matStepLabel>Fill out your address</ng-template>
+				      <mat-form-field>
+				        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+				      </mat-form-field>
+				      <div>
+				        <button mat-button matStepperPrevious>Back</button>
+				        <button mat-button matStepperNext>Next</button>
+				      </div>
+				    </form>
+				  </mat-step>
+				  <mat-step>
+				    <ng-template matStepLabel>Done</ng-template>
+				    You are now done.
+				    <div>
+				      <button mat-button matStepperPrevious>Back</button>
+				    </div>
+				  </mat-step>
+				</mat-horizontal-stepper>
+		  	</div>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>

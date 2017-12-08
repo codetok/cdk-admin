@@ -1,0 +1,165 @@
+<div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
+
+	<div class="spinner-header">
+		<h3>Progress Spinner</h3>
+	</div>
+	
+	<div class="spinner-container">
+		
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #00BCD4;margin: 14px 0;">Configurable Progress Spinner</h4>
+				<mat-divider></mat-divider>
+					
+				<mat-list>
+				<mat-list-item>
+		    	<section class="example-section">
+		      		<label class="example-margin">Color:</label>
+		      		
+		      		
+		      		<mat-radio-group [(ngModel)]="color">
+		        		<mat-radio-button class="example-margin" value="primary">
+		          		Primary
+		        		</mat-radio-button>
+		        		<mat-radio-button class="example-margin" value="accent">
+		          		Accent
+		        		</mat-radio-button>
+		       			<mat-radio-button class="example-margin" value="warn">
+		          		Warn
+		        		</mat-radio-button>
+		     		</mat-radio-group>
+		     		
+
+		    	</section>
+		    	</mat-list-item>
+		    	
+		    	<mat-list-item>
+			    <section class="example-section">
+			      <label class="example-margin">Mode:</label>
+			      <mat-radio-group [(ngModel)]="mode">
+			        <mat-radio-button class="example-margin" value="determinate">
+			          Determinate
+			        </mat-radio-button>
+			        <mat-radio-button class="example-margin" value="indeterminate">
+			          Indeterminate
+			        </mat-radio-button>
+			      </mat-radio-group>
+			    </section>
+
+			    </mat-list-item>
+			    </mat-list>
+
+
+			    <section class="example-section" *ngIf="mode == 'determinate'">
+			      <label class="example-margin">Progress:</label>
+			      <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+			    </section>
+					  
+					    					    
+			</div>
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #00BCD4;margin: 14px 0;">Result</h4>
+				<mat-divider></mat-divider>
+				
+				<mat-progress-spinner
+			        class="example-margin"
+			        [color]="color"
+			        [mode]="mode"
+			        [value]="value">
+			    </mat-progress-spinner>
+			   
+			</div>
+		</div>
+	</div>
+
+
+	<div class="spinner-header" style="    margin-top: 10px;">
+		<h3>Exapmles</h3>
+	</div>
+
+	<mat-tab-group fxFlexFill>
+		<mat-tab label="TS">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="spinnerHelpers?.tsSourceProgressSpinner" language="typescript"></code></pre>
+        </mat-tab>
+        <mat-tab label="HTML">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="spinnerHelpers?.htmlSourceProgressSpinner" language="html"></code></pre>
+        </mat-tab>
+
+        <mat-tab label="PREVIEW">
+        	<div style="padding: 20px;">
+        		<div class="spinner-container">
+		
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #00BCD4;margin: 14px 0;">Configurable Progress Spinner</h4>
+				<mat-divider></mat-divider>
+					
+				<mat-list>
+				<mat-list-item>
+		    	<section class="example-section">
+		      		<label class="example-margin">Color:</label>
+		      		
+		      		
+		      		<mat-radio-group [(ngModel)]="color">
+		        		<mat-radio-button class="example-margin" value="primary">
+		          		Primary
+		        		</mat-radio-button>
+		        		<mat-radio-button class="example-margin" value="accent">
+		          		Accent
+		        		</mat-radio-button>
+		       			<mat-radio-button class="example-margin" value="warn">
+		          		Warn
+		        		</mat-radio-button>
+		     		</mat-radio-group>
+		     		
+
+		    	</section>
+		    	</mat-list-item>
+		    	
+		    	<mat-list-item>
+			    <section class="example-section">
+			      <label class="example-margin">Mode:</label>
+			      <mat-radio-group [(ngModel)]="mode">
+			        <mat-radio-button class="example-margin" value="determinate">
+			          Determinate
+			        </mat-radio-button>
+			        <mat-radio-button class="example-margin" value="indeterminate">
+			          Indeterminate
+			        </mat-radio-button>
+			      </mat-radio-group>
+			    </section>
+
+			    </mat-list-item>
+			    </mat-list>
+
+
+			    <section class="example-section" *ngIf="mode == 'determinate'">
+			      <label class="example-margin">Progress:</label>
+			      <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+			    </section>
+					  
+					    					    
+			</div>
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #00BCD4;margin: 14px 0;">Result</h4>
+				<mat-divider></mat-divider>
+				
+				<mat-progress-spinner
+			        class="example-margin"
+			        [color]="color"
+			        [mode]="mode"
+			        [value]="value">
+			    </mat-progress-spinner>
+			   
+			</div>
+		</div>
+	</div>
+        		
+        	</div>	
+		</mat-tab>
+    </mat-tab-group>
+</div>

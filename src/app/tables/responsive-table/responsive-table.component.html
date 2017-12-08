@@ -1,0 +1,50 @@
+<div fxLayout="column"  fxLayoutAlign="space-around stretch"  fxLayoutGap="20px"  style="border: 1px solid #15980d">
+		
+	<div class="table-header" style="padding: 0 20px;">
+		<h3>Responsive Tables</h3>
+	</div>
+
+	<div>
+		
+		<table  matSort (matSortChange)="sortData($event)">
+					<thead>
+						<tr>
+							<th mat-sort-header="{{th.key}}" scope="col" *ngFor="let th of helpers?.header">{{th.name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let row of rows let i=index" >
+							<td [attr.data-label]="th.name" *ngFor="let th of helpers?.header" style="text-align: center;word-wrap: break-word;">
+
+								<span *ngIf="th.key!='action'">
+
+									{{row[th.key]}}
+
+									<mat-chip  (click)="findDuplicates(row)"
+									selected="true"
+									color="warn"  matTooltip="{{row['duplicate_applications'].length}} duplicate entries" matTooltipPosition="right" *ngIf="th.key=='applicationNumber' && row['duplicate_applications'] != 'undefined' && row['duplicate_applications'] && row['duplicate_applications'].length > 0" >
+									{{row['duplicate_applications'].length }}
+									</mat-chip>
+
+								</span>
+          
+							</td>
+							</tr>
+							<tr *ngIf="rows?.length==0 && status==false">
+								<td [colSpan]="header.length" style="text-align: center;">
+								No records found
+								</td>
+							</tr>
+					</tbody>
+					<thead *matHeaderRowDef="displayedColumns"></thead>
+					<tr *matRowDef="let row; columns: displayedColumns;"></tr>
+				</table>
+				<mat-paginator [length]="pageLength"
+		              [pageSize]="pageSize"
+		              [pageSizeOptions]="[1, 5, 10, 25, 100, 150, 200]"  (page)="next($event)">
+				</mat-paginator>
+
+	</div>
+		
+
+</div>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AirportGraphComponent } from './airport-graph.component';
+import { ResponsiveTableComponent } from './responsive-table.component';
 
-describe('AirportGraphComponent', () => {
-  let component: AirportGraphComponent;
-  let fixture: ComponentFixture<AirportGraphComponent>;
+describe('ResponsiveTableComponent', () => {
+  let component: ResponsiveTableComponent;
+  let fixture: ComponentFixture<ResponsiveTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AirportGraphComponent ]
+      declarations: [ ResponsiveTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AirportGraphComponent);
+    fixture = TestBed.createComponent(ResponsiveTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
