@@ -28,12 +28,11 @@ export class ListComponent implements OnInit {
 		Options selected: {{shoes.selectedOptions.selected.length}}
 	</p>
 	`.trim(),
-
-	export const Messages: Array =[
+}
+	export const Messages: Array<any> =[
 		{from: 'codetok', subject: 'client', content: 'hi there'},
 		{from: 'client', subject: 'codetok', content: 'yes'},
 		{from: 'jay', subject: 'tom', content: 'yes please'}
 	];
 
-	export const Links: Array = ['/home', '/admin'];
-}
+	export const Links: Array<String> = ['/home', '/admin'];

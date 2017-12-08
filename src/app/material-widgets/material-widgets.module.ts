@@ -16,6 +16,7 @@ import { MatNativeDateModule } from '@angular/material';
 import { MatProgressSpinnerModule,
          MatRadioModule,
          MatSliderModule,
+         MatCardModule,
  } from '@angular/material';
 
 
@@ -29,6 +30,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 export function highlightJsFactory(): any {
@@ -41,6 +43,7 @@ export function highlightJsFactory(): any {
     CommonModule,
     FlexLayoutModule,
     MatButtonModule,
+    MatCardModule,
     MatProgressSpinnerModule,
     MatIconModule,
     MatTabsModule,
@@ -68,7 +71,8 @@ export function highlightJsFactory(): any {
 
     StepperComponent,
     ExpansionPanelComponent,
-    SpinnerComponent],
+    SpinnerComponent,
+    CardsComponent],
 
   exports: [
     ]

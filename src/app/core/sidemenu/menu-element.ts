@@ -42,11 +42,11 @@ export const menus = [
                         },
                         {
 
-                            "name": "Stepper",
-                            "link": "material-widgets/stepper",
-                            "icon": "view_week",
-                            "chip"   : false,
-                            "open"   : false,
+                            "name"    : "Stepper",
+                            "link"    : "material-widgets/stepper",
+                            "icon"    : "view_week",
+                            "chip"    : false,
+                            "open"    : false,
 
                         },
                         {
@@ -64,10 +64,11 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "Cards",
-                            "link": "cards",
-                            "icon": "crop_16_9",
-                            "open"   : false,
+                            "name"    : "Cards",
+                            "link"    : "material-widgets/cards",
+                            "icon"    : "crop_16_9",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "Icons",

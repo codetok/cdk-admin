@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LIST_HELPERS } from './helpers.data';
-// , Messages, Links
+import { LIST_HELPERS,  Messages, Links} from './helpers.data';
+
 @Component({
   selector: 'cdk-list',
   templateUrl: './list.component.html',
@@ -9,10 +9,10 @@ import { LIST_HELPERS } from './helpers.data';
 export class ListComponent implements OnInit {
 
     listHelpers: any = LIST_HELPERS;
-    // links = Links;
+     links = Links;
 
     showMultiListCode: boolean = false;
-    // messages = Messages;
+     messages = Messages;
     constructor() { }
 
     ngOnInit() {

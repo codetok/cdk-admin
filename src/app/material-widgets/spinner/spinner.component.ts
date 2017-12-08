@@ -18,5 +18,5 @@ export class SpinnerComponent implements OnInit {
 		color = 'primary';
 	  	mode = 'determinate';
 	  	value = 50;
-
+spinnerHelpers: any = SPINNER_HELPERS;
 }
