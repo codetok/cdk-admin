@@ -71,10 +71,11 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "Icons",
-                            "link": "icon",
-                            "icon": "gif",
-                            "open"   : false,
+                            "name"    : "Icons",
+                            "link"    : "material-widgets/icons",
+                            "icon"    : "gif",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
 

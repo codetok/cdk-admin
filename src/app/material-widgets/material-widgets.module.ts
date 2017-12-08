@@ -31,6 +31,7 @@ import { StepperComponent } from './stepper/stepper.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { CardsComponent } from './cards/cards.component';
+import { IconsComponent } from './icons/icons.component';
 
 
 export function highlightJsFactory(): any {
@@ -72,7 +73,8 @@ export function highlightJsFactory(): any {
     StepperComponent,
     ExpansionPanelComponent,
     SpinnerComponent,
-    CardsComponent],
+    CardsComponent,
+    IconsComponent],
 
   exports: [
     ]
