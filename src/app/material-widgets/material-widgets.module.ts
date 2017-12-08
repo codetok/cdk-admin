@@ -36,6 +36,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
 export function highlightJsFactory(): any {
@@ -82,7 +83,8 @@ export function highlightJsFactory(): any {
     SpinnerComponent,
     CardsComponent,
     IconsComponent,
-    AutocompleteComponent],
+    AutocompleteComponent,
+    CheckboxComponent],
 
   exports: [
     ]

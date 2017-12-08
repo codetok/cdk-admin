@@ -86,10 +86,11 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "CheckBox",
-                            "link": "checkbox",
-                            "icon": "check_box",
-                            "open"   : false,
+                            "name"    : "CheckBox",
+                            "link"    : "material-widgets/checkbox",
+                            "icon"    : "check_box",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "DatePicker",

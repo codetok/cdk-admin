@@ -8,6 +8,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
@@ -18,6 +19,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'cards', component: CardsComponent},
     { path: 'icons', component: IconsComponent },
     { path: 'autocomplete', component: AutocompleteComponent },
+    { path: 'checkbox', component:  CheckboxComponent },
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 
