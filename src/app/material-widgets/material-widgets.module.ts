@@ -17,6 +17,9 @@ import { MatProgressSpinnerModule,
          MatRadioModule,
          MatSliderModule,
          MatCardModule,
+         MatAutocompleteModule,
+         MatCheckboxModule,
+         MatSlideToggleModule,
  } from '@angular/material';
 
 
@@ -32,6 +35,7 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
 import { SpinnerComponent } from './spinner/spinner.component';
 import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 
 export function highlightJsFactory(): any {
@@ -43,8 +47,10 @@ export function highlightJsFactory(): any {
   imports: [
     CommonModule,
     FlexLayoutModule,
+    MatAutocompleteModule,
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
     MatProgressSpinnerModule,
     MatIconModule,
     MatTabsModule,
@@ -60,6 +66,7 @@ export function highlightJsFactory(): any {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSliderModule,
+    MatSlideToggleModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,
       useFactory: highlightJsFactory
@@ -74,7 +81,8 @@ export function highlightJsFactory(): any {
     ExpansionPanelComponent,
     SpinnerComponent,
     CardsComponent,
-    IconsComponent],
+    IconsComponent,
+    AutocompleteComponent],
 
   exports: [
     ]

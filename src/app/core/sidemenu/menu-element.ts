@@ -79,10 +79,11 @@ export const menus = [
                         },
                         {
 
-                            "name": "AutoComplete",
-                            "link": "autocomplete",
-                            "icon": "get_app",
-                            "open"   : false,
+                            "name"    : "AutoComplete",
+                            "link"    : "material-widgets/autocomplete",
+                            "icon"    : "get_app",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "CheckBox",

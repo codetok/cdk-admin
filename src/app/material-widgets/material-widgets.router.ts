@@ -7,7 +7,7 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
 import { SpinnerComponent } from './spinner/spinner.component';
 import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
-
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
@@ -17,6 +17,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'spinner', component: SpinnerComponent},
     { path: 'cards', component: CardsComponent},
     { path: 'icons', component: IconsComponent },
+    { path: 'autocomplete', component: AutocompleteComponent },
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 
