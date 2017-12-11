@@ -1,0 +1,19 @@
+.table-header {
+	background-color: #15980d;
+	color: white;
+}
+.table-container {
+position: relative;
+margin-top:50px;
+}
+.table-container .mat-table {
+max-height: calc(100vh - 200px);
+overflow-y: auto;
+}
+.table-container .mat-table .mat-header-row {
+position: absolute;
+top: -50px;
+left: 0px;
+right: 18px;
+background: #fff;
+}

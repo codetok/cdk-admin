@@ -31,6 +31,7 @@ import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { FilterTableComponent } from './filter-table/filter-table.component';
 import { FeatureTableComponent } from './feature-table/feature-table.component';
 import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
+import { FixedTableComponent } from './fixed-table/fixed-table.component';
 
 
 export function highlightJsFactory(): any {
@@ -72,7 +73,8 @@ export function highlightJsFactory(): any {
   declarations: [
    FilterTableComponent,
    FeatureTableComponent,
-   ResponsiveTableComponent],
+   ResponsiveTableComponent,
+   FixedTableComponent],
   exports: [
     ]
       

@@ -167,30 +167,12 @@ export const menus = [
         "open"   : false,
         "chip"   :  { "value": 2,'color': 'accent'} ,
         "sub"    :  [
-                        // {
-                        //     "name": "Filtering",
-                        //     "icon": "filter_list",
-                        //     "link": "tables/filter",
-                        //     "open"   : false,
-                        // },
-                        // {
-                        //     "name": "Pagination",
-                        //     "icon": "last_page",
-                        //     "link": "pagination-table",
-                        //     "open"   : false,
-                        // },
-                        // {
-                        //     "name": "Sorting",
-                        //     "icon": "sort_by_alpha",
-                        //     "link": "sorting-table",
-                        //     "open"   : false,
-                        // },
-                        // {
-                        //     "name": "HTTP",
-                        //     "icon": "http",
-                        //     "link": "retrive-http-table",
-                        //     "open"   : false,
-                        // },
+                        {
+                            "name": "Fixed",
+                            "icon": "filter_list",
+                            "link": "tables/fixed",
+                            "open"   : false,
+                        },
                         {
                             "name": "Feature",
                             "icon": "done_all",
