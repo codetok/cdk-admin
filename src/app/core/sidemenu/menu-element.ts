@@ -109,10 +109,12 @@ export const menus = [
                             
                         },
                         {
-                            "name": "Slide Toggle",
-                            "link": "slide-toggle",
-                            "open"   : false,
-                            "icon":"album"
+                            "name"    : "Slide Toggle",
+                            "link"    : "material-widgets/slide-toggle",
+                            "icon"    : "album",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                            
                         },
                          {

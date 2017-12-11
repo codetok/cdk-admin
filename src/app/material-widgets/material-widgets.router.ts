@@ -11,7 +11,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
-
+import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
@@ -25,6 +25,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'checkbox', component:  CheckboxComponent },
     { path: 'datepicker', component:  DatepickerComponent },
     { path: 'slider', component:  SliderComponent },
+    { path: 'slide-toggle', component:  SlidetoggleComponent },
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 

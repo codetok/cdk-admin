@@ -40,6 +40,12 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
+import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
+import { MenuComponent } from './menu/menu.component';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { InputComponent } from './input/input.component';
+import { RadioComponent } from './radio/radio.component';
+import { SelectComponent } from './select/select.component';
 
 
 export function highlightJsFactory(): any {
@@ -89,7 +95,13 @@ export function highlightJsFactory(): any {
     AutocompleteComponent,
     CheckboxComponent,
     DatepickerComponent,
-    SliderComponent],
+    SliderComponent,
+    SlidetoggleComponent,
+    MenuComponent,
+    ProgressbarComponent,
+    InputComponent,
+    RadioComponent,
+    SelectComponent],
 
   exports: [
     ]
