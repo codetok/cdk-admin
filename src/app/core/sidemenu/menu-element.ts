@@ -93,10 +93,11 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "DatePicker",
-                            "link": "datepicker",
-                            "icon": "date_range",
-                            "open"   : false,
+                            "name"    : "DatePicker",
+                            "link"    : "material-widgets/datepicker",
+                            "icon"    : "date_range",
+                            "chip"    : false,
+                            "open"    : false,
                         },
 
                         {
