@@ -20,7 +20,7 @@ import { MatProgressSpinnerModule,
          MatAutocompleteModule,
          MatCheckboxModule,
          MatSlideToggleModule,
-         // ""MatDatepickerToggle,""
+         
  } from '@angular/material';
 
 
@@ -39,6 +39,7 @@ import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 export function highlightJsFactory(): any {
@@ -87,7 +88,8 @@ export function highlightJsFactory(): any {
     IconsComponent,
     AutocompleteComponent,
     CheckboxComponent,
-    DatepickerComponent],
+    DatepickerComponent,
+    SliderComponent],
 
   exports: [
     ]

@@ -1,0 +1,105 @@
+<div fxLayout="column"   style="background-color: white; border: 1px solid #006064;">
+
+	<div class="slider-header">
+		<h3>Slider</h3>
+	</div>
+	
+	<div class="slider-container">
+		
+		
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+            <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+                <h4 style="color: #006064;margin: 14px 0;">Basic Slider</h4>
+                    <mat-divider></mat-divider>
+                    <mat-slider></mat-slider>
+            </div>
+       
+
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #006064;margin: 14px 0;">Slider configuration</h4>
+				<mat-divider></mat-divider>
+
+				<section class="example-section">
+                    <mat-form-field class="example-margin">
+                    	<input matInput type="number" placeholder="Value" [(ngModel)]="value">
+                    </mat-form-field>
+                    <mat-form-field class="example-margin">
+                    	<input matInput type="number" placeholder="Min value" [(ngModel)]="min">
+                    </mat-form-field>
+                    <mat-form-field class="example-margin">
+                    	<input matInput type="number" placeholder="Max value" [(ngModel)]="max">
+                    </mat-form-field>
+                    <mat-form-field class="example-margin">
+                    	<input matInput type="number" placeholder="Step size" [(ngModel)]="step">
+                    </mat-form-field>
+                </section>
+
+
+                <section class="example-section">
+                    <mat-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+                    <mat-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+                        Auto ticks
+                    </mat-checkbox>
+                    <mat-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
+                        <input matInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
+                    </mat-form-field>
+                </section>
+                <br>
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
+                </section>
+
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</mat-checkbox>
+                  <mat-checkbox class="example-margin" [(ngModel)]="invert">Inverted</mat-checkbox>
+                </section>
+
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+                </section>
+
+
+                <section>
+        
+                    <h2 class="example-h2">Result</h2>
+
+                    <mat-slider
+                        class="example-margin"
+                        [disabled]="disabled"
+                        [invert]="invert"
+                        [max]="max"
+                        [min]="min"
+                        [step]="step"
+                        [thumb-label]="thumbLabel"
+                        [tick-interval]="tickInterval"
+                        [value]="value"
+                        [vertical]="vertical">
+                    </mat-slider>
+                </section>
+			</div>
+        </div>
+
+
+
+		<div class="slider-header" style="    margin-top: 10px;">
+			<h3>Exapmles</h3>
+		</div>
+
+		<mat-tab-group fxFlexFill>
+			<mat-tab label="TS">
+	            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="sliderHelpers?.tsSourceSlider" language="typescript"></code></pre>
+	        </mat-tab>
+	        <mat-tab label="HTML">
+	            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="sliderHelpers?.htmlSourceSlider" language="html"></code></pre>
+	        </mat-tab>
+
+	        <mat-tab label="PREVIEW">
+	        	<div style="padding: 20px;">
+		        	<mat-slider></mat-slider>
+			  	</div>
+	        </mat-tab>
+	    </mat-tab-group>
+
+	</div>
+</div>

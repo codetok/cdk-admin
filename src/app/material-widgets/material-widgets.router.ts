@@ -10,6 +10,7 @@ import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 const materialWidgetRoutes: Routes = [
@@ -23,6 +24,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'autocomplete', component: AutocompleteComponent },
     { path: 'checkbox', component:  CheckboxComponent },
     { path: 'datepicker', component:  DatepickerComponent },
+    { path: 'slider', component:  SliderComponent },
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 

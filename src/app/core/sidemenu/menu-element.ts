@@ -101,10 +101,12 @@ export const menus = [
                         },
 
                         {
-                            "name": "Slider",
-                            "link": "slider",
-                            "open"   : false,
-                            "icon":"keyboard_tab"
+                            "name"    : "Slider",
+                            "link"    : "material-widgets/slider",
+                            "icon"    : "keyboard_tab",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                         },
                         {
                             "name": "Slide Toggle",
