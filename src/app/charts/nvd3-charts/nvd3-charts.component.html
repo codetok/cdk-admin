@@ -1,0 +1,20 @@
+<div  fxLayoutAlign="space-between center"  fxLayout="column"   fxLayoutGap="20px"  fxFlex=97  fxLayoutAlign="center stretch"   >
+    <div fxFlex="49" fxLayout="row" fxLayoutGap="20px"  fxLayout.lt-sm="column">
+        <div  fxFlex="49"  class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto', 'height':'350px'}">
+             <app-historical-bar-chart></app-historical-bar-chart>
+        </div>
+        <div  fxFlex="49" class="mat-elevation-z4 "  fxFlex.lt-sm=100  [ngStyle]="{margin: 'auto', 'height':'350px'}">
+           <app-bar-chart></app-bar-chart>
+        </div>
+    </div>
+    <div fxFlex="49"  fxLayout="row" fxLayoutGap="20px"  fxLayout.lt-sm="column" >
+        <div fxFlex="49" class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto', 'height':'350px'}">
+            <app-pie-chart></app-pie-chart>
+        </div>
+        
+        <div fxFlex="49" class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto',  'height':'350px'}">
+			<app-sunburst-chart></app-sunburst-chart>
+        </div>
+    </div>
+    
+</div>

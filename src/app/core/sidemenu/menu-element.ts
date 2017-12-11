@@ -167,6 +167,7 @@ export const menus = [
         "open"   : false,
         "chip"   :  { "value": 2,'color': 'accent'} ,
         "sub"    :  [
+
                         {
                             "name": "Filtering",
                             "icon": "filter_list",
@@ -191,16 +192,43 @@ export const menus = [
                             "link": "retrive-http-table",
                             "open"   : false,
                         },
+                        
+
+                        // {
+                        //     "name": "Filtering",
+                        //     "icon": "filter_list",
+                        //     "link": "tables/filter",
+                        //     "open"   : false,
+                        // },
+                        // {
+                        //     "name": "Pagination",
+                        //     "icon": "last_page",
+                        //     "link": "pagination-table",
+                        //     "open"   : false,
+                        // },
+                        // {
+                        //     "name": "Sorting",
+                        //     "icon": "sort_by_alpha",
+                        //     "link": "sorting-table",
+                        //     "open"   : false,
+                        // },
+                        // {
+                        //     "name": "HTTP",
+                        //     "icon": "http",
+                        //     "link": "retrive-http-table",
+                        //     "open"   : false,
+                        // },
                         {
                             "name": "All Features",
+                        
                             "icon": "done_all",
-                            "link": "all-features-table",
+                            "link": "tables/featured",
                             "open"   : false,
                         },
                         {
                             "name": "Responsive Tables",
                             "icon": "filter_center_focus",
-                            "link": "responsive-table",
+                            "link": "tables/responsive",
                             "open"   : false,
                         }
                     ]
@@ -212,7 +240,7 @@ export const menus = [
                         {
                             "name": "chartjs",
                             "icon": "view_list",
-                            "link":"chartjs",
+                            "link":"charts/chartjs",
                             "open"   : false,
 
                         },
@@ -220,13 +248,13 @@ export const menus = [
                             "name": "ngx-chart",
                             "icon": "show_chart",
                             "open"   : false,
-                            "link": "ngx-charts",
+                            "link": "charts/ngx-charts",
                         },
                         {
                             "name": "nvd3",
                             "icon": "pie_chart",
                             "open"   : false,
-                            "link": "nvd3-charts",
+                            "link": "charts/nvd3-charts",
                         }
                         
                     ]
@@ -238,7 +266,7 @@ export const menus = [
                         {
                             "name": "google-map",
                             "icon": "directions",
-                            "link":"googlemap",
+                            "link":"maps/googlemap",
                             "open"   : false,
                         },
                         {
@@ -262,7 +290,7 @@ export const menus = [
                             "name": "Login",
                             "icon": "work",
                             "open": false,
-                            "link": "login",
+                            "link": "../login",
                         },{
                             "name": "Registeration",
                             "icon": "work",

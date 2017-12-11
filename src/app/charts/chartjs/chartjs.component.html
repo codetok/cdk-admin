@@ -1,0 +1,18 @@
+<div  fxLayout="column"   fxLayoutGap="20px" fxFlex=97 class="container" >
+    <div fxFlex="49" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" >
+        <div  fxFlex="49"  fxFlex.lt-sm="100"  [ngStyle]="{'height':'350px'}">
+            <app-line-chart></app-line-chart>
+        </div>
+        <div  fxFlex="49"  fxFlex.lt-sm="100"  [ngStyle]="{'height':'350px'}">
+            <app-bar-chart></app-bar-chart>
+        </div>
+    </div>
+    <div fxFlex="49"  fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+        <div  fxFlex="49"  fxFlex.lt-sm="100"  [ngStyle]="{'height':'350px'}">
+            <app-pie-chart></app-pie-chart>
+        </div>
+        <div  fxFlex="49"  fxFlex.lt-sm="100"  [ngStyle]="{'height':'350px'}">
+            <app-area-chart></app-area-chart>
+        </div>
+    </div>
+</div>
