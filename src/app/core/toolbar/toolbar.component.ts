@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'cdk-toolbar',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
+	
+	@Input() sidenav;
+	@Input() drawer;
+	@Input() matDrawerShow;
 	searchOpen: boolean = false;
   	constructor() { }
 
