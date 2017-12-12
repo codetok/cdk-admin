@@ -152,13 +152,13 @@ export const menus = [
                             "name": "Template Driven",
                             "icon": "mode_edit",
                             "open"   : false,
-                            "link":"template_driven"
+                            "link":"forms/template_forms"
                         },
                         {
                             "name": "Reactive Forms",
                             "icon": "text_fields",
                             "open"   : false,
-                            "link":"reactive_forms"
+                            "link":"forms/reactive_forms"
                         }
                     ]
     },{
@@ -186,7 +186,16 @@ export const menus = [
                             "open"   : false,
                         }
                     ]
-    },{
+    },
+    {
+        "name"   : "Guarded Routes",
+        "icon"   : "mode_edit",
+        "link"   : "/auth/guarded-routes",
+        "open"   : false,
+       
+                 
+    },
+    {
         "name"   : "Charts",
         "icon"   : "pie_chart_outlined",
         "open"   : false,

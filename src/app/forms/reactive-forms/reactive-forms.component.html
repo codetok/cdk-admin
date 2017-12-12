@@ -1,0 +1,53 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly stretch" style="border: 1px solid #00B8D4">
+		
+	<div class="form-header" style="padding: 0 20px;">
+		<h3>Reactive Forms</h3>
+	</div>
+    <div [hidden]="submitted" fxLayout="column"  class="widgetHolder-content" fxLayoutAlign="space-around stretch" style="background-color: white;">
+       
+		
+        <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()" fxLayout="column" fxFlex="100" >
+			<mat-form-field class="width">
+				<input matInput placeholder="Enter Username"  formControlName="displayName" >
+			
+			</mat-form-field>
+			
+			<mat-form-field  class="width">
+				<input type="email" matInput placeholder="Enter Your Email"  formControlName="email"  required
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" >
+			</mat-form-field>
+			<mat-form-field  class="width">
+				<input type="number" matInput placeholder="Enter your Number"  formControlName="number" >
+			</mat-form-field>
+			<mat-form-field>
+    			   <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="pwd" >
+    			   <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    		</mat-form-field>
+			<button style="font-weight: bold;" mat-raised-button type="submit" *ngIf="profileForm.value.displayName!='' &&profileForm.value.number!='' && profileForm.value.pwd!=''">Submit</button>
+		</form>
+    </div>
+    <div [hidden]="!submitted" style="background-color: white;">
+		<div fxLayout="column" fxLayoutAlign="space-around stretch" >
+			<h2>You submitted the following:</h2>
+		<div fxLayout="row" fxLayoutGap="20px">
+			<div >Name</div>
+			<div>{{ profileForm.value.displayName }}</div>
+		</div>
+		<div fxLayout="row" fxLayoutGap="20px" >
+			<div>Number</div>
+			<div>{{profileForm.value.number }}</div>
+		</div>
+		<div fxLayout="row" fxLayoutGap="20px">
+			<div >Password</div>
+			<div>{{ profileForm.value.pwd}}</div>
+		</div>
+		<div fxLayout="row" fxLayoutGap="20px">
+			<div >Email</div>
+			<div>{{ profileForm.value.email}}</div>
+		</div>
+		<br>
+		<button mat-raised-button type="submit" (click)="submitted=false">Edit</button>
+	</div>
+	</div>
+	
+</div>
