@@ -1,5 +1,5 @@
 export const LIST_HELPERS: any = {
-	
+
 	tsSourceSelectionList:`
 import { Component, OnInit } from '@angular/core';
 
