@@ -19,11 +19,25 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { UserMenuComponent } from './user-menu/user-menu.component';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
 @NgModule({
+
+  declarations: [
+  SidemenuComponent, 
+  SidemenuItemComponent, 
+  ToolbarNotificationComponent, 
+  ToolbarComponent, 
+  SearchBarComponent, 
+  FullscreenComponent, 
+  SidebarComponent,
+  UserMenuComponent
+  ],
+
   imports: [
     CommonModule,
     MatListModule,
@@ -35,10 +49,22 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatFormFieldModule   
+    MatFormFieldModule,
+
   ],
-  declarations: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent, SidebarComponent],
-  exports: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent],
+
+  
+  exports: [
+  SidemenuComponent, 
+  SidemenuItemComponent, 
+  ToolbarNotificationComponent, 
+  ToolbarComponent, 
+  SearchBarComponent, 
+  FullscreenComponent,
+  SidebarComponent,
+  UserMenuComponent
+  ],
+
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
