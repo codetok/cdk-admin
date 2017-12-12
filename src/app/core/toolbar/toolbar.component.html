@@ -9,5 +9,11 @@
 
     <span class="spacer"></span>
 
+    <button  mat-icon-button (click)="searchOpen = !searchOpen">
+        <i class="material-icons">search</i>
+    </button>
+    <cdk-search-bar [open]="searchOpen"></cdk-search-bar>
+
+
     <cdk-toolbar-notification></cdk-toolbar-notification>
 </mat-toolbar>

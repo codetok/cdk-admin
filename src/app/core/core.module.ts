@@ -4,9 +4,11 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { SidemenuItemComponent } from './sidemenu-item/sidemenu-item.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router'; 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -14,6 +16,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-notification.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -23,14 +26,16 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CommonModule,
     MatListModule,
     MatButtonModule,
+    MatInputModule,
     MatIconModule,
     MatChipsModule,
     RouterModule,
     PerfectScrollbarModule,
     FlexLayoutModule,
-    MatToolbarModule    
+    MatToolbarModule,
+    MatFormFieldModule   
   ],
-  declarations: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent],
+  declarations: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent],
   exports: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent],
   providers: [
     {
