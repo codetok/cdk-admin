@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./filter-table.component.scss']
 })
 export class FilterTableComponent implements OnInit {
+
 	public displayedColumns = ['userId', 'userName', 'progress', 'color'];
 	public exampleDatabase = new ExampleDatabase();
 	public dataSource: ExampleDataSource | null;
