@@ -16,8 +16,8 @@
 
     <cdk-fullscreen></cdk-fullscreen>
 
-    <cdk-toolbar-notification></cdk-toolbar-notification>
+    <cdk-toolbar-notification [notifications]="toolbarHelpers?.notifications"></cdk-toolbar-notification>
 
-    <cdk-user-menu></cdk-user-menu>
+    <cdk-user-menu [currentUser]="toolbarHelpers?.currentUser"></cdk-user-menu>
     
 </mat-toolbar>

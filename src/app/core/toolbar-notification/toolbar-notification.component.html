@@ -1,7 +1,7 @@
 <div class="toolbar-notification-container">
 	<button mat-icon-button (click)="isOpen = !isOpen;" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
     	<mat-icon>notifications_none</mat-icon>
-    	<span class="badge" *ngIf="notifications.length !== 0">{{ notifications?.length }}</span>
+    	<span class="badge" *ngIf="notifications && notifications?.length !== 0">{{ notifications?.length }}</span>
   </button>
 
 
@@ -18,9 +18,9 @@ You have {{ notifications?.length }} new notifications</div>
           		<mat-icon class="icon">settings</mat-icon>
         	</button>
       	</div>
-      	<div *ngIf="notifications.length !== 0; then thenBlock else elseBlock;"></div>
+      	<div *ngIf="notifications?.length !== 0; then thenBlock else elseBlock;"></div>
       	<div class="footer" fxLayout="row" fxLayoutAlign="center center">
-        	<div class="action">View all</div>
+        	<div class="action">Mark all as read</div>
     	</div>
     </div>
 

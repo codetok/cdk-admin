@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'cdk-user-menu',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserMenuComponent implements OnInit {
 	isOpen: boolean = false;
-  	currentUser = null;
+  	@Input() currentUser = null;
   	constructor() { }
 
   	ngOnInit() {
