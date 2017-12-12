@@ -18,6 +18,7 @@ import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-not
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
+import { UserMenuComponent } from './user-menu/user-menu.component';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -36,8 +37,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatToolbarModule,
     MatFormFieldModule   
   ],
-  declarations: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent],
-  exports: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent],
+  declarations: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent, UserMenuComponent],
+  exports: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent, UserMenuComponent],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
