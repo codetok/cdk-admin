@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'cdk-user-menu',
@@ -8,7 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserMenuComponent implements OnInit {
 	isOpen: boolean = false;
   	@Input() currentUser = null;
-  	constructor() { }
+  	@HostListener('document:click', ['$event', '$event.target'])
+  	onClick(event: MouseEvent, targetElement: HTMLElement) {
+    	if (!targetElement) {
+     		return;
+    	}
+
+    	const clickedInside = this.elementRef.nativeElement.contains(targetElement);
+    	if (!clickedInside) {
+      		this.isOpen = false;
+    	}
+  	}
+  	
+    
+  	constructor(private elementRef: ElementRef) { }
 
   	ngOnInit() {
   	}
