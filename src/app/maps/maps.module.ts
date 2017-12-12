@@ -10,6 +10,7 @@ import * as hljs from 'highlight.js';
 import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
 import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { LeafletMapComponent } from './leaflet-map/leaflet-map.component';
 
 
 
@@ -34,7 +35,8 @@ export function highlightJsFactory(): any {
     MapsRouterModule
   ],
   declarations: [
-    GoogleMapComponent],
+    GoogleMapComponent,
+    LeafletMapComponent],
 
   exports: [
     ]

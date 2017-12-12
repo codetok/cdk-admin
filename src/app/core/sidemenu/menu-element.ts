@@ -186,6 +186,7 @@ export const menus = [
                             "open"   : false,
                         }
                     ]
+
     },
     {
         "name"   : "Guarded Routes",
@@ -196,6 +197,19 @@ export const menus = [
                  
     },
     {
+        "name"   : "Applications",
+        "icon"   : "view_module",
+        "open"   : false,
+        "sub"    :  [
+                        {
+                            "name": "chat",
+                            "icon": "chat",
+                            "link":"chats/chat",
+                            "open"   : false,
+                        }
+                    ]
+    },{
+
         "name"   : "Charts",
         "icon"   : "pie_chart_outlined",
         "open"   : false,
@@ -235,7 +249,7 @@ export const menus = [
                         {
                             "name": "leaflet-map",
                             "icon": "directions",
-                            "link":"leafletmap",
+                            "link":"maps/leafletmap",
                             "open"   : false,
                         }
                     ]
@@ -278,6 +292,7 @@ export const menus = [
                         },
                        
                     ]
-    }
+    },
+
 
 ]

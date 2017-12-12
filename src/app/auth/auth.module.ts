@@ -27,7 +27,10 @@ export const appRoutes: Routes = [{
         {path: 'maps', loadChildren: '../maps/maps.module#MapsModule'},
         {path: 'charts', loadChildren: '../charts/charts.module#ChartsModule'},
         {path: 'forms',loadChildren:'../forms/forms.module#FormModule'},
-        {path: 'guarded-routes',loadChildren:'../guarded-routes/guarded-routes.module#GuardedRoutesModule'}
+        {path: 'guarded-routes',loadChildren:'../guarded-routes/guarded-routes.module#GuardedRoutesModule'},
+
+        {path: 'chats', loadChildren: '../chats/chat.module#ChatsModule'}
+
       ]}
   ]
 

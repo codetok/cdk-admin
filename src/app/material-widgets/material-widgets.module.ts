@@ -39,6 +39,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
+
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
   return hljs;
