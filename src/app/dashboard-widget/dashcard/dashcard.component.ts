@@ -7,7 +7,7 @@ import { Component, OnInit ,Input } from '@angular/core';
 })
 export class DashcardComponent implements OnInit {
     
-    @Input() dashData: string;
+    @Input() dashData: any;
     
     constructor() { }
 

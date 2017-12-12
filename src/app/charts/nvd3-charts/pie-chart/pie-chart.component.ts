@@ -12,62 +12,6 @@ export class PieChartComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-	// 	this.options = {
-	// 		"chart": {
-	// 			"type": "pieChart",
-	// 			"height": 300,
-	// 			"showLabels": true,
-	// 			"duration": 500,
-	// 			color: [                    'rgba(255, 99, 132,.7)',
- //                     'rgba(92, 107, 192,.7)',
- //                    'rgba(66, 165, 245,.7)',
- //                    'rgba(38, 166, 154,.7)',],
-	// 			"labelThreshold": 0.01,
-	// 			//"labelSunbeamLayout": true,
-	// 			"legend": {
-	// 				"margin": {
-	// 					"top": 5,
-	// 					"right": 35,
-	// 					"bottom": 5,
-	// 					"left": 0
-	// 				}
-	// 			}
-				
-	// 		},
-	// 		"backgroundColor": [
- //                    'rgba(255, 99, 132,.7)',
- //                    // 'rgba(92, 107, 192,.7)',
- //                    'rgba(66, 165, 245,.7)',
- //                    'rgba(38, 166, 154,.7)',
- //                    // 'rgba(102, 187, 106,.7)'
- //                ],
-	// 		"title": {
-	// 			"enable": true,
-	// 			"text": "Write Your Title",
-	// 			"className": "h4",
-	// 			// "css": {
-	// 			// 	"width": "nullpx",
-	// 			// 	"textAlign": "center"
-	// 			// }
-	// 		}
-	// }
-	// 	this.data = [
-	// 		{
-	// 			key: "One",
-	// 			y: 5
-	// 		},
-	// 		{
-	// 			key: "Two",
-	// 			y: 5
-	// 		},
-	// 		{
-	// 			key: "Three",
-	// 			y: 9
-	// 		},
-			
-			
-			
-	// 	];
 	this.options = {
             chart: {
                 type: 'pieChart',

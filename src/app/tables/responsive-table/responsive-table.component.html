@@ -6,7 +6,7 @@
 
 	<div>
 		
-		<table  matSort (matSortChange)="sortData($event)">
+		<table>
 					<thead>
 						<tr>
 							<th mat-sort-header="{{th.key}}" scope="col" *ngFor="let th of helpers?.header">{{th.name}}</th>

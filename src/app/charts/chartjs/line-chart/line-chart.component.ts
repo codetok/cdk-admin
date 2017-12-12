@@ -1,5 +1,4 @@
 import { Component, OnInit ,ViewEncapsulation } from '@angular/core';
-import { palete } from '../../../../environments/environment'
 declare const Chart;
 @Component({
   selector: 'app-line-chart',
@@ -8,8 +7,6 @@ declare const Chart;
   encapsulation: ViewEncapsulation.None
 })
 export class LineChartComponent implements OnInit {
-
-    public palete: any = palete;
 
     constructor() { }
 
