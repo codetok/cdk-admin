@@ -9,7 +9,7 @@
 
     <span class="spacer"></span>
 
-    <button  mat-icon-button (click)="searchOpen = !searchOpen">
+    <button  mat-icon-button (click)="searchOpen = !searchOpen" fxHide="true" [fxHide.gt-sm]="false">
         <i class="material-icons">search</i>
     </button>
     <cdk-search-bar [open]="searchOpen"></cdk-search-bar>
