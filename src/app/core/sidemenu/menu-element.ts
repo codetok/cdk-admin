@@ -187,6 +187,18 @@ export const menus = [
                         }
                     ]
     },{
+        "name"   : "Applications",
+        "icon"   : "view_module",
+        "open"   : false,
+        "sub"    :  [
+                        {
+                            "name": "chat",
+                            "icon": "chat",
+                            "link":"chats/chat",
+                            "open"   : false,
+                        }
+                    ]
+    },{
         "name"   : "Charts",
         "icon"   : "pie_chart_outlined",
         "open"   : false,
@@ -269,6 +281,7 @@ export const menus = [
                         },
                        
                     ]
-    }
+    },
+
 
 ]
