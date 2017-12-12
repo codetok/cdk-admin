@@ -226,7 +226,7 @@ export const menus = [
                         {
                             "name": "leaflet-map",
                             "icon": "directions",
-                            "link":"leafletmap",
+                            "link":"maps/leafletmap",
                             "open"   : false,
                         }
                     ]
