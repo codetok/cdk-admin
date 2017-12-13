@@ -12,12 +12,28 @@ submitted = false;
 
   constructor(public form: FormBuilder) { 
   		this.profileForm = this.form.group({
-            displayName:['',Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])],
+             username:['',{validators: [Validators.minLength(6)], updateOn: 'blur'}],
             email:['',Validators.required],
-            number:['',Validators.required],
+            number:[ '',{validators: [Validators.minLength(10)], updateOn: 'blur'}],
             pwd:['',Validators.required]
          });
+
   }
+  get number() {
+  return this.profileForm.get('number');
+}
+  get username() {
+  return this.profileForm.get('username');
+}
+ get email() {
+  return this.profileForm.get('email');
+}
+  // checkUserExists() {
+    
+       
+  //         this.profileForm.value.userName.setErrors({ userExists: `User Name  already exists` });
+       
+  // }
  onSubmit() { 
  	console.log('');
  	this.submitted = true; }

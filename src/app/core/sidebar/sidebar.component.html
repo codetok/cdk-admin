@@ -1,0 +1,62 @@
+<mat-tab-group>
+    <mat-tab label="Overview">
+            
+        <div class="sidebar">
+        
+        <div>
+            <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Today</h3>
+            <!-- <h1>{{today | date:'fullDate'}}</h1> -->
+            <h1>{{today | date:'short'}}</h1>
+        </div>
+        <mat-divider></mat-divider>
+
+       
+        <mat-nav-list>
+           <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Upcoming Events</h3>
+           <div *ngFor="let event of events;">
+                <div fxLayout="row" fxLayoutAlign="start center" mat-ripple>
+                <mat-list-item>
+                    <div class="title" fxLayout="column">
+                        <div class="name">{{ event.title }}</div>
+                        <div class="time" style="font-size: 12px;">{{ event.time }}</div>
+                    </div>
+                </mat-list-item>
+                </div>
+            </div>
+        </mat-nav-list>   
+        
+        <mat-divider></mat-divider>
+        
+        <mat-nav-list>
+            <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Todo-List</h3>
+            <div *ngFor="let todolist of todolists;">
+                <div fxLayout="row" fxLayoutAlign="start center" mat-ripple>
+                <mat-list-item>
+                    <div class="title" fxLayout="column">
+                        <div>{{ todolist.title }}</div>
+                        <div style="font-size: 12px;">{{ todolist.time }}</div>
+                    </div>
+                </mat-list-item>
+                </div>
+            </div>
+        </mat-nav-list>
+        
+
+        <mat-divider></mat-divider>
+            
+    </div>
+</mat-tab>
+
+<mat-tab label="Notifications">
+    <div class="sidebar">
+        <div>
+            <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Friends</h3>
+            <mat-list-item class="avatar">
+                <p>hjfgdg</p>
+            </mat-list-item>
+
+        </div>
+    </div>
+
+    </mat-tab>
+</mat-tab-group>

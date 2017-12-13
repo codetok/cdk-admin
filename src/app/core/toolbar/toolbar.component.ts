@@ -8,9 +8,11 @@ import { ToolbarHelpers } from './toolbar.helpers';
 })
 export class ToolbarComponent implements OnInit {
 	
-	@Input() sidenav;
+  @Input() sidenav;
+	@Input() sidebar;
 	@Input() drawer;
 	@Input() matDrawerShow;
+  
 	searchOpen: boolean = false;
     toolbarHelpers = ToolbarHelpers;
   	constructor() { }
