@@ -39,28 +39,19 @@
     }
   }
 
-  .dropdown {
-    background: white;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    width: 100%;
-    min-width: 160px;
-    z-index: 2;
-    transform: translateY(-135%);
-    visibility: hidden;
-    transition: transform .4s cubic-bezier(.25,.8,.25,1), visibility .4s cubic-bezier(.25,.8,.25,1);
+    .dropdown {
+        background: white;
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        min-width: 160px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s linear, max-height .25s linear, opacity .25s linear;
 
-    .content {
-        cursor: pointer;
-        .mat-list-item :hover {
-            background-color: #dedbda;
+        &.open {
+            opacity: 1;
+            visibility: visible;
         }
     }
-
-    &.open {
-      transform: translateY(0);
-      visibility: visible;
-    }
-  }
 }
