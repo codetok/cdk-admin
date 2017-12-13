@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { palete } from '../../../../environments/environment'
+
 declare const Chart;
 @Component({
     selector: 'app-bar-chart',
@@ -7,9 +7,7 @@ declare const Chart;
     styleUrls: ['./bar-chart.component.scss']
 })
 export class BarChartComponent implements OnInit {
-
-    public palete: any = palete;
-
+    
     constructor() { }
 
     ngOnInit() {

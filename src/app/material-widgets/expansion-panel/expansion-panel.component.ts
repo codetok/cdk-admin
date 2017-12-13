@@ -8,6 +8,7 @@ import { EXPANSION_HELPERS } from './helpers.data';
 })
 export class ExpansionPanelComponent implements OnInit {
 	step = 0;
+	public basicPanelOpenState:any;
 	expansionHelpers = EXPANSION_HELPERS;
   	constructor() { }
 

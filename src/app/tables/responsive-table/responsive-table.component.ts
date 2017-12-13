@@ -43,4 +43,6 @@ export class ResponsiveTableComponent implements OnInit {
         }
         this.pageLength = this.helpers.rows.length;
     }
+    sortData(val){
+    }
 }

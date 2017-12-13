@@ -13,12 +13,14 @@ export class SidemenuItemComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+
     }
-     
+
     openLink() {
         this.menu.open = this.menu.open
     }
     getHeight() {
+
         if(this.menu.open == false) return '48px';
         else {
             if(this.menu && this.menu.sub){
@@ -27,6 +29,7 @@ export class SidemenuItemComponent implements OnInit {
            }
         }
     }
+    
     chechForChildMenu() {
         return (this.menu && this.menu.sub) ?true:false ;
     }
