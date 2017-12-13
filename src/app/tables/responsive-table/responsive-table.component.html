@@ -14,7 +14,7 @@
 					</thead>
 					<tbody>
 						<tr *ngFor="let row of rows let i=index" >
-							<td [attr.data-label]="th.name" *ngFor="let th of helpers?.header" style="text-align: right;word-wrap: break-word;">
+							<td [attr.data-label]="th.name" *ngFor="let th of helpers?.header" >
 
 								<span *ngIf="th.key!='action'">
 
