@@ -1,43 +1,62 @@
-<div class="sidebar-items-container">
-	<button mat-icon-button (click)="isOpen = !isOpen;" [ngClass]="[cssPrefix+'-btn']" [class.open]="isOpen">
-	  <mat-icon>reorder</mat-icon>
-	  <span class="badge" *ngIf="sidebar.length !== 0">{{ sidebar?.length }}</span>
-	</button>
+<mat-tab-group>
+    <mat-tab label="Overview">
+            
+        <div class="sidebar">
+        
+        <div>
+            <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Today</h3>
+            <!-- <h1>{{today | date:'fullDate'}}</h1> -->
+            <h1>{{today | date:'short'}}</h1>
+        </div>
+        <mat-divider></mat-divider>
 
-	<div class="dropdown mat-elevation-z4" [class.open]="isOpen">
+       
+        <mat-nav-list>
+           <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Upcoming Events</h3>
+           <div *ngFor="let event of events;">
+                <div fxLayout="row" fxLayoutAlign="start center" mat-ripple>
+                <mat-list-item>
+                    <div class="title" fxLayout="column">
+                        <div class="name">{{ event.title }}</div>
+                        <div class="time" style="font-size: 12px;">{{ event.time }}</div>
+                    </div>
+                </mat-list-item>
+                </div>
+            </div>
+        </mat-nav-list>   
+        
+        <mat-divider></mat-divider>
+        
+        <mat-nav-list>
+            <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Todo-List</h3>
+            <div *ngFor="let todolist of todolists;">
+                <div fxLayout="row" fxLayoutAlign="start center" mat-ripple>
+                <mat-list-item>
+                    <div class="title" fxLayout="column">
+                        <div>{{ todolist.title }}</div>
+                        <div style="font-size: 12px;">{{ todolist.time }}</div>
+                    </div>
+                </mat-list-item>
+                </div>
+            </div>
+        </mat-nav-list>
+        
 
-	<div class="card">
-      	<div class="header" fxLayout="row" fxLayoutAlign="space-between center">
-        	<div class="title">
-         		 <div class="name">Overview</div>
-         	</div>
-         	<div><p>Haii</p></div>
-         	<div *ngIf="sidebar.length !== 0; then thenBlock else elseBlock;"></div>
-	      	<div class="footer" fxLayout="row" fxLayoutAlign="center center">
-	        	<div class="action">View all</div>
-	    	</div>
+        <mat-divider></mat-divider>
+            
+    </div>
+</mat-tab>
+
+<mat-tab label="Notifications">
+    <div class="sidebar">
+        <div>
+            <h3 class="subheading-2" style="font-family: Roboto;margin-top: 8px">Friends</h3>
+            <mat-list-item class="avatar">
+                <p>hjfgdg</p>
+            </mat-list-item>
+
         </div>
     </div>
-</div>
 
-
-<ng-template #thenBlock>
-	<perfect-scrollbar class="content">
-		<div *ngFor="let event of events">
-	      	<div class="sidebar" fxLayout="row" fxLayoutAlign="start center" mat-ripple>
-		        <p>Upcoming Events</p>
-			        <div class="title" fxLayout="column">
-			          <div class="name">{{ event.title }}</div>
-			          <div class="time">{{ event.time }}</div>
-			        </div>
-			        <span fxFlex></span>
-			    
-	      		</div>
-	      	<div class="divider" *ngIf="!isLast"></div>
-	    </div>
-	</perfect-scrollbar>
-</ng-template>
-
-<ng-template #elseBlock>
-  <div class="no" fxLayout="row" fxLayoutAlign="center center">暂无通知</div>
-</ng-template>
+    </mat-tab>
+</mat-tab-group>

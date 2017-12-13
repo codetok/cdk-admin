@@ -7,9 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 	
-	@Input() sidenav;
+  @Input() sidenav;
+	@Input() sidebar;
 	@Input() drawer;
 	@Input() matDrawerShow;
+  
 	searchOpen: boolean = false;
   	constructor() { }
 

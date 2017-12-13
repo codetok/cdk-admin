@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'cdk-sidebar',
@@ -7,33 +8,61 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-	cssPrefix = 'sidebar-items';
-	isOpen: boolean = false;
-
-	events = [
-  		{
-	        id: 'id',
-	        title: 'Business Meeting',
-	        time: '05:00 PM',
-	        venue: 'Conference Hall'
-	    },
-	    {
-	        id: 'id',
-	        title: 'Business Meeting',
-	        time: '05:00 PM',
-	        venue: 'Conference Hall'
-	    },
-	    {
-	        id: 'id',
-	        title: 'Business Meeting',
-	        time: '05:00 PM',
-	        venue: 'Conference Hall'
-	    },
-	];
-
   constructor() { }
 
   ngOnInit() {
   }
+
+  today: number = Date.now();
+
+    events = [
+          {
+            id: 'id',
+            title: 'Business Meeting',
+            time: '05:00 PM',
+            state: 'state'
+        },
+        {
+            id: 'id',
+            title: 'Business Meeting',
+            time: '05:00 PM',
+            state: 'state'
+        },
+        {
+            id: 'id',
+            title: 'Business Meeting',
+            time: '05:00 PM',
+            state: 'state'
+        },
+        {
+            id: 'id',
+            title: 'Business Meeting',
+            time: '05:00 PM',
+            state: 'state'
+        },
+    ];
+
+    todolists = [
+          {
+            id: 'id',
+            title: 'Get to know Angular more',
+            time: 'Added:4 days ago',
+        },
+        {
+            id: 'id',
+            title: 'Get to know Angular more',
+            time: 'Added:4 days ago',
+        },
+        {
+            id: 'id',
+            title: 'Get to know Angular more',
+            time: 'Added:4 days ago',
+        },
+        {
+            id: 'id',
+            title: 'Get to know Angular more',
+            time: 'Added:4 days ago',
+        },
+    ];
 
 }
