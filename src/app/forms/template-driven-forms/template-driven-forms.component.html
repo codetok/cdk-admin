@@ -1,0 +1,72 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly stretch" style="border: 1px solid #E65100">
+		
+	<div class="form-header" style="padding: 0 20px;">
+		<h3>Reactive Forms</h3>
+	</div>
+	<div [hidden]="submitted" style="background-color: white;">
+
+			<form (ngSubmit)="onSubmit()"   fxLayout="column" >
+				<mat-form-field class="width">
+					<input matInput type="text"   [(ngModel)]="model.name"  name="name" #name="ngModel" required minlength="4">
+
+				</mat-form-field>
+				<div  style="color:red" *ngIf="name.invalid && (name.dirty || name.touched)">
+
+					<div *ngIf="name.errors.required">
+						Name is required.
+					</div>
+					<div *ngIf="name.errors.minlength">
+						Name must be at least 4 characters long.
+					</div>
+				</div>
+				<mat-form-field class="width">
+					<input matInput type="number"  [(ngModel)]="model.number"  name="number" #number="ngModel" required minlength="10">
+				</mat-form-field>
+				<div  style="color:red" *ngIf="number.invalid && (number.dirty || number.touched)"
+				>
+
+					<div *ngIf="number.errors.required">
+						number is required.
+					</div>
+					<div *ngIf="number.errors.minlength">
+						number must be at least 10 characters long.
+					</div>
+
+
+				</div>
+				<mat-input-container fxFlex>
+      				<input matInput placeholder="Character count (max. 100)" maxlength="100"	#characterCountHintExample value="Hello! How are you today?">
+      				<mat-hint align="end">{{ characterCountHintExample.value.length }} / 100
+      				</mat-hint>
+    			</mat-input-container>
+    			<mat-form-field>
+    			   <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" >
+    			   <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    			 </mat-form-field>
+				<button style="font-weight: bold;" mat-raised-button type="submit" [disabled]="name.invalid||number.invalid" >Submit</button>
+			</form>
+			<div fxLayout="column" fxLayout.gt-md="row">
+    
+  </div>
+		</div>
+
+			<div [hidden]="!submitted" style="background-color: white;">
+				<div fxLayout="column" fxLayoutAlign="space-around stretch" >
+				<h2>You submitted the following:</h2>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div >Name</div>
+					<div>{{ model.name }}</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px" >
+					<div>Number</div>
+					<div>{{ model.number }}</div>
+				</div>
+				<div fxLayout="row" fxLayoutGap="20px">
+					<div >Password</div>
+					<div>{{ model.pwd}}</div>
+				</div>
+				<br>
+				<button mat-raised-button type="submit" (click)="submitted=false">Edit</button>
+			</div>
+			</div>
+</div>

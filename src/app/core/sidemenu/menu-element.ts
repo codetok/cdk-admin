@@ -152,13 +152,13 @@ export const menus = [
                             "name": "Template Driven",
                             "icon": "mode_edit",
                             "open"   : false,
-                            "link":"template_driven"
+                            "link":"forms/template_forms"
                         },
                         {
                             "name": "Reactive Forms",
                             "icon": "text_fields",
                             "open"   : false,
-                            "link":"reactive_forms"
+                            "link":"forms/reactive_forms"
                         }
                     ]
     },{
@@ -186,7 +186,30 @@ export const menus = [
                             "open"   : false,
                         }
                     ]
+
+    },
+    {
+        "name"   : "Guarded Routes",
+        "icon"   : "mode_edit",
+        "link"   : "/auth/guarded-routes",
+        "open"   : false,
+       
+                 
+    },
+    {
+        "name"   : "Applications",
+        "icon"   : "view_module",
+        "open"   : false,
+        "sub"    :  [
+                        {
+                            "name": "chat",
+                            "icon": "chat",
+                            "link":"chats/chat",
+                            "open"   : false,
+                        }
+                    ]
     },{
+
         "name"   : "Charts",
         "icon"   : "pie_chart_outlined",
         "open"   : false,
@@ -269,6 +292,7 @@ export const menus = [
                         },
                        
                     ]
-    }
+    },
+
 
 ]

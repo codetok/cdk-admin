@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { palete } from '../../../../environments/environment'
 declare const Chart;
 
 @Component({
@@ -8,9 +7,7 @@ declare const Chart;
     styleUrls: ['./area-chart.component.scss']
 })
 export class AreaChartComponent implements OnInit {
-
-    public palete: any = palete;
-
+    
     constructor() { }
 
     ngOnInit() {

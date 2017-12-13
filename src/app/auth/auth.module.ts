@@ -25,7 +25,12 @@ export const appRoutes: Routes = [{
         {path: 'material-widgets', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule'},
         {path: 'tables', loadChildren: '../tables/tables.module#TablesModule'},
         {path: 'maps', loadChildren: '../maps/maps.module#MapsModule'},
-        {path: 'charts', loadChildren: '../charts/charts.module#ChartsModule'}
+        {path: 'charts', loadChildren: '../charts/charts.module#ChartsModule'},
+        {path: 'forms',loadChildren:'../forms/forms.module#FormModule'},
+        {path: 'guarded-routes',loadChildren:'../guarded-routes/guarded-routes.module#GuardedRoutesModule'},
+
+        {path: 'chats', loadChildren: '../chats/chat.module#ChatsModule'}
+
       ]}
   ]
 
