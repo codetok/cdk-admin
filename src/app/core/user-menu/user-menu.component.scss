@@ -49,6 +49,10 @@
         visibility: hidden;
         transition: all .25s linear, max-height .25s linear, opacity .25s linear;
 
+        @media screen and (max-width: 599px) {
+            min-width: 65px;
+        }
+
         &.open {
             opacity: 1;
             visibility: visible;
