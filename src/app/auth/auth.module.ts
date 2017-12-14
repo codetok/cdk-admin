@@ -31,7 +31,6 @@ export const appRoutes: Routes = [{
         {path: 'guarded-routes',loadChildren:'../guarded-routes/guarded-routes.module#GuardedRoutesModule'},
 
         {path: 'chats', loadChildren: '../chats/chat.module#ChatsModule'}
-
       ]}
   ]
 
