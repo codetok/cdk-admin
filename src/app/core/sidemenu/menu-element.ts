@@ -89,23 +89,28 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "DatePicker",
-                            "link": "datepicker",
-                            "icon": "date_range",
-                            "open"   : false,
+                            "name"    : "DatePicker",
+                            "link"    : "material-widgets/datepicker",
+                            "icon"    : "date_range",
+                            "chip"    : false,
+                            "open"    : false,
                         },
 
                         {
-                            "name": "Slider",
-                            "link": "slider",
-                            "open"   : false,
-                            "icon":"keyboard_tab"
+                            "name"    : "Slider",
+                            "link"    : "material-widgets/slider",
+                            "icon"    : "keyboard_tab",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                         },
                         {
-                            "name": "Slide Toggle",
-                            "link": "slide-toggle",
-                            "open"   : false,
-                            "icon":"album"
+                            "name"    : "Slide Toggle",
+                            "link"    : "material-widgets/slide-toggle",
+                            "icon"    : "album",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                            
                         },
                          {

@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule,
          MatSortModule,
@@ -29,10 +30,15 @@ import * as hljs from 'highlight.js';
 import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
 import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { FilterTableComponent } from './filter-table/filter-table.component';
+<<<<<<< HEAD
 import { FeatureTableComponent } from './feature-table/feature-table.component';
 import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
 import { FixedTableComponent } from './fixed-table/fixed-table.component';
 
+
+import { FeatureTableComponent } from './feature-table/feature-table.component';
+import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
+>>>>>>> cdk2
 
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
@@ -62,7 +68,6 @@ export function highlightJsFactory(): any {
     MatCheckboxModule,
     MatTooltipModule,
     MatChipsModule,
-    MatButtonModule,
     MatButtonToggleModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,

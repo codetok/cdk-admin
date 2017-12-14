@@ -17,7 +17,11 @@
     mat-nav-list {
         overflow: hidden;
         height: 48px;
-        transition: height .4s cubic-bezier(.35, 0, .25, 1);   
+        transition: height .4s cubic-bezier(.35, 0, .25, 1);  
+    }
+
+    .secondaryMenu {
+        background:  mat-color($primary, 500); ;
     }
 
     .mat-nav-list .mat-list-item .mat-list-icon{
