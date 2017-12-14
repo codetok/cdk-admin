@@ -12,7 +12,8 @@ export const environment = {
     projectId: 'newproject-5d731',
     storageBucket: 'newproject-5d731.appspot.com',
     messagingSenderId: '737689833575'
-  }
+  },
+  mailApi: '/assets/list.json'
 };
 export const palete = {
     primary: '#D32F2F',

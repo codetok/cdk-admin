@@ -196,6 +196,39 @@ export const menus = [
                             "icon": "chat",
                             "link":"chats/chat",
                             "open"   : false,
+                        },
+                        {
+                            "name": "mail",
+                            "icon": "mail",
+                            "link":"mail/mail",
+                            "open"   : false,
+                        }
+                    ]
+    },{
+        "name"   : "Pages",
+        "icon"   : "content_copy",
+        "open"   : false,
+        "sub"    :  [
+                        {
+                            "name": "Login",
+                            "icon": "work",
+                            "open": false,
+                            "link": "../login",
+                        },{
+                            "name": "Services",
+                            "icon": "local_laundry_service",
+                            "open": false,
+                            "link": "pages/services",
+                        },{
+                            "name": "About",
+                            "icon": "work",
+                            "open": false,
+                            "link": "pages/about",
+                        },{
+                            "name":"Contact",
+                            "icon":"directions",
+                            "open": false,
+                            "link":"pages/contact"
                         }
                     ]
     },{
@@ -240,32 +273,6 @@ export const menus = [
                             "icon": "directions",
                             "link":"maps/leafletmap",
                             "open"   : false,
-                        }
-                    ]
-    },{
-        "name"   : "Pages",
-        "icon"   : "content_copy",
-        "open"   : false,
-        "sub"    :  [
-                        {
-                            "name": "Services",
-                            "icon": "local_laundry_service",
-                            "open": false,
-                            "link": "services",
-                        },{
-                            "name": "Login",
-                            "icon": "work",
-                            "open": false,
-                            "link": "../login",
-                        },{
-                            "name": "Registeration",
-                            "icon": "work",
-                            "open": false,
-                            "link": "register",
-                        },{
-                            "name":"Map",
-                            "icon":"directions",
-                            "open": false,
                         }
                     ]
     },{

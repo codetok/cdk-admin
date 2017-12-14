@@ -1,0 +1,7 @@
+<div class="search mat-elevation-z2" fxLayout="row">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-icon>search</mat-icon>
+  </div>
+  <input fxFlex type="search" autocomplete="off" spellcheck="false" [placeholder]="placeholder"
+         (keyup.enter)="enterUp()" [(ngModel)]="inputValue">
+</div>

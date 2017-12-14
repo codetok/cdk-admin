@@ -1,24 +1,26 @@
 <div class="chat-inner-container">
   <mat-toolbar>
-    <div class="toolbar" fxLayout="row" fxLayoutAlign="start center">
-      <button mat-icon-button (click)="onChatSideTriggered()">
-        <mat-icon>menu</mat-icon>
-      </button>
+    <div class="toolbar" fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
+          
+          <button mat-icon-button (click)="onChatSideTriggered()">
+            <mat-icon>menu</mat-icon>
+          </button>
 
-      <div class="current-contact" fxLayout="row" fxLayoutAlign="start center">
+     
         <img class="avatar pointer" *ngIf="activeChat" [src]="activeChat.picture">
 
-        <div fxLayout="column">
-          <span class="name" *ngIf="activeChat">{{ activeChat.name }}</span>
-          <span class="status">Online</span>
+        <div class="activeChat">
+            <h3 class="mat-body-2" *ngIf="activeChat">{{ activeChat.name }}</h3>
+            <p class="mat-body-1" style="margin: 0" *ngIf="activeChat">Online</p>
         </div>
-      </div>
+   
 
       <span fxFlex></span>
-
-      <button mat-icon-button [matMenuTriggerFor]="chatMenu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
+        <div fxLayout="row" fxLayoutAlign="end" >
+            <button mat-icon-button [matMenuTriggerFor]="chatMenu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
     </div>
   </mat-toolbar>
 
