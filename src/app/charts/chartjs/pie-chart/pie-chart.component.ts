@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { palete } from '../../../../environments/environment'
 declare const Chart;
 
 @Component({
@@ -8,9 +7,6 @@ declare const Chart;
     styleUrls: ['./pie-chart.component.scss']
 })
 export class PieChartComponent implements OnInit {
-
-    public palete: any = palete;
-
     constructor() { }
 
     ngOnInit() {
@@ -30,10 +26,8 @@ export class PieChartComponent implements OnInit {
 
                     backgroundColor: [
                         'rgba(255, 99, 132,.7)',
-                        // 'rgba(92, 107, 192,.7)',
                         'rgba(66, 165, 245,.7)',
                         'rgba(38, 166, 154,.7)',
-                        // 'rgba(102, 187, 106,.7)'
                     ],
                 }]
             },

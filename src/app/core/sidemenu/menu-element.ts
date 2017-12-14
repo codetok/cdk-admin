@@ -2,8 +2,9 @@ export const menus = [
     {
         "name"   : "Dashboard",
         "icon"   : "dashboard",
+        "link"   : false,
         "open"   : false,
-        "chip"   :  { "value": 2,'color': 'accent'} ,
+        "chip"   :  { "value": 1,'color': 'accent'} ,
         "sub"    :  [
                         {
                             "name": "Dashboard",
@@ -11,19 +12,14 @@ export const menus = [
                             "icon": "dashboard",
                             "chip"   : false,
                             "open"   : true,
-                        },
-                        {
-                            "name": "Account",
-                            "link": "/auth/dashboard-account",
-                            "icon": "dashboard",
-                            "chip"   : false,
-                            "open"   : true,
                         }
+                        
                     ]
     },
     {
         "name"   : "Material Widget",
         "icon"   : "widgets",
+        "link"   : false,
         "open"   : false,
         "sub"    :  [
                         {
@@ -93,23 +89,28 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "DatePicker",
-                            "link": "datepicker",
-                            "icon": "date_range",
-                            "open"   : false,
+                            "name"    : "DatePicker",
+                            "link"    : "material-widgets/datepicker",
+                            "icon"    : "date_range",
+                            "chip"    : false,
+                            "open"    : false,
                         },
 
                         {
-                            "name": "Slider",
-                            "link": "slider",
-                            "open"   : false,
-                            "icon":"keyboard_tab"
+                            "name"    : "Slider",
+                            "link"    : "material-widgets/slider",
+                            "icon"    : "keyboard_tab",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                         },
                         {
-                            "name": "Slide Toggle",
-                            "link": "slide-toggle",
-                            "open"   : false,
-                            "icon":"album"
+                            "name"    : "Slide Toggle",
+                            "link"    : "material-widgets/slide-toggle",
+                            "icon"    : "album",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                            
                         },
                          {
@@ -131,10 +132,11 @@ export const menus = [
                             "open"   : false,
                         },
                         {
-                            "name": "Radio",
-                            "icon": "radio_button_checked",
-                            "link": "radio",
-                            "open"   : false,
+                            "name"    : "Radio",
+                            "icon"    : "radio_button_checked",
+                            "link"    : "material-widgets/radio",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "Select",
@@ -147,23 +149,25 @@ export const menus = [
         "name"   : "Forms",
         "icon"   : "mode_edit",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "Template Driven",
                             "icon": "mode_edit",
                             "open"   : false,
-                            "link":"template_driven"
+                            "link":"forms/template_forms"
                         },
                         {
                             "name": "Reactive Forms",
                             "icon": "text_fields",
                             "open"   : false,
-                            "link":"reactive_forms"
+                            "link":"forms/reactive_forms"
                         }
                     ]
     },{
         "name"   : "Tables",
         "icon"   : "list",
+        "link"   : false,
         "open"   : false,
         "chip"   :  { "value": 2,'color': 'accent'} ,
         "sub"    :  [
@@ -186,10 +190,21 @@ export const menus = [
                             "open"   : false,
                         }
                     ]
-    },{
+
+    },
+    {
+        "name"   : "Guarded Routes",
+        "icon"   : "mode_edit",
+        "link"   : "/auth/guarded-routes",
+        "open"   : false,
+       
+                 
+    },
+    {
         "name"   : "Applications",
         "icon"   : "view_module",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "chat",
@@ -232,9 +247,11 @@ export const menus = [
                         }
                     ]
     },{
+
         "name"   : "Charts",
         "icon"   : "pie_chart_outlined",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "chartjs",
@@ -261,6 +278,7 @@ export const menus = [
         "name"   : "maps",
         "icon"   : "map",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "google-map",
@@ -276,9 +294,37 @@ export const menus = [
                         }
                     ]
     },{
+        "name"   : "Pages",
+        "icon"   : "content_copy",
+        "open"   : false,
+        "link"   : false,
+        "sub"    :  [
+                        {
+                            "name": "Services",
+                            "icon": "local_laundry_service",
+                            "open": false,
+                            "link": "services",
+                        },{
+                            "name": "Login",
+                            "icon": "work",
+                            "open": false,
+                            "link": "../login",
+                        },{
+                            "name": "Registeration",
+                            "icon": "work",
+                            "open": false,
+                            "link": "register",
+                        },{
+                            "name":"Map",
+                            "icon":"directions",
+                            "open": false,
+                        }
+                    ]
+    },{
         "name"   : "Editor",
         "icon"   : "content_copy",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "Text Editor",

@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule,
          MatSortModule,
@@ -62,7 +63,6 @@ export function highlightJsFactory(): any {
     MatCheckboxModule,
     MatTooltipModule,
     MatChipsModule,
-    MatButtonModule,
     MatButtonToggleModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,

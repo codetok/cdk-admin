@@ -1,0 +1,18 @@
+.table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+.table tr:first-child td {
+    border-top: none;
+}
+
+.text-right {
+	text-align: right;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+}

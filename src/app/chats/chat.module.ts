@@ -10,6 +10,7 @@ import { ChatComponent } from './chat/chat.component';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NoticeComponent } from './notice/notice.component';
+
 import {
     MatIconModule,
     MatListModule,

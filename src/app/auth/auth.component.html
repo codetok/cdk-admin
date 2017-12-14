@@ -18,15 +18,33 @@
             </mat-drawer>
             <mat-drawer-content >
 
-                <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
+                <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
 
 
                 <perfect-scrollbar  style="height: calc(100% - 33px);">
-                    <div style=" position: relative;}"  >
+                    <div>
+
                         <router-outlet></router-outlet>
                     </div>
+                    
                 </perfect-scrollbar>
             </mat-drawer-content>
         </mat-drawer-container>
     </mat-sidenav-content>
+
+    <mat-sidenav #sidenav2 position="end" mode="over">
+        <!-- <mat-tab-group>
+            <mat-tab label="Overview">
+            </mat-tab>
+            <mat-tab label="Notifications">
+            </mat-tab>
+        </mat-tab-group> -->
+    <cdk-sidebar></cdk-sidebar>
+    </mat-sidenav>
+    
 </mat-sidenav-container>
+        
+            
+        
+        
+

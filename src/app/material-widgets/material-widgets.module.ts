@@ -20,6 +20,7 @@ import { MatProgressSpinnerModule,
          MatAutocompleteModule,
          MatCheckboxModule,
          MatSlideToggleModule,
+         
  } from '@angular/material';
 
 
@@ -38,6 +39,14 @@ import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { SliderComponent } from './slider/slider.component';
+import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
+import { MenuComponent } from './menu/menu.component';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { InputComponent } from './input/input.component';
+import { RadioComponent } from './radio/radio.component';
+import { SelectComponent } from './select/select.component';
 
 
 export function highlightJsFactory(): any {
@@ -53,7 +62,7 @@ export function highlightJsFactory(): any {
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule,
+      MatProgressSpinnerModule,
     MatIconModule,
     MatTabsModule,
     MatRadioModule,
@@ -85,7 +94,17 @@ export function highlightJsFactory(): any {
     CardsComponent,
     IconsComponent,
     AutocompleteComponent,
-    CheckboxComponent],
+    CheckboxComponent,
+    DatepickerComponent,
+    SliderComponent,
+    SlidetoggleComponent,
+    MenuComponent,
+    ProgressbarComponent,
+    InputComponent,
+    RadioComponent,
+    SelectComponent
+
+    ],
 
   exports: [
     ]

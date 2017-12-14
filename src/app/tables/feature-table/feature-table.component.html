@@ -1,14 +1,14 @@
 <div fxLayout="column" fxLayoutAlign="space-evenly stretch" style="border: 1px solid #15980d">
 		
 		<div class="table-header" style="padding: 0 20px;">
-			<h3>Tables</h3>
+			<h1 class="mat-headline center-align " >Tables</h1>
 		</div>
 		<div class="example-header" style="padding: 0 20px;">
 			<mat-form-field floatPlaceholder="never" style="color: black; width: 100%;">
 				<input matInput #filter placeholder="Filter users">
 			</mat-form-field>
 		</div>
-		<div fxLayout="row" class="example-header example-selection-header"
+		<div fxLayout="row" class="example-header example-selection-header mat-headline center-align "
 			*ngIf="!selection.isEmpty()">
 			{{selection.selected.length}}
 			{{selection.selected.length == 1 ? 'user' : 'users'}}

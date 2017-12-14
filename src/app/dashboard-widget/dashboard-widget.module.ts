@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashcardComponent } from './dashcard/dashcard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +23,7 @@ import { RoundProgressbarComponent } from './round-progressbar/round-progressbar
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { D3UsaComponent } from './d3-usa/d3-usa.component';
+import { WorldMapComponent } from './world-map/world-map.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { D3UsaComponent } from './d3-usa/d3-usa.component';
     RoundProgressModule,
     MatMenuModule,
     MatChipsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
       DashcardComponent, 
@@ -50,7 +54,8 @@ import { D3UsaComponent } from './d3-usa/d3-usa.component';
       SharePriceComponent,
       RoundProgressbarComponent,
       SalesListComponent,
-      D3UsaComponent
+      D3UsaComponent,
+      WorldMapComponent
     
       ],
   exports: [
@@ -64,7 +69,8 @@ import { D3UsaComponent } from './d3-usa/d3-usa.component';
       SharePriceComponent,
       RoundProgressbarComponent,
       SalesListComponent,
-      D3UsaComponent
+      D3UsaComponent,
+      WorldMapComponent
   ]
 })
 export class DashboardWidgetModule { }

@@ -1,15 +1,15 @@
 <div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
 
-	<div class="spinner-header">
-		<h3>Progress Spinner</h3>
-	</div>
+	<mat-toolbar class="spinner-header">
+		<h1 class="mat-headline center-align" >Progress Spinner</h1>
+	</mat-toolbar>
 	
 	<div class="spinner-container">
 		
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #00BCD4;margin: 14px 0;">Configurable Progress Spinner</h4>
+				<h4 style="color: #00BCD4;margin: 14px 0;" class="mat-subheading-2 center-align">Configurable Progress Spinner</h4>
 				<mat-divider></mat-divider>
 					
 				<mat-list>
@@ -51,8 +51,8 @@
 			    </mat-list>
 
 
-			    <section class="example-section" *ngIf="mode == 'determinate'">
-			      <label class="example-margin">Progress:</label>
+			    <section class="example-section " *ngIf="mode == 'determinate'">
+			      <label class="mat-subheading-2 center-align" style="font-weight: bold;">Progress:</label>
 			      <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
 			    </section>
 					  
@@ -60,7 +60,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #00BCD4;margin: 14px 0;">Result</h4>
+				<h4 style="color: #00BCD4;margin: 14px 0;" class="mat-subheading-2 center-align">Result</h4>
 				<mat-divider></mat-divider>
 				
 				<mat-progress-spinner
@@ -75,9 +75,9 @@
 	</div>
 
 
-	<div class="spinner-header" style="    margin-top: 10px;">
-		<h3>Exapmles</h3>
-	</div>
+	<mat-toolbar  class="spinner-header" style="    margin-top: 10px;">
+		<h3 class="mat-headline center-align">Examples</h3>
+	</mat-toolbar>
 
 	<mat-tab-group fxFlexFill>
 		<mat-tab label="TS">
@@ -137,7 +137,7 @@
 
 
 			    <section class="example-section" *ngIf="mode == 'determinate'">
-			      <label class="example-margin">Progress:</label>
+			      <label class="example-margin mat-subheading-2 center-align">Progress:</label>
 			      <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
 			    </section>
 					  
@@ -145,7 +145,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #00BCD4;margin: 14px 0;">Result</h4>
+				<h4 style="color: #00BCD4;margin: 14px 0;" class="mat-subheading-2">Result</h4>
 				<mat-divider></mat-divider>
 				
 				<mat-progress-spinner

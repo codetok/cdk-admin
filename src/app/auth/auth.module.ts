@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -29,7 +30,8 @@ export const appRoutes: Routes = [{
         {path: 'chats', loadChildren: '../chats/chat.module#ChatsModule'},
         {path: 'mail', loadChildren: '../mail/mail.module#MailModule'},
         {path: 'pages', loadChildren: '../pages/pages.module#PagesModule'},
-
+        {path: 'forms',loadChildren:'../forms/forms.module#FormModule'},
+        {path: 'guarded-routes',loadChildren:'../guarded-routes/guarded-routes.module#GuardedRoutesModule'},
       ]}
   ]
 
@@ -40,6 +42,7 @@ export const appRoutes: Routes = [{
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatTabsModule,
     CoreModule,
     MatSidenavModule,
     PerfectScrollbarModule

@@ -1,0 +1,73 @@
+
+<div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
+
+	<mat-toolbar class="radio-header">
+		<h1 class="mat-headline center-align" >Radio Button</h1>
+	</mat-toolbar>
+	
+	<div class="radio-container">
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #00BCD4;margin: 14px 0;" class="mat-subheading-2 center-align">Basic Radios</h4>
+				<mat-divider></mat-divider>
+					
+				<mat-list>
+					<mat-list-item>
+				    	<section class="example-section">
+							<label class="example-margin">Season:</label>
+								<mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+									<mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+									{{season}}
+										</mat-radio-button>
+								</mat-radio-group>
+								<div class="example-selected-value">Your favorite season is: {{favoriteSeason}}
+								</div>
+						</section>
+			    	</mat-list-item>
+		    	</mat-list>
+			</div>
+		</div>
+	</div>
+
+
+	<mat-toolbar  class="radio-header" style="    margin-top: 10px;">
+		<h3 class="mat-headline center-align">Examples</h3>
+	</mat-toolbar>
+
+	<mat-tab-group fxFlexFill>
+		<mat-tab label="TS">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="radioHelpers?.tsSourceRadio" language="typescript"></code></pre>
+        </mat-tab>
+        <mat-tab label="HTML">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="radioHelpers?.htmlSourceRadio" language="html"></code></pre>
+        </mat-tab>
+
+        <mat-tab label="PREVIEW">
+        	<div style="padding: 20px;">
+        		<div class="radio-container">
+					<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+						<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+							<h4 style="color: #00BCD4;margin: 14px 0;">Basic Radios</h4>
+							<mat-divider></mat-divider>
+					
+							<mat-list>
+								<mat-list-item>
+							    	<section class="example-section">
+										<label class="example-margin">Season:</label>
+											<mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+												<mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+												{{season}}
+													</mat-radio-button>
+											</mat-radio-group>
+											<div class="example-selected-value">Your favorite season is: {{favoriteSeason}}
+											</div>
+									</section>
+						    	</mat-list-item>
+					    	</mat-list>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</mat-tab>
+    </mat-tab-group>
+</div>

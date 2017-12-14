@@ -31,18 +31,21 @@ $prefix: 'toolbar-notification';
 .dropdown {
 	background: white;
 	position: absolute;
-	top: 55px;
-	right: 0;
+	top: 42px;
+	right: 28px;
 	min-width: 350px;
-	z-index: -1;
-	transform: translateY(-110%) scale(0);
+	z-index: 2;
+	transform: translateY(0) scale(0);
 	transform-origin: top right;
 	visibility: hidden;
 	transition: transform .4s cubic-bezier(.25, .8, .25, 1), visibility .4s cubic-bezier(.25, .8, .25, 1);
 
 	@media screen and (max-width: 599px) {
-	    min-width: 90vw;
-	    right: 0;
+	    min-width: 50vw;
+	    right: 5px;
+	    transform: translateY(0);
+    	visibility: hidden;
+    	transition: transform .4s cubic-bezier(.25,.8,.25,1), visibility .4s cubic-bezier(.25,.8,.25,1);
 	}
 
 	&.open {

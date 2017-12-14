@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTabsModule} from '@angular/material';
 import { RouterModule } from '@angular/router'; 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -18,12 +19,31 @@ import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-not
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
+import { MatSidenavModule,
+         MatSliderModule,
+         MatProgressBarModule,
+       } from '@angular/material';
+
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
 @NgModule({
+
+  declarations: [
+  SidemenuComponent, 
+  SidemenuItemComponent, 
+  ToolbarNotificationComponent, 
+  ToolbarComponent, 
+  SearchBarComponent, 
+  FullscreenComponent, 
+  SidebarComponent,
+  UserMenuComponent
+  ],
+
   imports: [
     CommonModule,
     MatListModule,
@@ -35,10 +55,25 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatFormFieldModule   
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatSliderModule,
+    MatProgressBarModule,
   ],
-  declarations: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent, UserMenuComponent],
-  exports: [SidemenuComponent, SidemenuItemComponent, ToolbarNotificationComponent, ToolbarComponent, SearchBarComponent, FullscreenComponent, UserMenuComponent],
+
+  
+  exports: [
+  SidemenuComponent, 
+  SidemenuItemComponent, 
+  ToolbarNotificationComponent, 
+  ToolbarComponent, 
+  SearchBarComponent, 
+  FullscreenComponent,
+  SidebarComponent,
+  UserMenuComponent
+  ],
+
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
