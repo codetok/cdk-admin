@@ -22,6 +22,7 @@ import { RoundProgressbarComponent } from './round-progressbar/round-progressbar
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { D3UsaComponent } from './d3-usa/d3-usa.component';
+import { WorldMapComponent } from './world-map/world-map.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { D3UsaComponent } from './d3-usa/d3-usa.component';
       SharePriceComponent,
       RoundProgressbarComponent,
       SalesListComponent,
-      D3UsaComponent
+      D3UsaComponent,
+      WorldMapComponent
     
       ],
   exports: [
@@ -64,7 +66,8 @@ import { D3UsaComponent } from './d3-usa/d3-usa.component';
       SharePriceComponent,
       RoundProgressbarComponent,
       SalesListComponent,
-      D3UsaComponent
+      D3UsaComponent,
+      WorldMapComponent
   ]
 })
 export class DashboardWidgetModule { }

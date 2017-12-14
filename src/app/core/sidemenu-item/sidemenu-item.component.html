@@ -1,8 +1,6 @@
 <mat-nav-list  [style.height]="getHeight()">
 
-    <mat-list-item  (click)="menu.open = !menu.open"   [routerLink]="[menu.link]">
-        <mat-icon matListIcon iconsmall>{{menu.icon}} </mat-icon>
-    </mat-list-item>
+
     <mat-list-item *ngIf = "menu.link==false" (click)="menu.open = !menu.open" >
     	
     	<mat-icon matListIcon iconsmall  >{{menu.icon}} </mat-icon>

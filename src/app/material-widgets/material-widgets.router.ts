@@ -21,6 +21,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'icons', component: IconsComponent },
     { path: 'autocomplete', component: AutocompleteComponent },
     { path: 'checkbox', component:  CheckboxComponent },
+    
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 

@@ -1,9 +1,9 @@
 <div class="container">
 	<div fxLayout="column" fxLayoutAlign="space-evenly stretch" style="border: 1px solid #E65100">
 			
-		<div class="form-header" style="padding: 0 20px;">
-			<h3>Reactive Forms</h3>
-		</div>
+		<mat-toolbar class="form-header" style="padding: 0 20px;">
+			<h3 class="mat-headline center-align">Template Driven  Forms</h3>
+		</mat-toolbar>
 		<div [hidden]="submitted" style="background-color: white;">
 
 			<form (ngSubmit)="onSubmit()"   fxLayout="column" >
@@ -11,7 +11,7 @@
 					<input matInput type="text"   [(ngModel)]="model.name"  name="name" #name="ngModel" required minlength="4">
 
 				</mat-form-field>
-				<div  style="color:red" *ngIf="name.invalid && (name.dirty || name.touched)">
+				<div  style="color:red" *ngIf="name.invalid && (name.dirty || name.touched)" class="mat-body-1 center-align ">
 
 					<div *ngIf="name.errors.required">
 						Name is required.
@@ -41,23 +41,23 @@
     			   <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" >
     			   <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
     			 </mat-form-field>
-				<button style="font-weight: bold;" mat-raised-button type="submit" [disabled]="name.invalid||number.invalid" >Submit</button>
+				<button style="font-weight: bold;" mat-raised-button type="submit" [disabled]="name.invalid||number.invalid" class="mat-subheading-2 center-align">Submit</button>
 			</form>
 			
 		</div>
 
 		<div [hidden]="!submitted" style="background-color: white;">
 			<div fxLayout="column" fxLayoutAlign="space-around stretch" >
-				<h2>You submitted the following:</h2>
-				<div fxLayout="row" fxLayoutGap="20px">
+				<h2 class="mat-subheading-2 center-align">You submitted the following:</h2>
+				<div fxLayout="row" fxLayoutGap="20px" class="mat-body center-align">
 					<div >Name</div>
 					<div>{{ model.name }}</div>
 				</div>
-				<div fxLayout="row" fxLayoutGap="20px" >
+				<div fxLayout="row" fxLayoutGap="20px" class="mat-body center-align">
 					<div>Number</div>
 					<div>{{ model.number }}</div>
 				</div>
-				<div fxLayout="row" fxLayoutGap="20px">
+				<div fxLayout="row" fxLayoutGap="20px" class="mat-body center-align">
 					<div >Password</div>
 					<div>{{ model.pwd}}</div>
 				</div>

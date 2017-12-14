@@ -8,21 +8,21 @@ import { CanActivate } from '@angular/router';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { CanDeactivate } from '@angular/router';
 import { RouterDeactivateComponent } from './router-deactivate/router-deactivate.component';
-class UserToken { }
-class Permission {
+export class UserToken { }
+export class Permission {
 	canActivated(user: UserToken, id: string): boolean {
 		return true;
 	}
 }
 
-class Permissions {
+export class Permissions {
 	canActivate(user: UserToken, id: string): boolean {
 		return false;
 
 	}
 }
 @Injectable()
-class CanActivateTeam implements CanActivate {
+export class CanActivateTeam implements CanActivate {
 	constructor(private permissions: Permissions, private currentUser: UserToken) { }
 
 	canActivate(
@@ -35,16 +35,19 @@ class CanActivateTeam implements CanActivate {
 }
 
 
-const Routes: Routes = [
-	{ path: 'example', component: RouterComponent },
-	{ path: 'ex', component: RouterDeactivateComponent, canActivate: [CanActivateTeam] },
-	{ path: '', component: GuardedRoutesComponent },
+export const routes: Routes = [{
+		path: '', component: GuardedRoutesComponent,
+		children: [{ path: 'example', component: RouterComponent },
+		{ path: 'ex', component: RouterDeactivateComponent, canActivate: [CanActivateTeam] },]
+	},
+	
+
 
 ];
 
 @NgModule({
 	imports: [
-		RouterModule.forChild(Routes)
+		RouterModule.forChild(routes)
 	],
 	providers: [
 		CanActivateTeam, UserToken, Permissions,

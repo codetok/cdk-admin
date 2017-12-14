@@ -9,7 +9,7 @@ import { EmailValidator } from '@angular/forms';
 export class ReactiveFormsComponent implements OnInit {
 public profileForm:FormGroup;
 submitted = false;
-
+hide;
   constructor(public form: FormBuilder) { 
   		this.profileForm = this.form.group({
              username:['',{validators: [Validators.minLength(6)], updateOn: 'blur'}],

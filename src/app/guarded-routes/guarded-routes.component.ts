@@ -22,7 +22,7 @@ export class GuardedRoutesComponent implements OnInit {
   Onclick() {
 
     this.router.navigate(['/auth/guarded-routes/example']);
-
+    // this.router.navigate(['/auth/guarded-routes/', { outlets: { popup: [ 'example' ] }}]); 
   }
   Onclicked() {
 

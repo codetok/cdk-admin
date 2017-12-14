@@ -40,6 +40,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
 
+
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
   return hljs;
@@ -85,7 +86,8 @@ export function highlightJsFactory(): any {
     CardsComponent,
     IconsComponent,
     AutocompleteComponent,
-    CheckboxComponent],
+    CheckboxComponent,
+    ],
 
   exports: [
     ]
