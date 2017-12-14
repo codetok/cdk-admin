@@ -1,8 +1,10 @@
 <mat-nav-list  [style.height]="getHeight()">
 
+  
     <mat-list-item *ngIf = "menu.link==false" (click)="menu.open = !menu.open" >
     	
     	<mat-icon matListIcon iconsmall  >{{menu.icon}} </mat-icon>
+
         <h3 matLine *ngIf="!iconOnly">{{ menu.name }} </h3>
         <mat-chip-list *ngIf="menu?.chip && !iconOnly">
             <mat-chip >{{menu?.chip?.value}} </mat-chip>

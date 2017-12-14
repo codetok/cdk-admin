@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'cdk-toolbar-notification',
@@ -8,27 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class ToolbarNotificationComponent implements OnInit {
 	cssPrefix = 'toolbar-notification';
   	isOpen: boolean = false;
-  	notifications = [
-  		{
-	        id: 'id',
-	        title: 'Mail 5',
-	        lastTime: '23 Minutes ago',
-	        state: 'state'
-	    },
-	    {
-	        id: 'id',
-	        title: 'Mail 5',
-	        lastTime: '23 Minutes ago',
-	        state: 'state'
-	    },
-	    {
-	        id: 'id',
-	        title: 'Mail 5',
-	        lastTime: '23 Minutes ago',
-	        state: 'state'
-	    },
-	];
-  	constructor() { }
+  	@Input() notifications = [];
+
+    // @HostListener('document:click', ['$event', '$event.target'])
+    // onClick(event: MouseEvent, targetElement: HTMLElement) {
+    //     if (!targetElement) {
+    //           return;
+    //     }
+    //     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
+    //     if (!clickedInside) {
+    //          this.isOpen = false;
+    //     }
+    // }
+  	
+  	constructor(private elementRef: ElementRef) { }
 
   	ngOnInit() {
   	}
