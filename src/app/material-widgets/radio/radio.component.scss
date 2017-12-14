@@ -1,8 +1,19 @@
 .example-radio-group {
   display: inline-flex;
-  flex-direction: column;
+  
 }
 
 .example-radio-button {
   margin: 5px;
 }
+// cdk-radio {
+	.radio-header {
+		background-color: #00BCD4;
+		color: white;
+		padding: 0 5px;
+	}
+	.radio-container {
+		padding: 5px;
+		// color: white;
+	}
+// }

@@ -30,15 +30,10 @@ import * as hljs from 'highlight.js';
 import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
 import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { FilterTableComponent } from './filter-table/filter-table.component';
-<<<<<<< HEAD
 import { FeatureTableComponent } from './feature-table/feature-table.component';
 import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
 import { FixedTableComponent } from './fixed-table/fixed-table.component';
 
-
-import { FeatureTableComponent } from './feature-table/feature-table.component';
-import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
->>>>>>> cdk2
 
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
