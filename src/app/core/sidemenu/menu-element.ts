@@ -127,10 +127,11 @@ export const menus = [
                             "open"   : false,
                         },
                         {
-                            "name": "Radio",
-                            "icon": "radio_button_checked",
-                            "link": "radio",
-                            "open"   : false,
+                            "name"    : "Radio",
+                            "icon"    : "radio_button_checked",
+                            "link"    : "material-widgets/radio",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "Select",

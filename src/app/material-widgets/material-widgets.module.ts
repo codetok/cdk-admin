@@ -37,6 +37,7 @@ import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioComponent } from './radio/radio.component';
 
 
 
@@ -87,6 +88,7 @@ export function highlightJsFactory(): any {
     IconsComponent,
     AutocompleteComponent,
     CheckboxComponent,
+    RadioComponent,
     ],
 
   exports: [
