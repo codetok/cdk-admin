@@ -14,6 +14,7 @@ export class SidebarComponent implements OnInit {
   }
 
   today: number = Date.now();
+  // public bufferValue;
 
     events = [
           {
@@ -24,19 +25,19 @@ export class SidebarComponent implements OnInit {
         },
         {
             id: 'id',
-            title: 'Business Meeting',
+            title: 'Ask for a Vacation',
             time: '05:00 PM',
             state: 'state'
         },
         {
             id: 'id',
-            title: 'Business Meeting',
+            title: 'Dinner with Micheal',
             time: '05:00 PM',
             state: 'state'
         },
         {
             id: 'id',
-            title: 'Business Meeting',
+            title: 'Deadline for Project ABC',
             time: '05:00 PM',
             state: 'state'
         },
@@ -50,19 +51,27 @@ export class SidebarComponent implements OnInit {
         },
         {
             id: 'id',
-            title: 'Get to know Angular more',
+            title: 'Configure new Router',
             time: 'Added:4 days ago',
         },
         {
             id: 'id',
-            title: 'Get to know Angular more',
+            title: 'Invite Joy to play Carroms',
             time: 'Added:4 days ago',
         },
         {
             id: 'id',
-            title: 'Get to know Angular more',
+            title: 'Check SRS of Project X',
             time: 'Added:4 days ago',
         },
     ];
 
+    messages = [
+        {from: 'Catherin', subject: 'Shopping', content: 'hi there??'},
+        {from: 'Jack', subject: 'Function', content: 'yes'},
+        {from: 'Karina', subject: 'Get together', content: 'nice'},
+        {from: 'Micheal', subject: 'Trip', content: 'ya.. I will'},
+        {from: 'Ashik', subject: 'Meeting', content: 'Time??'},
+        {from: 'Joy', subject: 'Party', content: 'Lets enjoy'},
+    ];
 }
