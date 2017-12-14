@@ -8,7 +8,7 @@ import { User }    from './user';
 export class TemplateDrivenFormsComponent implements OnInit {
 model = new User(18, 'User','',8086824175);
   submitted = false;
- 
+ hide;
   onSubmit() { this.submitted = true; }
  
   newUser() {

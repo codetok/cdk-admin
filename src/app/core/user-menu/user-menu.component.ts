@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserMenuComponent implements OnInit {
 	isOpen: boolean = false;
   	currentUser = null;
+  	Hari;
   	constructor() { }
 
   	ngOnInit() {

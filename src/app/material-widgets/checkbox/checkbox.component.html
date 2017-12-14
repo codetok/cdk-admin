@@ -1,15 +1,15 @@
 <div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
 
-	<div class="checkbox-header">
-		<h3>Checkbox</h3>
-	</div>
+	<mat-toolbar class="checkbox-header">
+		<h1 class="mat-headline center-align" >Checkbox</h1>
+	</mat-toolbar>
 	
 	<div class="checkbox-container">
 		
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Checkbox Configuration</h4>
+				<h4 style="color: #006064;margin: 14px 0;"  class="mat-subheading-2 center-align">Checkbox Configuration</h4>
 				<mat-divider></mat-divider>
 				<mat-list>
 					<mat-list-item>
@@ -35,7 +35,7 @@
 				</mat-list>
 
 				<section class="example-section">
-                    <h2 class="example-h2">Result</h2>
+                    <h2 class="example-h2 ">Result</h2>
 					<mat-checkbox
 						class="example-margin"
 						[(ngModel)]="checked"
@@ -50,9 +50,9 @@
 	</div>
 
 
-	<div class="checkbox-header" style="    margin-top: 10px;">
-		<h3>Examples</h3>
-	</div>
+	<mat-toolbar class="checkbox-header" style="    margin-top: 10px;">
+		<h1 class="mat-headline center-align" >Examples</h1>
+	</mat-toolbar>
 
 	<mat-tab-group fxFlexFill>
 		<mat-tab label="TS">
