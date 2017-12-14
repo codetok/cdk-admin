@@ -1,16 +1,16 @@
 <div fxLayout="column"   style="background-color: white; border: 1px solid #E91E63;">
 
 
-	<div class="list-header">
-		<h3>Lists</h3>
-	</div>
+	<mat-toolbar class="list-header">
+		<h1 class="mat-headline center-align" >Lists</h1>
+	</mat-toolbar>
 	
 	<div class="list-container">
 		
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #E91E63;margin: 14px 0;">Simple List</h4>
+				<h4 style="color: #E91E63;margin: 14px 0;" class="mat-subheading-2 center-align">Simple List</h4>
 					<mat-divider></mat-divider>
 					<mat-list>
 						<mat-list-item> Pepper </mat-list-item>
@@ -20,7 +20,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #E91E63;margin: 14px 0;">Navigation list</h4>
+				<h4 style="color: #E91E63;margin: 14px 0;" class="mat-subheading-2 center-align">Navigation list</h4>
 				<mat-divider></mat-divider>
 
 				<mat-nav-list>
@@ -38,7 +38,7 @@
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
 
-				<h4 style="color: #E91E63;margin: 14px 0;">Selection list</h4>
+				<h4 style="color: #E91E63;margin: 14px 0;" class="mat-subheading-2 center-align">Selection list</h4>
 				<mat-divider></mat-divider>
 		
 				<mat-selection-list #shoes>
@@ -54,7 +54,7 @@
 
 			</div>
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #E91E63;margin: 14px 0;">Multi-line lists</h4>
+				<h4 style="color: #E91E63;margin: 14px 0;" class="mat-subheading-2 center-align">Multi-line lists</h4>
 				<mat-divider></mat-divider>
 				<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 				<!-- two line list -->
@@ -87,7 +87,7 @@
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
 
-				<h4 style="color: #E91E63;margin: 14px 0;">Lists with icons</h4>
+				<h4 style="color: #E91E63;margin: 14px 0;" class="mat-subheading-2 center-align">Lists with icons</h4>
 				<mat-divider></mat-divider>
 		
 				<mat-list>
@@ -104,7 +104,7 @@
 
 			</div>
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #E91E63;margin: 14px 0;">Lists with avatar</h4>
+				<h4 style="color: #E91E63;margin: 14px 0;" class="mat-subheading-2 center-align">Lists with avatar</h4>
 				<mat-divider></mat-divider>
 		
 				<mat-list>
@@ -121,9 +121,9 @@
 		</div>
 	</div>
 
-	<div class="list-header" style="    margin-top: 10px;">
-		<h3>Examples</h3>
-	</div>
+	<mat-toolbar class="list-header" style="    margin-top: 10px;">
+		<h1 class="mat-headline center-align" >Examples</h1>
+	</mat-toolbar >
 
 	<mat-tab-group fxFlexFill>
 		<mat-tab label="TS">

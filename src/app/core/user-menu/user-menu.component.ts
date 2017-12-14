@@ -7,6 +7,11 @@ import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/cor
 })
 export class UserMenuComponent implements OnInit {
 	isOpen: boolean = false;
+
+  	//currentUser = null;
+  	Hari;
+  	
+
   	@Input() currentUser = null;
   	@HostListener('document:click', ['$event', '$event.target'])
   	onClick(event: MouseEvent, targetElement: HTMLElement) {
@@ -22,6 +27,7 @@ export class UserMenuComponent implements OnInit {
   	
     
   	constructor(private elementRef: ElementRef) { }
+
 
   	ngOnInit() {
   	}

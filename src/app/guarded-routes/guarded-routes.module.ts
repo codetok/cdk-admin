@@ -9,17 +9,17 @@ import { CanActivate } from '@angular/router';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { RouterDeactivateComponent } from './router-deactivate/router-deactivate.component';
 import { MatSnackBarModule } from '@angular/material';
- 
+
 @NgModule({
   imports: [
     CommonModule,
-    GuardedRouter,
     FlexLayoutModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    GuardedRouter
    ],
    providers: [
    
