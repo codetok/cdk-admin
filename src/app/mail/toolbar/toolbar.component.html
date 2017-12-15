@@ -1,5 +1,6 @@
 <div *ngIf="!mail" class="toolbar" fxLayout="row" fxLayoutAlign="start center">
-  <mat-checkbox class="checkbox"></mat-checkbox>
+  <mat-checkbox [(ngModel)]="checked" (change)="showOptions($event)" 
+ class="checkbox"></mat-checkbox>
   <span fxFlex></span>
   <span>1 - 25 of {{ itemCount }}</span>
   <div class="chevrons">

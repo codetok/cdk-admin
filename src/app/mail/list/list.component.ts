@@ -6,21 +6,23 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+    @Input() checked;
+    @Input()  mails;
+    @Output() onOpenMailDetial = new EventEmitter();
+    @Output() onUncheckmail = new EventEmitter();
+    constructor() {
+    }
 
-  @Input()  mails;
-  @Output() onOpenMailDetial = new EventEmitter();
-
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-  ngOnChanges() {
-    console.log(this.mails);
-  }
-  onOpenMailDetialTriggered(mail) {
-    this.onOpenMailDetial.emit(mail);
-  }
+    ngOnInit() {
+    }
+    ngOnChanges() {
+    }
+    onOpenMailDetialTriggered(mail) {
+        this.onOpenMailDetial.emit(mail);
+    }
+    showOptions(event) {
+        if (event.checked == false) 
+            this.onUncheckmail.emit(false);
+    }
 
 }
