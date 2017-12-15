@@ -73,9 +73,18 @@ cdk-profile-card{
 @include sales-list($cdk-theme);
 
 
-
-
-
-
-
-
+body{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.components-container-gt-xs {
+    padding: 20px;
+    // background-color: #fdfdfd;
+}
+.components-container-xs {
+    padding: 5px !important;
+    // background-color: #fdfdfd;
+}
+.component-preview {
+    padding: 20px;
+}

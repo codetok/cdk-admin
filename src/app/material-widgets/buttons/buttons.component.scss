@@ -4,7 +4,19 @@
 	padding: 0 5px;
 }
 .button-container {
-	padding: 0 5px;
+	padding: 5px 15px 15px 15px;
 }
+.button-component-holder {
+	border: 1px solid #18988c;
+	background-color: white;
 
+	h4 {
+		color: #0e773d;
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}
 

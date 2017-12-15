@@ -1,0 +1,67 @@
+<div *ngIf="!mail" class="toolbar" fxLayout="row" fxLayoutAlign="start center">
+  <mat-checkbox class="checkbox"></mat-checkbox>
+  <span fxFlex></span>
+  <span>1 - 25 of {{ itemCount }}</span>
+  <div class="chevrons">
+    <button mat-icon-button>
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="mail"  class="toolbar toolbar-detail" fxLayout="row" fxLayoutAlign="start center">
+  <div class="icon-group">
+    <button class="back" mat-icon-button matTooltip="return" (click)="onForwardTriggered()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+  <div class="icon-group">
+    <button class="archive" mat-icon-button matTooltip="Receive">
+      <mat-icon>archive</mat-icon>
+    </button>
+    <button class="spam" mat-icon-button matTooltip="Mark the trash">
+      <mat-icon>backspace</mat-icon>
+    </button>
+    <button class="delete" mat-icon-button matTooltip="delete">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <div class="icon-group">
+    <button class="archive" mat-icon-button matTooltip="move to">
+      <mat-icon>folder</mat-icon>
+    </button>
+    <button class="spam" mat-icon-button matTooltip="label" [matMenuTriggerFor]="mailLabels">
+      <mat-icon>label</mat-icon>
+    </button>
+  </div>
+  <button class="delete" mat-icon-button [matMenuTriggerFor]="mailOptions">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <span fxFlex></span>
+  <span>1 - 25 of 0</span>
+  <div class="chevrons">
+    <button mat-icon-button>
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>
+
+<mat-menu #mailOptions="matMenu">
+  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>Mark unread </button>
+  <button mat-menu-item> <mat-icon>label</mat-icon> label </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item> <mat-icon>delete</mat-icon> delete </button>
+</mat-menu>
+
+<mat-menu #mailLabels="matMenu">
+  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>Mark unread </button>
+  <button mat-menu-item> <mat-icon>label</mat-icon> label </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item> <mat-icon>delete</mat-icon> delete </button>
+</mat-menu>

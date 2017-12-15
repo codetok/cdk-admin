@@ -63,7 +63,7 @@ export function highlightJsFactory(): any {
         ChatComponent,
         ChatListComponent,
         ContactsComponent,
-        NoticeComponent
+        NoticeComponent,
     ],
     exports: [
     ],
