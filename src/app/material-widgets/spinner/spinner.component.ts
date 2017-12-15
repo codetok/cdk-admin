@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SPINNER_HELPERS } from './helpers.data';
 
-
 @Component({
   selector: 'cdk-spinner',
   templateUrl: './spinner.component.html',
@@ -13,10 +12,10 @@ export class SpinnerComponent implements OnInit {
 
   ngOnInit() {
   }
-  showProgressBarCode;
+  // showProgressBarCode;
 	showSource;
 		color = 'primary';
-	  	mode = 'determinate';
-	  	value = 50;
+	  mode = 'determinate';
+	  value = 50;
 spinnerHelpers: any = SPINNER_HELPERS;
 }

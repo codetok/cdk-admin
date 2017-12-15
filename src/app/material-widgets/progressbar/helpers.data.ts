@@ -1,18 +1,19 @@
 export const PROGRESSBAR_HELPERS: any = {
 
 	tsSourceProgressbar: `
-import { Component, OnInit } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material';
-@Component({
-  selector: 'cdk-progressbar',
-  templateUrl: './progressbar.component.html',
-  styleUrls: ['./progressbar.component.scss']
-})
 @NgModule({
 		  imports: [
 		    MatProgressBarModule,
 		})
 export class AppModule { }
+
+import { Component, OnInit } from '@angular/core';
+@Component({
+  selector: 'cdk-progressbar',
+  templateUrl: './progressbar.component.html',
+  styleUrls: ['./progressbar.component.scss']
+})
 export class ProgressbarComponent implements OnInit {
 
   constructor() { }
