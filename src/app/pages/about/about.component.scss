@@ -1,0 +1,35 @@
+@import '~@angular/material/_theming';
+
+$navigation-font-size-base: 14px !default;
+$navigation-border-radius: 2px !default;
+
+mat-card {
+  padding: 10px;
+  margin: 10px;
+  .mat-card-avatar {
+    width: 100px;
+    height:100px;
+  }
+}
+
+.nav-title {
+  @include mat-truncate-line();
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav-desc {
+  height: 15px;
+  overflow: hidden;
+}
+.nav-item {
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: default;
+
+  &:hover {
+    transform: translate(0, -8px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .16)
+  }
+}

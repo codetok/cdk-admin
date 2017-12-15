@@ -1,0 +1,29 @@
+<div fxLayout="row" >
+	<mat-toolbar color="primary">
+		About Us
+	</mat-toolbar>
+</div>
+<div fxLayout="row"  >
+	<p >A theme is the set of colors that will be applied to the Angular Material components. The library's approach to theming is based on the guidance from the Material Design spec.
+
+In Angular Material, a theme is created by composing multiple palettes. In particular, a theme consists of:
+
+A primary palette: colors most widely used across all screens and components.
+An accent palette: colors used for the floating action button and interactive elements.
+A warn palette: colors used to convey error state.
+A foreground palette: colors for text and icons.
+A background palette: colors used for element backgrounds </p>
+</div>
+<mat-toolbar >
+		Our Team
+</mat-toolbar>
+<div fxLayout="row" >
+		 <div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" *ngFor="let navigation of navigations">
+    <mat-card class="nav-item">
+      <mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">{{ navigation.name }}</a></mat-card-title>
+      <mat-card-content class="nav-desc">{{ navigation.job }}</mat-card-content>
+      <mat-card-content class="nav-desc">{{ navigation.experience }}</mat-card-content>
+      <img mat-card-avatar src="assets/user-image.jpg">
+    </mat-card>
+  </div>
+</div> 

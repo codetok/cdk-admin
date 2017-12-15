@@ -6,8 +6,11 @@ import { AuthModule } from '../auth/auth.module';
 
 const routes: Routes = [   
     {path: 'auth', loadChildren: '../auth/auth.module#AuthModule'},
-    {path: 'login', loadChildren: '../login/login.module#LoginModule'},
     {path: 'register', loadChildren: '../register/register.module#RegisterModule'},
+    {path: 'login', loadChildren: '../pages/login/login.module#LoginModule'},
+    // {path: 'services', loadChildren: '../pages/services/services.module#ServicesModule'},
+    // {path: 'about', loadChildren: '../pages/about/about.module#AboutModule'},
+    // {path: 'contact', loadChildren: '../pages/contact/contact.module#ContactModule'},
     {path: '**', redirectTo: 'auth/dashboard'},
 ]
 

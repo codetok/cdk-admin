@@ -9,6 +9,7 @@ import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioComponent } from './radio/radio.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
@@ -24,6 +25,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'icons', component: IconsComponent },
     { path: 'autocomplete', component: AutocompleteComponent },
     { path: 'checkbox', component:  CheckboxComponent },
+    { path: 'radio', component:  RadioComponent },
     { path: 'datepicker', component:  DatepickerComponent },
     { path: 'slider', component:  SliderComponent },
     { path: 'slide-toggle', component:  SlidetoggleComponent },
