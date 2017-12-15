@@ -9,12 +9,16 @@ import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+
+import { SelectComponent } from './select/select.component';
+import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { MenuComponent } from './menu/menu.component';
+
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
@@ -26,19 +30,25 @@ const materialWidgetRoutes: Routes = [
     { path: 'icons', component: IconsComponent },
     { path: 'autocomplete', component: AutocompleteComponent },
     { path: 'checkbox', component:  CheckboxComponent },
+    
+    { path: 'select', component:  SelectComponent },
+    { path: 'input', component:  InputComponent },
     { path: 'radio', component:  RadioComponent },
     { path: 'datepicker', component:  DatepickerComponent },
     { path: 'slider', component:  SliderComponent },
     { path: 'slide-toggle', component:  SlidetoggleComponent },
+
+
     { path: 'progress-bar', component:  ProgressbarComponent },
     { path: 'menu', component:  MenuComponent },
+
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 
 @NgModule({
   imports: [
     RouterModule.forChild(materialWidgetRoutes)
-  	],
+  ],
   exports: [
     RouterModule
   ]

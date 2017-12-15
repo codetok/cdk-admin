@@ -1,8 +1,15 @@
 export const ICON_HELPERS: any = {
 
 	tsSourceIcons: `
-import { Component, OnInit } from '@angular/core';
+import { MatIconModule} from '@angular/material';
+	
+		@NgModule({
+		  imports: [
+		   MatIconModule
+		})
+		export class AppModule { }
 
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'cdk-icons',
   templateUrl: './icons.component.html',

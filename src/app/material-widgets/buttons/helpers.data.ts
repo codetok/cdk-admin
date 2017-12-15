@@ -7,7 +7,19 @@ export const BUTTON_HELPERS: any = {
 		  imports: [
 		    MatButtonModule,
 		})
-		export class AppModule { }`.trim(),
+		export class AppModule { }
+
+		import { Component, OnInit } from '@angular/core';
+
+        @Component({
+          selector: 'cdk-buttons',
+          templateUrl: './buttons.component.html',
+          styleUrls: ['./buttons.component.scss']
+        })
+        export class ButtonsComponent implements OnInit {
+        }
+
+		`.trim(),
 
   	htmlSourceRaisedButton: `
   		

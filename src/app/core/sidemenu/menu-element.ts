@@ -131,7 +131,7 @@ export const menus = [
                         {
                             "name": "Input",
                             "icon": "input",
-                            "link": "inputs",
+                            "link": "material-widgets/input",
                             "open"   : false,
                         },
                         {
@@ -144,7 +144,7 @@ export const menus = [
                         {
                             "name": "Select",
                             "icon": "select_all",
-                            "link": "select",
+                            "link": "material-widgets/select",
                             "open"   : false,
                         },
                     ]

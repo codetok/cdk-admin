@@ -1,6 +1,6 @@
-// cdk-icons {
+
 	.icon-header {
-		background-color: #9C27B0;
+		background-color: rgb(24, 152, 140);
 		color: white;
 		padding: 0 5px;
 	}
@@ -8,4 +8,16 @@
 		padding: 5px;
 		// color: white;
 	}
-// }
+.icons-component-holder {
+	border: 1px solid #18988c;
+	background-color: white;
+
+	h4 {
+		color: #0e773d;
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

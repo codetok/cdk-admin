@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, OnInit  } from '@angular/core';
 import { single, multi } from './data';
 @Component({
-  selector: 'app-area-chart',
+  selector: 'cdk-area-chart',
   templateUrl: './area-chart.component.html',
   styleUrls: ['./area-chart.component.scss']
 })

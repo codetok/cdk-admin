@@ -1,12 +1,19 @@
 export const AUTOCOMPLETE_HELPERS: any = {
 
 	tsSourceAutocomplete: `
+import { MatAutocompleteModule } from '@angular/material';
+  
+    @NgModule({
+      imports: [
+       MatAutocompleteModule
+    })
+    export class AppModule { }
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
-
 @Component({
   selector: 'cdk-autocomplete',
   templateUrl: './autocomplete.component.html',
