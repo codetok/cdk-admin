@@ -1,6 +1,6 @@
 // cdk-cards {
 	.cards-header {
-		background-color: #4CAF50;
+		background-color: #327ebd;
 		color: white;
 		padding: 0 5px;
 	}
@@ -13,3 +13,8 @@
   background-size: cover;
 }
 // }
+
+.cdk-card-holder {
+	border: 1px solid #327ebd;
+	background-color: white;
+}

@@ -1,84 +1,66 @@
-<div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
+<div fxLayout="column"  class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
 
-	<mat-toolbar class="cards-header">
-		<h1 class="mat-headline center-align" >Cards</h1>
-	</mat-toolbar>
-	
-	<div class="cards-container">
-		
-		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+	<div fxLayout="row" fxLayout.sm="column" fxLayoutAlign="start space-between"  fxLayoutGap="10px">
 
-			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #4CAF50;margin: 14px 0;" class="mat-subheading-1 center-align">Basic Card</h4>
-				<mat-divider></mat-divider>
-            
-	            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
-	                <mat-card>
-	                    <mat-card-header>
-	                        <div mat-card-avatar class="example-header-image">
-	                        </div>
-	                        <mat-card-title>Shiba Inu</mat-card-title>
-	                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-	                    </mat-card-header>
-	                    <img mat-card-image src="/assets/220px-Taka_Shiba.jpg" alt="Photo of a Shiba Inu">
+		<div fxFlex.sm="100" class="cdk-card-holder"  fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="100" >
 
-	                    <mat-card-content>
-	                        <p class="mat-body-1">
-	                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-	                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-	                            bred for hunting.
-	                        </p>
-	                    </mat-card-content>
-	                    <mat-card-actions>
-	                        <button mat-button class="mat-subheading-1 center-align" >LIKE</button>
-	                        <button mat-button class="mat-subheading-1 center-align">SHARE</button>
-	                    </mat-card-actions>
-	                </mat-card>
-	            </div>
-        	</div>
-        </div>
-	</div>
+			<mat-toolbar class="cards-header">
+				<h1 class="mat-headline center-align" >Basic Card</h1>
+			</mat-toolbar>
 
-	<mat-toolbar class="cards-header" style="    margin-top: 10px;">
-		<h1 class="mat-headline center-align" >Examples</h1>
-	</mat-toolbar>
+			<div class="cards-container">
+	            
+		            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
+		                <mat-card>
+		                    <mat-card-header>
+		                        <div mat-card-avatar class="example-header-image">
+		                        </div>
+		                        <mat-card-title>Shiba Inu</mat-card-title>
+		                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+		                    </mat-card-header>
+		                    <img mat-card-image src="/assets/220px-Taka_Shiba.jpg" alt="Photo of a Shiba Inu">
 
-	<mat-tab-group fxFlexFill>
-		<mat-tab label="TS">
-            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="cardsHelpers?.tsSourceCards" language="typescript"></code></pre>
-        </mat-tab>
-        <mat-tab label="HTML">
-            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="cardsHelpers?.htmlSourceCards" language="html"></code></pre>
-        </mat-tab>
+		                    <mat-card-content>
+		                        <p class="mat-body-1">
+		                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+		                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+		                            bred for hunting.
+		                        </p>
+		                    </mat-card-content>
+		                    <mat-card-actions>
+		                        <button mat-button class="mat-subheading-1 center-align" >LIKE</button>
+		                        <button mat-button class="mat-subheading-1 center-align">SHARE</button>
+		                    </mat-card-actions>
+		                </mat-card>
+		            </div>
+	        	</div>
+	     </div>
 
-        <mat-tab label="PREVIEW">
-        	<div style="padding: 20px;">
-        		<div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
-	                <mat-card>
-	                    <mat-card-header>
-	                        <div mat-card-avatar class="example-header-image">
-	                        </div>
-	                        <mat-card-title>Shiba Inu</mat-card-title>
-	                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-	                    </mat-card-header>
-	                    <img mat-card-image src="/assets/220px-Taka_Shiba.jpg" alt="Photo of a Shiba Inu">
+	    <div fxFlex.xs="100"  class="cdk-card-holder"  fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="100" >
+					
+					<mat-toolbar class="cards-header">
+						<h1 class="mat-headline center-align" >Example</h1>
+					</mat-toolbar>
+	            
+		            <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >
 
-	                    <mat-card-content>
-	                        <p>
-	                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-	                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-	                            bred for hunting.
-	                        </p>
-	                    </mat-card-content>
-	                    <mat-card-actions>
-	                        <button mat-button>LIKE</button>
-	                        <button mat-button>SHARE</button>
-	                    </mat-card-actions>
-	                </mat-card>
-	            </div>
-        		
-        	</div>
-        </mat-tab>
-    </mat-tab-group>
+		                <mat-tab-group fxFlexFill>
+			
+							<mat-tab label="TS">
+								<div class="component-preview">
+					            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="cardsHelpers?.tsSourceCards" language="typescript"></code></pre>
+					            </div>
+					        </mat-tab>
+					        <mat-tab label="HTML">
+					        	<div class="component-preview">
+					            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="cardsHelpers?.htmlSourceCards" language="html"></code></pre>
+					            </div>
+					        </mat-tab>
 
+					    </mat-tab-group>
+
+		            </div>
+	        	</div>
+
+	        </div>
 </div>
