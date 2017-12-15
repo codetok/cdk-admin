@@ -21,6 +21,7 @@ import { MatProgressSpinnerModule,
          MatCheckboxModule,
          MatSlideToggleModule,
          MatProgressBarModule,
+         MatMenuModule,
  } from '@angular/material';
 
 
@@ -74,6 +75,7 @@ export function highlightJsFactory(): any {
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,

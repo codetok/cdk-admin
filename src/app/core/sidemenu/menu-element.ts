@@ -114,10 +114,11 @@ export const menus = [
                            
                         },
                          {
-                            "name": "Menu",
-                            "icon": "menu",
-                            "link": "menu",
-                            "open"   : false,
+                            "name"    : "Menu",
+                            "icon"    : "menu",
+                            "link"    : "material-widgets/menu",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                          {
                             "name"    : "Progress Bar",

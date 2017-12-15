@@ -14,6 +14,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { MenuComponent } from './menu/menu.component';
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
@@ -30,6 +31,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'slider', component:  SliderComponent },
     { path: 'slide-toggle', component:  SlidetoggleComponent },
     { path: 'progress-bar', component:  ProgressbarComponent },
+    { path: 'menu', component:  MenuComponent },
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 
