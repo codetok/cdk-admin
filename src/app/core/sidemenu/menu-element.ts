@@ -128,7 +128,7 @@ export const menus = [
                         {
                             "name": "Input",
                             "icon": "input",
-                            "link": "inputs",
+                            "link": "material-widgets/input",
                             "open"   : false,
                         },
                         {

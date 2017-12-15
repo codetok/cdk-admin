@@ -1,8 +1,8 @@
 <div fxLayout="column"   style="background-color: white; border: 1px solid #006064;">
 
-	<div class="slider-header">
-		<h3>Slider</h3>
-	</div>
+	<mat-toolbar class="slider-header">
+		<h3 class="mat-headline center-align">Slider</h3>
+	</mat-toolbar>
 	
 	<div class="slider-container">
 		
@@ -10,14 +10,14 @@
         <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 
             <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-                <h4 style="color: #006064;margin: 14px 0;">Basic Slider</h4>
+                <h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Basic Slider</h4>
                     <mat-divider></mat-divider>
                     <mat-slider></mat-slider>
             </div>
        
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Slider configuration</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Slider configuration</h4>
 				<mat-divider></mat-divider>
 
 				<section class="example-section">
@@ -62,7 +62,8 @@
 
                 <section>
         
-                    <h2 class="example-h2">Result</h2>
+                    <label class="mat-subheading-2 center-align" style="font-weight: bold;">Result</label>
+                   
 
                     <mat-slider
                         class="example-margin"
@@ -82,9 +83,9 @@
     </div>
 
 
-		<div class="slider-header" style="margin-top: 10px;">
-			<h3>Exapmles</h3>
-		</div>
+		<mat-toolbar class="slider-header" style="margin-top: 10px;">
+			<h3 class="mat-headline center-align">Examples</h3>
+		</mat-toolbar >
 
 		<mat-tab-group fxFlexFill>
 			<mat-tab label="TS">

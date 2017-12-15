@@ -11,7 +11,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 
 import { SelectComponent } from './select/select.component';
-
+import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
@@ -29,9 +29,9 @@ const materialWidgetRoutes: Routes = [
     { path: 'icons', component: IconsComponent },
     { path: 'autocomplete', component: AutocompleteComponent },
     { path: 'checkbox', component:  CheckboxComponent },
-
+    
     { path: 'select', component:  SelectComponent },
-
+    { path: 'input', component:  InputComponent },
     { path: 'radio', component:  RadioComponent },
     { path: 'datepicker', component:  DatepickerComponent },
     { path: 'slider', component:  SliderComponent },
@@ -43,7 +43,7 @@ const materialWidgetRoutes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(materialWidgetRoutes)
-  	],
+  ],
   exports: [
     RouterModule
   ]

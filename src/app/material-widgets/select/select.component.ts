@@ -1,7 +1,7 @@
-import { Component, OnInit,ViewEncapsulation } from '@angular/core';
-import {FormControl,FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
-import { select_HELPERS,  Messages, Links} from './helpers.data';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { select_HELPERS, Messages, Links } from './helpers.data';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -13,34 +13,34 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   selector: 'app-select',
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss'],
-encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None,
 
 })
 export class SelectComponent implements OnInit {
-	SelectHelpers: any = select_HELPERS;
-    links = Links;
-    selectedValue;
-    showMultiListCode: boolean = false;
-    messages = Messages;
-	select = 'option2';
-	selected = new FormControl('valid', [
+  SelectHelpers: any = select_HELPERS;
+  links = Links;
+  selectedValue;
+  showMultiListCode: boolean = false;
+  messages = Messages;
+  select = 'option2';
+  selected = new FormControl('valid', [
     Validators.required,
     Validators.pattern('valid'),
   ]);
 
   matcher = new MyErrorStateMatcher();
-foods = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+  foods = [
+    { value: 'steak-0', viewValue: 'Steak' },
+    { value: 'pizza-1', viewValue: 'Pizza' },
+    { value: 'tacos-2', viewValue: 'Tacos' }
   ];
   animalControl = new FormControl('', [Validators.required]);
 
   animals = [
-    {name: 'Dog', sound: 'Woof!'},
-    {name: 'Cat', sound: 'Meow!'},
-    {name: 'Cow', sound: 'Moo!'},
-    {name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
+    { name: 'Dog', sound: 'Woof!' },
+    { name: 'Cat', sound: 'Meow!' },
+    { name: 'Cow', sound: 'Moo!' },
+    { name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!' },
   ];
   states = [
     'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
@@ -88,11 +88,11 @@ foods = [
       ]
     }
   ];
-toppings = new FormControl();
+  toppings = new FormControl();
 
   toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
-  
-topping = new FormControl();
+
+  topping = new FormControl();
 
   toppingLists = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   panelColor = new FormControl('red');

@@ -1,15 +1,15 @@
 <div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
 
-	<div class="datepicker-header">
-		<h3>Datepicker</h3>
-	</div>
+	<mat-toolbar class="datepicker-header">
+		<h3 class="mat-headline center-align">Datepicker</h3>
+	</mat-toolbar>
 	
 	<div class="datepicker-container">
 		
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Basic DatePicker</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Basic DatePicker</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field>
 					<input matInput [matDatepicker]="picker" placeholder="Choose a date">
@@ -19,7 +19,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Datepicker start date</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Datepicker start date</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field>
 						<input matInput [matDatepicker]="pick" placeholder="Choose a date">
@@ -31,7 +31,7 @@
 
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Datepicker selected value</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Datepicker selected value</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field>
 						<input matInput [matDatepicker]="picker1" placeholder="Angular forms" [formControl]="date">
@@ -54,7 +54,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Datepicker with min And max validation</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Datepicker with min And max validation</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field class="example-full-width">
 				  	<input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker4" placeholder="Choose a date">
@@ -66,7 +66,7 @@
 
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Datepicker with filter validation</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Datepicker with filter validation</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field class="example-full-width">
 						<input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker5" placeholder="Choose a date">
@@ -76,7 +76,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Datepicker input and change events</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Datepicker input and change events</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field>
 				    <input matInput [matDatepicker]="picker6" placeholder="Input & change events"
@@ -93,7 +93,7 @@
 
 		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Disabled datepicker</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Disabled datepicker</h4>
 				<mat-divider></mat-divider>
 				<p>
 					<mat-form-field>
@@ -113,7 +113,7 @@
 			</div>
 
 			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Datepicker open method</h4>
+				<h4 style="color: #006064;margin: 14px 0;" class="mat-subheading-2 center-align">Datepicker open method</h4>
 				<mat-divider></mat-divider>
 				<mat-form-field class="example-full-width">
 					<input matInput [matDatepicker]="picker8" placeholder="Choose a date">
@@ -126,9 +126,9 @@
 
 	</div>
 
-	<div class="datepicker-header" style="margin-top: 10px;">
-		<h3>Exapmles</h3>
-	</div>
+	<mat-toolbar class="datepicker-header" style="margin-top: 10px;">
+		<h3 class="mat-headline center-align">Examples</h3>
+	</mat-toolbar>
 
 	<mat-tab-group fxFlexFill>
 		<mat-tab label="TS">
