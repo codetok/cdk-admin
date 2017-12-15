@@ -89,23 +89,28 @@ export const menus = [
                             "open"    : false,
                         },
                         {
-                            "name": "DatePicker",
-                            "link": "datepicker",
-                            "icon": "date_range",
-                            "open"   : false,
+                            "name"    : "DatePicker",
+                            "link"    : "material-widgets/datepicker",
+                            "icon"    : "date_range",
+                            "chip"    : false,
+                            "open"    : false,
                         },
 
                         {
-                            "name": "Slider",
-                            "link": "slider",
-                            "open"   : false,
-                            "icon":"keyboard_tab"
+                            "name"    : "Slider",
+                            "link"    : "material-widgets/slider",
+                            "icon"    : "keyboard_tab",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                         },
                         {
-                            "name": "Slide Toggle",
-                            "link": "slide-toggle",
-                            "open"   : false,
-                            "icon":"album"
+                            "name"    : "Slide Toggle",
+                            "link"    : "material-widgets/slide-toggle",
+                            "icon"    : "album",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                            
                         },
                          {
@@ -127,10 +132,11 @@ export const menus = [
                             "open"   : false,
                         },
                         {
-                            "name": "Radio",
-                            "icon": "radio_button_checked",
-                            "link": "radio",
-                            "open"   : false,
+                            "name"    : "Radio",
+                            "icon"    : "radio_button_checked",
+                            "link"    : "material-widgets/radio",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "Select",
@@ -205,6 +211,39 @@ export const menus = [
                             "icon": "chat",
                             "link":"chats/chat",
                             "open"   : false,
+                        },
+                        {
+                            "name": "mail",
+                            "icon": "mail",
+                            "link":"mail/mail",
+                            "open"   : false,
+                        }
+                    ]
+    },{
+        "name"   : "Pages",
+        "icon"   : "content_copy",
+        "open"   : false,
+        "sub"    :  [
+                        {
+                            "name": "Login",
+                            "icon": "work",
+                            "open": false,
+                            "link": "../login",
+                        },{
+                            "name": "Services",
+                            "icon": "local_laundry_service",
+                            "open": false,
+                            "link": "pages/services",
+                        },{
+                            "name": "About",
+                            "icon": "work",
+                            "open": false,
+                            "link": "pages/about",
+                        },{
+                            "name":"Contact",
+                            "icon":"directions",
+                            "open": false,
+                            "link":"pages/contact"
                         }
                     ]
     },{

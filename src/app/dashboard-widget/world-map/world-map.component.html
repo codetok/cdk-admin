@@ -2,38 +2,18 @@
 
 <div fxLayout="column" fxLayout.xs="column" style="background-color: white;padding: 10px;">
 
-	<div class="mat-headline">
-		Global sales report
+	<div class="mat-headline" style="margin: 20px; border-bottom: 1px solid #dddddd;">
+		GLOBAL SALES REPORT
 	</div>
 
-	<div fxLayout="row" fxLayout.xs="column" >
-		<div fxFlex.gt-xs="45"  >
+	<div fxLayout="row" fxLayout.xs="column">
+		<div fxFlex.gt-xs="35"  style="padding-top: 10px;">
 
-			<table fxFlexFill class="table">
-					<tr>
-						<td class="mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-					</tr>
-					<tr>
-						<td class="mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-					</tr>
-					<tr>
-						<td class="mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-					</tr>
-					<tr>
-						<td class="mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-					</tr>
-					<tr>
-						<td class="mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
-						<td class="text-right mat-subheading-1">India</td>
+			<table  class="table">
+					<tr *ngFor="let detail of tableData">
+						<td class="mat-subheading-1">{{ detail?.country }}</td>
+						<td class="text-right mat-subheading-1">{{ detail?.sales }}</td>
+						<td class="text-right mat-subheading-1">{{ detail?.percentage }}</td>
 					</tr>
 			</table>
 			
@@ -41,7 +21,7 @@
 
 		<div fxFlex.gt-xs="10"></div>
 
-		<div style="padding: 5px 10px;" fxFlex.gt-xs="45">
+		<div style="padding: 5px 10px;" fxFlex.gt-xs="55">
 			<div id="chartdiv"  style="height: 300px;" >
 		</div>
 		</div> 

@@ -1,0 +1,39 @@
+<div class="inbox-compose">
+  <div mat-dialog-content fxLayout="row" fxLayoutAlign="space-between center">
+    <span>write a letter</span>
+    <button mat-dialog-close mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <form #mailForm="ngForm">
+    <div fxLayout="column" mat-dialog-content>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Recipients" name="name" [(ngModel)]="name" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Sender" disabled name="address" [(ngModel)]="address" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="theme" name="subject" [(ngModel)]="subject" required>
+      </mat-form-field>
+      <p class="editor">
+        <quill-editor name="content" [(ngModel)]="content"></quill-editor>
+      </p>
+    </div>
+
+    <div mat-dialog-actions fxLayout="row">
+      <button mat-dialog-close mat-icon-button>
+        <mat-icon>delete</mat-icon>
+      </button>
+      <span fxFlex></span>
+      <button mat-icon-button>
+        <mat-icon>attachment</mat-icon>
+      </button>
+      <button class="send" mat-raised-button color="primary" [disabled]="!mailForm.valid" (click)="send()">
+        send <mat-icon>send</mat-icon>
+      </button>
+    </div>
+
+  </form>
+</div>

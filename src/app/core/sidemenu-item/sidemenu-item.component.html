@@ -1,4 +1,4 @@
-<mat-nav-list  [style.height]="getHeight()">
+<mat-nav-list  [style.height]="getHeight()" [ngClass]="{'secondaryMenu': secondaryMenu}">
 
 
     <mat-list-item *ngIf = "menu.link==false" (click)="menu.open = !menu.open" >
@@ -16,7 +16,7 @@
     	<mat-icon matListIcon iconsmall  >{{menu.icon}} </mat-icon>
         <h3 matLine *ngIf="!iconOnly">{{ menu.name }} </h3>
     </mat-list-item>
-    <cdk-sidemenu-item *ngFor="let submenu of menu?.sub" [menu]="submenu" [iconOnly]="iconOnly"> </cdk-sidemenu-item>
+    <cdk-sidemenu-item *ngFor="let submenu of menu?.sub" [menu]="submenu" [iconOnly]="iconOnly" [secondaryMenu]="true"> </cdk-sidemenu-item>
 </mat-nav-list>
 
 

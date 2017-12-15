@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashcardComponent } from './dashcard/dashcard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -38,7 +39,9 @@ import { WorldMapComponent } from './world-map/world-map.component';
     RoundProgressModule,
     MatMenuModule,
     MatChipsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
       DashcardComponent, 
