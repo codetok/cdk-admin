@@ -120,10 +120,12 @@ export const menus = [
                             "open"   : false,
                         },
                          {
-                            "name": "Progress Bar",
-                            "link": "progress-bar",
-                            "open"   : false,
-                            "icon":"trending_flat"
+                            "name"    : "Progress Bar",
+                            "link"    : "material-widgets/progress-bar",
+                            "icon"    : "trending_flat",
+                            "chip"    : false,
+                            "open"    : false,
+                           
                         },
                         {
                             "name": "Input",

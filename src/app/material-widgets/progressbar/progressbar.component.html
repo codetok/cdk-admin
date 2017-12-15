@@ -1,3 +1,157 @@
-<p>
-  progressbar works!
-</p>
+
+<div fxLayout="column"  class="mat-elevation-z1 " style="background-color: white">
+
+	<mat-toolbar class="progressbar-header">
+		<h1 class="mat-headline center-align" >Progress Bar</h1>
+	</mat-toolbar>
+	
+	<div class="progressbar-container">
+		<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<h4 style="color: #00BCD4;margin: 14px 0;" class="mat-subheading-2 center-align">Basic Progressbar</h4>
+				<mat-divider></mat-divider>
+					
+					<h2 class="example-h2">Progress bar configuration</h2>
+
+								<section class="example-section">
+									<label class="example-margin">Color:</label>
+									<mat-radio-group [(ngModel)]="color">
+										<mat-radio-button class="example-margin" value="primary">
+										Primary
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="accent">
+										Accent
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="warn">
+										Warn
+										</mat-radio-button>
+									</mat-radio-group>
+								</section>
+
+								<section class="example-section">
+									<label class="example-margin">Mode:</label>
+									<mat-radio-group [(ngModel)]="mode">
+										<mat-radio-button class="example-margin" value="determinate">
+										Determinate
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="indeterminate">
+										Indeterminate
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="buffer">
+										Buffer
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="query">
+										Query
+										</mat-radio-button>
+									</mat-radio-group>
+								</section>
+
+								<section class="example-section" *ngIf="mode == 'determinate' || mode == 'buffer'">
+									<label class="example-margin">Progress:</label>
+									<mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+								</section>
+								<section class="example-section" *ngIf="mode == 'buffer'">
+									<label class="example-margin">Buffer:</label>
+									<mat-slider class="example-margin" [(ngModel)]="bufferValue"></mat-slider>
+								</section>
+
+								<h2 class="example-h2">Result</h2>
+
+							<section class="example-section">
+							<mat-progress-bar
+							class="example-margin"
+							[color]="color"
+							[mode]="mode"
+							[value]="value"
+							[bufferValue]="bufferValue">
+							</mat-progress-bar>
+							</section>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<mat-toolbar  class="progressbar-header" style="    margin-top: 10px;">
+		<h3 class="mat-headline center-align">Examples</h3>
+	</mat-toolbar>
+
+	<mat-tab-group fxFlexFill>
+		<mat-tab label="TS">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="progressbarHelpers?.tsSourceProgressbar" language="typescript"></code></pre>
+        </mat-tab>
+        <mat-tab label="HTML">
+            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="progressbarHelpers?.htmlSourceProgressbar" language="html"></code></pre>
+        </mat-tab>
+
+        <mat-tab label="PREVIEW">
+        	<div style="padding: 20px;">
+        		<div class="progressbar-container">
+					<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+						<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+							<h4 style="color: #00BCD4;margin: 14px 0;">Basic Progressbar</h4>
+							<mat-divider></mat-divider>
+					
+								<h2 class="example-h2">Progress bar configuration</h2>
+
+								<section class="example-section">
+									<label class="example-margin">Color:</label>
+									<mat-radio-group [(ngModel)]="color">
+										<mat-radio-button class="example-margin" value="primary">
+										Primary
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="accent">
+										Accent
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="warn">
+										Warn
+										</mat-radio-button>
+									</mat-radio-group>
+								</section>
+
+								<section class="example-section">
+									<label class="example-margin">Mode:</label>
+									<mat-radio-group [(ngModel)]="mode">
+										<mat-radio-button class="example-margin" value="determinate">
+										Determinate
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="indeterminate">
+										Indeterminate
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="buffer">
+										Buffer
+										</mat-radio-button>
+										<mat-radio-button class="example-margin" value="query">
+										Query
+										</mat-radio-button>
+									</mat-radio-group>
+								</section>
+
+								<section class="example-section" *ngIf="mode == 'determinate' || mode == 'buffer'">
+									<label class="example-margin">Progress:</label>
+									<mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+								</section>
+								<section class="example-section" *ngIf="mode == 'buffer'">
+									<label class="example-margin">Buffer:</label>
+									<mat-slider class="example-margin" [(ngModel)]="bufferValue"></mat-slider>
+								</section>
+
+								<h2 class="example-h2">Result</h2>
+
+								<section class="example-section">
+									<mat-progress-bar
+									class="example-margin"
+									[color]="color"
+									[mode]="mode"
+									[value]="value"
+									[bufferValue]="bufferValue">
+									</mat-progress-bar>
+								</section>
+							
+					    </div>
+					</div>
+				</div>
+			</div>
+		</mat-tab>
+    </mat-tab-group>
+</div>

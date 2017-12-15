@@ -20,7 +20,7 @@ import { MatProgressSpinnerModule,
          MatAutocompleteModule,
          MatCheckboxModule,
          MatSlideToggleModule,
-         
+         MatProgressBarModule,
  } from '@angular/material';
 
 
@@ -49,6 +49,7 @@ import { RadioComponent } from './radio/radio.component';
 import { SelectComponent } from './select/select.component';
 
 
+
 export function highlightJsFactory(): any {
   hljs.registerLanguage('typescript', hljsTypescript);
   return hljs;
@@ -62,7 +63,7 @@ export function highlightJsFactory(): any {
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
-      MatProgressSpinnerModule,
+    MatProgressSpinnerModule,
     MatIconModule,
     MatTabsModule,
     MatRadioModule,
@@ -78,6 +79,7 @@ export function highlightJsFactory(): any {
     MatNativeDateModule,
     MatSliderModule,
     MatSlideToggleModule,
+    MatProgressBarModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,
       useFactory: highlightJsFactory
@@ -102,7 +104,8 @@ export function highlightJsFactory(): any {
     ProgressbarComponent,
     InputComponent,
     RadioComponent,
-    SelectComponent
+    SelectComponent,
+    
 
     ],
 
