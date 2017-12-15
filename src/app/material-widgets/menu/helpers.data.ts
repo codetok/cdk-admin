@@ -1,12 +1,17 @@
 export const MENU_HELPERS: any = {
 	tsSourceMenu: `
 import { Component, OnInit } from '@angular/core';
-
+import { MatMenuModule } from '@angular/material';
 @Component({
   selector: 'cdk-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
+@NgModule({
+      imports: [
+        MatMenuModule,
+    })
+export class AppModule { }
 export class MenuComponent implements OnInit {
 
   constructor() { }
