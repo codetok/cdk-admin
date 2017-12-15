@@ -1,0 +1,35 @@
+// cdk-list {
+	.list-header {
+		background-color: #18988c;
+		color: white;
+		padding: 0 5px;
+	}
+	.list-container {
+		padding: 5px;
+		// color: white;
+	}
+// }
+.example-panel-red .mat-select-content {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.example-panel-green .mat-select-content {
+  background: rgba(0, 255, 0, 0.5);
+}
+
+.example-panel-blue .mat-select-content {
+  background: rgba(0, 0, 255, 0.5);
+}
+.select-component-holder {
+	border: 1px solid #18988c;
+	background-color: white;
+
+	h4 {
+		color: #0e773d;
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { single } from './data';
 
 @Component({
-  selector: 'app-guage-chart',
+  selector: 'cdk-guage-chart',
   templateUrl: './guage-chart.component.html',
   styleUrls: ['./guage-chart.component.scss']
 })

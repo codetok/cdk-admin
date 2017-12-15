@@ -1,0 +1,21 @@
+.menu-header {
+	background-color: #00BCD4;
+	color: white;
+	padding: 0 5px;
+}
+.menu-container {
+	padding: 5px 15px 15px 15px;
+}
+.menu-component-holder {
+	border: 1px solid #00BCD4;
+	background-color: white;
+
+	h4 {
+		color: #00BCD4;
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

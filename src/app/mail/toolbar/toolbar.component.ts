@@ -10,17 +10,19 @@ export class ToolbarComponent implements OnInit {
   @Input() mail;
   @Input() itemCount;
   @Output() onForward = new EventEmitter();
-
+  @Output() onCheck = new EventEmitter();
   constructor() { }
-
+  @Input() checked;
   ngOnInit() {
   }
   ngAfterViewInit() {
-    console.log(this.mail,this.itemCount);
   }
   onForwardTriggered() {
     // this.shownMailDetail = null;
     this.onForward.emit(true);
+  }
+  showOptions(event) {
+    this.onCheck.emit(event.checked);
   }
 
 }

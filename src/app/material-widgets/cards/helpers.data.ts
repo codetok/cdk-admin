@@ -1,15 +1,24 @@
 export const CARDS_HELPERS: any = {
 
 	tsSourceCards: `
-import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'cdk-cards',
-  templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.scss']
-})
-export class CardsComponent implements OnInit {
-}
+        import { MatCardModule } from '@angular/material/button';
+
+          @NgModule({
+          imports: [
+            MatCardModule,
+        })
+        export class AppModule { }
+
+        import { Component, OnInit } from '@angular/core';
+
+        @Component({
+          selector: 'cdk-cards',
+          templateUrl: './cards.component.html',
+          styleUrls: ['./cards.component.scss']
+        })
+        export class CardsComponent implements OnInit {
+        }
 `.trim(),
 	htmlSourceCards: `
 <div  fxLayoutAlign="space-around stretch" fxLayoutWrap >

@@ -1,11 +1,26 @@
-// cdk-autocomplete {
-	.autocomplete-header {
-		background-color: #2196F3;
+.width{
+	width:100%;
+	padding-left:15px;
+}
+.autocomplete-header {
+		background-color: #327ebd;
 		color: white;
 		padding: 0 5px;
 	}
-	.autocomplete-container {
+.autocomplete-container {
 		padding: 5px;
 		// color: white;
 	}
-// }
+.autocomplete-component-holder {
+	border: 1px solid #327ebd;
+	background-color: white;
+
+	h4 {
+		color: #327ebd;
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

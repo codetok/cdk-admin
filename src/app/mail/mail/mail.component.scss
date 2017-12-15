@@ -13,14 +13,22 @@ $margin-top__search__title: 42px;
 }
 
 .inbox {
-  height: 100%;
+    background-color: white;
 
-  .header {
+.header {
     min-height: 200px;
     max-height: 200px;
     background: #039be5 url('/assets/bg20.jpg') no-repeat center center fixed;
     background-size: cover;
-  }
+}
+.footer {
+    width: 100%;
+    padding: 20px 0px ;
+    text-align: center;
+    h6 {
+        margin: 5px 0 0 0 !important;
+    }
+}
 
   .container {
     margin-top: -200px;
@@ -68,7 +76,8 @@ $margin-top__search__title: 42px;
     }
 
     .nav-list {
-      margin-top: 28px;
+        margin-top: 28px;
+        height: 400px; overflow-y: auto;
 
       .nav-item {
         color: $color__inactive;

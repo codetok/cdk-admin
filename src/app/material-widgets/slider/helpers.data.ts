@@ -1,10 +1,19 @@
 export const SLIDER_HELPERS: any = {
 
 	tsSourceSlider: `
+import { MatSliderModule } from '@angular/material';
+
+
+	  	@NgModule({
+		  imports: [
+		    MatSliderModule,
+		})
+		export class AppModule { }
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-slider',
+  selector: 'cdk-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
