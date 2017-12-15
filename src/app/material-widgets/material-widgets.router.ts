@@ -16,7 +16,8 @@ import { RadioComponent } from './radio/radio.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlidetoggleComponent } from './slidetoggle/slidetoggle.component';
-
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 const materialWidgetRoutes: Routes = [
@@ -36,6 +37,10 @@ const materialWidgetRoutes: Routes = [
     { path: 'datepicker', component:  DatepickerComponent },
     { path: 'slider', component:  SliderComponent },
     { path: 'slide-toggle', component:  SlidetoggleComponent },
+
+
+    { path: 'progress-bar', component:  ProgressbarComponent },
+    { path: 'menu', component:  MenuComponent },
 
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];

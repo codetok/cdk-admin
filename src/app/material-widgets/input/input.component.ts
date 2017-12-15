@@ -11,7 +11,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 @Component({
-	selector: 'app-input',
+	selector: 'cdk-input',
 	templateUrl: './input.component.html',
 	styleUrls: ['./input.component.scss']
 })
