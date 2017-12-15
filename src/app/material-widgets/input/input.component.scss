@@ -1,0 +1,23 @@
+
+	.input-header {
+		background-color: rgb(24, 152, 140);
+		color: white;
+		padding: 0 5px;
+	}
+	.input-container {
+		padding:0 5px;
+		
+	}
+.input-component-holder {
+	border: 1px solid rgb(24, 152, 140);
+	background-color: white;
+
+	h4 {
+		color: rgb(24, 152, 140);
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

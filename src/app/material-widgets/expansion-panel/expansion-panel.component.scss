@@ -7,3 +7,16 @@
 		padding: 5px;
 		// color: white;
 	}
+.expansion-component-holder {
+	border: 1px solid rgb(53, 69, 162);
+	background-color: white;
+
+	h4 {
+		color: rgb(53, 69, 162);
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

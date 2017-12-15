@@ -1,6 +1,6 @@
 // cdk-checkbox {
 	.checkbox-header {
-		background-color: #006064;
+		background-color: #18988c;
 		color: white;
 		padding: 0 5px;
 	}
@@ -9,3 +9,16 @@
 		// color: white;
 	}
 // }
+.checkbox-component-holder {
+	border: 1px solid #18988c;
+	background-color: white;
+
+	h4 {
+		color: #0e773d;
+		margin: 14px 0;
+	}
+
+	mat-divider {
+		margin-bottom: 10px;
+	}
+}

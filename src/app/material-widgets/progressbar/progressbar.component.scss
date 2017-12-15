@@ -1,11 +1,21 @@
-// cdk-progressbar {
-	.progressbar-header {
-		background-color: #00BCD4;
-		color: white;
-		padding: 0 5px;
+.progressbar-header {
+	background-color: #00BCD4;
+	color: white;
+	padding: 0 5px;
+}
+.progressbar-container {
+	padding: 5px 15px 15px 15px;
+}
+.progressbar-component-holder {
+	border: 1px solid #00BCD4;
+	background-color: white;
+
+	h4 {
+		color: #00BCD4;
+		margin: 14px 0;
 	}
-	.progressbar-container {
-		padding: 5px;
-		// color: white;
+
+	mat-divider {
+		margin-bottom: 10px;
 	}
-// }
+}

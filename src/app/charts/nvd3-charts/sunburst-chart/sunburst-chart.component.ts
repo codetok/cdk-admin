@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sunburst-chart',
+  selector: 'cdk-sunburst-chart',
   templateUrl: './sunburst-chart.component.html',
   styleUrls: ['./sunburst-chart.component.scss']
 })

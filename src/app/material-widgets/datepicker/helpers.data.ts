@@ -1,6 +1,14 @@
 export const DATEPICKER_HELPERS: any = {
 
 	tsSourceDatepicker:`
+import { MatDatepickerModule } from '@angular/material';
+	
+		@NgModule({
+		  imports: [
+		   MatDatepickerModule  
+		})
+		export class AppModule { }
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';

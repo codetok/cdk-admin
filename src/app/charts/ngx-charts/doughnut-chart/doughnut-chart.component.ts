@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { single, multi } from './data';
 
 @Component({
-  selector: 'app-doughnut-chart',
+  selector: 'cdk-doughnut-chart',
   templateUrl: './doughnut-chart.component.html',
   styleUrls: ['./doughnut-chart.component.scss']
 })

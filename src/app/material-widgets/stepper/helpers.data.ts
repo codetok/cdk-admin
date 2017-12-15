@@ -7,8 +7,17 @@ export const STEPPER_HELPERS: any = {
 		  imports: [
 		    MatStepperModule,
 		})
-		export class AppModule { }`.trim(),
+		export class AppModule { }
+		
+		import { Component, OnInit } from '@angular/core';
 
+        @Component({
+          selector: 'cdk-stepper',
+          templateUrl: './stepper.component.html',
+          styleUrls: ['./stepper.component.scss']
+        })
+        export class CardsComponent implements OnInit {
+        }`.trim(),
   	htmlSourceRaisedButton: `
   		
 		  	<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>

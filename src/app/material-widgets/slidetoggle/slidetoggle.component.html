@@ -1,88 +1,100 @@
-<div fxLayout="column"   style="background-color: white; border: 1px solid #006064;">
 
-	<div class="slidetoggle-header">
-		<h3>Slide-Toggle</h3>
-	</div>
-	
-	<div class="slidetoggle-container">
-		
-		
-        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+<div fxLayout="column"  class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
 
-            <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-                <h4 style="color: #006064;margin: 14px 0;">Basic Slide-Toggles</h4>
+    <div fxFlex class="slidetoggle-component-holder mat-elevation-z4">
+
+    	<mat-toolbar class="slidetoggle-header">
+    		<h1 class="mat-headline" >Slide-Toggle</h1>
+    	</mat-toolbar>
+    	
+    	<div class="slidetoggle-container">
+    		
+    	   <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+                <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+
+                    <h4 class="mat-subheading-1">Basic Slide-Toggles</h4>
                     <mat-divider></mat-divider>
-                   	<mat-slide-toggle>Slide me!</mat-slide-toggle>
-            </div>
-       
 
-			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
-				<h4 style="color: #006064;margin: 14px 0;">Slide-Toggle configuration</h4>
-				<mat-divider></mat-divider>
+                    <mat-slide-toggle>Slide me!</mat-slide-toggle>
+                </div>
+           
 
-				<mat-card>
-                    <mat-card-content>
-                        <h2 class="example-h2">Slider configuration</h2>
-                        <section class="example-section">
-                            <label class="example-margin">Color:</label>
-                            <mat-radio-group [(ngModel)]="color">
-                                <mat-radio-button class="example-margin" value="primary">
-                                Primary
-                                </mat-radio-button>
-                                <mat-radio-button class="example-margin" value="accent">
-                                Accent
-                                </mat-radio-button>
-                                <mat-radio-button class="example-margin" value="warn">
-                                Warn
-                                </mat-radio-button>
-                            </mat-radio-group>
-                        </section>
+    			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
 
-                        <section class="example-section">
-                            <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
-                        </section>
+    				<h4 class="mat-subheading-1">Slide-Toggle configuration</h4>
+    				<mat-divider></mat-divider>
 
-                        <section class="example-section">
-                            <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
-                        </section>
-                    </mat-card-content>
-                </mat-card>
-                <mat-card class="result">
-                    <mat-card-content>
-                        <h2 class="example-h2">Result</h2>
-                        <section class="example-section">
-                            <mat-slide-toggle
-                            class="example-margin"
-                            [color]="color"
-                            [checked]="checked"
-                            [disabled]="disabled">
-                            Slide me!
-                            </mat-slide-toggle>
-                        </section>
-                    </mat-card-content>
-                </mat-card>
+                    <section class="example-section">
+                        <label class="example-margin">Color:</label>
+                        <mat-radio-group [(ngModel)]="color">
+                            <mat-radio-button class="example-margin" value="primary">
+                            Primary
+                            </mat-radio-button>
+                            <mat-radio-button class="example-margin" value="accent">
+                            Accent
+                            </mat-radio-button>
+                            <mat-radio-button class="example-margin" value="warn">
+                            Warn
+                            </mat-radio-button>
+                        </mat-radio-group>
+                    </section>
+
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+                    </section>
+
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+                    </section>
+
+                    <label class="mat-title">Result</label>
+                    <section class="example-section">
+                        <mat-slide-toggle
+                        class="example-margin"
+                        [color]="color"
+                        [checked]="checked"
+                        [disabled]="disabled">
+                        Slide me!
+                        </mat-slide-toggle>
+                    </section>
+                </div>
+
             </div>
         </div>
+    </div>
 
-	
-	</div>
+    <div fxFlex class="slidetoggle-component-holder mat-elevation-z4">
 
-	<div class="slidetoggle-header" style="margin-top: 10px;">
-			<h3>Exapmles</h3>
-		</div>
+
+    	<mat-toolbar class="slidetoggle-header">
+    		<h1 class="mat-headline">Examples</h1>
+
+		</mat-toolbar>
 
 		<mat-tab-group fxFlexFill>
+
 			<mat-tab label="TS">
-	            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="slidetoggleHelpers?.tsSourceSlideToggle" language="typescript"></code></pre>
+                <div class="component-preview">
+	               <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="slidetoggleHelpers?.tsSourceSlideToggle" language="typescript"></code></pre>
+                </div>
 	        </mat-tab>
+
 	        <mat-tab label="HTML">
-	            <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="slidetoggleHelpers?.htmlSourceSlideToggle" language="html"></code></pre>
+                <div class="component-preview">
+	               <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="slidetoggleHelpers?.htmlSourceSlideToggle" language="html"></code></pre>
+                </div>
 	        </mat-tab>
 
 	        <mat-tab label="PREVIEW">
-	        	<div style="padding: 20px;">
-		        	<mat-slide-toggle>Slide me!</mat-slide-toggle>
-			  	</div>
+                <div class="component-preview">
+	        	    <div style="padding: 20px;">
+		        	   <mat-slide-toggle>Slide me!</mat-slide-toggle>
+			  	    </div>
+                </div>
 	        </mat-tab>
+
 	    </mat-tab-group>
+
+    </div>
 </div>
