@@ -10,9 +10,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MailService } from './mail.service';
 import { MailRoutingModule } from './mail.routing';
 import { 
-         MatIconModule,
-         MatMenuModule,
-         MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
     MatInputModule,
     MatDialogModule,
     MatButtonModule,

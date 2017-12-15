@@ -32,6 +32,9 @@ export const appRoutes: Routes = [{
         {path: 'pages', loadChildren: '../pages/pages.module#PagesModule'},
         {path: 'forms',loadChildren:'../forms/forms.module#FormModule'},
         {path: 'guarded-routes',loadChildren:'../guarded-routes/guarded-routes.module#GuardedRoutesModule'},
+        {path: 'editor', loadChildren: '../editor/editor.module#EditorModule'},
+        {path: 'scrumboard', loadChildren: '../scrumboard/scrumboard.module#ScrumboardModule'},
+
       ]}
   ]
 
