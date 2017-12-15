@@ -135,7 +135,7 @@ export const menus = [
                         {
                             "name": "Select",
                             "icon": "select_all",
-                            "link": "select",
+                            "link": "material-widgets/select",
                             "open"   : false,
                         },
                     ]

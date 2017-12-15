@@ -9,7 +9,7 @@ import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
-
+import { SelectComponent } from './select/select.component';
 
 const materialWidgetRoutes: Routes = [
   	{ path: 'buttons', component:  ButtonsComponent },
@@ -21,7 +21,7 @@ const materialWidgetRoutes: Routes = [
     { path: 'icons', component: IconsComponent },
     { path: 'autocomplete', component: AutocompleteComponent },
     { path: 'checkbox', component:  CheckboxComponent },
-    
+    { path: 'select', component:  SelectComponent },
     { path: '', redirectTo: '/buttons', pathMatch: 'full'}
 ];
 

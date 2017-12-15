@@ -20,6 +20,7 @@ import { MatProgressSpinnerModule,
          MatAutocompleteModule,
          MatCheckboxModule,
          MatSlideToggleModule,
+         MatSelectModule
  } from '@angular/material';
 
 
@@ -37,6 +38,7 @@ import { CardsComponent } from './cards/cards.component';
 import { IconsComponent } from './icons/icons.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SelectComponent } from './select/select.component';
 
 
 
@@ -69,6 +71,7 @@ export function highlightJsFactory(): any {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSliderModule,
+    MatSelectModule,
     MatSlideToggleModule,
     HighlightJsModule.forRoot({
       provide: HIGHLIGHT_JS,
@@ -87,6 +90,7 @@ export function highlightJsFactory(): any {
     IconsComponent,
     AutocompleteComponent,
     CheckboxComponent,
+    SelectComponent,
     ],
 
   exports: [
