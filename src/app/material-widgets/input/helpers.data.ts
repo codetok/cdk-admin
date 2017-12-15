@@ -1,8 +1,14 @@
 export const input_HELPERS: any = {
 
 	tsSourceInput:`
+import { MatInputModule } from '@angular/material';
+		@NgModule({
+		  imports: [
+		   MatInputModule
+		})
+		export class AppModule { }
+		
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'cdk-input',
   templateUrl: './input.component.html',

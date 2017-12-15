@@ -1,6 +1,14 @@
 export const select_HELPERS: any = {
 
 	tsSourceSelectionselect:`
+import { MatSelectModule } from '@angular/material';
+
+
+	  	@NgModule({
+		  imports: [
+		    MatSelectModule
+		})
+		export class AppModule { }
 import { Component, OnInit } from '@angular/core';
 
 @Component({

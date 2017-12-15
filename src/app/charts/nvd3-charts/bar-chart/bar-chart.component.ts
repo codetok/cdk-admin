@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 declare let d3: any;
 @Component({
-	selector: 'app-bar-chart',
+	selector: 'cdk-bar-chart',
 	templateUrl: './bar-chart.component.html',
 	styleUrls: ['./bar-chart.component.scss']
 })

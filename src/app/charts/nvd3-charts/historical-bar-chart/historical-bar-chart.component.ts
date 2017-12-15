@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-historical-bar-chart',
+  selector: 'cdk-historical-bar-chart',
   templateUrl: './historical-bar-chart.component.html',
   styleUrls: ['./historical-bar-chart.component.scss']
 })

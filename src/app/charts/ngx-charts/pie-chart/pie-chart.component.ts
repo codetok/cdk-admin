@@ -1,7 +1,7 @@
 import { Component, Input, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { single, multi } from './data';
 @Component({
-	selector: 'app-pie-chart',
+	selector: 'cdk-pie-chart',
 	templateUrl: './pie-chart.component.html',
 	styleUrls: ['./pie-chart.component.scss']
 })

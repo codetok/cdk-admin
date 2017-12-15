@@ -1,20 +1,26 @@
 export const LIST_HELPERS: any = {
 
 	tsSourceSelectionList:`
-import { Component, OnInit } from '@angular/core';
+		import { MatListModule } from '@angular/material'
+		@NgModule({
+		  imports: [
+		   MatListModule
+		})
+		export class AppModule { }
+		
+		import { Component, OnInit } from '@angular/core';
+		@Component({
+			  selector: 'cdk-list',
+			  templateUrl: './list.component.html',
+			  styleUrls: ['./list.component.scss']
+		})
+		export class ListComponent implements OnInit {
 
-@Component({
-  selector: 'cdk-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
-})
-export class ListComponent implements OnInit {
+			  constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
- }
+			  ngOnInit() {
+			  }
+		 }
 	`.trim(),
 
 
