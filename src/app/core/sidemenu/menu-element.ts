@@ -202,8 +202,12 @@ export const menus = [
         "open"   : false,
        
                  
-    },
-    {
+    },{
+        "name"   : "Scrumboard",
+        "open"   : false,
+        "link"   : "/auth/scrumboard",
+        "icon"   : "grade",
+    },{
         "name"   : "Applications",
         "icon"   : "view_module",
         "open"   : false,
@@ -219,6 +223,12 @@ export const menus = [
                             "name": "mail",
                             "icon": "mail",
                             "link":"mail/mail",
+                            "open"   : false,
+                        },
+                        {
+                            "name": "Editor",
+                            "icon": "editor",
+                            "link":"editor/editor",
                             "open"   : false,
                         }
                     ]
@@ -296,48 +306,7 @@ export const menus = [
                             "open"   : false,
                         }
                     ]
-    },{
-        "name"   : "Pages",
-        "icon"   : "content_copy",
-        "open"   : false,
-        "link"   : false,
-        "sub"    :  [
-                        {
-                            "name": "Services",
-                            "icon": "local_laundry_service",
-                            "open": false,
-                            "link": "services",
-                        },{
-                            "name": "Login",
-                            "icon": "work",
-                            "open": false,
-                            "link": "../login",
-                        },{
-                            "name": "Registeration",
-                            "icon": "work",
-                            "open": false,
-                            "link": "register",
-                        },{
-                            "name":"Map",
-                            "icon":"directions",
-                            "open": false,
-                        }
-                    ]
-    },{
-        "name"   : "Editor",
-        "icon"   : "content_copy",
-        "open"   : false,
-        "link"   : false,
-        "sub"    :  [
-                        {
-                            "name": "Text Editor",
-                            "icon": "mode_edit",
-                            "link": "editor",
-                            "open"   : false,
-                        },
-                       
-                    ]
-    },
+    }
 
 
 ]
