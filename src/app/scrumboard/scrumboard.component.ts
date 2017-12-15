@@ -11,9 +11,4 @@ export class ScrumboardComponent {
     developers: Array<string> = [];
     testers: Array<string> = [];
 
-    cards: Array<any> = [
-        {title: 'Tasks', tasks: this.tasks },
-        { title: 'Developers', tasks: [] },
-        { title: 'Testers', tasks: [] }
-    ];
 }
