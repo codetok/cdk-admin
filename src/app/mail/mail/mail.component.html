@@ -1,0 +1,112 @@
+<div class="inbox" fxLayout="column" [ngStyle]="{ 'height': height }">
+
+    <div class="header mat-elevation-z2"></div>
+
+    <div class="container" fxLayout="row">
+                <div class="navigation" fxFlex="250px" [fxHide]="true" [fxHide.gt-md]="false">
+
+                    <div class="title-container">
+                        <mat-icon>mail</mat-icon>
+                        <span class="title">Mail</span>
+                    </div>
+
+                    <div class="compose-container">
+                        <button class="compose" mat-raised-button (click)="openComposeDialog()">
+                            <mat-icon>mode_edit</mat-icon>
+                            <span>write a letter</span>
+                        </button>
+                    </div>
+
+                    <mat-nav-list class="nav-list" >
+                        <h3 mat-subheader>Inbox</h3>
+                        <a class="nav-item mt0" mat-list-item>
+                             <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">mail</mat-icon>
+                                <span class="text">inbox </span>
+                            </h3>
+                        </a>
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">group</mat-icon>
+                                <span class="text">Contact </span>
+                            </h3>
+                        </a>
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">local_offer</mat-icon>
+                                <span class="text">label </span>
+                            </h3>
+                        </a>
+                        
+                        <mat-divider></mat-divider>
+
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">star</mat-icon>
+                                <span class="text">Star mail</span>
+                            </h3>
+                        </a>
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">send</mat-icon>
+                                <span class="text">Has been sent</span>
+                            </h3>
+                        </a>
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">drafts</mat-icon>
+                                <span class="text">Draft box</span>
+                            </h3>
+                        </a>
+                    
+                        <mat-divider></mat-divider>
+                    
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">backspace</mat-icon>
+                                <span class="text">spam</span>
+                            </h3>
+                        </a>
+                        <a class="nav-item" mat-list-item>
+                            <h3 class="nav-title" mat-line>
+                                <mat-icon class="icon">delete</mat-icon>
+                                <span class="text">Recycle Bin</span>
+                            </h3>
+                        </a>
+              
+                    </mat-nav-list>
+
+                </div>
+
+            <div class="content-container" fxFlex fxLayout="column">
+
+                <cdk-mail-searchbar class="search" placeholder="search for..."></cdk-mail-searchbar>
+
+                <div class="mails-container mat-elevation-z2" fxFlex>
+                    <cdk-mail-toolbar [mail]="shownMailDetail" [itemCount]="shownMails.length" [checked]="check" (onCheck)="onStatusChange($event)" (onForward)="onForward($event)"></cdk-mail-toolbar>
+
+                    <div class="mails">
+                        <cdk-list *ngIf="!shownMailDetail"  [mails]="shownMails" [checked]="check"(onOpenMailDetial)="openMailDetial($event)" (onUncheckmail)="onUncheckmail($event)"></cdk-list>
+                        <cdk-detail *ngIf="shownMailDetail" [mail]="shownMailDetail"></cdk-detail>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+
+    <div class="footer">
+            
+            <mat-divider></mat-divider> 
+            <h6 class="mat-caption">Codetok Pvt Ltd</h6>
+    </div>
+
+</div>
+
+<mat-menu #mailOptions="matMenu">
+    <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>Mark unread </button>
+    <button mat-menu-item> <mat-icon>label</mat-icon> label </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item> <mat-icon>delete</mat-icon> delete </button>
+</mat-menu>

@@ -1,19 +1,36 @@
-.round-progressbar {
-     margin: 10px 5px;
-     padding: 10px;
-     background-color:white;
-     min-height: 300px;
 
-     & .header {
-        text-align: center;
-        color:white;
-     }
-     & .roundholder{
-        position: absolute;
-        
-        & .current{
+@mixin round-progressbar($theme) {
+    .round-progressbar {
+         margin: 10px 5px;
+         padding: 10px;
+         background-color:white;
+         
+         & .header {
+            text-align: center;
+            color:white;
+         }
+         & .roundholder{
+            position: absolute;
+            
+            & .current{
+                position: relative;
+            }
+         }
+        .progress-wrapper {
             position: relative;
+            margin: 20px auto;
         }
-     }
 
+        .current {
+            position: absolute;
+            font-weight: 100;
+            line-height: 1;
+            font-size: 32px;
+            color: white;
+        }
+
+        round-progress {
+          margin: auto;
+        }
+    }
 }

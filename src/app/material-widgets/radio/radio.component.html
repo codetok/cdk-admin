@@ -1,0 +1,68 @@
+<div fxLayout="row" fxLayout.lt-sm="column" class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
+
+	<div fxFlex class="radio-component-holder mat-elevation-z4">
+
+		<mat-toolbar class="radio-header">
+			<h1 class="mat-headline center-align" >Radio Button</h1>
+		</mat-toolbar>
+	
+		<div class="radio-container" fxLayout="column">
+
+			<h4 class="mat-title">Season:</h4>
+
+			<mat-radio-group  [(ngModel)]="favoriteSeason" class="example-radio-button">
+				<mat-radio-button  *ngFor="let season of seasons" [value]="season" class="example-radio-button">
+										{{season}}
+				</mat-radio-button>
+			</mat-radio-group>
+
+			<div class="example-selected-value mat-title">Your favorite season is: {{favoriteSeason}}
+			</div>
+					    	
+
+		</div>
+	</div>
+
+	<div fxFlex class="radio-component-holder mat-elevation-z4">
+
+		<mat-toolbar  class="radio-header">
+			<h1 class="mat-headline" >Examples</h1>
+		</mat-toolbar>
+
+		<mat-tab-group fxFlexFill>
+
+			<mat-tab label="TS">
+				<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="radioHelpers?.tsSourceRadio" language="typescript"></code></pre>
+	            </div>
+	        </mat-tab>
+	        <mat-tab label="HTML">
+	        	<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="radioHelpers?.htmlSourceRadio" language="html"></code></pre>
+	            </div>
+	        </mat-tab>
+
+	        <mat-tab label="PREVIEW">
+		        <div class="component-preview">
+		        	<div>
+		        		<div class="radio-container" fxLayout="column">
+
+							<h4 class="mat-title">Season:</h4>
+
+							<mat-radio-group  [(ngModel)]="favoriteSeason" class="example-radio-button">
+								<mat-radio-button  *ngFor="let season of seasons" [value]="season" class="example-radio-button">
+														{{season}}
+								</mat-radio-button>
+							</mat-radio-group>
+
+							<div class="example-selected-value mat-title">Your favorite season is: {{favoriteSeason}}
+							</div>
+									    	
+
+						</div>
+					</div>
+				</div>
+			</mat-tab>
+	    </mat-tab-group>
+    </div>
+</div>

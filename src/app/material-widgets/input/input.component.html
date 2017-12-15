@@ -1,0 +1,176 @@
+<div fxLayout="column" class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
+	<div fxFlex class="input-component-holder mat-elevation-z4">
+		<mat-toolbar class="input-header">
+			<h1 class="mat-headline center-align" >Input</h1>
+		</mat-toolbar>
+		<div class="input-container">
+			
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Basic Input</h4>
+					<mat-divider></mat-divider>
+					<form class="example-form">
+					  <mat-form-field class="example-full-width">
+					    <input matInput placeholder="Favorite food" value="Sushi">
+					  </mat-form-field>
+					</form>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Input with a custom ErrorStateMatcher</h4>
+					<mat-divider></mat-divider>
+					<form class="example-form">
+					  <mat-form-field class="example-full-width">
+					    <input matInput placeholder="Email" [formControl]="emailFormControl"
+					           [errorStateMatcher]="matcher">
+					    <mat-hint>Errors appear instantly!</mat-hint>
+					    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+					      Please enter a valid email address
+					    </mat-error>
+					    <mat-error *ngIf="emailFormControl.hasError('required')">
+					      Email is <strong>required</strong>
+					    </mat-error>
+					  </mat-form-field>
+					</form>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Auto-resizing textarea</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <textarea matInput placeholder="Autosize textarea" matTextareaAutosize matAutosizeMinRows="2"
+					            matAutosizeMaxRows="5"></textarea>
+					</mat-form-field>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Input with a clear button</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field class="example-form-field">
+					  <input matInput type="text" placeholder="Clearable input" [(ngModel)]="value"/>
+					  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+					    <mat-icon>close</mat-icon>
+					  </button>
+					</mat-form-field>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Input with error messages</h4>
+					<mat-divider></mat-divider>
+					<form class="example-form">
+					  <mat-form-field class="example-full-width">
+					    <input matInput placeholder="Email" [formControl]="emailFormControls">
+					    <mat-error *ngIf="emailFormControls.hasError('pattern')">
+					      Please enter a valid email address
+					    </mat-error>
+					    <mat-error *ngIf="emailFormControls.hasError('required')">
+					      Email is <strong>required</strong>
+					    </mat-error>
+					  </mat-form-field>
+					</form>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Input with hints</h4>
+					<mat-divider></mat-divider>
+					<form class="example-form">
+
+					  <mat-form-field class="example-full-width">
+					    <input matInput #message maxlength="256" placeholder="Message">
+					    <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+					    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+					  </mat-form-field>
+					  
+					</form>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Inputs in a form</h4>
+					<mat-divider></mat-divider>
+					<form class="example-form">
+					  <mat-form-field class="example-full-width">
+					    <input matInput placeholder="Company (disabled)" disabled value="Google">
+					  </mat-form-field>
+
+					  <table class="example-full-width" cellspacing="0"><tr>
+					    <td><mat-form-field class="example-full-width">
+					      <input matInput placeholder="First name">
+					    </mat-form-field></td>
+					    <td><mat-form-field class="example-full-width">
+					      <input matInput placeholder="Long Last Name That Will Be Truncated">
+					    </mat-form-field></td>
+					  </tr></table>
+
+					  <p>
+					    <mat-form-field class="example-full-width">
+					      <textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+					    </mat-form-field>
+					    <mat-form-field class="example-full-width">
+					      <textarea matInput placeholder="Address 2"></textarea>
+					    </mat-form-field>
+					  </p>
+
+					  <table class="example-full-width" cellspacing="0"><tr>
+					    <td><mat-form-field class="example-full-width">
+					      <input matInput placeholder="City">
+					    </mat-form-field></td>
+					    <td><mat-form-field class="example-full-width">
+					      <input matInput placeholder="State">
+					    </mat-form-field></td>
+					    <td><mat-form-field class="example-full-width">
+					      <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+					      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+					    </mat-form-field></td>
+					  </tr></table>
+					</form>
+
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Inputs with prefixes and suffixes</h4>
+					<mat-divider></mat-divider>
+					<form class="example-form">
+
+					  <mat-form-field class="example-full-width">
+					    <span matPrefix>+1 &nbsp;</span>
+					    <input type="tel" matInput placeholder="Telephone">
+					    <mat-icon matSuffix>mode_edit</mat-icon>
+					  </mat-form-field>
+					  
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div fxFlex class="input-component-holder mat-elevation-z4">
+		<mat-toolbar class="input-header" >
+			<h1 class="mat-headline center-align" >Examples</h1>
+		</mat-toolbar >
+
+		<mat-tab-group fxFlexFill>
+			<mat-tab label="TS">
+				<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="InputHelpers?.tsSourceInput" language="typescript"></code></pre>
+	            </div>
+	        </mat-tab>
+	        <mat-tab label="HTML">
+	        	<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="InputHelpers?.htmlSourceInput" language="html"></code></pre>
+	            </div>
+	        </mat-tab>
+
+	        <mat-tab label="PREVIEW">
+	        	<div class="component-preview">
+		        	<form class="example-form">
+		        	  <mat-form-field class="example-full-width">
+		        	    <input matInput placeholder="Favorite food" value="Sushi">
+		        	  </mat-form-field>
+		        	</form>
+				</div>
+	        </mat-tab>
+	    </mat-tab-group>
+	</div>
+</div>

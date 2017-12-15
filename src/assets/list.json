@@ -1,0 +1,82 @@
+﻿[
+  {
+    "from": {
+      "name": "codetok",
+      "mail": "ramya@codetok.com"
+    },
+    "subject": "Test",
+    "content": "This is a test mail",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/user-image.jpg"]
+  },
+  {
+    "from": {
+      "name": "Hari",
+      "mail": "Hari@codetok.com"
+    },
+    "subject": "Test?",
+    "content": "This is a test mail",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/profile.jpg"]
+  },
+  {
+    "from": {
+      "name": "Ramya",
+      "mail": "ramya@codetok.com"
+    },
+    "subject": "new",
+    "content": "This is a test mail",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/man.jpg"]
+  },
+  {
+    "from": {
+      "name": "Hari",
+      "mail": "hari@codetok.com"
+    },
+    "subject": "hai",
+    "content": "This is a test mail",
+    "when": "20170405",
+    "read": true,
+    "starred": true,
+    "labels": [
+      {
+        "name": "Private",
+        "color": "darkgrey"
+      }
+    ],
+    "group": "promotions",
+    "type": "sent",
+    "attachments": ["assets/noavatar.png"]
+  }
+]

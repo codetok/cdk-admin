@@ -1,0 +1,114 @@
+<div fxLayout.lt-sm="column" fxLayout="row" class="mat-elevation-z1 " class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
+	<div fxFlex class="checkbox-component-holder mat-elevation-z4">
+	
+		<mat-toolbar class="checkbox-header">
+			<h1 class="mat-headline center-align" >Checkbox</h1>
+		</mat-toolbar>
+		
+		<div class="checkbox-container">
+			
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Checkbox Configuration</h4>
+					<mat-divider></mat-divider>
+					<mat-list>
+						<mat-list-item>
+							<section class="example-section">
+								<mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+								<mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+							</section>
+						</mat-list-item>
+						<mat-list-item>
+							<section class="example-section">
+								<label class="example-margin">Align:</label>
+								<mat-radio-group [(ngModel)]="align">
+									<mat-radio-button class="example-margin" value="start">Start</mat-radio-button>
+									<mat-radio-button class="example-margin" value="end">End</mat-radio-button>
+								</mat-radio-group>
+							</section>
+						</mat-list-item>
+						<mat-list-item>
+							<section class="example-section">
+								<mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+							</section>
+						</mat-list-item>
+					</mat-list>
+
+					<section class="example-section">
+	                    <label class="mat-title">Result:</label>
+	                    
+						<mat-checkbox
+							class="example-margin"
+							[(ngModel)]="checked"
+							[(indeterminate)]="indeterminate"
+							[align]="align"
+							[disabled]="disabled">
+							I'm a checkbox
+						</mat-checkbox>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div fxFlex class="checkbox-component-holder mat-elevation-z4">
+		<mat-toolbar class="checkbox-header" >
+			<h1 class="mat-headline center-align" >Examples</h1>
+		</mat-toolbar>
+
+		<mat-tab-group fxFlexFill>
+			<mat-tab label="TS">
+				<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="checkboxHelpers?.tsSourceCheckbox" language="typescript"></code></pre>
+	            </div>
+	        </mat-tab>
+	        <mat-tab label="HTML">
+	        	<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="checkboxHelpers?.htmlSourceCheckbox" language="html"></code></pre>
+	        	</div>
+	        </mat-tab>
+
+	        <mat-tab label="PREVIEW">
+	        	<div class="component-preview">
+	        		
+	        		<mat-list>
+						<mat-list-item>
+							<section class="example-section">
+								<mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+								<mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+							</section>
+						</mat-list-item>
+						<mat-list-item>
+							<section class="example-section">
+								<label class="example-margin">Align:</label>
+								<mat-radio-group [(ngModel)]="align">
+									<mat-radio-button class="example-margin" value="start">Start</mat-radio-button>
+									<mat-radio-button class="example-margin" value="end">End</mat-radio-button>
+								</mat-radio-group>
+							</section>
+						</mat-list-item>
+						<mat-list-item>
+							<section class="example-section">
+								<mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+							</section>
+						</mat-list-item>
+					</mat-list>
+					
+					<section class="example-section">
+	                    <label class="mat-title">Result:</label>
+	                    
+						<mat-checkbox
+							class="example-margin"
+							[(ngModel)]="checked"
+							[(indeterminate)]="indeterminate"
+							[align]="align"
+							[disabled]="disabled">
+							I'm a checkbox
+						</mat-checkbox>
+					</section>
+					
+				</div>
+			</mat-tab>
+		</mat-tab-group>	
+	</div>
+</div>

@@ -1,0 +1,28 @@
+
+.table-container {
+position: relative;
+margin-top:50px;
+}
+.table-container .mat-table {
+max-height: calc(100vh - 200px);
+overflow-y: auto;
+}
+.table-container .mat-table .mat-header-row {
+position: absolute;
+top: -50px;
+left: 0px;
+right: 18px;
+background: #fff;
+}
+.table-header {
+	background-color: #15980d;
+	color: white;
+	padding: 0 5px;
+}
+.table-container {
+	padding: 5px 15px 15px 15px;
+}
+.table-component-holder {
+	border: 1px solid #327ebd;
+	background-color: white;
+}

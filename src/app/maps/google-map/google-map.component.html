@@ -1,0 +1,7 @@
+<div fxLayout="column" fxFlexFill #mapContainer>
+	<div class="mat-elevation-z1 map-container" fxFlexFill>
+		<agm-map [latitude]="lat" [longitude]="lng" [zoom]="17" [ngStyle]="{ 'height': height }">
+				<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+		</agm-map>
+	</div>
+</div>

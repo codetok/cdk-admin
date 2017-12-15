@@ -1,0 +1,46 @@
+<div fxLayout="column">
+    
+    <div fxLayout="row" fxLayout.lt-md="column" class="mat-ripple list-holder" fxFlexFill #mailList  *ngFor="let mail of mails" >
+            
+        <div fxFlex="25" fxLayout="row" fxLayoutAlign="start center" class="cdk-list-item">
+
+            <mat-checkbox [(ngModel)]="checked  || mail.checked" (change)="showOptions($event)" class="checkbox"></mat-checkbox>
+
+            <button [fxHide]="true" [fxHide.gt-sm]="false" mat-icon-button>
+                <mat-icon class="star" *ngIf="!mail.starred">star_border</mat-icon>
+                <mat-icon class="star active" *ngIf="mail.starred">star</mat-icon>
+            </button>
+
+            <img [fxHide]="true" [fxHide.gt-sm]="false" class="from-avatar" src="assets/profile.jpg">
+
+            <span class="from-name mat-button">{{ mail.from.name }}</span>
+
+        </div>
+        
+        <div fxFlex="60" (click)="onOpenMailDetialTriggered(mail)" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.lt-md="start stretch" fxLayout.lt-md="column"  class="mail-detail">
+        
+            <span class="mat-button subject">{{ mail.subject }}</span>
+            <span class="middot" [fxHide.lt-md]="true">&middot;</span>
+            <span class="mat-button content">{{ mail.content }}</span>
+
+        </div>
+
+        <div fxFlex="20"  fxLayout="row" fxLayoutAlign="end center" >
+            
+            <span class="when">{{ mail.when }}</span>
+            <button [fxHide]="true" [fxHide.gt-sm]="false"  class="options" [matMenuTriggerFor]="mailOptions" mat-icon-button>
+                <mat-icon>more_vert</mat-icon>
+            </button>
+
+        </div>
+
+    </div>
+    
+</div>
+
+<mat-menu #mailOptions="matMenu">
+  <button mat-menu-item> <mat-icon>markunread_mailbox</mat-icon>Mark unread </button>
+  <button mat-menu-item> <mat-icon>label</mat-icon> label </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item> <mat-icon>delete</mat-icon> delete </button>
+</mat-menu>

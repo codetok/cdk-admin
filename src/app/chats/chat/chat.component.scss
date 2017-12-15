@@ -1,0 +1,69 @@
+$height__chat-header: 150px;
+$height__chat-toolbar: 64px;
+$height__chat-container: calc(100% - #{$height__chat-header - $height__chat-toolbar});
+.avatar {
+  width: 41px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.chat-inner-container {
+  .chat-content {
+    height:300px;
+    background-color:#ffffff;
+    perfect-scrollbar {
+    }
+    .messages-container {
+      padding: 24px;
+      .chat-message {
+        margin: 24px 0;
+        .message {
+          padding: 8px;
+          position: relative;
+          box-shadow: 0 0 0 -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+        }
+
+        .partner {
+          .message {
+            background: white;
+            margin-left: 12px;
+          }
+        }
+
+        .me {
+          .message {
+            background: #E1FFC7;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+  .chat-respond {
+  background: white;
+  padding: 12px 24px;
+    }
+}
+
+mat-toolbar {
+  border-bottom: 1px solid #EEE;
+  .current-contact {
+    .avatar {
+      margin: 0 14px 0 10px;
+    }
+     .status {
+      font-size: 14px;
+      color: #888;
+    }
+  }
+}
+.activeChat{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 16px;
+}

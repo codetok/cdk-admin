@@ -1,27 +1,17 @@
-<div  class="profile-card-holder banner-content mat-elevation-z4 ">
+<div  class="profile-card-holder ">
     <div fxLayout="column" >
-        <div fxLayout="row" >
-            <div  class="banner"   fxFlex="30" >
-                 <img width="70" [style.borderRadius]="'50%'" src="./assets/user-image.jpg">
-            </div>
-
-            <div fxFlex="70"  class="banner-content"  fxLayoutAlign="space-around center">
-                    <h1 class="mat-headline border-top">Hari Krishna S</h1>
+        <div fxLayout="row" fxLayoutAlign="space-around center"  >
+            <div  class="banner"     >
+                 <img width="100" [style.borderRadius]="'50%'" src="./assets/user-image.jpg">
             </div>
         </div>
-        <div style="padding: 10px">
-            <mat-tab-group>
-                <mat-tab label="Basic info">
-                    <h1 class="mat-headline">
-                       Who am i? 
-                    </h1> 
-                </mat-tab>
-                <mat-tab label="Contact Details">
-                    CEO, Codetok.com
-                </mat-tab>
-            </mat-tab-group>
+        <div   class="profile-details mat-elevation-z8">
+            <div fxLayout="column" class="profile-details-holder" fxLayoutAlign="space-around center">
+                <h1 class="mat-headline center-align" >Hari Krishna S</h1>
+                <h1 class="mat-subheading-1 center-align" >CTO/CO FOUNDER Codetok.com</h1>
+                <button class="Follow " mat-raised-button color="warn">Follow</button>
+            </div>
         </div>
-        <div>
-        </div>
+        
     </div>
 </div>

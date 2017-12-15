@@ -85,7 +85,6 @@ export class SharePriceComponent implements OnInit {
             graph.data.datasets[0].data.map((p)=> {
                 p = this.getRandomInt(20, 60);
             })
-           console.log(graph);
         },2500)
         
 

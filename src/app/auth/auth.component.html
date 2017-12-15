@@ -1,5 +1,5 @@
 <mat-sidenav-container class="container" fullscreen  >
-    <mat-sidenav   mode="side" class="sidenav" #sidenav opened="true" style="overflow: hidden;">
+    <mat-sidenav   [mode]="sideNavMode" class="sidenav" #sidenav [opened]="sideNavOpened" style="overflow: hidden;">
         <mat-toolbar color="primary" class="mat-elevation-z4">
          <img src="./assets/logo.codetok.png" width="36px">
             <h1 style="font-size: 26px;font-family: Roboto;color:white;margin-top: 8px" >
@@ -8,26 +8,43 @@
         </mat-toolbar>
         <cdk-sidemenu></cdk-sidemenu>
     </mat-sidenav>
-    <mat-sidenav-content  >
+    <mat-sidenav-content  style="z-index: unset">
         <mat-drawer-container fullscreen >
-            <mat-drawer mode="side" #drawer class="drawer" opened="false" style="overflow: hidden;"  >
+            <mat-drawer mode="side" #drawer class="drawer" [opened]="matDrawerOpened" style="overflow: hidden;">
                 <mat-toolbar  color="primary" class="mat-elevation-z4">
                     <img src="./assets/logo.codetok.png" width="36px">
                 </mat-toolbar>
                 <cdk-sidemenu [iconOnly]="true"></cdk-sidemenu>
             </mat-drawer>
-            <mat-drawer-content style="overflow: hidden;">
-                <mat-toolbar   class="mat-elevation-z4">                            
-                    <button mat-icon-button (click)="sidenav.toggle();drawer.toggle();">
-                        <i class="material-icons app-toolbar-menu">menu </i>
-                    </button> 
-                </mat-toolbar>
-                <perfect-scrollbar  >
-                    <div style="position: relative;padding: 0px 5px;" >
+            <mat-drawer-content >
+
+                <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
+
+
+                <perfect-scrollbar  style="height: calc(100% - 33px);">
+                    <div>
+
                         <router-outlet></router-outlet>
                     </div>
+                    
                 </perfect-scrollbar>
             </mat-drawer-content>
         </mat-drawer-container>
     </mat-sidenav-content>
+
+    <mat-sidenav #sidenav2 position="end" mode="over">
+        <!-- <mat-tab-group>
+            <mat-tab label="Overview">
+            </mat-tab>
+            <mat-tab label="Notifications">
+            </mat-tab>
+        </mat-tab-group> -->
+    <cdk-sidebar></cdk-sidebar>
+    </mat-sidenav>
+    
 </mat-sidenav-container>
+        
+            
+        
+        
+

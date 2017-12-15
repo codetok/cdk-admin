@@ -1,0 +1,119 @@
+
+<div fxLayout="column" class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px" >
+
+	<div fxFlex class="stepper-component-holder mat-elevation-z4">
+		<mat-toolbar class="stepper-header">
+			<h1 class="mat-headline center-align" >Stepper</h1>
+		</mat-toolbar>
+		
+		<div class="stepper-container">
+			
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				
+
+					<h4 class="mat-subheading-2 center-align">Basic Stepper</h4>
+
+					<mat-divider></mat-divider>
+			
+					<button mat-raised-button color="accent" (click)="isLinear = !isLinear" id="toggle-linear">Toggle linear mode</button> 
+					<span *ngIf="isLinear">Linear mode enabled</span>
+
+					<mat-horizontal-stepper [linear]="isLinear" fxFlexfill>
+					  <mat-step [stepControl]="firstFormGroup">
+					    <form [formGroup]="firstFormGroup">
+					      <ng-template matStepLabel >Fill out your name</ng-template>
+					      <mat-form-field>
+					        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+					      </mat-form-field>
+					      <div>
+					        <button mat-button matStepperNext>Next</button>
+					      </div>
+					    </form>
+					  </mat-step>
+					  <mat-step [stepControl]="secondFormGroup">
+					    <form [formGroup]="secondFormGroup">
+					      <ng-template matStepLabel>Fill out your address</ng-template>
+					      <mat-form-field>
+					        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+					      </mat-form-field>
+					      <div>
+					        <button mat-button matStepperPrevious>Back</button>
+					        <button mat-button matStepperNext>Next</button>
+					      </div>
+					    </form>
+					  </mat-step>
+					  <mat-step>
+						<ng-template matStepLabel>Done</ng-template>
+					    You are now done.
+					    <div>
+					      <button mat-button matStepperPrevious>Back</button>
+					    </div>
+					  </mat-step>
+					</mat-horizontal-stepper>	           
+
+				</div>
+				
+			</div>
+
+		</div>		
+
+	</div>
+
+	<div fxFlex class="stepper-component-holder mat-elevation-z4">
+	<mat-toolbar class="stepper-header">
+		<h1 class="mat-headline" >Examples</h1>
+	</mat-toolbar>
+
+	<mat-tab-group fxFlexFill>
+		<mat-tab label="TS">
+			<div class="component-preview">
+            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="stepperHelpers?.tsSourceRaisedButton" language="typescript"></code></pre>
+        	</div>
+        </mat-tab>
+        <mat-tab label="HTML">
+        	<div class="component-preview">
+            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="stepperHelpers?.htmlSourceRaisedButton" language="html"></code></pre>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="PREVIEW">
+        	<div >
+	        	<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+				<mat-horizontal-stepper [linear]="isLinear">
+				  <mat-step [stepControl]="firstFormGroup">
+				    <form [formGroup]="firstFormGroup">
+				      <ng-template matStepLabel>Fill out your name</ng-template>
+				      <mat-form-field>
+				        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+				      </mat-form-field>
+				      <div>
+				        <button mat-button matStepperNext>Next</button>
+				      </div>
+				    </form>
+				  </mat-step>
+				  <mat-step [stepControl]="secondFormGroup">
+				    <form [formGroup]="secondFormGroup">
+				      <ng-template matStepLabel>Fill out your address</ng-template>
+				      <mat-form-field>
+				        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+				      </mat-form-field>
+				      <div>
+				        <button mat-button matStepperPrevious>Back</button>
+				        <button mat-button matStepperNext>Next</button>
+				      </div>
+				    </form>
+				  </mat-step>
+				  <mat-step>
+				    <ng-template matStepLabel>Done</ng-template>
+				    You are now done.
+				    <div>
+				      <button mat-button matStepperPrevious>Back</button>
+				    </div>
+				  </mat-step>
+				</mat-horizontal-stepper>
+		  	</div>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>

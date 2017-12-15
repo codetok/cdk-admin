@@ -1,0 +1,199 @@
+<div fxLayout="column" class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
+
+	<div fxFlex class="expansion-component-holder mat-elevation-z4">
+		<mat-toolbar class="expansion-header">
+			<h1 class="mat-headline center-align" >Expansion Panel</h1>
+		</mat-toolbar>
+		
+		<div class="expansion-container">
+			
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				
+				<div fxFlexLayoutWrap fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50">
+
+					<h4 class="mat-subheading-2 center-align">Basic expansion panel</h4>
+
+					<mat-divider></mat-divider>
+			
+					<mat-accordion>
+					<mat-expansion-panel>
+						<mat-expansion-panel-header>
+							<mat-panel-title>
+							Personal data
+							</mat-panel-title>
+							<mat-panel-description>
+							Type your name and age
+							</mat-panel-description>
+						</mat-expansion-panel-header>
+
+						<mat-form-field>
+							<input matInput placeholder="First name">
+						</mat-form-field>
+
+						<mat-form-field>
+						<input matInput placeholder="Age">
+						</mat-form-field>
+					</mat-expansion-panel>
+					<mat-expansion-panel (opened)="basicPanelOpenState = true"
+						(closed)="basicPanelOpenState = false">
+						<mat-expansion-panel-header>
+						<mat-panel-title>
+							Self aware panel
+						</mat-panel-title>
+						<mat-panel-description>
+							Currently I am {{basicPanelOpenState ? 'open' : 'closed'}}
+						</mat-panel-description>
+						</mat-expansion-panel-header>
+						<p>I'm visible because I am open</p>
+					</mat-expansion-panel>
+				</mat-accordion>
+
+					           
+
+				</div>
+
+
+				<div fxFlexLayoutWrap fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50">
+
+					<h4 class="mat-subheading-2 center-align">Expansion panel as accordion</h4>
+
+					<mat-divider></mat-divider>
+			
+					<mat-accordion class="example-headers-align">
+				  	<mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+				    	<mat-expansion-panel-header>
+				      		<mat-panel-title>
+				        	Personal data
+				     		</mat-panel-title>
+				      		<mat-panel-description>
+					       	 	Type your name and age
+					        	<mat-icon>account_circle</mat-icon>
+				      		</mat-panel-description>
+				    	</mat-expansion-panel-header>
+
+					    <mat-form-field>
+					      <input matInput placeholder="First name">
+					    </mat-form-field>
+
+					    <mat-form-field>
+					      <input matInput type="number" min="1" placeholder="Age">
+					    </mat-form-field>
+
+					    <mat-action-row>
+					      <button mat-button color="primary" (click)="nextStep()">Next</button>
+					    </mat-action-row>
+				  	</mat-expansion-panel>
+
+				  	<mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+				    <mat-expansion-panel-header>
+					    <mat-panel-title>
+					        Destination
+				    	</mat-panel-title>
+				    	<mat-panel-description>
+				        	Type the country name
+				        	<mat-icon>map</mat-icon>
+				   	 	</mat-panel-description>
+				 	</mat-expansion-panel-header>
+
+				    <mat-form-field>
+				      <input matInput placeholder="Country">
+				    </mat-form-field>
+
+				    <mat-action-row>
+				      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+				      <button mat-button color="primary" (click)="nextStep()">Next</button>
+				    </mat-action-row>
+				  </mat-expansion-panel>
+
+				  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+				    <mat-expansion-panel-header>
+				      <mat-panel-title>
+				        Day of the trip
+				      </mat-panel-title>
+				      <mat-panel-description>
+				        Inform the date you wish to travel
+				        <mat-icon>date_range</mat-icon>
+				      </mat-panel-description>
+				    </mat-expansion-panel-header>
+
+				    <mat-form-field>
+				      <input matInput placeholder="Date" [matDatepicker]="picker" (focus)="picker.open()" readonly>
+				    </mat-form-field>
+				    <mat-datepicker #picker></mat-datepicker>
+
+				    <mat-action-row>
+				      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+				      <button mat-button color="primary" (click)="nextStep()">End</button>
+				    </mat-action-row>
+				  </mat-expansion-panel>
+
+				</mat-accordion>
+				
+					           
+
+				</div>
+				
+			</div>
+
+						
+
+		</div>
+	</div>
+
+	<div fxFlex class="expansion-component-holder mat-elevation-z4">
+		<mat-toolbar class="expansion-header"  >
+			<h1 class="mat-headline center-align" >Examples</h1>
+		</mat-toolbar>
+
+		<mat-tab-group fxFlexFill>
+			<mat-tab label="TS">
+				<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="expansionHelpers?.tsSourceRaisedButton" language="typescript"></code></pre>
+	        	</div>
+	        </mat-tab>
+	        <mat-tab label="HTML">
+	        	<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="expansionHelpers?.htmlSourceRaisedButton" language="html"></code></pre>
+	            </div>
+	        </mat-tab>
+
+	        <mat-tab label="PREVIEW">
+	        	<div class="component-preview">
+		        	<mat-accordion>
+					<mat-expansion-panel>
+						<mat-expansion-panel-header>
+							<mat-panel-title>
+							Personal data
+							</mat-panel-title>
+							<mat-panel-description>
+							Type your name and age
+							</mat-panel-description>
+						</mat-expansion-panel-header>
+
+						<mat-form-field>
+							<input matInput placeholder="First name">
+						</mat-form-field>
+
+						<mat-form-field>
+						<input matInput placeholder="Age">
+						</mat-form-field>
+					</mat-expansion-panel>
+					<mat-expansion-panel (opened)="basicPanelOpenState = true"
+						(closed)="basicPanelOpenState = false">
+						<mat-expansion-panel-header>
+						<mat-panel-title>
+							Self aware panel
+						</mat-panel-title>
+						<mat-panel-description>
+							Currently I am {{basicPanelOpenState ? 'open' : 'closed'}}
+						</mat-panel-description>
+						</mat-expansion-panel-header>
+						<p>I'm visible because I am open</p>
+					</mat-expansion-panel>
+				</mat-accordion>
+			  	</div>
+	        </mat-tab>
+	    </mat-tab-group>
+	</div>
+
+</div>

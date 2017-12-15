@@ -1,0 +1,49 @@
+<div class="sidenav-container">
+  <mat-toolbar>
+    <div class="toolbar" fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
+      <img class="avatar" [src]="avatar">
+      <span fxFlex></span>
+      <div fxLayout="row" fxLayoutAlign="end" >
+          <button mat-icon-button>
+              <mat-icon>phone</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="userMenu">
+              <mat-icon>more_vert</mat-icon>
+          </button>
+      </div>
+      
+    </div>
+  </mat-toolbar>
+
+  <div class="chat-contacts-container" fxLayout="column">
+    <div>
+      <mat-nav-list class="chat-contacts">
+        <mat-list-item class="chat-contact" (click)="setActiveChat(chat)" *ngFor="let chat of chats" mat-ripple>
+          <img class="avatar" [src]="chat?.picture" mat-list-avatar>
+          <h3 class="name" mat-line>{{chat.name}}</h3>
+          <p class="last-message" mat-line> {{chat.lastMessage}}</p>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+</div>
+
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon> account_circle </mat-icon>
+    <span> I </span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon> settings </mat-icon>
+    <span> Set </span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>help</mat-icon>
+    <span>help</span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>
+    <mat-icon> exit_to_app </mat-icon>
+    <span> drop out </span>
+  </button>
+</mat-menu>

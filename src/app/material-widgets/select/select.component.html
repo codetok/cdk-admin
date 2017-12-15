@@ -1,0 +1,218 @@
+<div fxLayout="column" class="components-container-gt-xs"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px"  >
+	<div fxFlex class="select-component-holder mat-elevation-z4">
+		<mat-toolbar class="list-header">
+			<h1 class="mat-headline center-align" >Select</h1>
+		</mat-toolbar>
+		<div class="list-container">
+			
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Basic select</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+	  					<mat-select placeholder="Favorite food">
+		    				<mat-option *ngFor="let food of foods" [value]="food.value">
+		      								{{ food.viewValue }}
+		    				</mat-option>
+	  					</mat-select>
+					</mat-form-field>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Select with 2-way value binding</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <mat-select [(value)]="select">
+					    <mat-option>None</mat-option>
+					    <mat-option value="option1">Option 1</mat-option>
+					    <mat-option value="option2">Option 2</mat-option>
+					    <mat-option value="option3">Option 3</mat-option>
+					  </mat-select>
+					</mat-form-field>
+
+					<h2 class="mat-body-2 center-align">You selected: {{select}}</h2>
+				</div>
+			</div>
+		
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Select in a form</h4>
+					<mat-divider></mat-divider>
+					<form>
+					  	<mat-form-field>
+						    <mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+						      <mat-option *ngFor="let food of foods" [value]="food.value">
+						        {{food.viewValue}}
+						      </mat-option>
+						    </mat-select>
+					  	</mat-form-field>
+
+					  	<p> Selected value: {{selectedValue}} </p>
+					</form>
+				</div>
+				
+			
+			
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Select with form field features</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  	<mat-select placeholder="Favorite animal" [formControl]="animalControl" required>
+						    <mat-option>--</mat-option>
+						    <mat-option *ngFor="let animal of animals" [value]="animal">
+						      {{animal.name}}
+						    </mat-option>
+					  	</mat-select>
+					  	<mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+					  	<mat-hint>{{animalControl.value?.sound}}</mat-hint>
+					</mat-form-field>
+				</div>
+			</div>	
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Disabled select</h4>
+					<mat-divider></mat-divider>
+					<p>
+					  <mat-checkbox [formControl]="disableSelect">Disable select</mat-checkbox>
+					</p>
+					<p>
+					  <mat-form-field>
+					    <mat-select placeholder="Choose an option" [disabled]="disableSelect.value">
+					      <mat-option value="option1">Option 1</mat-option>
+					      <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+					      <mat-option value="option3">Option 3</mat-option>
+					    </mat-select>
+					  </mat-form-field>
+					</p>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Select with reset option</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <mat-select placeholder="State">
+					    <mat-option>None</mat-option>
+					    <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+					  </mat-select>
+					</mat-form-field>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Select with option groups</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+						<mat-select placeholder="Pokemon" [formControl]="pokemonControl">
+						    <mat-option>-- None --</mat-option>
+						    <mat-optgroup *ngFor="let group of pokemonGroups" [label]="group.name"
+						                  [disabled]="group.disabled">
+						      <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
+						        {{ pokemon.viewValue }}
+						      </mat-option>
+						    </mat-optgroup>
+						  </mat-select>
+					</mat-form-field>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Select with multiple selection</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <mat-select placeholder="Toppings" [formControl]="toppings" multiple>
+					    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+					  </mat-select>
+					</mat-form-field>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Select with custom trigger text</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+						  <mat-select placeholder="Toppings" [formControl]="topping" multiple>
+						    <mat-select-trigger>
+						      {{topping.value ? topping.value[0] : ''}}
+						      <span *ngIf="topping.value?.length > 1" class="example-additional-selection">
+						        (+{{topping.value.length - 1}} others)
+						      </span>
+						    </mat-select-trigger>
+						    <mat-option *ngFor="let topping of toppingLists" [value]="topping">{{topping}}</mat-option>
+						  </mat-select>
+					</mat-form-field>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4 class="mat-subheading-2 center-align">Select with no option ripple</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <mat-select placeholder="Select an option" disableRipple>
+					    <mat-option value="1">Option 1</mat-option>
+					    <mat-option value="2">Option 2</mat-option>
+					    <mat-option value="3">Option 3</mat-option>
+					  </mat-select>
+					</mat-form-field>
+				</div>
+			</div>
+			<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Select with custom panel styling</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <mat-select placeholder="Panel color" [formControl]="panelColor"
+					              panelClass="example-panel-{{panelColor.value}}">
+					    <mat-option value="red">Red</mat-option>
+					    <mat-option value="green">Green</mat-option>
+					    <mat-option value="blue">Blue</mat-option>
+					  </mat-select>
+					</mat-form-field>
+				</div>
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+					<h4  class="mat-subheading-2 center-align">Select with a custom ErrorStateMatcher</h4>
+					<mat-divider></mat-divider>
+					<mat-form-field>
+					  <mat-select placeholder="Choose one" [formControl]="selected" [errorStateMatcher]="matcher">
+					    <mat-option>Clear</mat-option>
+					    <mat-option value="valid">Valid option</mat-option>
+					    <mat-option value="invalid">Invalid option</mat-option>
+					  </mat-select>
+					  <mat-hint>Errors appear instantly!</mat-hint>
+					  <mat-error *ngIf="selected.hasError('required')">You must make a selection</mat-error>
+					  <mat-error *ngIf="selected.hasError('pattern') && !selected.hasError('required')">
+					    Your selection is invalid
+					  </mat-error>
+					</mat-form-field>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div fxFlex class="select-component-holder mat-elevation-z4">
+		<mat-toolbar class="list-header">
+			<h1 class="mat-headline center-align" >Examples</h1>
+		</mat-toolbar >
+
+		<mat-tab-group fxFlexFill>
+			<mat-tab label="TS">
+				<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="SelectHelpers?.tsSourceSelectionselect" language="typescript"></code></pre>
+	            </div>
+	        </mat-tab>
+	        <mat-tab label="HTML">
+	        	<div class="component-preview">
+	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="SelectHelpers?.htmlSourceSelectionselect" language="html"></code></pre>
+	            </div>
+	        </mat-tab>
+
+	        <mat-tab label="PREVIEW">
+	        	<div class="component-preview">
+		        	<mat-form-field>
+		        	  <mat-select placeholder="Select an option" disableRipple>
+		        	    <mat-option value="1">Option 1</mat-option>
+		        	    <mat-option value="2">Option 2</mat-option>
+		        	    <mat-option value="3">Option 3</mat-option>
+		        	  </mat-select>
+		        	</mat-form-field>
+
+				</div>
+	        </mat-tab>
+	    </mat-tab-group>
+	</div>
+
+</div>
+

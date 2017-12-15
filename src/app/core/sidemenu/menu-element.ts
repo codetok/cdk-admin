@@ -2,8 +2,9 @@ export const menus = [
     {
         "name"   : "Dashboard",
         "icon"   : "dashboard",
+        "link"   : false,
         "open"   : false,
-        "chip"   :  { "value": 2,'color': 'accent'} ,
+        "chip"   :  { "value": 1,'color': 'accent'} ,
         "sub"    :  [
                         {
                             "name": "Dashboard",
@@ -11,129 +12,139 @@ export const menus = [
                             "icon": "dashboard",
                             "chip"   : false,
                             "open"   : true,
-                        },
-                        {
-                            "name": "Account",
-                            "link": "/auth/dashboard-account",
-                            "icon": "dashboard",
-                            "chip"   : false,
-                            "open"   : true,
                         }
+                        
                     ]
     },
     {
         "name"   : "Material Widget",
         "icon"   : "widgets",
+        "link"   : false,
         "open"   : false,
         "sub"    :  [
                         {
-                            "name": "Buttons",
-                            "link": "buttons",
-                            "icon": "indeterminate_check_box",
-                            "chip"   : false,
-                            "open"   : false,
+                            "name"  : "Buttons",
+                            "link"  : "material-widgets/buttons",
+                            "icon"  : "indeterminate_check_box",
+                            "chip"  : false,
+                            "open"  : false,
                         },
                         {
-                            "name": "List",
-                            "link": "list",
-                            "icon": "list",
-                            "chip"   : false,
-                            "open"   : false,
-                        },
-                        {
-                            "name": "Stepper",
-                            "link": "stepper",
-                            "icon": "view_week",
-                            "chip"   : false,
-                            "open"   : false,
-                        },
-                        {
-                            "name": "Expansion",
-                            "link": "expansion",
-                            "icon": "web_aaset",
-                            "chip"   : false,
-                            "open"   : false,
-                        },
-                        {
-                            "name": "Progress Spinner",
-                            "link": "spinner",
-                            "icon": "cached",
-                            "chip"   : false,
-                            "open"   : false,
-                        },
-                        {
-                            "name": "Cards",
-                            "link": "cards",
-                            "icon": "crop_16_9",
-                            "open"   : false,
-                        },
-                        {
-                            "name": "Icons",
-                            "link": "icon",
-                            "icon": "gif",
-                            "open"   : false,
+                            "name"  : "List",
+                            "link"  : "material-widgets/list",
+                            "icon"  : "list",
+                            "chip"  : false,
+                            "open"  : false,
                         },
                         {
 
-                            "name": "AutoComplete",
-                            "link": "autocomplete",
-                            "icon": "get_app",
-                            "open"   : false,
+                            "name"    : "Stepper",
+                            "link"    : "material-widgets/stepper",
+                            "icon"    : "view_week",
+                            "chip"    : false,
+                            "open"    : false,
+
                         },
                         {
-                            "name": "CheckBox",
-                            "link": "checkbox",
-                            "icon": "check_box",
-                            "open"   : false,
+                            "name"    : "Expansion",
+                            "link"    : "material-widgets/expansion",
+                            "icon"    : "web_aaset",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
-                            "name": "DatePicker",
-                            "link": "datepicker",
-                            "icon": "date_range",
-                            "open"   : false,
+                            "name"    : "Progress Spinner",
+                            "link"    : "material-widgets/spinner",
+                            "icon"    : "cached",
+                            "chip"    : false,
+                            "open"    : false,
+                        },
+                        {
+                            "name"    : "Cards",
+                            "link"    : "material-widgets/cards",
+                            "icon"    : "crop_16_9",
+                            "chip"    : false,
+                            "open"    : false,
+                        },
+                        {
+                            "name"    : "Icons",
+                            "link"    : "material-widgets/icons",
+                            "icon"    : "gif",
+                            "chip"    : false,
+                            "open"    : false,
+                        },
+                        {
+
+                            "name"    : "AutoComplete",
+                            "link"    : "material-widgets/autocomplete",
+                            "icon"    : "get_app",
+                            "chip"    : false,
+                            "open"    : false,
+                        },
+                        {
+                            "name"    : "CheckBox",
+                            "link"    : "material-widgets/checkbox",
+                            "icon"    : "check_box",
+                            "chip"    : false,
+                            "open"    : false,
+                        },
+                        {
+                            "name"    : "DatePicker",
+                            "link"    : "material-widgets/datepicker",
+                            "icon"    : "date_range",
+                            "chip"    : false,
+                            "open"    : false,
                         },
 
                         {
-                            "name": "Slider",
-                            "link": "slider",
-                            "open"   : false,
-                            "icon":"keyboard_tab"
+                            "name"    : "Slider",
+                            "link"    : "material-widgets/slider",
+                            "icon"    : "keyboard_tab",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                         },
                         {
-                            "name": "Slide Toggle",
-                            "link": "slide-toggle",
-                            "open"   : false,
-                            "icon":"album"
+                            "name"    : "Slide Toggle",
+                            "link"    : "material-widgets/slide-toggle",
+                            "icon"    : "album",
+                            "chip"    : false,
+                            "open"    : false,
+                            
                            
                         },
                          {
-                            "name": "Menu",
-                            "icon": "menu",
-                            "link": "menu",
-                            "open"   : false,
+                            "name"    : "Menu",
+                            "icon"    : "menu",
+                            "link"    : "material-widgets/menu",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                          {
-                            "name": "Progress Bar",
-                            "link": "progress-bar",
-                            "open"   : false,
-                            "icon":"trending_flat"
+                            "name"    : "Progress Bar",
+                            "link"    : "material-widgets/progress-bar",
+                            "icon"    : "trending_flat",
+                            "chip"    : false,
+                            "open"    : false,
+                           
                         },
                         {
                             "name": "Input",
                             "icon": "input",
-                            "link": "inputs",
+                            "link": "material-widgets/input",
                             "open"   : false,
                         },
                         {
-                            "name": "Radio",
-                            "icon": "radio_button_checked",
-                            "link": "radio",
-                            "open"   : false,
+                            "name"    : "Radio",
+                            "icon"    : "radio_button_checked",
+                            "link"    : "material-widgets/radio",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                         {
                             "name": "Select",
                             "icon": "select_all",
-                            "link": "select",
+                            "link": "material-widgets/select",
                             "open"   : false,
                         },
                     ]
@@ -141,104 +152,83 @@ export const menus = [
         "name"   : "Forms",
         "icon"   : "mode_edit",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "Template Driven",
                             "icon": "mode_edit",
                             "open"   : false,
-                            "link":"template_driven"
+                            "link":"forms/template_forms"
                         },
                         {
                             "name": "Reactive Forms",
                             "icon": "text_fields",
                             "open"   : false,
-                            "link":"reactive_forms"
+                            "link":"forms/reactive_forms"
                         }
                     ]
     },{
         "name"   : "Tables",
         "icon"   : "list",
+        "link"   : false,
         "open"   : false,
         "chip"   :  { "value": 2,'color': 'accent'} ,
         "sub"    :  [
                         {
-                            "name": "Filtering",
+                            "name": "Fixed",
                             "icon": "filter_list",
-                            "link": "filter-table",
+                            "link": "tables/fixed",
                             "open"   : false,
                         },
                         {
-                            "name": "Pagination",
-                            "icon": "last_page",
-                            "link": "pagination-table",
-                            "open"   : false,
-                        },
-                        {
-                            "name": "Sorting",
-                            "icon": "sort_by_alpha",
-                            "link": "sorting-table",
-                            "open"   : false,
-                        },
-                        {
-                            "name": "HTTP",
-                            "icon": "http",
-                            "link": "retrive-http-table",
-                            "open"   : false,
-                        },
-                        {
-                            "name": "All Features",
+                            "name": "Feature",
                             "icon": "done_all",
-                            "link": "all-features-table",
+                            "link": "tables/featured",
                             "open"   : false,
                         },
                         {
                             "name": "Responsive Tables",
                             "icon": "filter_center_focus",
-                            "link": "responsive-table",
+                            "link": "tables/responsive",
                             "open"   : false,
                         }
                     ]
-    },{
-        "name"   : "Charts",
-        "icon"   : "pie_chart_outlined",
-        "open"   : false,
-        "sub"    :  [
-                        {
-                            "name": "chartjs",
-                            "icon": "view_list",
-                            "link":"chartjs",
-                            "open"   : false,
 
-                        },
-                        {
-                            "name": "ngx-chart",
-                            "icon": "show_chart",
-                            "open"   : false,
-                            "link": "ngx-charts",
-                        },
-                        {
-                            "name": "nvd3",
-                            "icon": "pie_chart",
-                            "open"   : false,
-                            "link": "nvd3-charts",
-                        }
-                        
-                    ]
-    },{
-        "name"   : "maps",
-        "icon"   : "map",
+    },
+    {
+        "name"   : "Guarded Routes",
+        "icon"   : "mode_edit",
+        "link"   : "/auth/guarded-routes",
         "open"   : false,
+       
+                 
+    },{
+        "name"   : "Scrumboard",
+        "open"   : false,
+        "link"   : "/auth/scrumboard",
+        "icon"   : "grade",
+    },{
+        "name"   : "Applications",
+        "icon"   : "view_module",
+        "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
-                            "name": "google-map",
-                            "icon": "directions",
-                            "link":"googlemap",
+                            "name": "chat",
+                            "icon": "chat",
+                            "link":"chats/chat",
                             "open"   : false,
                         },
                         {
-                            "name": "leaflet-map",
-                            "icon": "directions",
-                            "link":"leafletmap",
+                            "name": "mail",
+                            "icon": "mail",
+                            "link":"mail/mail",
+                            "open"   : false,
+                        },
+                        {
+                            "name": "Editor",
+                            "icon": "editor",
+                            "link":"editor/editor",
                             "open"   : false,
                         }
                     ]
@@ -248,39 +238,75 @@ export const menus = [
         "open"   : false,
         "sub"    :  [
                         {
-                            "name": "Services",
-                            "icon": "local_laundry_service",
-                            "open": false,
-                            "link": "services",
-                        },{
                             "name": "Login",
                             "icon": "work",
                             "open": false,
-                            "link": "login",
+                            "link": "../login",
                         },{
-                            "name": "Registeration",
+                            "name": "Services",
+                            "icon": "local_laundry_service",
+                            "open": false,
+                            "link": "pages/services",
+                        },{
+                            "name": "About",
                             "icon": "work",
                             "open": false,
-                            "link": "register",
+                            "link": "pages/about",
                         },{
-                            "name":"Map",
+                            "name":"Contact",
                             "icon":"directions",
                             "open": false,
+                            "link":"pages/contact"
                         }
                     ]
     },{
-        "name"   : "Editor",
-        "icon"   : "content_copy",
+
+        "name"   : "Charts",
+        "icon"   : "pie_chart_outlined",
         "open"   : false,
+        "link"   : false,
         "sub"    :  [
                         {
-                            "name": "Text Editor",
-                            "icon": "mode_edit",
-                            "link": "editor",
+                            "name": "chartjs",
+                            "icon": "view_list",
+                            "link":"charts/chartjs",
+                            "open"   : false,
+
+                        },
+                        {
+                            "name": "ngx-chart",
+                            "icon": "show_chart",
+                            "open"   : false,
+                            "link": "charts/ngx-charts",
+                        },
+                        {
+                            "name": "nvd3",
+                            "icon": "pie_chart",
+                            "open"   : false,
+                            "link": "charts/nvd3-charts",
+                        }
+                        
+                    ]
+    },{
+        "name"   : "maps",
+        "icon"   : "map",
+        "open"   : false,
+        "link"   : false,
+        "sub"    :  [
+                        {
+                            "name": "google-map",
+                            "icon": "directions",
+                            "link":"maps/googlemap",
                             "open"   : false,
                         },
-                       
+                        {
+                            "name": "leaflet-map",
+                            "icon": "directions",
+                            "link":"maps/leafletmap",
+                            "open"   : false,
+                        }
                     ]
     }
+
 
 ]

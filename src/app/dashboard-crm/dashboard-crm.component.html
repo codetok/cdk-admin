@@ -5,34 +5,35 @@
     </div>
 </div>
 <div fxLayout="row" fxLayoutWrap>
-    <div  fxFlex="75" fxFlex.lt-sm="100"  fxFlex.sm="75" fxFlex.md="75"  >
-        <div fxLayout="row" >
-            <cdk-bar-graph fxFlex="50"></cdk-bar-graph>
-            <cdk-doughnut-graph fxFlex="50"></cdk-doughnut-graph>
-        </div>
-        <cdk-line-graph></cdk-line-graph>
-    </div>
-    <div   fxFlex="25" fxFlex.lt-sm="100"  fxFlex.sm="25" fxFlex.md="25" >
-        <div fxLayout="column" >
-            <cdk-weather></cdk-weather>
-            
-            <cdk-share-price></cdk-share-price>
-        </div>
-    </div>
+    <cdk-bar-graph fxFlex="37.5" fxFlex.lt-sm="100"  fxFlex.sm="50" ></cdk-bar-graph>
+    <cdk-doughnut-graph fxFlex="37.5" fxFlex.lt-sm="100"  fxFlex.sm="50" ></cdk-doughnut-graph>
+    <cdk-weather fxFlex="25" fxFlex.lt-sm="100"  fxFlex.sm="100" ></cdk-weather>
+</div>
+<div fxLayout="row" fxLayoutWrap>
+     <cdk-line-graph fxFlex="75" fxFlex.lt-sm="100"  fxFlex.sm="50" ></cdk-line-graph>
+     <cdk-share-price fxFlex="25" fxFlex.lt-sm="100"  fxFlex.sm="50"  ></cdk-share-price>
+</div>
+<div fxLayout="row" fxLayoutWrap>
+     <cdk-sales-list fxFlex="60"  fxFlex.lt-sm="100"  fxFlex.sm="100" fxFlex.md="70" ></cdk-sales-list>
+     <cdk-profile-card fxFlex="40"  fxFlex.lt-sm="100"  fxFlex.sm="100" fxFlex.md="30" ></cdk-profile-card>
 </div>
 
 <div fxLayout="row" fxLayoutWrap>
-    <div  fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
-       <cdk-round-progressbar [title]="'SALES'"  [current]="'23'" [max]="'100'" [background]="'#32CDCD'" [color]="'#0cd397'" [boxcolor]="'#7986CB'"  ></cdk-round-progressbar>
+    <div  fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25" >
+       <cdk-round-progressbar [title]="'SALES'"  [current]="'23'" [max]="'100'" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"  ></cdk-round-progressbar>
     </div>
     <div fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
-       <cdk-round-progressbar  [title]="'LEADS'" [current]="'23'" [max]="'100'" [background]="'#45ccce'" [color]="'#0cd397'" [boxcolor]="'#64B5F6'"  ></cdk-round-progressbar>
+       <cdk-round-progressbar  [title]="'LEADS'" [current]="'33'" [max]="'100'" [background]="'#FFE268'" [color]="'#A7C1FF'" [boxcolor]="'#42A5F5'"  ></cdk-round-progressbar>
     </div>
     <div fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
-      <cdk-round-progressbar  [title]="'ASSETS'" [current]="'23'" [max]="'100'" [background]="'#45ccce'" [color]="'#0cd397'" [boxcolor]="'#4DB6AC'"  ></cdk-round-progressbar>
+      <cdk-round-progressbar  [title]="'ASSETS'" [current]="'78'" [max]="'100'" [background]="'#FFC368'" [color]="'#A7F0FF'" [boxcolor]="'#26A69A'"  ></cdk-round-progressbar>
     </div>
     <div fxFlex.lt-sm="100"  fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar  [title]="'BANKING'" [current]="'23'" [max]="'100'" [background]="'#1f91ef'" [color]="'#15a6ea'" [boxcolor]="'#81C784'"  ></cdk-round-progressbar>
+        <cdk-round-progressbar  [title]="'BANKING'" [current]="'90'" [max]="'100'" [background]="'#FFCF68'" [color]="'#A7DEFF'" [boxcolor]="'#26C6DA'"  ></cdk-round-progressbar>
     </div>    
 </div>
-<app-airport-graph></app-airport-graph>
+
+<div fxLayout="column" fxLayoutWrap style=" padding: 8px;">
+    <cdk-world-map [tableData]="tableData"></cdk-world-map>
+</div>
+
