@@ -1,18 +1,19 @@
 export const RADIO_HELPERS: any = {
 
 	tsSourceRadio: `
-import { Component, OnInit } from '@angular/core';
 import { MatRadioModule } from '@angular/material';
-@Component({
-  selector: 'cdk-radio',
-  templateUrl: './radio.component.html',
-  styleUrls: ['./radio.component.scss']
-})
 @NgModule({
       imports: [
         MatRadioModule,
     })
 export class AppModule { }
+
+import { Component, OnInit } from '@angular/core';
+@Component({
+  selector: 'cdk-radio',
+  templateUrl: './radio.component.html',
+  styleUrls: ['./radio.component.scss']
+})
 export class RadioComponent implements OnInit {
 
   constructor() { }
