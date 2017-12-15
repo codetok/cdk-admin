@@ -114,16 +114,19 @@ export const menus = [
                            
                         },
                          {
-                            "name": "Menu",
-                            "icon": "menu",
-                            "link": "menu",
-                            "open"   : false,
+                            "name"    : "Menu",
+                            "icon"    : "menu",
+                            "link"    : "material-widgets/menu",
+                            "chip"    : false,
+                            "open"    : false,
                         },
                          {
-                            "name": "Progress Bar",
-                            "link": "progress-bar",
-                            "open"   : false,
-                            "icon":"trending_flat"
+                            "name"    : "Progress Bar",
+                            "link"    : "material-widgets/progress-bar",
+                            "icon"    : "trending_flat",
+                            "chip"    : false,
+                            "open"    : false,
+                           
                         },
                         {
                             "name": "Input",
