@@ -5,7 +5,7 @@ import {
         MatButtonModule,
         MatButtonToggleModule,
         MatInputModule,
-        MatToolbarModule
+        MatListModule,
        } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,7 +21,7 @@ const routes: Routes = [
         MatButtonModule,
         MatButtonToggleModule,
         MatInputModule,
-        MatToolbarModule,
+        MatListModule,
         RouterModule.forChild(routes)
     ],
     declarations: [   

@@ -1,61 +1,99 @@
-<div fxLayout="column" class="page" style="padding: 20px 0;">
-	<mat-toolbar color="primary">
-		Services
-	</mat-toolbar>
-	<div fxLayout="row" >
-		<div fxFlex="100" fxFlex.gt-md="25" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" >
-			<mat-card class="nav-item">
-				<mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">Web Design</a></mat-card-title>
+<div fxLayout="column" >
+	
+	<div class="service-header" fxLayout="column" fxLayoutAlign="center stretch" >
 
-				<img mat-card-image src="/assets/pages/webdesign.png">
-				<mat-card-content class="nav-desc">From ideation to market research:Discover, Design, plan your product!</mat-card-content>
-			</mat-card>
-		</div>
-		<div fxFlex="100" fxFlex.gt-md="25" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" >
-			<mat-card class="nav-item">
-				<mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">E-commerce</a></mat-card-title>
-				<img mat-card-image src="/assets/pages/ecommerce.png">
-				
-				<mat-card-content class="nav-desc">From ideation to market research:Discover, Design, plan your product!</mat-card-content>
-				
-			</mat-card>
-		</div>
-		<div fxFlex="100" fxFlex.gt-md="25" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" >
-			<mat-card class="nav-item">
-				<mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">Mobile</a></mat-card-title>
+		<div fxFlex class="content" style="padding: 20px;
+}" fxLayout="row" fxLayoutAlign="center center">
 
-				<img mat-card-image src="/assets/pages/mobile.png">
-				<mat-card-content class="nav-desc">From ideation to market research:Discover, Design, plan your product!</mat-card-content>
-			</mat-card>
+			<div fxFlex="40" fxLayout="row"  fxLayoutAlign="center stretch">
+				<div>
+					<h3 class="mat-display-1">Our Services</h3>
+					<mat-divider></mat-divider>
+					<p class="mat-body-2">
+					From ideation to market research:Discover, Design, plan your product!From ideation to market research:Discover, Design, plan your product!From ideation to market research:Discover, Design, plan your product!
+					</p>
+				</div>
+			
+			</div>
+			<div fxFlex="60" fxLayout="row" fxLayoutAlign="center center">
+				<img style="width: 400px;" src="./assets/images/bg/cdk.png">
+			</div>
+			
 		</div>
 	</div>
-	<div fxLayout="row" >
-		<div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" >
-			<mat-card class="nav-item">
-				<mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">Custom Application</a></mat-card-title>
 
-				<img mat-card-image src="/assets/pages/custom.png">
-				<mat-card-content class="nav-desc">From ideation to market research:Discover, Design, plan your product!</mat-card-content>
-				
-			</mat-card>
-		</div>
-		<div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" >
-			<mat-card class="nav-item">
-				<mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">Strategy</a></mat-card-title>
+	<div fxLayout="column" class="service-card-content">
 
-				<img mat-card-image src="/assets/pages/strategy.png">
-				<mat-card-content class="nav-desc">From ideation to market research:Discover, Design, plan your product!</mat-card-content>
-			</mat-card>
-		</div>
-		<div fxFlex="100" fxFlex.gt-md="20" fxFlex.gt-sm="33.3" fxFlex.gt-xs="50" >
-			<mat-card class="nav-item">
-				<mat-card-title class="nav-title"><a href="www.codetok.com" target="_blank">Prototypes</a></mat-card-title>
+		<div fxLayout="row" class="service-card-container" fxLayout.lt-md="column" fxLayoutGap="20px"  >
 
-				<img mat-card-image src="/assets/pages/prototype.png">
-				<mat-card-content class="nav-desc">From ideation to market research:Discover, Design, plan your product!</mat-card-content>
-				
-			</mat-card>
+			<div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card " >
+				<img src="/assets/pages/webdesign.png" fxFlex>
+
+				<h3 class="mat-title" fxFlex>Title1</h3>
+				<p class="mat-body-2"  fxFlex>From ideation to market research:Discover, Design, plan your product!</p>
+
+
+			</div>
+
+		
+
+			<div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "  >
+				<img src="/assets/pages/mobile.png" fxFlex>
+
+				<h3 class="mat-title" fxFlex>Title3</h3>
+				<p class="mat-body-2"  fxFlex>From ideation to market research:Discover, Design, plan your product!</p>
+
+
+			</div>
+
+			<div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "  >
+				<img src="/assets/pages/custom.png" fxFlex>
+
+				<h3 class="mat-title"  fxFlex>Title4</h3>
+				<p class="mat-body-2"  fxFlex>From ideation to market research:Discover, Design, plan your product!</p>
+
+
+			</div>
+
 		</div>
+
+
+		<div fxLayout="row" class="service-card-container" fxLayout.lt-md="column" fxLayoutGap="20px"  >
+
+			<div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card " >
+				<img src="/assets/pages/strategy.png" fxFlex>
+
+				<h3 class="mat-title" fxFlex>Title1</h3>
+				<p class="mat-body-2"  fxFlex>From ideation to market research:Discover, Design, plan your product!</p>
+
+
+			</div>
+
+		
+
+			<div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "  >
+				<img src="/assets/pages/mobile.png" fxFlex>
+
+				<h3 class="mat-title" fxFlex>Title3</h3>
+				<p class="mat-body-2"  fxFlex>From ideation to market research:Discover, Design, plan your product!</p>
+
+
+			</div>
+
+			<div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "  >
+				<img src="/assets/pages/prototype.png" fxFlex>
+
+				<h3 class="mat-title"  fxFlex>Title4</h3>
+				<p class="mat-body-2"  fxFlex>From ideation to market research:Discover, Design, plan your product!</p>
+
+
+			</div>
+
+		</div>
+
+		
+
+
 	</div>
 </div>
 
