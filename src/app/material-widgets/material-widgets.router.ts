@@ -21,28 +21,28 @@ import { MenuComponent } from './menu/menu.component';
 
 
 const materialWidgetRoutes: Routes = [
-  	{ path: 'buttons', component:  ButtonsComponent },
-    { path: 'list', component:  ListComponent },
-    { path: 'stepper', component: StepperComponent},
-    { path: 'expansion', component: ExpansionPanelComponent},
-    { path: 'spinner', component: SpinnerComponent},
-    { path: 'cards', component: CardsComponent},
-    { path: 'icons', component: IconsComponent },
-    { path: 'autocomplete', component: AutocompleteComponent },
-    { path: 'checkbox', component:  CheckboxComponent },
+  	{ path: 'buttons', component:  ButtonsComponent , data: { animation: 'buttons' }},
+    { path: 'list', component:  ListComponent , data: { animation: 'list' }},
+    { path: 'stepper', component: StepperComponent ,data: { animation: 'stepper' } },
+    { path: 'expansion', component: ExpansionPanelComponent , data: { animation: 'expansion' }},
+    { path: 'spinner', component: SpinnerComponent ,data: { animation: 'spinner' } },
+    { path: 'cards', component: CardsComponent ,data: { animation: 'cards' } },
+    { path: 'icons', component: IconsComponent , data: { animation: 'icons' }},
+    { path: 'autocomplete', component: AutocompleteComponent , data: { animation: 'autocomplete' }},
+    { path: 'checkbox', component:  CheckboxComponent , data: { animation: 'checkbox' }},
     
-    { path: 'select', component:  SelectComponent },
-    { path: 'input', component:  InputComponent },
-    { path: 'radio', component:  RadioComponent },
-    { path: 'datepicker', component:  DatepickerComponent },
-    { path: 'slider', component:  SliderComponent },
-    { path: 'slide-toggle', component:  SlidetoggleComponent },
+    { path: 'select', component:  SelectComponent ,data: { animation: 'select' } },
+    { path: 'input', component:  InputComponent , data: { animation: 'input' }},
+    { path: 'radio', component:  RadioComponent , data: { animation: 'radio' }},
+    { path: 'datepicker', component:  DatepickerComponent , data: { animation: 'datepicker' }},
+    { path: 'slider', component:  SliderComponent , data: { animation: 'slider' }},
+    { path: 'slide-toggle', component:  SlidetoggleComponent ,data: { animation: 'slide-toggle' } },
 
 
-    { path: 'progress-bar', component:  ProgressbarComponent },
-    { path: 'menu', component:  MenuComponent },
+    { path: 'progress-bar', component:  ProgressbarComponent , data: { animation: 'progress-bar' }},
+    { path: 'menu', component:  MenuComponent ,data: { animation: 'menu' } },
 
-    { path: '', redirectTo: '/buttons', pathMatch: 'full'}
+    { path: '', redirectTo: '/buttons', pathMatch: 'full',}
 ];
 
 @NgModule({

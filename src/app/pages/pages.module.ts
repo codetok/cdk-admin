@@ -30,7 +30,7 @@ import { CoreModule } from '../core/core.module';
         MatCheckboxModule,
         MatListModule,
         CoreModule,
-        PagesRouterModule    ],
+        PagesRouterModule ],
     declarations: [   
         ContactComponent,
         AboutComponent,

@@ -22,9 +22,8 @@
 
 
                 <perfect-scrollbar  style="height: calc(100% - 33px);">
-                    <div>
-
-                        <router-outlet></router-outlet>
+                    <div [@fadeInAnimation]="getRouteAnimation(route)">
+                      <router-outlet #route="outlet"></router-outlet>
                     </div>
                     
                 </perfect-scrollbar>

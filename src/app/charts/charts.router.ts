@@ -11,7 +11,8 @@ const chartRoutes: Routes = [
 
 @NgModule({
 	imports: [
-		RouterModule.forChild(chartRoutes)
+		RouterModule.forChild(chartRoutes),
+		
 	],
 	exports: [
 		RouterModule

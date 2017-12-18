@@ -148,26 +148,28 @@ export const menus = [
                             "open"   : false,
                         },
                     ]
-    },{
-        "name"   : "Forms",
-        "icon"   : "mode_edit",
-        "open"   : false,
-        "link"   : false,
-        "sub"    :  [
-                        {
-                            "name": "Template Driven",
-                            "icon": "mode_edit",
-                            "open"   : false,
-                            "link":"forms/template_forms"
-                        },
-                        {
-                            "name": "Reactive Forms",
-                            "icon": "text_fields",
-                            "open"   : false,
-                            "link":"forms/reactive_forms"
-                        }
-                    ]
-    },{
+    },
+    // {
+    //     "name"   : "Forms",
+    //     "icon"   : "mode_edit",
+    //     "open"   : false,
+    //     "link"   : false,
+    //     "sub"    :  [
+    //                     {
+    //                         "name": "Template Driven",
+    //                         "icon": "mode_edit",
+    //                         "open"   : false,
+    //                         "link":"forms/template_forms"
+    //                     },
+    //                     {
+    //                         "name": "Reactive Forms",
+    //                         "icon": "text_fields",
+    //                         "open"   : false,
+    //                         "link":"forms/reactive_forms"
+    //                     }
+    //                 ]
+    // },
+    {
         "name"   : "Tables",
         "icon"   : "list",
         "link"   : false,
@@ -232,10 +234,12 @@ export const menus = [
                             "open"   : false,
                         }
                     ]
-    },{
+     }
+    ,{
         "name"   : "Pages",
         "icon"   : "content_copy",
         "open"   : false,
+           "link"    : false,
         "sub"    :  [
                         {
                             "name": "Login",
@@ -259,7 +263,8 @@ export const menus = [
                             "link":"pages/contact"
                         }
                     ]
-    },{
+    }
+    ,{
 
         "name"   : "Charts",
         "icon"   : "pie_chart_outlined",
