@@ -203,17 +203,10 @@ export const menus = [
        
                  
     },{
-        "name"   : "Featured",
+        "name"   : "Scrumboard",
         "open"   : false,
+        "link"   : "/auth/scrumboard",
         "icon"   : "grade",
-        "sub"    :  [
-                        {
-                            "name": "Scrumboard",
-                            "link": "scrumboard/scrumboard",
-                            "open"   : false,
-                        },
-
-                    ]
     },{
         "name"   : "Applications",
         "icon"   : "view_module",

@@ -1,7 +1,4 @@
-.table-header {
-	background-color: #15980d;
-	color: white;
-}
+
 .table-container {
 position: relative;
 margin-top:50px;
@@ -16,4 +13,16 @@ top: -50px;
 left: 0px;
 right: 18px;
 background: #fff;
+}
+.table-header {
+	background-color: #15980d;
+	color: white;
+	padding: 0 5px;
+}
+.table-container {
+	padding: 5px 15px 15px 15px;
+}
+.table-component-holder {
+	border: 1px solid #327ebd;
+	background-color: white;
 }

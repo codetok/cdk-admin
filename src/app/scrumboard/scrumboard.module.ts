@@ -11,7 +11,7 @@ import {
         MatCardModule
     } from '@angular/material';
 export const ROUTES: Routes = [
-   { path: 'scrumboard', component: ScrumboardComponent }, 
+   { path: '', component: ScrumboardComponent }, 
 ];
 @NgModule({
   imports: [
