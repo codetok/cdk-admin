@@ -5,9 +5,9 @@ import { FeatureTableComponent } from './feature-table/feature-table.component';
 import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
 
 const materialWidgetRoutes: Routes = [
-  	{ path: 'fixed', component: FixedTableComponent },
-  	{ path: 'featured', component: FeatureTableComponent },
-  	{ path: 'responsive', component: ResponsiveTableComponent }
+  	{ path: 'fixed', component: FixedTableComponent , data: { animation: 'fixed' }},
+  	{ path: 'featured', component: FeatureTableComponent ,data: { animation: 'featured' }},
+  	{ path: 'responsive', component: ResponsiveTableComponent ,data: { animation: 'responsive' }}
 ];
 
 @NgModule({
