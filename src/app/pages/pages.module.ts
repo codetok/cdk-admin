@@ -7,8 +7,9 @@ import {
         MatToolbarModule,
         MatIconModule,
         MatCheckboxModule,
-        MatListModule
+        MatListModule,
        } from '@angular/material';
+import { MatChipsModule } from '@angular/material/chips';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PagesRouterModule } from './pages.routes';
@@ -29,6 +30,7 @@ import { CoreModule } from '../core/core.module';
         MatIconModule,
         MatCheckboxModule,
         MatListModule,
+        MatChipsModule,
         CoreModule,
         PagesRouterModule    ],
     declarations: [   
