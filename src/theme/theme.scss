@@ -91,3 +91,88 @@ body{
 .ps-content {
   height: 100%;
 }
+
+.loader-container {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    position: absolute;
+    
+    -moz-animation: cssAnimation 1s ease-in 5s forwards;
+    /* Firefox */
+    animation: cssAnimation 1s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 1s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 1s ease-in 5s forwards;
+    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+    to {
+        opacity:0;
+        display: none;
+        visibility:hidden;
+    }
+}
+@keyframes cssAnimation {
+    to {
+        visibility:hidden;
+        opacity:0;
+        display: none;
+    }
+}
+
+
+
+.spinner {
+    margin: 50vh auto 0;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  
+
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.bounce3 {
+    background-color: orange;
+}
+
+.spinner .bounce1 {
+    background-color: blue;
+  animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    background-color: red;
+  animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { transform: scale(0) }
+  40% { transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
