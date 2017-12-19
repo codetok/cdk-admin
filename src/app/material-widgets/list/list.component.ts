@@ -13,6 +13,7 @@ export class ListComponent implements OnInit {
 
     showMultiListCode: boolean = false;
      messages = Messages;
+
     constructor() { }
 
     ngOnInit() {

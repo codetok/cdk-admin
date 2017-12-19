@@ -32,7 +32,7 @@ import { CoreModule } from '../core/core.module';
         MatListModule,
         MatChipsModule,
         CoreModule,
-        PagesRouterModule    ],
+        PagesRouterModule ],
     declarations: [   
         ContactComponent,
         AboutComponent,
