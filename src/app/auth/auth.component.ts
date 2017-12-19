@@ -13,60 +13,7 @@ import { fadeAnimation } from '../material-widgets/animation';
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss'],
-
-  //   trigger('fadeInAnimation', [
-  //     transition('* <=> *', [
-  //       // Initial state of new route
-  //       query(':enter',
-  //         style({
-  //           position: 'fixed',
-  //           width:'100%',
-  //           transform: 'translateX(-100%)'
-  //         }),
-  //         {optional:true}),
-  //       // move page off screen right on leave
-  //       query(':leave',
-  //         animate('500ms ease',
-  //           style({
-  //             position: 'fixed',
-  //             width:'100%',
-  //             transform: 'translateX(100%)'
-  //           })
-  //         ),
-  //       {optional:true}),
-  //       // move page in screen from left to right
-  //       query(':enter',
-  //         animate('500ms ease',
-  //           style({
-  //             opacity: 1,
-  //             transform: 'translateX(0%)'
-  //           })
-  //         ),
-  //       {optional:true}),
-  //     ])
-  //   ])
-  // ]
-   // trigger('fadeInAnimation', [
-   //    transition('* <=> *', [
-   //      // Initial state of new route
-   //      query(':enter',
-   //       animate('2s', style({ opacity: 1 })
-   //           ),
-   //        ),
-   //      // move page off screen right on leave
-   //      query(':leave',
-   //        animate('2s', style({ opacity: 1 })
-   //        ),
-   //     ),
-   //      // move page in screen from left to right
-   //      query(':enter',
-   //        animate('2s', style({ opacity: 1 })
-   //        ),
-   //      ),
-   //    ])
-   //  ])]})
-
-  animations:[ trigger('fadeInAnimation', [
+  animations:[ trigger('fadeAnimation', [
         // route 'enter' transition
         transition('* <=> *', [
 
@@ -74,7 +21,7 @@ import { fadeAnimation } from '../material-widgets/animation';
             style({ opacity: 0 }),
 
             // animation and styles at end of transition
-            animate('2s', style({ opacity: 1 })),
+            animate('500ms', style({ opacity: 1 })),
 
         ]),])]
 })

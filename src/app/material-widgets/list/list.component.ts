@@ -4,7 +4,8 @@ import { LIST_HELPERS,  Messages, Links} from './helpers.data';
 @Component({
   selector: 'cdk-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
+  //animations: [fadeAnimation]
 })
 export class ListComponent implements OnInit {
 
@@ -13,7 +14,6 @@ export class ListComponent implements OnInit {
 
     showMultiListCode: boolean = false;
      messages = Messages;
-
     constructor() { }
 
     ngOnInit() {

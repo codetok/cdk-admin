@@ -239,7 +239,7 @@ export const menus = [
         "name"   : "Pages",
         "icon"   : "content_copy",
         "open"   : false,
-           "link"    : false,
+        "link"   : false,
         "sub"    :  [
                         {
                             "name": "Login",
@@ -251,11 +251,6 @@ export const menus = [
                             "icon": "local_laundry_service",
                             "open": false,
                             "link": "pages/services",
-                        },{
-                            "name": "About",
-                            "icon": "work",
-                            "open": false,
-                            "link": "pages/about",
                         },{
                             "name":"Contact",
                             "icon":"directions",
