@@ -5,10 +5,12 @@ import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { AUTOCOMPLETE_HELPERS } from './helpers.data';
 
+
 @Component({
   selector: 'cdk-autocomplete',
   templateUrl: './autocomplete.component.html',
-  styleUrls: ['./autocomplete.component.scss']
+  styleUrls: ['./autocomplete.component.scss'],
+  
 })
 export class AutocompleteComponent implements OnInit {
 
@@ -22,7 +24,9 @@ export class AutocompleteComponent implements OnInit {
     return this.states.filter(state =>
       state.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
 }
-
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
+  }
   ngOnInit() {
   }
 	stateCtrl: FormControl;

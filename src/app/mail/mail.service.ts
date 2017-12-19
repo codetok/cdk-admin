@@ -20,10 +20,7 @@ export class MailService {
 
   getMails() {
     return this.http.get(this.apiUrl).map(res => res.json());
-    // const url = this.apiUrl;
-    // this.http.get(url)
-    //   .map(res => res.json())
-    //   .subscribe(res => this._mails.next(res));
+    
   }
 
   send() {

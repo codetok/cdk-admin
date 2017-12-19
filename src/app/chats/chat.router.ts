@@ -6,7 +6,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { NoticeComponent } from './notice/notice.component';
 
 const materialWidgetRoutes: Routes = [
-  	{ path: 'chat', component: ChatListComponent },
+  	{ path: 'chat', component: ChatListComponent ,data: { animation: 'chat' }},
 ];
 
 @NgModule({
