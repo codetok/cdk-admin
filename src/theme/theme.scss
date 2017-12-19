@@ -99,13 +99,13 @@ body{
     z-index: 2000;
     position: absolute;
     
-    -moz-animation: cssAnimation 1s ease-in 5s forwards;
+    -moz-animation: cssAnimation 1s ease-in 3s forwards;
     /* Firefox */
-    animation: cssAnimation 1s ease-in 5s forwards;
+    animation: cssAnimation 1s ease-in 3s forwards;
     /* Safari and Chrome */
-    -o-animation: cssAnimation 1s ease-in 5s forwards;
+    -o-animation: cssAnimation 1s ease-in 3s forwards;
     /* Opera */
-    animation: cssAnimation 1s ease-in 5s forwards;
+    animation: cssAnimation 1s ease-in 3s forwards;
     animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
