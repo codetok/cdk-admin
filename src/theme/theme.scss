@@ -72,10 +72,13 @@ cdk-profile-card{
 @include round-progressbar($cdk-theme);
 @include sales-list($cdk-theme);
 
-
+html {
+  height:100%;
+}
 body{
   padding: 0px !important;
   margin: 0px !important;
+  height:100%;
 }
 .components-container-gt-xs {
     padding: 20px;

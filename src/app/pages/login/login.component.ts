@@ -55,24 +55,24 @@ export class LoginComponent implements OnInit {
   }
 
   onValueChanged(data?: any) {
-    if (!this.userForm) {
-      return;
-    }
-    const form = this.userForm;
-    for (const field in this.formErrors) {
-      if (Object.prototype.hasOwnProperty.call(this.formErrors, field)) {
-        this.formErrors[field] = '';
-        const control = form.get(field);
-        if (control && control.dirty && !control.valid) {
-          const messages = this.validationMessages[field];
-          for (const key in control.errors) {
-            if (Object.prototype.hasOwnProperty.call(control.errors, key)) {
-              this.formErrors[field] += messages[key] + ' ';
-            }
-          }
-        }
-      }
-    }
+    // if (!this.userForm) {
+    //   return;
+    // }
+    // const form = this.userForm;
+    // for (const field in this.formErrors) {
+    //   if (Object.prototype.hasOwnProperty.call(this.formErrors, field)) {
+    //     this.formErrors[field] = '';
+    //     const control = form.get(field);
+    //     if (control && control.dirty && !control.valid) {
+    //       const messages = this.validationMessages[field];
+    //       for (const key in control.errors) {
+    //         if (Object.prototype.hasOwnProperty.call(control.errors, key)) {
+    //           this.formErrors[field] += messages[key] + ' ';
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
   login() {
     this.router.navigate(['/']);
