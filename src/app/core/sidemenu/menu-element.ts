@@ -235,35 +235,35 @@ export const menus = [
                         }
                     ]
      }
-    // ,{
-    //     "name"   : "Pages",
-    //     "icon"   : "content_copy",
-    //     "open"   : false,
-    //        "link"    : false,
-    //     "sub"    :  [
-    //                     {
-    //                         "name": "Login",
-    //                         "icon": "work",
-    //                         "open": false,
-    //                         "link": "../login",
-    //                     },{
-    //                         "name": "Services",
-    //                         "icon": "local_laundry_service",
-    //                         "open": false,
-    //                         "link": "pages/services",
-    //                     },{
-    //                         "name": "About",
-    //                         "icon": "work",
-    //                         "open": false,
-    //                         "link": "pages/about",
-    //                     },{
-    //                         "name":"Contact",
-    //                         "icon":"directions",
-    //                         "open": false,
-    //                         "link":"pages/contact"
-    //                     }
-    //                 ]
-    // }
+    ,{
+        "name"   : "Pages",
+        "icon"   : "content_copy",
+        "open"   : false,
+           "link"    : false,
+        "sub"    :  [
+                        {
+                            "name": "Login",
+                            "icon": "work",
+                            "open": false,
+                            "link": "../login",
+                        },{
+                            "name": "Services",
+                            "icon": "local_laundry_service",
+                            "open": false,
+                            "link": "pages/services",
+                        },{
+                            "name": "About",
+                            "icon": "work",
+                            "open": false,
+                            "link": "pages/about",
+                        },{
+                            "name":"Contact",
+                            "icon":"directions",
+                            "open": false,
+                            "link":"pages/contact"
+                        }
+                    ]
+    }
     ,{
 
         "name"   : "Charts",
