@@ -101,7 +101,7 @@
 									<div fxLayout="column" fxLayoutGap=15px>
 						    			<section class="example-section">
 						      				<label class="example-margin">Color:</label>
-					      					<mat-radio-group [(ngModel)]="color" fxLayout="column"  fxLayoutGap=10px>
+					      					<mat-radio-group [(ngModel)]="colors" fxLayout="column"  fxLayoutGap=10px>
 								        		<mat-radio-button class="example-margin" value="primary">
 								          		Primary
 								        		</mat-radio-button>
@@ -116,7 +116,7 @@
 						    	
 									    <section class="example-section">
 										    <label class="example-margin">Mode:</label>
-										    <mat-radio-group [(ngModel)]="mode" fxLayout="column"  fxLayoutGap=10px>
+										    <mat-radio-group [(ngModel)]="modes" fxLayout="column"  fxLayoutGap=10px>
 										        <mat-radio-button class="example-margin" value="determinate">
 										          Determinate
 										        </mat-radio-button>
@@ -128,9 +128,9 @@
 									</div>
 										
 
-									<section class="example-section " *ngIf="mode == 'determinate'">
+									<section class="example-section " *ngIf="modes == 'determinate'">
 									    <label class="mat-subheading-2 center-align">Progress:</label>
-									    <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+									    <mat-slider class="example-margin" [(ngModel)]="values"></mat-slider>
 									</section>
 								</div>
 
@@ -140,9 +140,9 @@
 										
 									<mat-progress-spinner
 								        class="example-margin"
-								        [color]="color"
-								        [mode]="mode"
-								        [value]="value">
+								        [color]="colors"
+								        [mode]="modes"
+								        [value]="values">
 								    </mat-progress-spinner>
 								</div>
 							</div>
