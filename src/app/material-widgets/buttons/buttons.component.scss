@@ -20,21 +20,3 @@
 	}
 }
 
-:host {
-
-  display: flex;
-  overflow: hidden;
-  height: 100vh;
-
-  main {
-    flex: 1;
-    position: relative;
-  }
-
-  /deep/ router-outlet ~ * {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-}
