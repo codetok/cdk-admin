@@ -1,20 +1,22 @@
-<div  fxLayoutAlign="space-between center"  fxLayout="column"   fxLayoutGap="20px"  fxFlex=97  fxLayoutAlign="center stretch"   >
-    <div fxFlex="49" fxLayout="row" fxLayoutGap="20px"  fxLayout.lt-sm="column">
-        <div  fxFlex="49"  class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto', 'height':'350px'}">
-             <cdk-historical-bar-chart></cdk-historical-bar-chart>
+<div class="components-container-gt-xs" [ngClass.xs]="components-container-xs" >
+    <div  fxLayoutAlign="space-between center"  fxLayout="column"   fxLayoutGap="20px"  fxFlex=97  fxLayoutAlign="center stretch"   >
+        <div fxFlex="49" fxLayout="row" fxLayoutGap="20px"  fxLayout.lt-sm="column">
+            <div  fxFlex="49"  class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto', 'height':'350px'}">
+                 <cdk-historical-bar-chart></cdk-historical-bar-chart>
+            </div>
+            <div  fxFlex="49" class="mat-elevation-z4 "  fxFlex.lt-sm=100  [ngStyle]="{margin: 'auto', 'height':'350px'}">
+               <cdk-bar-chart></cdk-bar-chart>
+            </div>
         </div>
-        <div  fxFlex="49" class="mat-elevation-z4 "  fxFlex.lt-sm=100  [ngStyle]="{margin: 'auto', 'height':'350px'}">
-           <cdk-bar-chart></cdk-bar-chart>
-        </div>
-    </div>
-    <div fxFlex="49"  fxLayout="row" fxLayoutGap="20px"  fxLayout.lt-sm="column" >
-        <div fxFlex="49" class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto', 'height':'350px'}">
-            <cdk-pie-chart></cdk-pie-chart>
+        <div fxFlex="49"  fxLayout="row" fxLayoutGap="20px"  fxLayout.lt-sm="column" >
+            <div fxFlex="49" class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto', 'height':'350px'}">
+                <cdk-pie-chart></cdk-pie-chart>
+            </div>
+            
+            <div fxFlex="49" class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto',  'height':'200px'}">
+    			<cdk-sunburst-chart></cdk-sunburst-chart>
+            </div>
         </div>
         
-        <div fxFlex="49" class="mat-elevation-z4 " fxFlex.lt-sm=100 [ngStyle]="{margin: 'auto',  'height':'200px'}">
-			<cdk-sunburst-chart></cdk-sunburst-chart>
-        </div>
     </div>
-    
 </div>

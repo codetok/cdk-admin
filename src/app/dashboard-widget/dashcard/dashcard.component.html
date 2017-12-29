@@ -1,4 +1,4 @@
-<div fxLayout="row"  class="dashcard mat-elevation-z4"  >
+<div fxLayout="row"  class="dashcard mat-elevation-z4 "  >
     <div fxFlex="40" fxLayout="row"  fxLayoutAlign="center center" [style.background]="dashData?.colorLight">
         <mat-icon  class="cardIcon">{{dashData?.icon}}</mat-icon>
     </div>
@@ -6,6 +6,7 @@
          
         <div style="color: white;font-size: 40px">
             <ng2-odometer [number]="dashData?.number" [config]="{ }"></ng2-odometer>
+            
         </div>
         <p class="mat-body-1 border-top">
             {{dashData?.title}}

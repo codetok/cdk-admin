@@ -42,3 +42,5 @@ export const LIST_HELPERS: any = {
 	];
 
 	export const Links: Array<String> = ['/home', '/admin'];
+
+	//export const shoetypes: Array<any> = ['Boots', 'Sneaker', 'Casual'];

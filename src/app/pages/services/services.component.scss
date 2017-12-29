@@ -1,35 +1,46 @@
-.service-row {
-	& div {
-		padding: 20px;
-	}
+.service-header {
+    height: 350px; width: 100%;
+    padding: 30px 0 0 0;
+    color: white;
+    .content {
+         background-color: white;
+    }
+    h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    p {
+        margin: 0;
+        text-align: center;
+    }
+    mat-divider {
+            border-top-color: white;
+    }
+
 }
-@import '~@angular/material/_theming';
-
-$navigation-font-size-base: 14px !default;
-$navigation-border-radius: 2px !default;
-
-mat-card {
-  margin: 10px;
-}
-
-.nav-title {
-  @include mat-truncate-line();
-
-  a {
-    text-decoration: none;
-  }
-}
-
-.nav-desc {
-  height: 80px;
-  overflow: hidden;
-}
-.nav-item {
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  cursor: default;
-
-  &:hover {
-    transform: translate(0, -8px);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, .16)
-  }
+.service-card-content{
+    .service-card-container {
+        padding: 20px;
+        .service-card {
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: default;
+            background-color: white;
+            padding: 20px;
+            img {
+                height: 200px;
+            }
+            h3 {
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                text-align: center;
+            }
+            &:hover {
+                transform: translate(0, -8px);
+                box-shadow: 0 20px 20px rgba(0, 0, 0, .16)
+          }
+        }
+    }
 }

@@ -1,13 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { MediaChange, ObservableMedia } from "@angular/flex-layout";
-
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  query,
+} from '@angular/animations'
+import { fadeAnimation } from '../material-widgets/animation';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
-})
-export class AuthComponent implements OnInit {
+  styleUrls: ['./auth.component.scss'],
+  animations:[ trigger('fadeAnimation', [
+        // route 'enter' transition
+        transition('* <=> *', [
 
+            // styles at start of transition
+            style({ opacity: 0 }),
+
+            // animation and styles at end of transition
+            animate('500ms', style({ opacity: 1 })),
+
+        ]),])]
+})
+
+export class AuthComponent implements OnInit{
+    @Input() isVisible : boolean = true;
+  visibility = 'shown';
+
+  ngOnChanges() {
+   this.visibility = this.isVisible ? 'shown' : 'hidden';
+  }
 	sideNavOpened: boolean = true;
 	matDrawerOpened: boolean = false;
 	matDrawerShow: boolean = true;
@@ -20,6 +45,12 @@ export class AuthComponent implements OnInit {
             this.toggleView();
         });
 	}
+    getRouteAnimation(outlet) {
+
+       return outlet.activatedRouteData.animation
+       //return outlet.isActivated ? outlet.activatedRoute : ''
+    }
+    
 	toggleView() {
 		if (this.media.isActive('gt-md')) {
             this.sideNavMode = 'side';

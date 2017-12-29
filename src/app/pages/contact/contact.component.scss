@@ -1,31 +1,47 @@
-.widgetHolder{
-	margin: 0 auto;
-	.widgetHolder-content {
-		padding: 5px;
-	}
-}
-.example-header-image {
-  background-size: cover;
-}
-.example-contact{
-	width:80px;
-}
-.example-margin {
-  margin-left:1px;
-}
-.space{
-	padding-top: 10px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-}
-.mat-card-actions {
-	margin-left: 16px;
-}
 .full {
 	width: 100%;
 }
-.mat-card-avatar {
-	width: 120px;
-	height: 120px;
+.contact-list-container {
+	background-color: white;
+	padding: 10px;
+
+	.contact-list {
+		height: 400px;
+		overflow: auto;
+		div {
+			margin: 0;
+		}
+		h3 {
+			margin: 0;
+		}
+		p {
+			margin: 0;
+		}
+		.avatar {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+	}
+	
+	.contact-list-header {
+		background-color: #eee;
+		padding: 10px;
+		div {
+			margin: auto;
+		}
+		
+	}
 }
+.contact-add {
+		padding: 10px;
+		background: white;
+		.avatar {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+		}
+		h3 {
+			margin: auto;
+		}
+	}

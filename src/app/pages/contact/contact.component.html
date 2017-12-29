@@ -1,77 +1,156 @@
-<div fxLayout="row" fxFlex.xs="100"  fxFlex.sm="90"class="widgetHolder mat-elevation-z4"  fxLayoutGap="20px">
-	<div fxLayout="column" fxFlex="60" class="mat-elevation-z4"  fxLayoutGap="20px">
-		<mat-card >
-			<p class="mat-display-1">Contacts</p>
-			<div fxLayout="row">
-				<button  mat-icon-button fxHide="true" [fxHide.gt-sm]="false">
-			        <i class="material-icons">search</i>
-			    </button>
-				<div fxLayout="column" fxFlex="50" fxLayoutGap="10px">
-					<mat-form-field class="search-open">
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxFlexFil fxFill class="components-container-gt-xs " [ngClass.xs]="components-container-gt-xs">
 
-					  <input matInput placeholder="Search" autocomplete="off" (focus)="bigMenu = true" (focusout)="bigMenu = false">
-					</mat-form-field>
-				</div>
-                <div fxLayout="column" fxFlex="30" fxLayoutGap="10px">
-	                <mat-card-actions>
-			            <button mat-raised-button color="primary">ADD EMPLOYEE</button>
-			        </mat-card-actions>
-			    </div>
-			</div>
+	<div fxLayout="row" fxLayoutAlign="space-between stretch" fxFlexFil fxFill fxLayoutGap="20px">
+
+		<div fxFlex="65" fxLayout="column" class="mat-elevation-z2 contact-list-container" >
 			
-			<mat-card-content>
-			<div   fxLayoutWrap >
-                <mat-list class="full">
-                	<mat-list-item  *ngFor="let employee of employees">
-                		<mat-checkbox class="checkbox"></mat-checkbox>
-                		<img matListAvatar src="{{employee?.image}}">
-					    <h3 matLine> {{employee.select}} </h3>
-					    <p matLine>
-					      <span matSubheader> {{employee.position}} </span>
-					    </p>
-				  </mat-list-item>
-				</mat-list>
+			<div fxFlex="10" fxLayoutAlign="start center"  fxLayout="row">
+				
+				<h3 class="mat-headline">Contacts</h3> 
+				<h3 class="mat-headline">|</h3> 
+				<h6 class="mat-title"> 1335 contacts</h6>
+
+			</div>
+
+			<mat-divider></mat-divider>
+
+			<div fxFlex="10" fxLayout="row" fxLayoutAlign="space-between stretch" >
+					
+					<div fxflex="70" class="full">
+						<mat-form-field class="full">
+						    <input matInput placeholder="search" >
+						     <mat-icon matSuffix>search</mat-icon>
+						  </mat-form-field>
+
+
+					</div>
+
+					<div fxFlex="30" fxLayout="row" fxLayoutAlign="end center">
+						<button mat-raised-button color="primary">ADD EMPLOYEE</button>
+					</div>
+
+			</div>
+
+
+			<div fxFlex="10" class="contact-list-header" fxLayout="row" fxLayoutAlign="space-around stretch">
+
+				<div fxFlex="10">
+					<mat-checkbox  class="checkbox"></mat-checkbox>
+				</div>
+				<div fxFlex="10">
+					<button mat-icon-button> <mat-icon>sort</mat-icon> </button>
+				</div>
+				<div fxFlex="10">
+					<button mat-icon-button> <mat-icon>delete</mat-icon> </button>
+				</div>
+				
+				<div fxFlex="80" fxLayoutAlign="end center" >
+					
+					<button mat-raised-button >ADD TAGS</button>
+
+				</div>
+
+			</div>
+			<div fxFlex="70" fxLayout="column" fxLayoutAlign="space-between stretch" class="contact-list-container">
+
+				<div class="contact-list">
+					<div fxLayout="row" *ngFor="let employee of employees" fxLayoutAlign="space-around none" class="mat-ripple"  >
+					
+						<div fxFlex="10" >
+							<mat-checkbox  class="checkbox"></mat-checkbox>
+						</div>
+						<div fxFlex="10">
+							<img class="avatar" src="{{employee?.image}}">
+						</div>
+						<div fxFlex="50">
+							<h3 class="mat-subheading-1" > {{employee?.select}} </h3>
+							    <p class="mat-body-1" >
+							      {{employee?.position}} 
+							    </p>
+						</div>
+						<div fxFlex="20" >
+							<mat-chip-list>
+							  <mat-chip>android</mat-chip>
+							</mat-chip-list>
+						</div>
+						<div fxFlex="10" >
+							<button mat-icon-button> <mat-icon>send</mat-icon> </button>
+						</div>
+					</div>
+
+
+				</div>
+
+				<mat-divider></mat-divider>
+
+			
     		</div>
-			</mat-card-content>
-		</mat-card>
-	</div>
-	<div fxLayout="column" fxFlex="40" class="mat-elevation-z4"  fxLayoutGap="20px">
-		<mat-card>
-			<p>
-				 New Contact
-			</p>
-			<form>        
-				<div fxLayout="row" fxLayoutGap="20px">
-					<img mat-card-avatar src="assets/user-image.jpg"/>
-                    	<h3 matLine>Sujith</h3>
-			    </div>  
-								
-				                	
-            	<div fxLayout="row" fxLayoutGap="20px" >
-            		<mat-form-field >
-						<input  matInput placeholder="phone">
-					</mat-form-field>
-					<mat-form-field >
-			            <input type="address" matInput placeholder="Office">
-			        </mat-form-field>
-			    </div>
-		        <div fxLayout="row" fxLayoutGap="20px" >
-            		<mat-form-field >
-            			<input  matInput placeholder="skype">
-					</mat-form-field>
-					<mat-form-field >
-			            <input type="address" matInput placeholder="Email">
-			        </mat-form-field>
+
+
+		</div>
+
+		<div fxFlex="35" fxLayout="column" class="mat-elevation-z2 contact-add" >
+
+			<div fxFlex="10" fxLayout="row" fxLayoutAlign="space-between center" >
+					
+				<h3  class="mat-headline" fxFlex="80">New Contact</h3> 
+				<div fxLayout="row" fxLayoutAlign="end center" fxFlex="10">
+					<button mat-icon-button> <mat-icon>close</mat-icon> </button>
+
 				</div>
-				<div fxLayout="row">
-					<mat-icon class="space" disabled="True">delete</mat-icon>
-	                <mat-card-actions>
-	                	<button mat-button disabled>Delete Contacts</button>
-	                	<button mat-button color="black">CANCEL</button>
+
+			</div>
+							<mat-divider></mat-divider>
+
+			<div fxFlex="25"  fxLayout="row" fxLayoutAlign="space-between center" >
+				
+				<div fxFlex="40">
+										<img class="avatar" src="assets/user-image.jpg"/>
+
+				</div>
+				<div fxFlex="60" fxLayout="column" fxLayoutAlign="center start" >
+					<h3 class="mat-title" >Sujith</h3>
+					<h3 class="mat-body-2" >Developer</h3>
+				</div>
+
+
+			</div>
+
+			<div fxFlex="10" fxLayoutGap="10px" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="center start" >
+				<div fxFlex="50" fxLayout.lt-lg="100">
+					<mat-form-field >
+					<input  matInput placeholder="phone">
+				</mat-form-field>
+				</div>
+				<div fxFlex="50" fxLayout.lt-lg="100">
+					<mat-form-field >
+					<input  matInput placeholder="Office">
+				</mat-form-field>
+				</div>
+				
+			</div>
+
+			<div fxFlex="10" fxLayoutGap="10px" fxLayout="row" fxLayout.lt-lg="column"  fxLayoutAlign="center start"  >
+				<div fxFlex="50" fxLayout.lt-lg="100">
+					<mat-form-field >
+	            		<input  matInput placeholder="skype">
+					</mat-form-field>
+				</div>
+				<div fxFlex="50" fxLayout.lt-lg="100">
+					<mat-form-field >
+				        <input  matInput placeholder="Email">
+				    </mat-form-field>
+				</div>
+			</div>
+
+			<div fxFlex fxLayout="column" fxLayoutAlign="end stretch" >
+				<div fxLayout="row" fxLayoutAlign="space-between stretch" >
+	                	<button mat-raised-button >CANCEL</button>
 			            <button mat-raised-button color="primary">SAVE</button>
-			        </mat-card-actions>
-				</div>
-			</form>
-		</mat-card>
+			     </div>
+			</div>
+		</div>
+
 	</div>
+
 </div>

@@ -5,9 +5,9 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 
 const pagesRoutes: Routes = [
-  	{ path: 'contact', component: ContactComponent },
-  	{ path: 'about', component: AboutComponent },
-  	{ path: 'services', component: ServicesComponent },
+  	{ path: 'contact', component: ContactComponent ,data: { animation: 'contact' } },
+  	{ path: 'about', component: AboutComponent ,data: { animation: 'about' }},
+  	{ path: 'services', component: ServicesComponent ,data: { animation: 'services' }},
 ];
 
 @NgModule({

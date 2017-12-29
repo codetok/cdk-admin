@@ -42,22 +42,22 @@
 					<h4 class="mat-subheading-2 center-align">Selection list</h4>
 					<mat-divider></mat-divider>
 			
-					<mat-selection-list #shoes>
-					  	<mat-list-option *ngFor="let shoe of ['Boots', 'Sneaker', 'Casual']">
+					<mat-selection-list #shoess>
+					  	<mat-list-option *ngFor="let shoe of ['Boots', 'Sneaker', 'Casual', 'Moccasins', 'Clogs']">
 					    {{shoe}}
 					  	</mat-list-option>
 					</mat-selection-list>
-
-				<p>
-				  Options selected: {{shoes.selectedOptions.selected.length}}
+				<!-- <label class="mat-title center-align">Result :</label> -->
+				<p class="list-container">
+				  Options selected: {{shoess.selectedOptions.selected.length}}
 				</p>
-							           
-
 				</div>
-				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+				<!-- <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" > -->
+				<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50">
 					<h4 class="mat-subheading-2 center-align">Multi-line lists</h4>
 					<mat-divider></mat-divider>
-					<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+
+					<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="80px">
 					<!-- two line list -->
 						<mat-list>
 							<h3>Two line</h3>
