@@ -25,7 +25,7 @@ const routes: Routes = [
         RouterModule.forChild(routes)
     ],
     declarations: [   
-        ServicesComponent,
+       // ServicesComponent,
     ],
     exports: [
         RouterModule
