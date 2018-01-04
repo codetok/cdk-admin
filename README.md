@@ -1,6 +1,9 @@
 # CdK Admin - FREE PREMIUM ANGULAR 5 MATERIAL DESIGN+FLEX LAYOUT ADMIN PANEL
 
 
+DEMO:https://newproject-5d731.firebaseapp.com
+
+contact: hari@codetok.com
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
