@@ -13,7 +13,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
-import { Ng2PageTransitionModule } from "ng2-page-transition";
+// import { Ng2PageTransitionModule } from "ng2-page-transition";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -51,7 +51,7 @@ export const appRoutes: Routes = [{
     CoreModule,
     MatSidenavModule,
     PerfectScrollbarModule,
-    Ng2PageTransitionModule
+    // Ng2PageTransitionModule
   ],
   declarations: [AuthComponent], 
   providers: [
