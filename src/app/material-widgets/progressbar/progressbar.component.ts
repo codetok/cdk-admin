@@ -8,15 +8,24 @@ import {PROGRESSBAR_HELPERS } from './helpers.data';
 })
 export class ProgressbarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  public colors;
+  public modes;
+  public values;
+  public bufferValues;
 
   public color;
   public mode;
   public value;
   public bufferValue;
 
+
+
   progressbarHelpers: any = PROGRESSBAR_HELPERS;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  
 }

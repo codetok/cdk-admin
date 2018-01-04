@@ -8,14 +8,20 @@ import { SPINNER_HELPERS } from './helpers.data';
 })
 export class SpinnerComponent implements OnInit {
 
+  public showSource;
+  public colors = 'primary';
+  public modes = 'determinate';
+  public values = 50;
+
+  public color;
+  public mode ;
+  public value;
+
+  public spinnerHelpers: any = SPINNER_HELPERS;
   constructor() { }
 
   ngOnInit() {
   }
   // showProgressBarCode;
-	showSource;
-		color = 'primary';
-	  mode = 'determinate';
-	  value = 50;
-spinnerHelpers: any = SPINNER_HELPERS;
+	  
 }

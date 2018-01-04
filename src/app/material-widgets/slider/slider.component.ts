@@ -17,6 +17,7 @@ export class SliderComponent implements OnInit {
 	thumbLabel = false;
 	value = 0;
 	vertical = false;
+    tickInterval;
 
   constructor() { }
 
