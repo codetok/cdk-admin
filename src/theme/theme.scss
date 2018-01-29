@@ -1,11 +1,11 @@
 @import '~@angular/material/theming';
-@import '~app/auth/auth.component.scss';
-@import '~app/core/sidemenu/sidemenu.component.scss';
-@import '~app/core/sidemenu-item/sidemenu-item.component.scss';
-@import '~app/dashboard-widget/dashcard/dashcard.component.scss';
-@import '~app/dashboard-widget/profile-card/profile-card.component.scss';
-@import '~app/dashboard-widget/round-progressbar/round-progressbar.component.scss';
-@import '~app/dashboard-widget/sales-list/sales-list.component.scss';
+@import '../app/auth/auth.component.scss';
+@import '../app/core/sidemenu/sidemenu.component.scss';
+@import '../app/core/sidemenu-item/sidemenu-item.component.scss';
+@import '../app/dashboard-widget/dashcard/dashcard.component.scss';
+@import '../app/dashboard-widget/profile-card/profile-card.component.scss';
+@import '../app/dashboard-widget/round-progressbar/round-progressbar.component.scss';
+@import '../app/dashboard-widget/sales-list/sales-list.component.scss';
 
 $mat-light-theme-background: (
   status-bar: map_get($mat-grey, 300),
@@ -42,9 +42,9 @@ cdk-sidemenu{
     $sidemenu-app-accent:  mat-palette($accent , 900);
     $sidemenu-app-warn:    mat-palette($warn );
     $cdk-sidemenu-theme:   mat-dark-theme($sidemenu-app-primary, $sidemenu-app-accent,$sidemenu-app-warn);
-    @include mat-list-theme($cdk-sidemenu-theme); 
+    @include mat-list-theme($cdk-sidemenu-theme);
 }
-   
+
 
 cdk-sidemenu-item{
     @include sidemenu-item($cdk-theme,20px)
@@ -56,7 +56,7 @@ cdk-dashcard {
     $dashcard-accent:  mat-palette($accent);
     $dashcard-warn:    mat-palette($warn);
     $dashcard-theme:   mat-dark-theme($dashcard-primary, $dashcard-accent,$dashcard-warn);
-    @include dashcard($dashcard-theme);    
+    @include dashcard($dashcard-theme);
 }
 
 cdk-profile-card{
@@ -64,8 +64,8 @@ cdk-profile-card{
     $dashboard-profile-accent:  mat-palette($accent , 900);
     $dashboard-profile-warn:    mat-palette($warn );
     $cdk-dashboard-profile-theme:   mat-dark-theme($dashboard-profile-primary, $dashboard-profile-accent,$dashboard-profile-warn);
-    @include dashboard-profile($cdk-dashboard-profile-theme); 
-    @include mat-tabs-theme($cdk-dashboard-profile-theme); 
+    @include dashboard-profile($cdk-dashboard-profile-theme);
+    @include mat-tabs-theme($cdk-dashboard-profile-theme);
 }
 @include angular-material-theme($cdk-theme);
 @include auth($cdk-theme);
@@ -101,7 +101,7 @@ body{
     height: 100vh;
     z-index: 2000;
     position: absolute;
-    
+
     -moz-animation: cssAnimation 1s ease-in 3s forwards;
     /* Firefox */
     animation: cssAnimation 1s ease-in 3s forwards;
@@ -139,7 +139,7 @@ body{
 .spinner > div {
   width: 18px;
   height: 18px;
-  
+
 
   border-radius: 100%;
   display: inline-block;
@@ -171,10 +171,10 @@ body{
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
+  0%, 80%, 100% {
     transform: scale(0);
     transform: scale(0);
-  } 40% { 
+  } 40% {
     transform: scale(1.0);
     transform: scale(1.0);
   }

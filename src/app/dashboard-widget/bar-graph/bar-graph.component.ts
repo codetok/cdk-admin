@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Chart from 'chart.js';
+import { Chart } from 'chart.js';
 
 
 @Component({
@@ -45,7 +45,7 @@ export class BarGraphComponent implements OnInit {
                         fill: 'false'
                     },
                     {
-                        backgroundColor: 'rgba(102, 187, 106, .7)',    
+                        backgroundColor: 'rgba(102, 187, 106, .7)',
                         borderColor: 'rgba(255, 99, 132)',
                         data: [75, 55, 55, 95, 66, 88, 70, 78,77,100],
                         label: 'Dataset',
@@ -66,7 +66,7 @@ export class BarGraphComponent implements OnInit {
                 plugins: {
                     filler: {
                         propagate: false
-                    }    
+                    }
                 },
                 title: {
                     display: true,

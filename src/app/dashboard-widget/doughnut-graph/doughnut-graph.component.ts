@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Chart from 'chart.js';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'cdk-doughnut-graph',
@@ -12,14 +12,14 @@ export class DoughnutGraphComponent implements OnInit {
 
   ngOnInit() {
       setTimeout(() => {
-          this.createDoughnutGraph();    
+          this.createDoughnutGraph();
       },500)
-      
+
   }
     randomNumber(min=0, max=0) {
         if(min==0 || max== 0)
             return Math.round(Math.random() * 100);
-        else 
+        else
             return Math.random() * (max - min) + min;
     };
     randomBar(date, lastClose) {
@@ -67,15 +67,15 @@ export class DoughnutGraphComponent implements OnInit {
                 plugins: {
                     filler: {
                         propagate: false
-                    }    
+                    }
                 },
                 title: {
                     display: true,
                     text: 'LEAD GRAPH'
                 }
             }
-        
-    })  
+
+    })
   }
-  
+
 }
