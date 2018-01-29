@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { MediaChange, ObservableMedia } from "@angular/flex-layout";
+import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 
 
 
@@ -8,7 +8,7 @@ import { MediaChange, ObservableMedia } from "@angular/flex-layout";
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
-  
+
 })
 
 export class AuthComponent implements OnInit{
@@ -36,7 +36,7 @@ export class AuthComponent implements OnInit{
        return outlet.activatedRouteData.animation;
        //return outlet.isActivated ? outlet.activatedRoute : ''
     }
-    
+
 	toggleView() {
 		if (this.media.isActive('gt-md')) {
             this.sideNavMode = 'side';
@@ -56,5 +56,5 @@ export class AuthComponent implements OnInit{
         }
 	}
 
-    
+
 }

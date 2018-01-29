@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Chart from 'chart.js';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'cdk-line-graph',
@@ -12,7 +12,7 @@ export class LineGraphComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-        this.createLineChart();  
+        this.createLineChart();
     },500)
   }
   createLineChart() {
@@ -21,7 +21,7 @@ export class LineGraphComponent implements OnInit {
                 data: {
                     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sep",'Oct'],
                     datasets: [{
-                        backgroundColor: 'rgba(92, 107, 192, 0.36)', 
+                        backgroundColor: 'rgba(92, 107, 192, 0.36)',
                         borderColor: 'rgba(92, 107, 192,.5)',
                         data: [76.97, 88.91, 99.31, 122.19, 130.85, 140.91, 150.36, 142.66, 150.36, 142.66],
                         label: 'Dataset',
@@ -41,7 +41,7 @@ export class LineGraphComponent implements OnInit {
                     plugins: {
                         filler: {
                             propagate: false
-                        }    
+                        }
                     },
                     title: {
                         display: true,
