@@ -1,17 +1,46 @@
-<mat-sidenav-container class="container" fullscreen  >
-    <mat-sidenav   [mode]="sideNavMode" class="sidenav" #sidenav [opened]="sideNavOpened" style="overflow: hidden;">
+<mat-sidenav-container class="container" fullscreen>
+    <mat-sidenav [mode]="sideNavMode" class="sidenav" #sidenav [opened]="sideNavOpened" style="overflow: hidden;">
+        
         <mat-toolbar color="primary" class="mat-elevation-z4">
-         <img src="./assets/logo.codetok.png" width="36px">
-            <h1 style="font-size: 26px;font-family: Roboto;color:white;margin-top: 8px" >
-                CODETOK.<span style="font-size: 12px;">com</span>
+            <img src="./assets/logo.codetok.png" width="36px">
+            
+            <h1 class="logo">
+                CODETOK.
+                <span style="font-size: 12px;">com</span>
+            </h1>
+        </mat-toolbar>
+
+        <cdk-sidemenu></cdk-sidemenu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
+        <perfect-scrollbar>
+            <router-outlet></router-outlet>
+        </perfect-scrollbar>
+    </mat-sidenav-content>
+    <mat-sidenav #sidenav2 position="end" mode="over">
+        <cdk-sidebar></cdk-sidebar>
+    </mat-sidenav>
+</mat-sidenav-container>
+        
+        
+ <!-- Below is another example of the home page that has a smaller menu that shows up when the main menu is hidden -->
+
+<!-- <mat-sidenav-container class="container" fullscreen>
+    <mat-sidenav [mode]="sideNavMode" class="sidenav" #sidenav [opened]="sideNavOpened" style="overflow: hidden;">
+        <mat-toolbar color="primary" class="mat-elevation-z4">
+            <img src="./assets/logo.codetok.png" width="36px">
+            <h1 class="logo">
+                CODETOK.
+                <span style="font-size: 12px;">com</span>
             </h1>
         </mat-toolbar>
         <cdk-sidemenu></cdk-sidemenu>
     </mat-sidenav>
-    <mat-sidenav-content  style="z-index: unset;overflow: hidden;">
-        <mat-drawer-container fullscreen >
+    <mat-sidenav-content style="z-index: unset;overflow: hidden;">
+        <mat-drawer-container fullscreen>
             <mat-drawer mode="side" #drawer class="drawer" [opened]="matDrawerOpened" style="overflow: hidden;">
-                <mat-toolbar  color="primary" class="mat-elevation-z4">
+                <mat-toolbar color="primary" class="mat-elevation-z4">
                     <img src="./assets/logo.codetok.png" width="36px">
                 </mat-toolbar>
                 <cdk-sidemenu [iconOnly]="true"></cdk-sidemenu>
@@ -21,29 +50,31 @@
                 <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
 
 
-                <perfect-scrollbar  style="height: calc(100% - 33px);">
-                    <div  style="height: 100%;">
-                      <router-outlet #route="outlet"></router-outlet>
-                    </div>
-                    
+                <perfect-scrollbar>
+                    <router-outlet></router-outlet>
                 </perfect-scrollbar>
+
+           
             </mat-drawer-content>
         </mat-drawer-container>
     </mat-sidenav-content>
 
     <mat-sidenav #sidenav2 position="end" mode="over">
-        <!-- <mat-tab-group>
-            <mat-tab label="Overview">
-            </mat-tab>
-            <mat-tab label="Notifications">
-            </mat-tab>
-        </mat-tab-group> -->
-    <cdk-sidebar></cdk-sidebar>
+        <cdk-sidebar></cdk-sidebar>
     </mat-sidenav>
-    
-</mat-sidenav-container>
-        
+
+</mat-sidenav-container> -->
+                
             
-        
-        
+            
+    
+    
+
+
+
+
+
+
+
+
 
