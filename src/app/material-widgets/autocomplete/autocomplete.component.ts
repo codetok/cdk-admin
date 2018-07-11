@@ -1,8 +1,10 @@
+
+import {map, startWith} from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
+
+
 import { AUTOCOMPLETE_HELPERS } from './helpers.data';
 
 
@@ -16,9 +18,9 @@ export class AutocompleteComponent implements OnInit {
 
   constructor() { 
   this.stateCtrl = new FormControl();
-    this.filteredStates = this.stateCtrl.valueChanges
-        .startWith(null)
-        .map(state => state ? this.filterStates(state) : this.states.slice());
+    this.filteredStates = this.stateCtrl.valueChanges.pipe(
+        startWith(null),
+        map(state => state ? this.filterStates(state) : this.states.slice()),);
     }
     filterStates(name: string) {
     return this.states.filter(state =>

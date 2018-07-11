@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GuardedRoutesComponent } from './guarded-routes.component';
 import { RouterComponent } from './router/router.component';
 import { RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { CanActivate } from '@angular/router';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { CanDeactivate } from '@angular/router';

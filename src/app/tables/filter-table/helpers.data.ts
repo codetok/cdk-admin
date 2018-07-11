@@ -1,14 +1,16 @@
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
+import {merge as observableMerge,  BehaviorSubject ,  Observable } from 'rxjs';
+
+import {map} from 'rxjs/operators';
 import { DataSource } from '@angular/cdk/collections';
-import { Observable } from 'rxjs/Observable';
 import { UserData } from '../interfaces';
 
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/observable/merge';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/observable/fromEvent';
+
+
+
+
+
+
 
 const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
   'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
@@ -73,12 +75,12 @@ export class ExampleDataSource extends DataSource<any> {
       this._filterChange,
     ];
 
-    return Observable.merge(...displayDataChanges).map(() => {
+    return observableMerge(...displayDataChanges).pipe(map(() => {
       return this._exampleDatabase.data.slice().filter((item: UserData) => {
         let searchStr = (item.name + item.color).toLowerCase();
         return searchStr.indexOf(this.filter.toLowerCase()) != -1;
       });
-    });
+    }));
   }
 
   disconnect() {}

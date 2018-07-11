@@ -1,8 +1,10 @@
+
+import {map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import 'rxjs/add/operator/map'
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable()
 export class MailService {
@@ -19,7 +21,7 @@ export class MailService {
   }
 
   getMails() {
-    return this.http.get(this.apiUrl).map(res => res.json());
+    return this.http.get(this.apiUrl).pipe(map(res => res.json()));
     
   }
 
