@@ -1,6 +1,6 @@
 import { Component, OnInit , ElementRef, ViewChild} from '@angular/core';
 import { ExampleDatabase, ExampleDataSource } from './helpers.data';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-fixed-table',

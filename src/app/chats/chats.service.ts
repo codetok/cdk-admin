@@ -1,6 +1,8 @@
+
+import {map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class ChatsService {
@@ -17,9 +19,9 @@ export class ChatsService {
   }
 
   getChatsList() {
-    return this.chatsRef.snapshotChanges().map(arr => {
+    return this.chatsRef.snapshotChanges().pipe(map(arr => {
       return arr.map(snap => Object.assign(snap.payload.val(), {$key: snap.key}));
-    });
+    }));
   }
 
   getChat(key: string): Observable<any> {

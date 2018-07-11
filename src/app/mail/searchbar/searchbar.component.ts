@@ -1,8 +1,12 @@
+
+import {fromEvent as observableFromEvent} from 'rxjs';
+
+import {distinctUntilChanged, debounceTime, map} from 'rxjs/operators';
 import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/Observable';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
+
+
 
 @Component({
   selector: 'cdk-mail-searchbar',
@@ -19,10 +23,10 @@ export class SearchbarComponent {
   @Output() onSearchChange = new EventEmitter();
 
   constructor(private elementRef: ElementRef) {
-    const event$ = Observable.fromEvent(elementRef.nativeElement, 'keyup')
-      .map(() => this.inputValue)
-      .debounceTime(this.delay)
-      .distinctUntilChanged();
+    const event$ = observableFromEvent(elementRef.nativeElement, 'keyup').pipe(
+      map(() => this.inputValue),
+      debounceTime(this.delay),
+      distinctUntilChanged(),);
     event$.subscribe(input => this.onSearchChange.emit(input));
   }
 
