@@ -3,10 +3,10 @@
     	<mat-toolbar class="slider-header">
     		<h3 class="mat-headline center-align">Slider</h3>
     	</mat-toolbar>
-    	
+
     	<div class="slider-container">
-    		
-    		
+
+
             <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
 
                 <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
@@ -14,7 +14,7 @@
                         <mat-divider></mat-divider>
                         <mat-slider></mat-slider>
                 </div>
-           
+
 
     			<div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
     				<h4 class="mat-subheading-2 center-align">Slider configuration</h4>
@@ -61,9 +61,9 @@
 
 
                     <section>
-            
+
                         <label class="mat-title center-align" >Result</label>
-                       
+
 
                         <mat-slider
                             class="example-margin"
@@ -72,8 +72,6 @@
                             [max]="max"
                             [min]="min"
                             [step]="step"
-                            [thumb-label]="thumbLabel"
-                            [tick-interval]="tickInterval"
                             [value]="value"
                             [vertical]="vertical">
                         </mat-slider>
