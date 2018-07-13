@@ -19,6 +19,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
 };
 
+import { DashboardCrmModule } from '../dashboard-crm/dashboard-crm.module';
+
 import { CoreModule } from '../core/core.module';
 
 
@@ -27,6 +29,7 @@ import { CoreModule } from '../core/core.module';
         CommonModule,
         RouterModule.forChild(appRoutes),
         MatToolbarModule,
+        DashboardCrmModule,
         MatButtonModule,
         MatIconModule,
         MatTabsModule,
