@@ -5,11 +5,17 @@
     $warn: map-get($theme, warn);
 
     
-    .sidenav,.drawer{
+    .sidenav{
         background: mat-color($primary,400);    
         overflow: hidden;
         position: relative;
         width: 250px;
+    }
+    .drawer{
+        background: mat-color($primary,400);    
+        overflow: hidden;
+        position: relative;
+        width: 80px;
     }
     [no-over-flow] {
         overflow: hidden;
