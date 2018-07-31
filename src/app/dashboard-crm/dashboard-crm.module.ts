@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router'; 
+import { RouterModule, Routes } from '@angular/router';
 import { DashboardCrmComponent } from './dashboard-crm.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
@@ -8,7 +8,7 @@ import { DashboardWidgetModule } from '../dashboard-widget/dashboard-widget.modu
 
 export const appRoutes: Routes = [
     { path: '', component: DashboardCrmComponent },
-]
+];
 
 @NgModule({
   imports: [
@@ -19,6 +19,6 @@ export const appRoutes: Routes = [
     DashboardWidgetModule
   ],
   declarations: [DashboardCrmComponent],
-  exports:[ ]
+  exports: [ ]
 })
 export class DashboardCrmModule { }

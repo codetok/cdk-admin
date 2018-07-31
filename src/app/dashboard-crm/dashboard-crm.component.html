@@ -1,23 +1,23 @@
-<div fxLayout="row" fxLayoutWrap>
+<div fxLayout="row" fxLayout="row wrap">
     <div *ngFor="let dash of dashCard" fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
         <cdk-dashcard [dashData]="dash"></cdk-dashcard>
     </div>
 </div>
-<div fxLayout="row" fxLayoutWrap>
+<div fxLayout="row" fxLayout="row wrap">
     <cdk-bar-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-bar-graph>
     <cdk-doughnut-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-doughnut-graph>
     <cdk-weather fxFlex="25" fxFlex.lt-sm="100" fxFlex.sm="100"></cdk-weather>
 </div>
-<div fxLayout="row" fxLayoutWrap>
+<div fxLayout="row" fxLayout="row wrap">
     <cdk-line-graph fxFlex="75" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-line-graph>
     <cdk-share-price fxFlex="25" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-share-price>
 </div>
-<div fxLayout="row" fxLayoutWrap>
+<div fxLayout="row" fxLayout="row wrap">
     <cdk-sales-list fxFlex="60" fxFlex.lt-sm="100" fxFlex.sm="100" fxFlex.md="70"></cdk-sales-list>
     <cdk-profile-card fxFlex="40" fxFlex.lt-sm="100" fxFlex.sm="100" fxFlex.md="30"></cdk-profile-card>
 </div>
 
-<div fxLayout="row" fxLayoutWrap>
+<div fxLayout="row" fxLayout="row wrap">
     <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
         <cdk-round-progressbar [title]="'SALES'" [current]="'23'" [max]="'100'" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"></cdk-round-progressbar>
     </div>
@@ -32,6 +32,6 @@
     </div>
 </div>
 
-<div fxLayout="column" fxLayoutWrap style=" padding: 8px;">
-    <cdk-world-map [tableData]="tableData"></cdk-world-map>
+<div fxLayout="row" fxLayout="row wrap" >
+    <cdk-world-map fxFlex="100" [tableData]="tableData"></cdk-world-map>
 </div>
