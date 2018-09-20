@@ -1,3 +1,60 @@
-<p>
-  modern-garden works!
-</p>
+<mat-card>
+        <img mat-card-image src="/assets/231605.jpg" alt="Photo of a Shiba Inu">
+</mat-card>
+<hr/>
+<mat-card>
+        <mat-card-header>
+                <div mat-card-avatar class="example-header-image">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 01</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content *ngIf="show">
+                        <p class="mat-body-1">
+                                This Modern Garden gate is with a Island Thyme is Custom made according to the wishes of a home owner. A Metal Security Driveway Gates Don't have to take away from the beauty of your main home Entrance we can Custom make the 
+                                gate to compliment you home Entry.
+                        </p>
+                        <i>
+                             <span>
+                                      <b>
+                                                     Price - 100$
+                                                     <br/>
+                                                     Made In - USA
+                                             </b>
+                                        </span>  
+                             </i>
+                        <img mat-card-image src="../../../assets/Unknown.jpg" alt="Photo of a Shiba Inu">
+                        <button (click)="hide()"><b> Hide</b></button>
+                    </mat-card-content>
+        <mat-card-actions>
+                <button mat-button class="mat-subheading-1 center-align" (click)="showDetails()">VIEW</button>
+                <button mat-button class="mat-subheading-1 center-align" (click)="!checkLogedIn() ? buy() : openDialog()">BUY</button>
+        </mat-card-actions>
+</mat-card>
+<hr/>
+<mat-card>
+        <mat-card-header>
+                <div mat-card-avatar class="ex2">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 02</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+                <button mat-button class="mat-subheading-1 center-align" >VIEW</button>
+                <button mat-button class="mat-subheading-1 center-align">BUY</button>
+        </mat-card-actions>
+</mat-card>
+<hr/>
+<mat-card>
+        <mat-card-header>
+                <div mat-card-avatar class="ex3">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 03</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+                <button mat-button class="mat-subheading-1 center-align" >VIEW</button>
+                <button mat-button class="mat-subheading-1 center-align">BUY</button>
+        </mat-card-actions>
+</mat-card>

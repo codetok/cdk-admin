@@ -4,6 +4,7 @@ import { DashboardCrmComponent } from '../dashboard-crm/dashboard-crm.component'
 import {AboutUsComponent} from './about-us/about-us.component';
 import {ModernGardenComponent} from './modern-garden/modern-garden.component';
 import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
+//import {CardsComponent} from './cards/cards.component';
 
 export const appRoutes: Routes = [{
     path: '', component: AuthComponent, children: [

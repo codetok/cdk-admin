@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Would you like to customize your design?
+    <mat-slide-toggle (change)="customize($event)"></mat-slide-toggle>
+</h1>
+<hr/>
+<div mat-dialog-content *ngIf="productCustomize">
+  My favorite animal is:
+
+
+</div>
+<hr/>
+<div mat-dialog-footer> 
+      <button (click)="addToCart()" class="setToCenter" [disabled]="clickedOnce">
+          <mat-icon class="space" >add_shopping_cart</mat-icon>
+    </button>
+  
+</div>
