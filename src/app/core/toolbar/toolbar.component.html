@@ -2,7 +2,7 @@
 <mat-toolbar   class="mat-elevation-z4">  
 	<button mat-icon-button (click)="sidenav.toggle();drawer.toggle();" *ngIf="matDrawerShow">
         <i class="material-icons app-toolbar-menu">menu </i>
-    </button> 
+    </button>
     <button mat-icon-button (click)="sidenav.toggle();" *ngIf="!matDrawerShow">
         <i class="material-icons app-toolbar-menu">menu </i>
     </button>
@@ -14,7 +14,7 @@
     </button>
     <cdk-search-bar [open]="searchOpen"></cdk-search-bar>
 
-    <cdk-fullscreen></cdk-fullscreen>
+    <cdk-fullscreen></cdk-fullscreen> 
 
     <cdk-toolbar-notification [notifications]="toolbarHelpers?.notifications"></cdk-toolbar-notification>
 

@@ -22,6 +22,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 import { DashboardCrmModule } from '../dashboard-crm/dashboard-crm.module';
 
 import { CoreModule } from '../core/core.module';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ModernGardenComponent } from './modern-garden/modern-garden.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -37,7 +40,7 @@ import { CoreModule } from '../core/core.module';
         MatSidenavModule,
         PerfectScrollbarModule,
     ],
-    declarations: [AuthComponent],
+    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent],
     providers: [
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
