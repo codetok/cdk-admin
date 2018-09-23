@@ -28,7 +28,8 @@ import { CoreModule } from '../core/core.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ModernGardenComponent } from './modern-garden/modern-garden.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-//import {CardsComponent} from './cards/cards.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { SliderModule } from 'angular-image-slider';
 
 import { MatProgressSpinnerModule,
     MatRadioModule,
@@ -63,6 +64,8 @@ import { GateExampleComponent } from './gate-example/gate-example.component';
         MatSnackBarModule,
         MatDialogModule,
         MatSlideToggleModule,
+        SlideshowModule,
+        SliderModule
         //MatDialog, 
         //MatDialogRef,
 

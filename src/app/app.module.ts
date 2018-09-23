@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { LazyLoadModule } from './lazy-load/lazy-load.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { SliderModule } from 'angular-image-slider';
+
 
 
 
@@ -17,7 +20,9 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     LazyLoadModule,
     CoreModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SlideshowModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

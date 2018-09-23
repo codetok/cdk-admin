@@ -5,6 +5,7 @@ import { ModernGardenComponent } from './modern-garden.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material';
 import { DashboardWidgetModule } from '../../dashboard-widget/dashboard-widget.module';
+import {SlideshowModule} from 'ng-simple-slideshow';
 //import {CardsComponent} from '../../material-widgets/cards/cards.component'
 
 export const appRoutes: Routes = [
@@ -18,6 +19,7 @@ export const appRoutes: Routes = [
     FlexLayoutModule,
     MatCardModule,
     DashboardWidgetModule,
+    SlideshowModule
   //  CardsComponent
   ],
   declarations: [ModernGardenComponent],

@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./modern-garden.component.scss']
 })
 export class ModernGardenComponent implements OnInit {
-
+  public imagesUrl;
  // gateExample : GateExampleComponent;
  message = 'you do not have permission to access this link. Log in first!';
  action = 'exit';
@@ -22,6 +22,14 @@ export class ModernGardenComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    this.imagesUrl = [
+      '../../../assets/gate3.jpg',
+      '../../../assets/Unknown.jpg',
+      '../../../assets/gate2.jpg',
+      '../../../assets/231605.jpg',
+      '../../../assets/images.jpeg',
+      '../../../assets/images (1).jpeg',
+    ];
   }
 
   showDetails(): void 
