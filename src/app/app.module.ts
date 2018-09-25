@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SliderModule } from 'angular-image-slider';
-
+import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
 
 
 
@@ -22,7 +22,8 @@ import { SliderModule } from 'angular-image-slider';
     CoreModule,
     BrowserAnimationsModule,
     SlideshowModule,
-    SliderModule
+    SliderModule,
+    CanvasWhiteboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

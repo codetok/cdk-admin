@@ -46,7 +46,7 @@ import { MatProgressSpinnerModule,
 
 } from '@angular/material';
 import { GateExampleComponent } from './gate-example/gate-example.component';
-
+import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
 @NgModule({
     imports: [
         CommonModule,
@@ -65,7 +65,8 @@ import { GateExampleComponent } from './gate-example/gate-example.component';
         MatDialogModule,
         MatSlideToggleModule,
         SlideshowModule,
-        SliderModule
+        SliderModule,
+        CanvasWhiteboardModule
         //MatDialog, 
         //MatDialogRef,
 

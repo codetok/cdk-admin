@@ -38,7 +38,8 @@
         </mat-card-content>
         <mat-card-actions>
                 <button mat-button color="primary" (click)="showDetails()">VIEW</button>
-                <button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">BUY</button>
+                <button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart($event)" [disabled]="clickedOnce" id="btn1">BUY</button>
         </mat-card-actions>
 </mat-card>
 <hr/>
@@ -50,8 +51,10 @@
                 <mat-card-subtitle>Gate - 02</mat-card-subtitle>
         </mat-card-header>
         <mat-card-actions>
-                <button mat-button class="mat-subheading-1 center-align" >VIEW</button>
-                <button mat-button class="mat-subheading-1 center-align">BUY</button>
+                <button mat-button color="primary" >VIEW</button>
+                <button mat-button color="accent">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart($event)" id="btn2">BUY</button>
+                <!--[disabled]="clickedOnce"-->
         </mat-card-actions>
 </mat-card>
 <hr/>
@@ -63,7 +66,8 @@
                 <mat-card-subtitle>Gate - 03</mat-card-subtitle>
         </mat-card-header>
         <mat-card-actions>
-                <button mat-button class="mat-subheading-1 center-align" >VIEW</button>
-                <button mat-button class="mat-subheading-1 center-align">BUY</button>
+                <button mat-button color="primary" >VIEW</button>
+                <button mat-button color="accent">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart()" id="btn2">BUY</button>
         </mat-card-actions>
 </mat-card>

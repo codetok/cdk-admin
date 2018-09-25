@@ -13,9 +13,11 @@ export class ModernGardenComponent implements OnInit {
   public imagesUrl;
  // gateExample : GateExampleComponent;
  message = 'you do not have permission to access this link. Log in first!';
+ message1='Added To the Shoping Cart!'
  action = 'exit';
  show:boolean=false;
  logedin:boolean=true;
+ clickedOnce:boolean=false;
   constructor(
     public dialog: MatDialog,
     public snackBar: MatSnackBar
@@ -44,11 +46,35 @@ export class ModernGardenComponent implements OnInit {
   {
     this.show=false;
   }
+  addToCart(e){
+    if(this.logedin)
+    {
+      this.snackBar.open(this.message1, this.action, {
+        duration: 2000,
+      });
+      this.clickedOnce=true;
+    }
+    
+    else{
+      this.snackBar.open(this.message, this.action, {
+        duration: 2000,
+      });
+      
+    }
+    
+  }
   buy():void
   {
+
     this.snackBar.open(this.message, this.action, {
       duration: 2000,
     });
+
+    this.snackBar.open(this.message, this.action, {
+      duration: 2000,
+    });
+    this.clickedOnce=true;
+  
   }
   checkLogedIn()
   {
@@ -57,11 +83,12 @@ export class ModernGardenComponent implements OnInit {
   openDialog()
   {
     this.dialog.open(GateExampleComponent,{
-      width:'500px',
-      height:'500px',
+      width:'600px',
+      height:'700px',
     });
   }
 };
+
 
 @Component({
   selector: 'dialog-data-example-dialog',
