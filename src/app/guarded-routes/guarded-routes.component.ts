@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./guarded-routes.component.scss']
 })
 export class GuardedRoutesComponent implements OnInit {
-  message = 'you do not have permission to access this link';
+  message = 'you do not have permission to access this link.';
   action = 'exit';
   constructor(public router: Router, public snackBar: MatSnackBar) {
 
