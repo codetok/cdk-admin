@@ -98,12 +98,31 @@ export const menus = [
         'link':'/auth/shoppingCart',
         'open':true
     },
-    {
-        'name':'About Us',
-        'icon':'help',
-        'link':'/auth/aboutUs',
-        'open':true,
-    },
+
+  {
+    'name':'My Favourites',
+    'icon':'favorite',
+    'link':'/auth/my-favorites',
+    'open':true,
+  },
+  {
+    'name':'FAQ',
+    'icon':'help',
+    'link':'/auth/faq',
+    'open':true
+  },
+  {
+    'name':'About Us',
+    'icon':'info',
+    'link':'/auth/aboutUs',
+    'open':true,
+  },
+  {
+    'name':'Contact Us',
+    'icon':'phone',
+    'link':'/auth/contactUs',
+    'open':true,
+  },
     {
         'name': 'Material Widget',
         'icon': 'widgets',
