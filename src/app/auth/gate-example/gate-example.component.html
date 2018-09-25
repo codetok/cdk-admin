@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Would you like to customize your design?
+    <!--<mat-slide-toggle (change)="customize($event)"></mat-slide-toggle>-->
+</h1>
+<!--*ngIf="productCustomize"-->
+<div mat-dialog-content >
+  <canvas #canvas class="posstion" class="bc"></canvas>
+</div>
+
+<div>   
+      <!--  <button mat-fab color="primary" (click)="reloadCanvas()">Clear</button>-->
+
+        
+        <button mat-fab (click)="reloadCanvas()">
+                <mat-icon class="space" >restore</mat-icon>
+        </button>
+        CLEAR
+        <!--<button mat-fab color="primary" (click)="saveToImage()">save</button>-->
+        <button mat-fab (click)="saveToImage()">
+            <mat-icon class="space">print</mat-icon>
+        </button>
+        SAVE
+        
+        <a mat-fab href="https://accounts.google.com/">
+            <mat-icon class="space">https</mat-icon>
+        </a>
+        EMAIL	
+</div>
+
+ 
+
+
+<!--
+<div mat-dialog-footer> 
+      <button (click)="addToCart()" class="setToCenter" [disabled]="clickedOnce">
+          <mat-icon class="space" >add_shopping_cart</mat-icon>
+    </button>
+  
+</div>
+-->

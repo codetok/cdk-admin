@@ -1,0 +1,73 @@
+<mat-card>
+        <!--<img mat-card-image src="/assets/231605.jpg" alt="Photo of a Shiba Inu">-->
+        <angular-image-slider [images]="imagesUrl" class="bc"></angular-image-slider>
+</mat-card>
+<hr/>
+<mat-card class="bc">
+        <mat-card-header>
+                <div mat-card-avatar class="example-header-image">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 01 
+                        <br/>
+                                <b>
+                                Price - 100$
+                                <br/>
+                                Made In - USA
+                        </b>
+                </mat-card-subtitle>
+        </mat-card-header>
+<br/>
+        <mat-card-content *ngIf="show" >
+                <table>
+                        <tr>
+                                <td class="content">
+                                        <img mat-card-image src="../../../assets/Unknown.jpg" alt="Photo of a Shiba Inu" >
+                                </td>
+                                <td class="para">
+                                        <p class="mat-body-1">
+                                        This Modern Garden gate is with a Island Thyme is Custom made according to the wishes of a home owner. A Metal Security Driveway Gates Don't have to take away from the beauty of your main home Entrance we can Custom make the 
+                                        gate to compliment you home Entry.
+                                        </p>
+                                </td>
+                        </tr>
+                </table>
+                        
+                        
+                        <button mat-mini-fab color="primary" (click)="hide()"><b> Hide</b></button>
+        </mat-card-content>
+        <mat-card-actions>
+                <button mat-button color="primary" (click)="showDetails()">VIEW</button>
+                <button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart($event)" [disabled]="clickedOnce" id="btn1">BUY</button>
+        </mat-card-actions>
+</mat-card>
+<hr/>
+<mat-card class="bc2"> 
+        <mat-card-header>
+                <div mat-card-avatar class="ex2">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 02</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+                <button mat-button color="primary" >VIEW</button>
+                <button mat-button color="accent">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart($event)" id="btn2">BUY</button>
+                <!--[disabled]="clickedOnce"-->
+        </mat-card-actions>
+</mat-card>
+<hr/>
+<mat-card>
+        <mat-card-header>
+                <div mat-card-avatar class="ex3">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 03</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+                <button mat-button color="primary" >VIEW</button>
+                <button mat-button color="accent">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart()" id="btn2">BUY</button>
+        </mat-card-actions>
+</mat-card>

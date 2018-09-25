@@ -7,7 +7,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatTabsModule } from '@angular/material';
+import {MatTabsModule} from '@angular/material';
+import { MatSnackBarModule,MatDialogModule } from '@angular/material';
+//import {MatDialog, MatDialogRef,} from '@angular/material';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -20,10 +22,31 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 };
 
 import { DashboardCrmModule } from '../dashboard-crm/dashboard-crm.module';
+import {MaterialWidgetsModule} from '../material-widgets/material-widgets.module';
 
 import { CoreModule } from '../core/core.module';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ModernGardenComponent } from './modern-garden/modern-garden.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { SliderModule } from 'angular-image-slider';
+
+import { MatProgressSpinnerModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatCardModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    
 
 
+} from '@angular/material';
+import { GateExampleComponent } from './gate-example/gate-example.component';
+import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
 @NgModule({
     imports: [
         CommonModule,
@@ -36,8 +59,23 @@ import { CoreModule } from '../core/core.module';
         CoreModule,
         MatSidenavModule,
         PerfectScrollbarModule,
+        MaterialWidgetsModule,
+        MatCardModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        MatSlideToggleModule,
+        SlideshowModule,
+        SliderModule,
+        CanvasWhiteboardModule
+        //MatDialog, 
+        //MatDialogRef,
+
+        
     ],
-    declarations: [AuthComponent],
+    entryComponents: [
+        GateExampleComponent,
+    ],
+    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent],
     providers: [
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
