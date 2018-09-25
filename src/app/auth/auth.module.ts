@@ -8,14 +8,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material';
-import { MatSnackBarModule,MatDialogModule } from '@angular/material';
-//import {MatDialog, MatDialogRef,} from '@angular/material';
+import { MatSnackBarModule, MatDialogModule } from '@angular/material';
+
+
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { appRoutes } from './lazyloader.routes';
+
+
+
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
@@ -41,13 +46,64 @@ import { MatProgressSpinnerModule,
     MatSelectModule,
     MatProgressBarModule,
     MatMenuModule,
-    
+
 
 
 } from '@angular/material';
 import { GateExampleComponent } from './gate-example/gate-example.component';
 import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
-@NgModule({
+
+
+
+
+
+import { HttpClientModule } from '@angular/common/http';
+
+
+
+
+
+import {MatFormFieldModule} from '@angular/material';
+import { MatInputModule} from '@angular/material';
+import {MatFormFieldControl} from '@angular/material';
+
+
+
+
+
+
+
+
+
+
+
+import {MatDividerModule} from '@angular/material/divider';
+
+
+
+
+
+
+import { FAQComponent } from './faq/faq.component';
+
+import { MyFavouritesComponent } from './my-favourites/my-favourites.component';
+import { MatChipsModule } from '@angular/material/chips';
+
+import { DialogComponent } from './faq/dialog/dialog.component';
+
+import { Pro1dialogComponent } from './faq/pro1dialog/pro1dialog.component';
+import { Shareproduct1Component } from './faq/shareproduct1/shareproduct1.component';
+import { Pro2dialogComponent } from './faq/pro2dialog/pro2dialog.component';
+import { Pro3dialogComponent } from './faq/pro3dialog/pro3dialog.component';
+import { ContactComponent } from './contact/contact.component';
+
+
+
+
+
+
+
+@NgModule ({
     imports: [
         CommonModule,
         RouterModule.forChild(appRoutes),
@@ -66,16 +122,39 @@ import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
         MatSlideToggleModule,
         SlideshowModule,
         SliderModule,
-        CanvasWhiteboardModule
-        //MatDialog, 
-        //MatDialogRef,
+        CanvasWhiteboardModule,
+        HttpClientModule,
+        MatDividerModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCheckboxModule,
+        MatSliderModule,
+        MatAutocompleteModule,
+        MatSelectModule,
+        MatProgressBarModule,
+        MatMenuModule,
 
-        
     ],
     entryComponents: [
-        GateExampleComponent,
+      GateExampleComponent,
+      FAQComponent,
+      MyFavouritesComponent,
+      DialogComponent,
+      Pro1dialogComponent,
+      Shareproduct1Component,
+      Pro2dialogComponent,
+      Pro3dialogComponent,
+      ContactComponent,
     ],
-    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent],
+    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent ,FAQComponent,
+      MyFavouritesComponent,
+      DialogComponent,
+      Pro1dialogComponent,
+      Shareproduct1Component,
+      Pro2dialogComponent,
+      Pro3dialogComponent,
+      ContactComponent],
     providers: [
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
