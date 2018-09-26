@@ -18,15 +18,30 @@
              placeholder="Name"
              formControlName="description">
     </mat-form-field>
+
+
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [formControl]="emailFormControl"
+               [errorStateMatcher]="matcher">
+
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
     <mat-form-field>
-      <input matInput
-             placeholder="Email"
-             formControlName="description">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
+      <mat-select placeholder="Issue category" [formControl]="animalControl" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let animal of animals" [value]="animal">
+          {{animal.name}}
+        </mat-option>
       </mat-select>
+      <mat-error *ngIf="animalControl.hasError('required')">Please choose an Issue Category</mat-error>
+
     </mat-form-field>
     <mat-form-field>
       <textarea matInput placeholder="Question"></textarea>
@@ -42,7 +57,7 @@
 
     <hr>
   <mat-dialog-actions>
-    <button mat-raised-button color="primary" (click)="onCloseConfirm()">Confirm</button>
+    <button mat-raised-button color="primary"  (click)="openDialog()" >Confirm</button>
 
   </mat-dialog-actions>
 </div>

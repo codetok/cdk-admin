@@ -4,6 +4,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {GateExampleComponent} from '../gate-example/gate-example.component';
 
 import {DialogComponent} from './dialog/dialog.component';
+import {AddeddialogComponent} from './addeddialog/addeddialog.component';
 
 @Component({
   selector: 'app-faq',
@@ -32,6 +33,8 @@ export class FAQComponent implements OnInit {
       this.dialogResult = result;
     })
   }
+
+
 
 
 
