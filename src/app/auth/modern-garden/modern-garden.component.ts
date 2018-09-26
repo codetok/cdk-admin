@@ -3,6 +3,16 @@ import { MatCardModule } from '@angular/material';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {GateExampleComponent} from '../gate-example/gate-example.component';
 import { MatSnackBar } from '@angular/material';
+import {GatePicComponent} from '../gate-pic/gate-pic.component';
+import {MoreDetailsComponent} from '../more-details/more-details.component';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+import swal from 'sweetalert';
+
+
+export interface Rate {
+  name: string;
+}
 
 @Component({
   selector: 'app-modern-garden',
@@ -10,7 +20,14 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./modern-garden.component.scss']
 })
 export class ModernGardenComponent implements OnInit {
+
+  rates:Rate[]=[
+    {name:"Impressed"},
+    {name:"Satisfied"},
+    {name:"OK"}
+  ]
   public imagesUrl;
+  swal:any;
  // gateExample : GateExampleComponent;
  message = 'you do not have permission to access this link. Log in first!';
  message1='Added To the Shoping Cart!'
@@ -18,6 +35,7 @@ export class ModernGardenComponent implements OnInit {
  show:boolean=false;
  logedin:boolean=true;
  clickedOnce:boolean=false;
+ comment:string="";
   constructor(
     public dialog: MatDialog,
     public snackBar: MatSnackBar
@@ -37,6 +55,11 @@ export class ModernGardenComponent implements OnInit {
   showDetails(): void 
   {
     this.show=true;
+    this.dialog.open(MoreDetailsComponent,{
+      width: '500px',
+      height:'700px'
+    })
+    
    /* this.dialog.open(GateExampleComponent,{
       width: '500px',
       height:'500px'
@@ -45,6 +68,13 @@ export class ModernGardenComponent implements OnInit {
   hide():void
   {
     this.show=false;
+    swal({
+      //position: 'top-end',
+      icon: "success",
+      title: 'Thank You for the Feedback!',
+      closeOnClickOutside: false,
+    })
+    this.comment=null;
   }
   addToCart(e){
     if(this.logedin)
@@ -84,9 +114,18 @@ export class ModernGardenComponent implements OnInit {
   {
     this.dialog.open(GateExampleComponent,{
       width:'600px',
-      height:'700px',
+      height:'600px',
     });
   }
+
+  gatePic()
+  {
+    this.dialog.open(GatePicComponent,{
+      width:'600px',
+      height:'600px',
+    });
+  }
+
 };
 
 

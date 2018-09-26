@@ -30,6 +30,9 @@ import { ModernGardenComponent } from './modern-garden/modern-garden.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SliderModule } from 'angular-image-slider';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 
 import { MatProgressSpinnerModule,
     MatRadioModule,
@@ -42,11 +45,16 @@ import { MatProgressSpinnerModule,
     MatProgressBarModule,
     MatMenuModule,
     
+    
 
 
 } from '@angular/material';
 import { GateExampleComponent } from './gate-example/gate-example.component';
 import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
+import {MatDividerModule} from '@angular/material/divider';
+import { GatePicComponent } from './gate-pic/gate-pic.component';
+import { MoreDetailsComponent } from './more-details/more-details.component';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -66,7 +74,13 @@ import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
         MatSlideToggleModule,
         SlideshowModule,
         SliderModule,
-        CanvasWhiteboardModule
+        CanvasWhiteboardModule,
+        MatDividerModule,
+        ReactiveFormsModule, 
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule
         //MatDialog, 
         //MatDialogRef,
 
@@ -74,8 +88,10 @@ import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
     ],
     entryComponents: [
         GateExampleComponent,
+        GatePicComponent,
+        MoreDetailsComponent,
     ],
-    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent],
+    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent, GatePicComponent, MoreDetailsComponent],
     providers: [
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
