@@ -1,0 +1,82 @@
+<div fxLayout="column"  class="components-container-gt-xs"   fxLayoutGap="20px">
+
+  <div fxFlex class="contact-component-holder mat-elevation-z4" color="primary">
+
+    <mat-toolbar class="contact-header" color="primary">
+      <h1 class="mat-headline center-align">Contact Us</h1>
+    </mat-toolbar>
+
+    <div class="contact-container">
+      <p align="justify">The GatesNFences team is always available any and all of your questions.The more details provide the better we will able to respond</p>
+      <hr>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl"
+                 [errorStateMatcher]="matcher">
+
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Subject">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Message"></textarea>
+        </mat-form-field>
+      </form>
+      <br>
+      <button mat-raised-button color="primary" (click)="openDialog()"><b>Send</b></button>
+
+
+
+      </div>
+    <hr>
+    <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+      <div class="contact-container" class="color">
+
+        <h4><p><button mat-icon-button color="primary">
+
+            <img class="logo-image" src="../../../assets/images/socialmedia/Mail.png" >
+
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/gmail/">LAOrnamental@Aol.com</a></p></h4>
+
+
+        <h4><p><button mat-icon-button color="primary">
+
+          <img class="logo-image" src="../../../assets/images/socialmedia/telephone.png" >
+
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;305-696-0419</p></h4>
+        <h4><p><button mat-icon-button color="primary">
+
+          <img class="logo-image" src="../../../assets/images/socialmedia/fax_B-512.png" >
+
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;305-696-0461</p></h4>
+        <h4><p><button mat-icon-button color="primary">
+
+          <img class="logo-image" src="../../../assets/images/socialmedia/address.png" >
+
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3708 NW<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;82nd Street<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Miami<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Florida 33147</p></h4>
+
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+
