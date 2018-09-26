@@ -1,0 +1,63 @@
+<div>
+  <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+    <h2 mat-dialog-title><p> Let's Help!
+
+      <mat-icon aria-label="Example icon-button with a heart icon" color="primary">help</mat-icon></p></h2>
+
+  </div>
+  <hr>
+
+
+
+  <mat-dialog-content>
+    <p>If you couldn't find an answer for your question tell us what issues or questions you looking for!We like to help you and get back soon as possible.</p>
+
+    <br>
+    <mat-form-field>
+      <input matInput
+             placeholder="Name"
+             formControlName="description">
+    </mat-form-field>
+
+
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [formControl]="emailFormControl"
+               [errorStateMatcher]="matcher">
+
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Issue category" [formControl]="animalControl" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let animal of animals" [value]="animal">
+          {{animal.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="animalControl.hasError('required')">Please choose an Issue Category</mat-error>
+
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Question"></textarea>
+    </mat-form-field>
+
+
+
+
+
+
+      <!--<strong>{{data}}</strong>-->
+  </mat-dialog-content>
+
+    <hr>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary"  (click)="openDialog()" >Confirm</button>
+
+  </mat-dialog-actions>
+</div>
