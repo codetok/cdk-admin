@@ -1,0 +1,48 @@
+<div>
+  <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+    <h2 mat-dialog-title><p> Let's Help!
+
+      <mat-icon aria-label="Example icon-button with a heart icon" color="primary">help</mat-icon></p></h2>
+
+  </div>
+  <hr>
+
+
+
+  <mat-dialog-content>
+    <p>If you couldn't find an answer for your question tell us what issues or questions you looking for!We like to help you and get back soon as possible.</p>
+
+    <br>
+    <mat-form-field>
+      <input matInput
+             placeholder="Name"
+             formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+             placeholder="Email"
+             formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Question"></textarea>
+    </mat-form-field>
+
+
+
+
+
+
+      <!--<strong>{{data}}</strong>-->
+  </mat-dialog-content>
+
+    <hr>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onCloseConfirm()">Confirm</button>
+
+  </mat-dialog-actions>
+</div>

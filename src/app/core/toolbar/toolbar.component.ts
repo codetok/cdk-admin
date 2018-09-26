@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ToolbarHelpers } from './toolbar.helpers';
+import {Items} from '../../core/toolbar/items';
 
 @Component({
   selector: 'cdk-toolbar',
@@ -12,12 +13,13 @@ export class ToolbarComponent implements OnInit {
 	@Input() sidebar;
 	@Input() drawer;
 	@Input() matDrawerShow;
-  
+  items:Items[]
 	searchOpen: boolean = false;
     toolbarHelpers = ToolbarHelpers;
   	constructor() { }
 
   	ngOnInit() {
+			this.items= [{ name: "archie" }, { name: "jake" }, { name: "richard" }];
   	}
-
+		
 }

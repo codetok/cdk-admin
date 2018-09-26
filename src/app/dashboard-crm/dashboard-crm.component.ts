@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {MatCard, MatDialog} from '@angular/material';
+import {Pro1dialogComponent} from '../auth/faq/pro1dialog/pro1dialog.component';
+import {Pro2dialogComponent} from '../auth/faq/pro2dialog/pro2dialog.component';
+
+import {Pro3dialogComponent} from '../auth/faq/pro3dialog/pro3dialog.component';
+
+import {Shareproduct1Component} from '../auth/faq/shareproduct1/shareproduct1.component';
+import {CHECKBOX_HELPERS} from '../material-widgets/checkbox/helpers.data';
 
 @Component({
     selector: 'app-dashboard-crm',
@@ -8,25 +16,80 @@ import { Component, OnInit } from '@angular/core';
 
 export class DashboardCrmComponent implements OnInit {
 
-    public dashCard = [
-        { colorDark: '#5C6BC0', colorLight: '#7986CB', number: 1221, title: 'SALES', icon: 'local_grocery_store' },
-        { colorDark: '#42A5F5', colorLight: '#64B5F6', number: 1221, title: 'LEADS', icon: 'new_releases' },
-        { colorDark: '#26A69A', colorLight: '#4DB6AC', number: 1221, title: 'ASSETS', icon: 'assignments' },
-        { colorDark: '#66BB6A', colorLight: '#81C784', number: 1221, title: 'BANKING', icon: 'account_balance' }
-    ];
 
-    tableData = [
-        { country: 'India', sales: 5400, percentage: '40%' },
-        { country: 'Us', sales: 3200, percentage: '30.33%' },
-        { country: 'Australia', sales: 2233, percentage: '18.056%' },
-        { country: 'Spaim', sales: 600, percentage: '6%' },
-        { country: 'China', sales: 200, percentage: '4.50%' },
-        { country: 'Brazil', sales: 100, percentage: '2.50%' },
-    ];
+  dialogResult = '';
+  public imagesUrl;
 
-    constructor() { }
+  public icon1 = 'favorite_border';
+
+  public icon2 = 'favorite_border';
+  public icon3 = 'favorite_border';
+
+  public changeIcon1(newIcon: string ){
+    this.icon1 = newIcon ;
+  }
+
+  public changeIcon2(newIcon: string ){
+    this.icon2 = newIcon ;
+  }
+  public changeIcon3(newIcon: string ){
+    this.icon3 = newIcon ;
+  }
+
+  constructor( public dialog: MatDialog) {}
+  openProduct1() {
+    const dialogRef = this.dialog.open(Pro1dialogComponent, {
+      width: '600px',
+      data: 'This text is passed'
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog closed:${result}`);
+      this.dialogResult = result;
+    })
+  }
+  openProduct2() {
+    const dialogRef = this.dialog.open(Pro2dialogComponent, {
+      width: '600px',
+      data: 'This text is passed'
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog closed:${result}`);
+      this.dialogResult = result;
+    })
+  }
+  openProduct3() {
+    const dialogRef = this.dialog.open(Pro3dialogComponent, {
+      width: '600px',
+      data: 'This text is passed'
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog closed:${result}`);
+      this.dialogResult = result;
+    })
+  }
+
+  shareProduct1(){
+    const dialogRef = this.dialog.open(Shareproduct1Component, {
+      width: '600px',
+      data: 'This text is passed'
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog closed:${result}`);
+      this.dialogResult = result;
+    })
+  }
+
+
+
+
+
+
 
     ngOnInit() {
+      this.imagesUrl = [
+        '../../assets/images/slideshows/gate-sale-by-gates-and-fences-uk.png',
+
+      ];
     }
 
 }

@@ -1,0 +1,193 @@
+<mat-card>
+        <angular-image-slider [images]="imagesUrl" class="bc"></angular-image-slider>
+</mat-card>
+<!--
+<mat-card class="bc">
+        <mat-card-header>
+                <div mat-card-avatar class="example-header-image">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 01 
+                        <br/>
+                                <b>
+                                Price - 100$
+                                <br/>
+                                Made In - USA
+                        </b>
+                </mat-card-subtitle>
+        </mat-card-header>
+<br/>
+        <mat-card-content *ngIf="show" >
+                <table>
+                        <tr>
+                                <td class="content">
+                                        <img mat-card-image src="../../../assets/Unknown.jpg" alt="Photo of a Shiba Inu" >
+                                </td>
+                                <td class="para">
+                                        <p class="mat-body-1">
+                                        This Modern Garden gate is with a Island Thyme is Custom made according to the wishes of a home owner. A Metal Security Driveway Gates Don't have to take away from the beauty of your main home Entrance we can Custom make the 
+                                        gate to compliment you home Entry.
+                                        </p>
+                                </td>
+                        </tr>
+                </table>
+                        
+                        
+                        <button mat-mini-fab color="primary" (click)="hide()"><b> Hide</b></button>
+        </mat-card-content>
+        <mat-card-actions>
+                <button mat-button color="primary" (click)="showDetails()">VIEW</button>
+                <button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart($event)" [disabled]="clickedOnce" id="btn1">BUY</button>
+        </mat-card-actions>
+</mat-card>
+<hr/>
+<mat-card class="bc2"> 
+        <mat-card-header>
+                <div mat-card-avatar class="ex2">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 02</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+                <button mat-button color="primary" >VIEW</button>
+                <button mat-button color="accent">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart($event)" id="btn2">BUY</button>
+        </mat-card-actions>
+</mat-card>
+<hr/>
+<mat-card>
+        <mat-card-header>
+                <div mat-card-avatar class="ex3">
+                </div>
+                <mat-card-title>Modern Garden Gate</mat-card-title>
+                <mat-card-subtitle>Gate - 03</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+                <button mat-button color="primary" >VIEW</button>
+                <button mat-button color="accent">CUSTOMIZE</button>
+                <button mat-button color="primary" (click)="addToCart()" id="btn2">BUY</button>
+        </mat-card-actions>
+</mat-card>
+-->
+
+<div fxLayout="column">
+                <div fxLayout="column" class="service-card-content">
+        
+                        <div fxLayout="row" class="service-card-container" fxLayout.lt-md="column" fxLayoutGap="20px">
+                                <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc" >
+                                        <table>
+                                                <tr>
+                                                        <td>
+                                                                        <div class="imageContainer">
+                                                                <img src="../../../assets/Unknown.jpg" fxFlex (click)="gatePic()"><br/>  
+                                                                </div>      
+                                                        </td>
+                                                        <td class="para">
+                                                                <mat-card-content >
+
+                                                                        	<!--<div fxFlex class="input-component-holder mat-elevation-z4">-->
+                                                                                                <!--<mat-toolbar class="input-header" >
+                                                                                                        <h5 class="mat-headline center-align" >Say Something About this product!</h5>
+                                                                                                </mat-toolbar >
+                                                                                -->
+                                                                                                <!--<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+                                                                                                        fxFlex.xs="300" fxFlex.lg="100" fxFlex.md="50" fxFlex.sm="50" -->
+                                                                                        <div class="example-container">
+                                                                                                <mat-form-field>
+                                                                                                        <textarea matInput placeholder="Say Something About the Product?" [(ngModel)]="comment"></textarea>
+                                                                                                </mat-form-field> 
+                                                                                                <mat-form-field>
+                                                                                                        <mat-select placeholder="Design of the Product">
+                                                                                                                <mat-option *ngFor="let food of rates" [value]="food.value">
+                                                                                                                    {{food.name}}
+                                                                                                                </mat-option>
+                                                                                                        </mat-select>
+                                                                                                </mat-form-field>                                                    
+                                                                                        </div>
+                                                                                                              
+                                                                                                       
+                                                                                                <!--</div> -->
+                                                                               <!-- </div> -->
+                                                                        <!--<div>-->
+                                                                                <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>
+                                                                     <!--   </div>   -->          
+                                                                </mat-card-content>     
+                                                        </td>
+                                                </tr>
+                                        </table>
+                                        <button mat-button color="primary" (click)="showDetails()">MORE</button>
+                                        <button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">CUSTOMIZE</button>
+                                        <button mat-button color="primary" (click)="addToCart($event)" [disabled]="clickedOnce" id="btn1">BUY</button>
+                                        
+                                </div>
+                                <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc2"  >
+                                                <table>
+                                                                <tr>
+                                                                        <td>
+                                                                                <img src="../../../assets/gate2.jpg" fxFlex><br/>        
+                                                                        </td>
+                                                                        <td class="para"> 
+                                                                                        <mat-card-content >
+                                                                                                                <div class="example-container">
+                                                                                                                        <mat-form-field>
+                                                                                                                                <textarea matInput placeholder="Say Something About the Product?"></textarea>
+                                                                                                                        </mat-form-field> 
+                                                                                                                        <mat-form-field>
+                                                                                                                                <mat-select placeholder="Design of the Product">
+                                                                                                                                        <mat-option *ngFor="let food of rates" [value]="food.value">
+                                                                                                                                            {{food.name}}
+                                                                                                                                        </mat-option>
+                                                                                                                                </mat-select>
+                                                                                                                        </mat-form-field>                                                    
+                                                                                                                </div>
+                                                                                                        <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>
+                                                                                                      
+                                                                                        </mat-card-content>  
+
+                                                                        </td>
+                                                                </tr>
+                                                        </table>
+                                                        <button mat-button color="primary" >MORE</button>
+                                                        <button mat-button color="accent" >CUSTOMIZE</button>
+                                                        <button mat-button color="primary" >BUY</button>
+                                                        
+                                </div>
+                                <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc"  >
+                                                <table>
+                                                                <tr>
+                                                                        <td>
+                                                                                <img src="../../../assets/gate3.jpg" fxFlex><br/>        
+                                                                        </td>
+                                                                        <td class="para">
+                                                                                <mat-card-content >
+                                                                                        <div class="example-container">
+                                                                                                <mat-form-field>
+                                                                                                 <textarea matInput placeholder="Say Something About the Product?"></textarea>
+                                                                                                </mat-form-field>
+                                                                                                                        <mat-form-field>
+                                                                                                                                <mat-select placeholder="Design of the Product">
+                                                                                                                                        <mat-option *ngFor="let food of rates" [value]="food.value">
+                                                                                                                                            {{food.name}}
+                                                                                                                                        </mat-option>
+                                                                                                                                </mat-select>
+                                                                                                                        </mat-form-field>                                                    
+                                                                                                                </div>
+                                                                                                        <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>
+                                                                                                      
+                                                                                        </mat-card-content>   
+                                                                        </td>
+                                                                </tr>
+                                                        </table>
+                                                        <button mat-button color="primary" >MORE</button>
+                                                        <button mat-button color="accent" >CUSTOMIZE</button>
+                                                        <button mat-button color="primary"  id="btn1">BUY</button>
+                                                        
+        
+                                </div>
+        
+                        </div>
+                </div>
+        
+</div>
+        
