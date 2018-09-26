@@ -11,9 +11,11 @@ import {CanvasWhiteboardModule} from 'ng2-canvas-whiteboard';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
     
   ],
   imports: [

@@ -65,7 +65,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {MatFormFieldModule} from '@angular/material';
 import { MatInputModule} from '@angular/material';
-import {MatFormFieldControl} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+
 
 
 
@@ -96,6 +98,9 @@ import { Shareproduct1Component } from './faq/shareproduct1/shareproduct1.compon
 import { Pro2dialogComponent } from './faq/pro2dialog/pro2dialog.component';
 import { Pro3dialogComponent } from './faq/pro3dialog/pro3dialog.component';
 import { ContactComponent } from './contact/contact.component';
+import { AddeddialogComponent } from './faq/addeddialog/addeddialog.component';
+import { SendfaqsuccessComponent } from './faq/sendfaqsuccess/sendfaqsuccess.component';
+import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsentsuccess.component';
 
 
 
@@ -134,6 +139,9 @@ import { ContactComponent } from './contact/contact.component';
         MatSelectModule,
         MatProgressBarModule,
         MatMenuModule,
+        FormsModule,
+        ReactiveFormsModule
+
 
     ],
     entryComponents: [
@@ -146,15 +154,21 @@ import { ContactComponent } from './contact/contact.component';
       Pro2dialogComponent,
       Pro3dialogComponent,
       ContactComponent,
+      AddeddialogComponent,
+      SendfaqsuccessComponent
     ],
-    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent ,FAQComponent,
+    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent , FAQComponent,
       MyFavouritesComponent,
       DialogComponent,
       Pro1dialogComponent,
       Shareproduct1Component,
       Pro2dialogComponent,
       Pro3dialogComponent,
-      ContactComponent],
+      ContactComponent,
+      AddeddialogComponent,
+      SendfaqsuccessComponent,
+      ContactsentsuccessComponent,
+      ],
     providers: [
         {
             provide: PERFECT_SCROLLBAR_CONFIG,

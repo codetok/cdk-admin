@@ -7,6 +7,9 @@ import {Pro3dialogComponent} from '../auth/faq/pro3dialog/pro3dialog.component';
 
 import {Shareproduct1Component} from '../auth/faq/shareproduct1/shareproduct1.component';
 import {CHECKBOX_HELPERS} from '../material-widgets/checkbox/helpers.data';
+import {GateExampleComponent} from '../auth/gate-example/gate-example.component';
+import { MatSnackBar } from '@angular/material';
+
 
 @Component({
     selector: 'app-dashboard-crm',
@@ -15,6 +18,10 @@ import {CHECKBOX_HELPERS} from '../material-widgets/checkbox/helpers.data';
 })
 
 export class DashboardCrmComponent implements OnInit {
+
+
+
+
 
 
   dialogResult = '';
@@ -87,9 +94,18 @@ export class DashboardCrmComponent implements OnInit {
 
     ngOnInit() {
       this.imagesUrl = [
-        '../../assets/images/slideshows/gate-sale-by-gates-and-fences-uk.png',
+
+        '../../assets/images/slideshows/4-tall-vinyl-scalloped-baluster-fence-and-gate31.jpg',
+        '../../assets/images/slideshows/garden-arbor-with-fence-wood-gate-pergola-like-the-entrance-home-fences-diy-deluxe.jpg',
+        '../../assets/images/slideshows/decorative-metal-garden-gates-decorative-garden-gates-metal-gate-and-entry-wood-fence-for-sale-decorative-garden-gates-decorative-metal-garden-gates-for-sale.jpg',
+        '../../assets/images/slideshows/iron-work-fence-decorative-custom-ironwork-wrought-iron-fence-design-for-sale-for-garden-decor-ironwork-fences-gates.jpg',
+        '../../assets/images/slideshows/side-yard-gates-custom-iron-fences-gates-n-ave-phoenix-phone-number-yelp-side-yard-gates-phoenix.jpg',
 
       ];
     }
 
-}
+
+};
+
+
+
