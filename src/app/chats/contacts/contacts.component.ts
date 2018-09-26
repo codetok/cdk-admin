@@ -10,7 +10,7 @@ export class ContactsComponent {
   @Input() chats;
   @Output() onActiveChat = new EventEmitter();
 
-  avatar: string = '../assets/user-image.jpg';
+  avatar: string = '../assets/images/avatars/noavatar.png';
 
   constructor() {
   }

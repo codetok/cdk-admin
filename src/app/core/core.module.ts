@@ -42,7 +42,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         SearchBarComponent,
         FullscreenComponent,
         SidebarComponent,
-        UserMenuComponent
+        UserMenuComponent,
     ],
 
     imports: [
