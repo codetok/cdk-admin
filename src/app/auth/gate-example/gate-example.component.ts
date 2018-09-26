@@ -11,6 +11,7 @@ import {
 import { fromEvent } from 'rxjs';
 import { pairwise, switchMap, takeUntil } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-gate-example',
@@ -22,8 +23,8 @@ export class GateExampleComponent implements OnInit,AfterViewInit, OnDestroy{
   clickedOnce:boolean=false;
   message = 'Added to the cart!';
   action = 'OK';
-  @Input() width = 500;
-  @Input() height = 500;
+  @Input() width = 550;
+  @Input() height = 200;
   @ViewChild('canvas') canvas: ElementRef;
   cx: CanvasRenderingContext2D;
   drawingSubscription: Subscription;
@@ -172,6 +173,16 @@ window.location.href=image;
       duration: 2000,
     });
     this.clickedOnce=true;
+  }
+
+  popUp()
+  {
+    swal({
+      //position: 'top-end',
+      icon: "success",
+      title: 'Your customization successfully Sent alone with the Product!. We will contact you soon',
+      closeOnClickOutside: true,
+    })
   }
 
 }

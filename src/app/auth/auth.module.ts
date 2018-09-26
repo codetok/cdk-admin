@@ -35,6 +35,9 @@ import { ModernGardenComponent } from './modern-garden/modern-garden.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SliderModule } from 'angular-image-slider';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+//import { MatFormFieldModule } from '@angular/material';
+//import { MatInputModule } from '@angular/material';
 
 import { MatProgressSpinnerModule,
     MatRadioModule,
@@ -46,6 +49,8 @@ import { MatProgressSpinnerModule,
     MatSelectModule,
     MatProgressBarModule,
     MatMenuModule,
+    
+    
 
 
 
@@ -79,7 +84,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
-import {MatDividerModule} from '@angular/material/divider';
+//import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -102,7 +107,9 @@ import { AddeddialogComponent } from './faq/addeddialog/addeddialog.component';
 import { SendfaqsuccessComponent } from './faq/sendfaqsuccess/sendfaqsuccess.component';
 import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsentsuccess.component';
 
-
+import {MatDividerModule} from '@angular/material/divider';
+import { GatePicComponent } from './gate-pic/gate-pic.component';
+import { MoreDetailsComponent } from './more-details/more-details.component';
 
 
 
@@ -128,6 +135,14 @@ import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsen
         SlideshowModule,
         SliderModule,
         CanvasWhiteboardModule,
+        MatDividerModule,
+        ReactiveFormsModule, 
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        //MatDialog, 
+        //MatDialogRef,
         HttpClientModule,
         MatDividerModule,
         MatChipsModule,
@@ -154,10 +169,17 @@ import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsen
       Pro2dialogComponent,
       Pro3dialogComponent,
       ContactComponent,
+
       AddeddialogComponent,
       SendfaqsuccessComponent
     ],
     declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent , FAQComponent,
+
+      GatePicComponent,
+    MoreDetailsComponent,
+    ],
+    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent ,FAQComponent,GatePicComponent, MoreDetailsComponent,
+
       MyFavouritesComponent,
       DialogComponent,
       Pro1dialogComponent,
@@ -168,6 +190,8 @@ import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsen
       AddeddialogComponent,
       SendfaqsuccessComponent,
       ContactsentsuccessComponent,
+      GatePicComponent,
+      MoreDetailsComponent,
       ],
     providers: [
         {
