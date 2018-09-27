@@ -108,8 +108,6 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
 
 
 
-
-
 @NgModule ({
     imports: [
         CommonModule,
@@ -149,6 +147,7 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
         MatSelectModule,
         MatProgressBarModule,
         MatMenuModule,
+        MatIconModule,
 
     ],
     entryComponents: [
