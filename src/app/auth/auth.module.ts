@@ -35,7 +35,7 @@ import { ModernGardenComponent } from './modern-garden/modern-garden.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SliderModule } from 'angular-image-slider';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+//import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 //import { MatFormFieldModule } from '@angular/material';
 //import { MatInputModule } from '@angular/material';
 
@@ -70,7 +70,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {MatFormFieldModule} from '@angular/material';
 import { MatInputModule} from '@angular/material';
-import {MatFormFieldControl} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+
 
 
 
@@ -101,6 +103,9 @@ import { Shareproduct1Component } from './faq/shareproduct1/shareproduct1.compon
 import { Pro2dialogComponent } from './faq/pro2dialog/pro2dialog.component';
 import { Pro3dialogComponent } from './faq/pro3dialog/pro3dialog.component';
 import { ContactComponent } from './contact/contact.component';
+import { AddeddialogComponent } from './faq/addeddialog/addeddialog.component';
+import { SendfaqsuccessComponent } from './faq/sendfaqsuccess/sendfaqsuccess.component';
+import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsentsuccess.component';
 
 import {MatDividerModule} from '@angular/material/divider';
 import { GatePicComponent } from './gate-pic/gate-pic.component';
@@ -148,6 +153,9 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
         MatProgressBarModule,
         MatMenuModule,
         MatIconModule,
+        FormsModule,
+        ReactiveFormsModule
+
 
     ],
     entryComponents: [
@@ -160,17 +168,30 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
       Pro2dialogComponent,
       Pro3dialogComponent,
       ContactComponent,
-      GatePicComponent,
-    MoreDetailsComponent,
+
+      AddeddialogComponent,
+      SendfaqsuccessComponent
     ],
+   // declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent , FAQComponent,
+
+   //   GatePicComponent,
+   // MoreDetailsComponent,
+  //  ],
     declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent ,FAQComponent,GatePicComponent, MoreDetailsComponent,
+
       MyFavouritesComponent,
       DialogComponent,
       Pro1dialogComponent,
       Shareproduct1Component,
       Pro2dialogComponent,
       Pro3dialogComponent,
-      ContactComponent],
+      ContactComponent,
+      AddeddialogComponent,
+      SendfaqsuccessComponent,
+      ContactsentsuccessComponent,
+      GatePicComponent,
+      MoreDetailsComponent,
+      ],
     providers: [
         {
             provide: PERFECT_SCROLLBAR_CONFIG,

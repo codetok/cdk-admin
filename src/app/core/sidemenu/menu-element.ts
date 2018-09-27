@@ -123,6 +123,7 @@ export const menus = [
     'link':'/auth/contactUs',
     'open':true,
   },
+
     {
         'name': 'Material Widget',
         'icon': 'widgets',
