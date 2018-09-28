@@ -13,6 +13,7 @@ import {AddeddialogComponent} from './addeddialog/addeddialog.component';
 })
 
 export class FAQComponent implements OnInit {
+  panelOpenState = false;
   dialogResult = '';
   private show1: boolean;
   private show2: boolean;

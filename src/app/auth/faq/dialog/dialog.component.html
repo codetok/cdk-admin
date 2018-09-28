@@ -1,5 +1,5 @@
 <div>
-  <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+  <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" align="center" >
     <h2 mat-dialog-title><p> Let's Help!
 
       <mat-icon aria-label="Example icon-button with a heart icon" color="primary">help</mat-icon></p></h2>
@@ -9,7 +9,7 @@
 
 
 
-  <mat-dialog-content>
+  <mat-dialog-content align="center">
     <p>If you couldn't find an answer for your question tell us what issues or questions you looking for!We like to help you and get back soon as possible.</p>
 
     <br>
@@ -18,10 +18,10 @@
              placeholder="Name"
              formControlName="description">
     </mat-form-field>
+    <br>
 
 
-
-      <mat-form-field class="example-full-width">
+    <mat-form-field >
         <input matInput placeholder="Email" [formControl]="emailFormControl"
                [errorStateMatcher]="matcher">
 
@@ -32,7 +32,7 @@
           Email is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-
+    <br>
     <mat-form-field>
       <mat-select placeholder="Issue category" [formControl]="animalControl" required>
         <mat-option>--</mat-option>
@@ -43,6 +43,7 @@
       <mat-error *ngIf="animalControl.hasError('required')">Please choose an Issue Category</mat-error>
 
     </mat-form-field>
+    <br>
     <mat-form-field>
       <textarea matInput placeholder="Question"></textarea>
     </mat-form-field>
@@ -56,7 +57,7 @@
   </mat-dialog-content>
 
     <hr>
-  <mat-dialog-actions>
+  <mat-dialog-actions align="center">
     <button mat-raised-button color="primary"  (click)="openDialog()" >Confirm</button>
 
   </mat-dialog-actions>

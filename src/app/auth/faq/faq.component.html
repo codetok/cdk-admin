@@ -17,96 +17,90 @@
     </mat-toolbar>
   </div>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>What is the deal with this store?</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>What is the deal with this store?</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show1">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
         This is the official Cards Against Humanity store.We made it ourselves so that we could cut all of the middle men between us and you.
       </p>
 
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="showDetails1()"><b>More</b> </button>
-      <button mat-button color="warn" (click)="hide1()"><b> Hide</b></button>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-
-
-    </mat-card-actions>
-  </mat-card>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>Is it safe to put my creditcard number into this website?</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>Is it safe to put my creditcard number into this website?</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show2">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
-       Probably,We don't store any of your credit card information(that's handled by our payment processor Stripe,the best in the business)and we will never share your personal information with anyone else.
+        Probably,We don't store any of your credit card information(that's handled by our payment processor Stripe,the best in the business)and we will never share your personal information with anyone else.
       </p>
 
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary"(click)="showDetails2()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide2()"><b> Hide</b></button>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-    </mat-card-actions>
-  </mat-card>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>What is your privacy policy?</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>What is your privacy policy?</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show3">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
         We will never share your information with any third party.Who is a third party?Well the first party is us,and the second party is you.So a third party is anyone other than us and you.And,you know,they probably have enough already.
       </p>
 
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary"(click)="showDetails3()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide3()"><b> Hide</b></button>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-    </mat-card-actions>
-  </mat-card>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>How to make the order?</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>How to make the order?</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show4">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
         This Modern Garden gate is with a Island Thyme is Custom made according to the wishes of a home owner. A Metal Security Driveway Gates Don't have to take away from the beauty of your main home Entrance we can Custom make the
-        gate to compliment you home Entry.
-      </p>
+        gate to compliment you home Entry.      </p>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
+    </mat-expansion-panel>
+  </mat-accordion>
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="showDetails4()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide4()"><b> Hide</b></button>
 
-    </mat-card-actions>
-  </mat-card>
   <hr/>
 
   <div fxLayout="row" >
@@ -115,95 +109,91 @@
     </mat-toolbar>
   </div>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>My order never received?</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>My order never received?</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show5">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
-       Check your order confirmation email for the tracking number.If that doesn't work,send us an email,tell us what you ordered and your order number,and we'll help you out.
+        Check your order confirmation email for the tracking number.If that doesn't work,send us an email,tell us what you ordered and your order number,and we'll help you out.
       </p>
 
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary"  (click)="showDetails5()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide5()"><b> Hide</b></button>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-    </mat-card-actions>
-  </mat-card>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>My order arrived incomplete or damaged</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>My order arrived incomplete or damaged</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show6">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
         Take a deep breath.Contemplate the transience of all things.In your mind's eye,envision the faces of everyone you love and everything you hold dear,and let them go.Then send us an email.Tell us what you ordered and your order number,and we'll help out.
       </p>
 
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary"  (click)="showDetails6()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide6()"><b> Hide</b></button>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-    </mat-card-actions>
-  </mat-card>
+
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>I would like to return my order</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>I would like to return my order</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show7">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
-        Send us an email at LAOrnamental@Aol.com
-      </p>
+        Send us an email at LAOrnamental@Aol.com      </p>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
+    </mat-expansion-panel>
+  </mat-accordion>
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="showDetails7()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide7()"><b> Hide</b></button>
-
-    </mat-card-actions>
-  </mat-card>
   <hr/>
-  <mat-card>
-    <mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>It's 2018 and somehow i screwed up address form</b>
+        </mat-panel-title>
 
-      <mat-card-title><b>It's 2018 and somehow i screwed up address form</b></mat-card-title>
-
-    </mat-card-header>
-
-    <mat-card-content *ngIf="show8">
+      </mat-expansion-panel-header>
       <p class="mat-body-1" align="justify">
-        How is that even possible?Send us an email at LAOrnamental@Aol.com
-      </p>
+        How is that even possible?Send us an email at LAOrnamental@Aol.com   </p>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
 
 
-
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="showDetails8()"><b>More</b></button>
-      <button mat-button color="warn" (click)="hide8()"><b> Hide</b></button>
+    </mat-expansion-panel>
+  </mat-accordion>
 
 
-    </mat-card-actions>
-  </mat-card>
   <hr/>
+
   <mat-card>
     <mat-card-header>
 

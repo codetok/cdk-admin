@@ -38,11 +38,11 @@ export class DialogComponent implements OnInit {
 
   animalControl = new FormControl('', [Validators.required]);
   animals: Animal[] = [
-    {name: 'General' },
+    {name: 'General'},
     {name: 'Shipping'},
     {name: 'Orders'},
-    {name: 'Returns', },
-    {name: 'Other', },
+    {name: 'Returns',},
+    {name: 'Other',},
   ];
 
   emailFormControl = new FormControl('', [
@@ -53,8 +53,8 @@ export class DialogComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
 
-
-  constructor(public  thisDialogRef: MatDialogRef <DialogComponent>, @Inject( MAT_DIALOG_DATA)public data: string, public dialog: MatDialog) {}
+  constructor(public  thisDialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data: string, public dialog: MatDialog) {
+  }
 
   ngOnInit() {
   }
@@ -63,14 +63,13 @@ export class DialogComponent implements OnInit {
     this.thisDialogRef.close('Confirm');
 
   }
+
   onCloseCancel() {
-  this.thisDialogRef.close('Cancel');
+    this.thisDialogRef.close('Cancel');
 
 
+  }
 
-
-
-}
   openDialog() {
     const dialogRef = this.dialog.open(SendfaqsuccessComponent, {
       width: '600px',
@@ -80,4 +79,5 @@ export class DialogComponent implements OnInit {
       console.log(`Dialog closed:${result}`);
       this.dialogResult = result;
     })
+  }
 }
