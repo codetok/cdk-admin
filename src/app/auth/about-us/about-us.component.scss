@@ -1,0 +1,57 @@
+@import '~@angular/material/_theming';
+
+$navigation-font-size-base: 14px !default;
+$navigation-border-radius: 2px !default;
+
+mat-card {
+  padding: 10px;
+  margin: 10px;
+  .mat-card-avatar {
+    width: 100px;
+    height:100px;
+  }
+}
+
+.nav-title {
+  @include mat-truncate-line();
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav-desc {
+  height: 15px;
+  overflow: hidden;
+}
+.nav-item {
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: default;
+
+  &:hover {
+    transform: translate(0, -8px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .16)
+  }
+}
+.about-header {
+  //background-color: #327ebd;
+  color: white;
+  padding: 0 5px;
+}
+.about-container {
+  padding: 5px 15px 15px 15px;
+}
+.about-component-holder {
+  border: 1px solid #327ebd;
+  background-color: white;
+
+  h4 {
+    color: #327ebd;
+    margin: 14px 0;
+  }
+
+  mat-divider {
+    margin-bottom: 10px;
+  }
+}
+

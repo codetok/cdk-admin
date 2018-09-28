@@ -23,6 +23,7 @@ import { MatProgressSpinnerModule,
          MatSelectModule,
          MatProgressBarModule,
          MatMenuModule,
+         
 
  } from '@angular/material';
 
@@ -90,7 +91,8 @@ export function highlightJsFactory(): any {
       provide: HIGHLIGHT_JS,
       useFactory: highlightJsFactory
     }),
-    MaterialWidgetsRouterModule
+    MaterialWidgetsRouterModule,
+    
   ],
   declarations: [
     ButtonsComponent,

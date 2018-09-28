@@ -1,10 +1,27 @@
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
 import { DashboardCrmComponent } from '../dashboard-crm/dashboard-crm.component';
+import {AboutUsComponent} from './about-us/about-us.component';
+import {ContactComponent} from './contact/contact.component';
+import {FAQComponent} from './faq/faq.component';
+import {MyFavouritesComponent} from './my-favourites/my-favourites.component';
+import {ModernGardenComponent} from './modern-garden/modern-garden.component';
+import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
+
+//import {CardsComponent} from './cards/cards.component';
 
 export const appRoutes: Routes = [{
     path: '', component: AuthComponent, children: [
         { path: 'dashboard', component: DashboardCrmComponent },
+        {path: 'contactUs', component : ContactComponent},
+        {path: 'aboutUs', component : AboutUsComponent},
+        {path: 'faq', component : FAQComponent},
+        {path: 'my-favorites', component : MyFavouritesComponent},
+
+
+
+        {path: 'modernGarden', component: ModernGardenComponent},
+        {path: 'shoppingCart', component: ShoppingCartComponent},
         { path: 'material-widgets', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule' },
         { path: 'tables', loadChildren: '../tables/tables.module#TablesModule' },
         { path: 'maps', loadChildren: '../maps/maps.module#MapsModule' },
