@@ -7,6 +7,7 @@ import {FAQComponent} from './faq/faq.component';
 import {MyFavouritesComponent} from './my-favourites/my-favourites.component';
 import {ModernGardenComponent} from './modern-garden/modern-garden.component';
 import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
+import {PayComponent} from './pay/pay.component';
 
 //import {CardsComponent} from './cards/cards.component';
 
@@ -18,6 +19,7 @@ export const appRoutes: Routes = [{
         {path: 'faq', component : FAQComponent},
         {path: 'my-favorites', component : MyFavouritesComponent},
 
+        {path: 'pay', component : PayComponent},
 
 
         {path: 'modernGarden', component: ModernGardenComponent},

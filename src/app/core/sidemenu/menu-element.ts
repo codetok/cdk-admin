@@ -92,19 +92,21 @@ export const menus = [
             },
         ]
     },
+
     {
         'name':'Shopping Cart',
         'icon':'add_shopping_cart',
         'link':'/auth/shoppingCart',
         'open':true
     },
+    {
+        'name':'Payments',
+        'icon':'add_shopping_cart',
+        'link':'/auth/pay',
+        'open':true
+    },
 
-  {
-    'name':'My Favourites',
-    'icon':'favorite',
-    'link':'/auth/my-favorites',
-    'open':true,
-  },
+
   {
     'name':'FAQ',
     'icon':'help',

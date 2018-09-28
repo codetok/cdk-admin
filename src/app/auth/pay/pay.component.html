@@ -1,0 +1,106 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="10px"  fxFlexFill style="padding: 20px;">
+
+	<div  class="payment-back" >
+		<mat-card class="card-blocks">
+			<div class="label-header">
+				<label class="block-header">Cart Details</label>
+			</div>
+			<div class="label-deatils">
+        <table>
+          <tr>
+            <td class="tdtd">No of Items</td>
+            <td>: 05</td>
+          </tr>
+          <tr>
+              <td class="tdtd">Gross Total</td>
+              <td>: $450</td>
+            </tr>
+            <tr>
+                <td class="tdtd">Discount</td>
+                <td>: $50</td>
+              </tr>
+              <tr>
+                  <td class="tdtd">Net Total</td>
+                  <td>: $400</td>
+                </tr>
+              </table>
+			</div>
+		</mat-card>
+		<mat-card class="card-blocks">
+			<div class="label-header">
+				<label class="block-header">Personal Details</label>
+			</div>
+            <div class="label-details">
+
+				<div class="example-container">
+					<label class="block-details-key">Full Name</label><br/>
+					<mat-form-field>
+						<input matInput placeholder="Ravindu Landekumbura" readonly>
+					</mat-form-field>
+					<label class="block-details-key">Address</label><br/>
+					<mat-form-field>
+              <input matInput placeholder="No 55, Malabe road, kaduwela" readonly>						
+					</mat-form-field>
+					<label class="block-details-key">City</label><br/>
+					<mat-form-field>
+              <input matInput placeholder="Kaduwela" readonly>						
+          </mat-form-field>
+					<label class="block-details-key">Country</label><br/>
+          <mat-form-field>
+              <input matInput placeholder="Sri Lanka" readonly>						
+          </mat-form-field>
+          <label class="block-details-key">Telephone</label><br/>
+          <mat-form-field>
+              <input matInput placeholder="0766735465" readonly>						
+          </mat-form-field>
+          <label class="block-details-key">Email</label><br/>
+          <mat-form-field>
+              <input matInput placeholder="Ravindulandekumbura@gmail.com" readonly>						
+          </mat-form-field> 
+          <mat-checkbox formControlName="hideRequired">Shipping address is same as my address</mat-checkbox> 
+          <label class="block-details-key">Shipping Address</label><br/>
+          <mat-form-field>
+              <input matInput placeholder= " " >						
+          </mat-form-field>        
+				</div>
+			</div>
+		</mat-card>
+		<mat-card class="card-blocks">
+			<div class="label-header">
+				<label class="block-header">Payment Details</label>
+			</div>
+			<div class="label-details">
+
+				<div class="example-container">
+					<label class="block-details-key">Select Payment Method</label><br/>
+					<mat-form-field>
+              <mat-select placeholder="Select">
+                <mat-option value="option">Master Card</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <label class="block-details-key">Card Number</label><br/>
+            <mat-form-field>
+              <input matInput placeholder="" >
+            </mat-form-field>
+            <label class="block-details-key">Verification Code</label><br/>
+            <mat-form-field>
+                <input matInput placeholder="" >						
+            </mat-form-field>
+            <label class="block-details-key">Name on Card</label><br/>
+            <mat-form-field>
+                <input matInput placeholder="">						
+            </mat-form-field>
+            <label class="block-details-key">Expiration Date</label><br/>
+            <mat-form-field>
+                <input matInput placeholder="">						
+            </mat-form-field>
+			</div>
+    </div>
+    </mat-card>
+    <div class="button-containers">
+        <button id="back">Back to Cart</button>
+        <button id="confirm">Confirm Order</button>
+    </div>
+	</div>
+</div>
+
