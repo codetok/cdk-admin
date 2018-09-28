@@ -1,57 +1,82 @@
+<div style="align-self: center" class="main">
 
 
-<div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="10px"  fxFlexFill style="padding: 20px;">
+  <div class="two" text-align="right" style="align-self: center">
+    <div class="register">
+      <h3>Create your account</h3>
+      <form id="reg-form1">
+        <div>
+          <label for="username1">Username</label>
+          <input type="text" id="username1"   spellcheck="false" placeholder="Ravindu"  pattern="[a-z0-9A-Z]"class="form-control"
+          name="username1" ngModel #username="ngModel" required/>
 
-	<div fxLayout="column"  style="background-color: white; padding: 10px;" fxLayoutAlign="space-between stretch" fxLayoutGap="10px"  fxFlexFill>	
-		<div >	
-			<mat-toolbar >
-					<h3 class="mat-heading"> Move items between multi list sortable containers	</h3>
-			</mat-toolbar>
-		</div>
-		<div fxFlexFill>	
-			<div fxLayout="row" fxLayoutGap="10px" fxLayout.lt-sm="column">
-				<div class=" mat-elevation-z4" fxFlex="35" >	
-					<mat-toolbar>
-							<h5 class="mat-title">Tasks</h5>
-					</mat-toolbar>
-					<div  dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="tasks">
-						<mat-nav-list>
-							<mat-list-item  *ngFor="let item of tasks; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
-									
-								{{ item }}
-									
-							</mat-list-item>
-						</mat-nav-list>
-					</div>
+          <div *ngIf="emailref.errors && (username.touched||username.dirty)" class="alert alert-danger">
+            <div id="usernameerror" name="usernameerror" [hidden]="!username.errors?.pattern" style="color: crimson">
+              <label class="err"></label> Enter Valid user name
+            </div>
+          </div>
 
-				</div>
-				<div class=" mat-elevation-z4" fxFlex="35" >	
-					<mat-toolbar>
-						<h5 class="mat-title">Developers</h5>
-					</mat-toolbar>
+        </div>
+        <div>
+          <label for="email1">Email</label>
+          <input type="text" id="email1" spellcheck="false" class="form-control" placeholder="ravindu@xyz.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+[a-z]{2,3}$" name="email"
+          ngModel #emailref="ngModel" required/>
+          <div *ngIf="emailref.errors && (emailref.touched||emailref.dirty)" class="alert alert-danger">
+            <div id="emailerror" name="emailerror"[hidden]="!emailref.errors?.pattern" style="color: crimson">
+             <label class="err"></label> Enter Valid Email address
+            </div>
+          </div>
+        </div>
 
-					<div dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="developers" style="height: 100%">
-						<mat-list>
-							<mat-list-item *ngFor="let item1 of developers; let x = index" class="list-group-item" dnd-sortable [sortableIndex]="x">
-								{{item1}}			
-							</mat-list-item>
-						</mat-list>
-					</div>
-				</div>
-				<div class=" mat-elevation-z4" fxFlex="35" >
-					<mat-toolbar >
-						<h5 class="mat-title">Testers</h5>
-					</mat-toolbar>
+        <div>
+          <label for="password1" pattern="[a-zA-Z0-9._@#$%&]" [attr.required]="true">Password</label>
+          <input type="password" id="password1" required/>
+        </div>
+        <div>
+          <label for="password-again1">Confirm Password</label>
+          <input type="password" id="password-again1"  required/>
+        </div>
 
-					<div dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="testers" style="height: 100%">
-						<mat-list>
-							<mat-list-item *ngFor="let item2 of testers; let y = index" class="list-group-item" dnd-sortable [sortableIndex]="y">
-								{{item2}}			
-							</mat-list-item>
-						</mat-list>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="sep">
+        <span>
+        <div>
+          <div class="sep">
+            <span class="orr">Contacts</span>
+          </div>
+
+          <label for="telephone">Telephone</label>
+          <input type="text" id="Telephone" spellcheck="false" placeholder="Telephone" required/>
+        </div>
+        <div>
+        <label for="address">Address</label>
+        <input type="text" id="Address" spellcheck="false" placeholder="Address" required/>
+
+        </div>
+
+        </span>
+        </div>
+        <div>
+          <label></label>
+          <input type="submit" value="Create Account" id="create-account1" class="button" align="center"/>
+        </div>
+      </form>
+      <div class="sep">
+        <span class="or">OR</span>
+      </div>
+      <div class="connect">
+        <div class="social-buttons facebook">
+          <a href="#">
+            <span>Facebook</span>
+          </a>
+        </div>
+        <div class="social-buttons twitter">
+          <a href="#">
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+

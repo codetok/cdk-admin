@@ -14,7 +14,8 @@ export class Pro1dialogComponent implements OnInit {
   dialogResult = '';
 
 
-  constructor(public  thisDialogRef: MatDialogRef <Pro1dialogComponent>, @Inject( MAT_DIALOG_DATA)public data: string, public dialog: MatDialog) {}
+  constructor(public  thisDialogRef: MatDialogRef<Pro1dialogComponent>, @Inject(MAT_DIALOG_DATA) public data: string, public dialog: MatDialog) {
+  }
 
 
   ngOnInit() {
@@ -23,10 +24,12 @@ export class Pro1dialogComponent implements OnInit {
   onCloseConfirm() {
     this.thisDialogRef.close('Confirm');
   }
+
   onCloseCancel() {
     this.thisDialogRef.close('Cancel');
 
   }
+
   openDialog() {
     const dialogRef = this.dialog.open(AddeddialogComponent, {
       width: '600px',
@@ -37,4 +40,5 @@ export class Pro1dialogComponent implements OnInit {
       this.dialogResult = result;
     })
 
+  }
 }
