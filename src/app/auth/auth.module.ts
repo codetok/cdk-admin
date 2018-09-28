@@ -111,6 +111,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { GatePicComponent } from './gate-pic/gate-pic.component';
 import { MoreDetailsComponent } from './more-details/more-details.component';
 
+import{MatExpansionModule} from '@angular/material';
 
 
 @NgModule ({
@@ -154,7 +155,8 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
         MatMenuModule,
         MatIconModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatExpansionModule
 
 
     ],
@@ -172,11 +174,9 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
       AddeddialogComponent,
       SendfaqsuccessComponent
     ],
-   // declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent , FAQComponent,
+   
 
-   //   GatePicComponent,
-   // MoreDetailsComponent,
-  //  ],
+
     declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent ,FAQComponent,GatePicComponent, MoreDetailsComponent,
 
       MyFavouritesComponent,
@@ -191,6 +191,9 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
       ContactsentsuccessComponent,
       GatePicComponent,
       MoreDetailsComponent,
+      GatePicComponent,
+      MoreDetailsComponent,
+
       ],
     providers: [
         {

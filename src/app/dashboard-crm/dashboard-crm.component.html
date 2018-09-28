@@ -1,13 +1,42 @@
-<mat-card>
 
-  <angular-image-slider [images]="imagesUrl" class="bc"></angular-image-slider>
-</mat-card>
+<div class="service-header" fxLayout="column" fxLayoutAlign="center stretch" >
+
+  <div fxFlex class="content" fxLayout.lt-sm="column" style="padding: 20px;
+}" fxLayout="row" fxLayoutAlign="center stretch">
+
+    <div fxFlex="35"  fxFlex.lt-sm="100" fxLayout="row" style="background-color: #45aae3; padding: 20px;"  fxLayoutAlign="center stretch" >
+      <div>
+        <h3 class="mat-display-1"><i>"Really Make an Entrance"</i></h3>
+        <mat-divider></mat-divider>
+        <br>
+
+        <p class="mat-body-2">
+          Finest hand selected materials expertly crafted by our experienced team of joiners anf fabricators to create truly stunning and durable gates and fences.Whether you're looking for wooden or metal gates,We have a design to compliment your home!
+        </p>
+      </div>
+
+    </div>
+
+    <div fxFlex="65" fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
+      <!--<img style="width: 400px;" src="../../assets/images/bg/cdk.png">-->
+
+      <angular-image-slider [images]="imagesUrl" class="bc"></angular-image-slider>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
 
 
 <div fxLayout="column" >
 
 
-  <div fxLayout="row" >
+  <div fxLayout="row">
     <mat-toolbar color="primary">
       Featured products
     </mat-toolbar>
@@ -119,6 +148,8 @@
       <div>
         <h3 class="mat-display-1">Our Services</h3>
         <mat-divider></mat-divider>
+        <br>
+        <br>
         <p class="mat-body-2">
           Great Range Of Designs,Professionally Installed,Stylish and Affordable,Great Customer Service,Family owned business,Environmentally Friendly Aluminium
           YOUR ONE - STOP SOURCE Design, plan your product!
@@ -130,31 +161,36 @@
     <div fxFlex="65" fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
       <img style="width: 400px;" src="../../assets/images/bg/cdk.png">
 
+
+
+
     </div>
 
   </div>
 </div>
 
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Follow Us!</b>
-</span>
+<mat-toolbar color="primary" align="center">
+  <mat-toolbar-row align="center">
+    <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" align="center">
+      <b>Follow Us!</b>
+    </div>
+
   </mat-toolbar-row>
 
   <mat-toolbar-row >
 
-    <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+    <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" align="center">
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button mat-icon-button color="primary"  onclick="window.location.href='https://www.facebook.com/'">
+      <button mat-icon-button color="primary"  onclick="window.location.href='https://www.facebook.com/'">
 
           <img class="logo-image" src="../../assets/images/slideshows/square-facebook-512.png" style="width:40px;height:40px;">
 
-        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button mat-icon-button color="primary" onclick="window.location.href='https://twitter.com/'">
 
         <img class="logo-image" src="../../assets/images/slideshows/square-twitter-512.png" style="width:40px;height:40px;">
 
-      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button mat-icon-button color="primary" onclick="window.location.href='https://www.instagram.com/?hl=en'">
 
         <img class="logo-image" src="../../assets/images/slideshows/instagram-square-flat-3-512.png" style="width:40px;height:40px;">
