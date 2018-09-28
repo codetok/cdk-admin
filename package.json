@@ -50,6 +50,7 @@
     "ng2-semantic-ui": "^0.9.7",
     "ngx-perfect-scrollbar": "^5.3.5",
     "ngx-quill": "^2.2.0",
+    "ngx-select-dropdown": "^0.7.2",
     "rxjs": "^6.2.1",
     "rxjs-compat": "^6.2.1",
     "screenfull": "^3.3.2",

@@ -116,9 +116,18 @@
                                                         </td>
                                                 </tr>
                                         </table>
-                                        <button mat-button color="primary" (click)="showDetails()">MORE</button>
-                                        <button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">CUSTOMIZE</button>
-                                        <button mat-button color="primary" (click)="addToCart($event)" [disabled]="clickedOnce" id="btn1">BUY</button>
+                                       <!-- <button mat-button color="primary" (click)="showDetails()">MORE</button>-->
+                                        <button mat-icon-button color="primary">
+                                                <mat-icon aria-label="Example icon-button with a heart icon"  (click)="showDetails()">visibility</mat-icon>
+                                        </button>
+                                        <button mat-icon-button color="primary">
+                                                        <mat-icon aria-label="Example icon-button with a heart icon"  (click)="!checkLogedIn() ? buy() : openDialog()">edit</mat-icon>
+                                        </button>
+                                        <button mat-icon-button color="primary">
+                                                        <mat-icon aria-label="Example icon-button with a heart icon"  (click)="addToCart($event)">shopping_cart</mat-icon>
+                                        </button>
+                                        <!--<button mat-button color="accent" (click)="!checkLogedIn() ? buy() : openDialog()">CUSTOMIZE</button>-->
+                                        <!--<button mat-button color="primary" (click)="addToCart($event)" [disabled]="clickedOnce" id="btn1">BUY</button>-->
                                         
                                 </div>
                                 <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc2"  >
@@ -148,9 +157,15 @@
                                                                         </td>
                                                                 </tr>
                                                         </table>
-                                                        <button mat-button color="primary" >MORE</button>
-                                                        <button mat-button color="accent" >CUSTOMIZE</button>
-                                                        <button mat-button color="primary" >BUY</button>
+                                                        <button mat-icon-button color="primary">
+                                                                        <mat-icon aria-label="Example icon-button with a heart icon"  (click)="showDetails()">visibility</mat-icon>
+                                                                </button>
+                                                                <button mat-icon-button color="primary">
+                                                                                <mat-icon aria-label="Example icon-button with a heart icon"  (click)="!checkLogedIn() ? buy() : openDialog()">edit</mat-icon>
+                                                                </button>
+                                                                <button mat-icon-button color="primary">
+                                                                                <mat-icon aria-label="Example icon-button with a heart icon"  (click)="addToCart($event)">shopping_cart</mat-icon>
+                                                                </button>
                                                         
                                 </div>
                                 <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc"  >
@@ -179,9 +194,15 @@
                                                                         </td>
                                                                 </tr>
                                                         </table>
-                                                        <button mat-button color="primary" >MORE</button>
-                                                        <button mat-button color="accent" >CUSTOMIZE</button>
-                                                        <button mat-button color="primary"  id="btn1">BUY</button>
+                                                        <button mat-icon-button color="primary">
+                                                                        <mat-icon aria-label="Example icon-button with a heart icon"  (click)="showDetails()">visibility</mat-icon>
+                                                                </button>
+                                                                <button mat-icon-button color="primary">
+                                                                                <mat-icon aria-label="Example icon-button with a heart icon"  (click)="!checkLogedIn() ? buy() : openDialog()">edit</mat-icon>
+                                                                </button>
+                                                                <button mat-icon-button color="primary">
+                                                                                <mat-icon aria-label="Example icon-button with a heart icon"  (click)="addToCart($event)">shopping_cart</mat-icon>
+                                                                </button>
                                                         
         
                                 </div>

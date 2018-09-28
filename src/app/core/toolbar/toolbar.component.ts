@@ -13,13 +13,14 @@ export class ToolbarComponent implements OnInit {
 	@Input() sidebar;
 	@Input() drawer;
 	@Input() matDrawerShow;
-  items:Items[]
+	//items:Items[]
+	items= [ "archie" ,"jake" ,"richard","gates","modern garden gates" ];
 	searchOpen: boolean = false;
     toolbarHelpers = ToolbarHelpers;
   	constructor() { }
 
   	ngOnInit() {
-			this.items= [{ name: "archie" }, { name: "jake" }, { name: "richard" }];
+			
   	}
 		
 }

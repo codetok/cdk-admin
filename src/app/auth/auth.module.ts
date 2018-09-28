@@ -35,7 +35,7 @@ import { ModernGardenComponent } from './modern-garden/modern-garden.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SliderModule } from 'angular-image-slider';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+//import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 //import { MatFormFieldModule } from '@angular/material';
 //import { MatInputModule } from '@angular/material';
 
@@ -114,8 +114,6 @@ import { MoreDetailsComponent } from './more-details/more-details.component';
 import{MatExpansionModule} from '@angular/material';
 
 
-
-
 @NgModule ({
     imports: [
         CommonModule,
@@ -155,6 +153,7 @@ import{MatExpansionModule} from '@angular/material';
         MatSelectModule,
         MatProgressBarModule,
         MatMenuModule,
+        MatIconModule,
         FormsModule,
         ReactiveFormsModule,
         MatExpansionModule
@@ -175,12 +174,9 @@ import{MatExpansionModule} from '@angular/material';
       AddeddialogComponent,
       SendfaqsuccessComponent
     ],
-    declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent , FAQComponent,
+   
 
-      GatePicComponent,
-    MoreDetailsComponent,
 
-    ],
     declarations: [AuthComponent, AboutUsComponent, ModernGardenComponent, ShoppingCartComponent, GateExampleComponent ,FAQComponent,GatePicComponent, MoreDetailsComponent,
 
       MyFavouritesComponent,
@@ -193,6 +189,8 @@ import{MatExpansionModule} from '@angular/material';
       AddeddialogComponent,
       SendfaqsuccessComponent,
       ContactsentsuccessComponent,
+      GatePicComponent,
+      MoreDetailsComponent,
       GatePicComponent,
       MoreDetailsComponent,
 

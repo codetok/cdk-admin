@@ -26,8 +26,10 @@ import {
     MatSidenavModule,
     MatSliderModule,
     MatProgressBarModule,
+    MatSelectModule,
 } from '@angular/material';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
@@ -63,7 +65,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         MatSliderModule,
         MatProgressBarModule,
         Ng2SearchPipeModule,
-        FormsModule
+        FormsModule,
+        MatSelectModule,
     ],
 
 
