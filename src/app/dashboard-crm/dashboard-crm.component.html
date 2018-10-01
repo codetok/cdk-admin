@@ -1,37 +1,209 @@
-<div fxLayout="row" fxLayout="row wrap">
-    <div *ngFor="let dash of dashCard" fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-dashcard [dashData]="dash"></cdk-dashcard>
+
+<div class="service-header" fxLayout="column" fxLayoutAlign="center stretch" >
+
+  <div fxFlex class="content" fxLayout.lt-sm="column" style="padding: 20px;
+}" fxLayout="row" fxLayoutAlign="center stretch">
+
+    <div fxFlex="35"  fxFlex.lt-sm="100" fxLayout="row" style="background-color: #45aae3; padding: 20px;"  fxLayoutAlign="center stretch" >
+      <div>
+        <h3 class="mat-display-1"><i>"Really Make an Entrance"</i></h3>
+        <mat-divider></mat-divider>
+        <br>
+
+        <p class="mat-body-2">
+          Finest hand selected materials expertly crafted by our experienced team of joiners anf fabricators to create truly stunning and durable gates and fences.Whether you're looking for wooden or metal gates,We have a design to compliment your home!
+        </p>
+      </div>
+
     </div>
-</div>
-<div fxLayout="row" fxLayout="row wrap">
-    <cdk-bar-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-bar-graph>
-    <cdk-doughnut-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-doughnut-graph>
-    <cdk-weather fxFlex="25" fxFlex.lt-sm="100" fxFlex.sm="100"></cdk-weather>
-</div>
-<div fxLayout="row" fxLayout="row wrap">
-    <cdk-line-graph fxFlex="75" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-line-graph>
-    <cdk-share-price fxFlex="25" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-share-price>
-</div>
-<div fxLayout="row" fxLayout="row wrap">
-    <cdk-sales-list fxFlex="60" fxFlex.lt-sm="100" fxFlex.sm="100" fxFlex.md="70"></cdk-sales-list>
-    <cdk-profile-card fxFlex="40" fxFlex.lt-sm="100" fxFlex.sm="100" fxFlex.md="30"></cdk-profile-card>
+
+    <div fxFlex="65" fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
+      <!--<img style="width: 400px;" src="../../assets/images/bg/cdk.png">-->
+
+      <angular-image-slider [images]="imagesUrl" class="bc"></angular-image-slider>
+
+
+    </div>
+
+  </div>
 </div>
 
-<div fxLayout="row" fxLayout="row wrap">
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'SALES'" [current]="'23'" [max]="'100'" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"></cdk-round-progressbar>
+
+
+
+
+
+<div fxLayout="column" >
+
+
+  <div fxLayout="row">
+    <mat-toolbar color="primary">
+      Featured products
+    </mat-toolbar>
+  </div>
+
+
+
+
+
+  <div fxLayout="column" class="service-card-content" >
+
+    <div fxLayout="row" class="service-card-container" fxLayout.lt-md="column" fxLayoutGap="20px"  >
+
+      <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "
+          >
+        <img src="../../assets/images/gates/Driveway%20gate.jpg" fxFlex>
+
+        <h3 class="color"  fxFlex>Driveway Gate</h3>
+        <p class="mat-body-2"  fxFlex>This Decorative Driveway Gate Design is available in a matching
+          Walk Gates...</p>
+        <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+        <button mat-icon-button color="warn">
+          <mat-icon aria-label="Example icon-button with a heart icon"   (click)="changeIcon1('favorite')"   >{{icon1}}</mat-icon>
+        </button>
+          <button mat-icon-button color="primary">
+            <mat-icon aria-label="Example icon-button with a heart icon"   (click)="shareProduct1()"   >share</mat-icon>
+          </button>
+          <button mat-icon-button color="primary">
+            <mat-icon aria-label="Example icon-button with a heart icon"   (click)="openProduct1()" >visibility</mat-icon>
+          </button>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "  >
+        <img src="../../assets/images/gates/Holme%20Garden%20Gate.jpg" fxFlex>
+
+        <h3 class="color" fxFlex>Garden Gate</h3>
+        <p class="mat-body-2"  fxFlex>This Lovely Design has a metal backing for privacy another version...</p>
+        <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+        <button mat-icon-button color="warn">
+          <mat-icon aria-label="Example icon-button with a heart icon"   (click)="changeIcon2('favorite')"   >{{icon2}}</mat-icon>
+        </button>
+        <button mat-icon-button color="primary">
+          <mat-icon aria-label="Example icon-button with a heart icon"   (click)="shareProduct1()"   >share</mat-icon>
+        </button>
+        <button mat-icon-button color="primary">
+          <mat-icon aria-label="Example icon-button with a heart icon"   (click)="openProduct2()"     >visibility</mat-icon>
+        </button>
+        </div>
+
+
+
+
+      </div>
+
+      <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card "  >
+        <img src="../../assets/images/gates/Rail1.jpg" fxFlex>
+
+        <h3 class="color"  fxFlex>Railing</h3>
+        <p class="mat-body-2"  fxFlex>Metal handrails can add a very appealing touch to your home or building...</p>
+
+
+        <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" >
+
+        <button mat-icon-button color="warn">
+          <mat-icon aria-label="Example icon-button with a heart icon"   (click)="changeIcon3('favorite')"   >{{icon3}}</mat-icon>
+        </button>
+          <button mat-icon-button color="primary">
+            <mat-icon aria-label="Example icon-button with a heart icon"   (click)="shareProduct1()"   >share</mat-icon>
+          </button>
+          <button mat-icon-button color="primary">
+            <mat-icon aria-label="Example icon-button with a heart icon"   (click)="openProduct3()"  >visibility</mat-icon>
+          </button>
+
+
+        </div>
+
+
+      </div>
+
     </div>
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'LEADS'" [current]="'33'" [max]="'100'" [background]="'#FFE268'" [color]="'#A7C1FF'" [boxcolor]="'#42A5F5'"></cdk-round-progressbar>
+
+
+
+
+
+
+
+
+
+
     </div>
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'ASSETS'" [current]="'78'" [max]="'100'" [background]="'#FFC368'" [color]="'#A7F0FF'" [boxcolor]="'#26A69A'"></cdk-round-progressbar>
+
+
+
+
+  </div>
+<div class="service-header" fxLayout="column" fxLayoutAlign="center stretch" >
+
+  <div fxFlex class="content" fxLayout.lt-sm="column" style="padding: 20px;
+}" fxLayout="row" fxLayoutAlign="center stretch">
+
+    <div fxFlex="35"  fxFlex.lt-sm="100" fxLayout="row" style="background-color: #45aae3; padding: 20px;"  fxLayoutAlign="center stretch" >
+      <div>
+        <h3 class="mat-display-1">Our Services</h3>
+        <mat-divider></mat-divider>
+        <br>
+        <br>
+        <p class="mat-body-2">
+          Great Range Of Designs,Professionally Installed,Stylish and Affordable,Great Customer Service,Family owned business,Environmentally Friendly Aluminium
+          YOUR ONE - STOP SOURCE Design, plan your product!
+        </p>
+      </div>
+
     </div>
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'BANKING'" [current]="'90'" [max]="'100'" [background]="'#FFCF68'" [color]="'#A7DEFF'" [boxcolor]="'#26C6DA'"></cdk-round-progressbar>
+
+    <div fxFlex="65" fxHide.lt-sm fxLayout="row" fxLayoutAlign="center center">
+      <img style="width: 400px;" src="../../assets/images/bg/cdk.png">
+
+
+
+
     </div>
+
+  </div>
 </div>
 
-<div fxLayout="row" fxLayout="row wrap" >
-    <cdk-world-map fxFlex="100" [tableData]="tableData"></cdk-world-map>
-</div>
+<mat-toolbar color="primary" align="center">
+  <mat-toolbar-row align="center">
+    <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" align="center">
+      <b>Follow Us!</b>
+    </div>
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row >
+
+    <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50" align="center">
+
+      <button mat-icon-button color="primary"  onclick="window.location.href='https://www.facebook.com/'">
+
+          <img class="logo-image" src="../../assets/images/slideshows/square-facebook-512.png" style="width:40px;height:40px;">
+
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-icon-button color="primary" onclick="window.location.href='https://twitter.com/'">
+
+        <img class="logo-image" src="../../assets/images/slideshows/square-twitter-512.png" style="width:40px;height:40px;">
+
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-icon-button color="primary" onclick="window.location.href='https://www.instagram.com/?hl=en'">
+
+        <img class="logo-image" src="../../assets/images/slideshows/instagram-square-flat-3-512.png" style="width:40px;height:40px;">
+
+      </button>&nbsp;
+
+    </div>
+
+
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+

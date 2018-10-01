@@ -1,11 +1,11 @@
 export const menus = [
     {
-        'name': 'Dashboard',
-        'icon': 'dashboard',
-        'link': false,
-        'open': false,
-        'chip': { 'value': 1, 'color': 'accent' },
-        'sub': [
+        'name': 'Home',
+        'icon': 'home',
+        'link': '/auth/dashboard',
+        'open': true,
+        //'chip': { 'value': 1, 'color': 'accent' },
+        /*'sub': [
             {
                 'name': 'Dashboard',
                 'link': '/auth/dashboard',
@@ -13,8 +13,119 @@ export const menus = [
                 'chip': false,
                 'open': true,
             }
+        ]*/
+    },
+    {
+        'name':'Products',
+        'icon':'account_balance',
+        'link':false,
+        'chip':{'value':3,'color':'accent'},
+        'open':false,
+        'sub':
+        [
+            {
+                'name':'Gates',
+                'icon':'swap_vert',
+                'chip':{'value':2,'color':'accent'},
+                'link':false,
+                'open':false,
+                'sub':
+                [
+                    {
+                        'name':'Garden',
+                        'icon':'code',
+                        'chip':{'value':2,'color':'accent'},
+                        'link':false,
+                        'open':false,
+                        'sub':
+                        [
+                            {
+                                'name':'Modern Garden',
+                                'link':'/auth/modernGarden',
+                                'open':true
+                            },
+                            {
+                                'name':'Privacy Garden',
+                                'link':false,
+                                'open':false,
+                            }
+                        ]
+                    },
+                    {
+                        'name':'Driveway',
+                        'icon':'code',
+                        'chip':{'value':3,'color':'accent'},
+                        'link':false,
+                        'open':false,
+                        'sub':
+                        [
+                            {
+                                'name':'Modern Driveway',
+                                'link':false,
+                                'open':false,
+                            },
+                            {
+                                'name':'Custome Driveway',
+                                'link':false,
+                                'open':false,
+                            },
+                            {
+                                'name':'Privacy Driveway',
+                                'link':false,
+                                'open':false,
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                'name':'Fences',
+                'icon':'swap_vert',
+                'link':false,
+                'open':false,
+            },
+            {
+                'name':'Railings',
+                'icon':'swap_vert',
+                'link':false,
+                'open':false,
+            },
         ]
     },
+
+    {
+        'name':'Shopping Cart',
+        'icon':'add_shopping_cart',
+        'link':'/auth/shoppingCart',
+        'open':true
+    },
+    {
+        'name':'Payments',
+        'icon':'add_shopping_cart',
+        'link':'/auth/pay',
+        'open':true
+    },
+
+
+  {
+    'name':'FAQ',
+    'icon':'help',
+    'link':'/auth/faq',
+    'open':true
+  },
+  {
+    'name':'About Us',
+    'icon':'info',
+    'link':'/auth/aboutUs',
+    'open':true,
+  },
+  {
+    'name':'Contact Us',
+    'icon':'phone',
+    'link':'/auth/contactUs',
+    'open':true,
+  },
+
     {
         'name': 'Material Widget',
         'icon': 'widgets',

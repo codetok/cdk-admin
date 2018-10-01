@@ -1,0 +1,41 @@
+.contact-header {
+  //background-color: #327ebd;
+  color: white;
+  padding: 0 5px;
+}
+.contact-container {
+  padding: 5px 15px 15px 15px;
+}
+.contact-component-holder {
+  border: 1px solid #327ebd;
+  background-color: white;
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+  .logo-image {
+    height: 100%;
+    width: 100%;
+
+  }
+  .color {
+    background-color: #e0e0e0;
+
+  }
+
+
+  h4 {
+    color: #327ebd;
+    margin: 14px 0;
+  }
+
+  mat-divider {
+    margin-bottom: 10px;
+  }
+}
+

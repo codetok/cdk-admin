@@ -1,0 +1,70 @@
+<h1>Shopping Cart</h1>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+
+  <!--<div *ngIf="showForm">-->
+  <div class="product" *ngFor="let checkoutItem of checkOutItemsArray">
+    <div class="product-image">
+      <img src="{{checkoutItem.image}}">
+    </div>
+    <div class="product-details">
+      <div class="product-title"><B>{{checkoutItem.title}}</B></div>
+      <p class="product-description">{{checkoutItem.about}}</p>
+    </div>
+    <div class="product-price" id="unitPrice">{{checkoutItem.unitprice}}</div>
+    <div class="product-quantity">
+      <input type="number" value="{{checkoutItem.quantity}}" min="1"
+             (change)="onChangeValue(checkoutItem.id)"
+             id="inputValue{{checkoutItem.id}}">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">
+      <input id="totalValue{{checkoutItem.id}}" value="40">
+      <!--<label >40</label>-->
+      <!--<div class="product-line-price" id="totalValue{{checkoutItem.id}}>{{checkoutItem.id}}</div>-->
+    </div>
+  </div>
+
+
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">71.97</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">3.60</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">90.57</div>
+    </div>
+  </div>
+
+  <button class="checkout" style="margin-left :100px">Checkout</button>
+
+  <button class="checkout" style="margin-left :100px">Clear Cart</button>
+
+  <button class="checkout" style="margin-left :20px">Go Back to Shopping</button>
+
+</div>
+
+
