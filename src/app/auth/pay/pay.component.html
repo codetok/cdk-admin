@@ -38,29 +38,29 @@
 					</mat-form-field>
 					<label class="block-details-key">Address</label><br/>
 					<mat-form-field>
-              <input matInput placeholder="No 55, Malabe road, kaduwela" readonly>						
+              <input matInput placeholder="No 55, Malabe road, kaduwela" readonly>
 					</mat-form-field>
 					<label class="block-details-key">City</label><br/>
 					<mat-form-field>
-              <input matInput placeholder="Kaduwela" readonly>						
+              <input matInput placeholder="Kaduwela" readonly>
           </mat-form-field>
 					<label class="block-details-key">Country</label><br/>
           <mat-form-field>
-              <input matInput placeholder="Sri Lanka" readonly>						
+              <input matInput placeholder="Sri Lanka" readonly>
           </mat-form-field>
           <label class="block-details-key">Telephone</label><br/>
           <mat-form-field>
-              <input matInput placeholder="0766735465" readonly>						
+              <input matInput placeholder="0766735465" readonly>
           </mat-form-field>
           <label class="block-details-key">Email</label><br/>
           <mat-form-field>
-              <input matInput placeholder="Ravindulandekumbura@gmail.com" readonly>						
-          </mat-form-field> 
-          <mat-checkbox formControlName="hideRequired" (change)="addressCheck($event)">Shipping address is same as my address</mat-checkbox> 
+              <input matInput placeholder="Ravindulandekumbura@gmail.com" readonly>
+          </mat-form-field>
+          <mat-checkbox formControlName="hideRequired" (change)="addressCheck($event)">Shipping address is same as my address</mat-checkbox>
           <label class="block-details-key">Shipping Address</label><br/>
           <mat-form-field>
-              <input matInput placeholder= " " [disabled]="!addressShow" ([ngModel])="add">						
-          </mat-form-field>        
+              <input matInput placeholder= " " [disabled]="!addressShow" ([ngModel])="add">
+          </mat-form-field>
 				</div>
 			</div>
 		</mat-card>
@@ -90,15 +90,15 @@
             </mat-form-field>
             <label class="block-details-key">Verification Code</label><br/>
             <mat-form-field>
-                <input matInput placeholder="" >						
+                <input matInput placeholder="" >
             </mat-form-field>
             <label class="block-details-key">Name on Card</label><br/>
             <mat-form-field>
-                <input matInput placeholder="">						
+                <input matInput placeholder="">
             </mat-form-field>
            <!-- <label class="block-details-key">Expiration Date</label><br/>
             <mat-form-field>
-                <input matInput placeholder="">						
+                <input matInput placeholder="">
             </mat-form-field>-->
 </div>
 <!--</div>-->
@@ -109,15 +109,15 @@
     </mat-form-field>
     <label class="block-details-key">Verification Code</label><br/>
     <mat-form-field>
-        <input matInput placeholder="" >						
+        <input matInput placeholder="" >
     </mat-form-field>
     <label class="block-details-key">Name on Card</label><br/>
     <mat-form-field>
-        <input matInput placeholder="">						
+        <input matInput placeholder="">
     </mat-form-field>
     <label class="block-details-key">Expiration Date</label><br/>
     <mat-form-field>
-        <input matInput placeholder="">						
+        <input matInput placeholder="">
     </mat-form-field>
 
 </div>
@@ -125,7 +125,7 @@
 </mat-card>
     <div class="button-containers">
         <button id="back">Back to Cart</button>
-        <button id="confirm">Confirm Order</button>
+        <button id="confirm" (click)="payAlert()">Confirm Order</button>
     </div>
 </div>
 </div>

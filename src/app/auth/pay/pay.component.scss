@@ -56,21 +56,24 @@
 }
 
 #back {
-    margin-left: 5px;
+    //margin-left: 5px;
     float: left;
-    width: 400px;
+    width: 49%;
     height: 50px;
+    border-radius: 10px;
 }
 
 #confirm {
-    margin-right :5px;
+    //margin-right :5px;
     float: right;
-    width: 400px;
+    width: 49%;
     height: 50px;
-    background-color: darkcyan
+    background-color: darkcyan;
+    border-radius: 10px;
 }
 
 .button-containers {
     height: 100px;
-    padding: 30px
+    padding-top: 10px;
+    font-size: medium;
 }

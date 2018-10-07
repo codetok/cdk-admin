@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-pay',
@@ -12,6 +13,7 @@ export class PayComponent implements OnInit {
   add:String;
   visa:boolean=false;
   master:boolean=false;
+  show:boolean=false;
   constructor() { }
 
   ngOnInit() {
@@ -45,4 +47,12 @@ export class PayComponent implements OnInit {
     }
   }
 
+  payAlert(){
+
+    swal({
+      icon: 'success',
+      title: 'Order Placed Successfully!',
+      closeOnClickOutside: true
+    });
+  }
 }
