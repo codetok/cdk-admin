@@ -57,7 +57,7 @@ export class ModernGardenComponent implements OnInit {
     this.show=true;
     this.dialog.open(MoreDetailsComponent,{
       width: '500px',
-      height:'700px'
+      height:'350px'
     })
     
    /* this.dialog.open(GateExampleComponent,{

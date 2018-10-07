@@ -11,7 +11,7 @@ export class PayComponent implements OnInit {
   addressShow:boolean=true;
   add:String;
   visa:boolean=false;
-  master:boolean=true;
+  master:boolean=false;
   constructor() { }
 
   ngOnInit() {
@@ -36,10 +36,12 @@ export class PayComponent implements OnInit {
     if(f.value.category=="master")
     {
       this.master=true;
+      this.visa=false;
     }
     else if (f.value.category=="visa")
     {
       this.visa=true;
+      this.master=false;
     }
   }
 

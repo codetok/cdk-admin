@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material';
 import { MatSnackBarModule, MatDialogModule } from '@angular/material';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -158,7 +158,8 @@ import { PayComponent } from './pay/pay.component';
         MatIconModule,
         FormsModule,
         ReactiveFormsModule,
-        MatExpansionModule
+        MatExpansionModule,
+        FlexLayoutModule
 
 
     ],

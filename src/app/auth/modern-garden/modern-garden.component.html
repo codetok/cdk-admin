@@ -73,18 +73,16 @@
 
 <div fxLayout="column">
                 <div fxLayout="column" class="service-card-content">
-        
                         <div fxLayout="row" class="service-card-container" fxLayout.lt-md="column" fxLayoutGap="20px">
-                                <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc" >
-                                        <table>
-                                                <tr>
-                                                        <td>
-                                                                        <div class="imageContainer">
-                                                                <img src="../../../assets/Unknown.jpg" fxFlex (click)="gatePic()"><br/>  
-                                                                </div>      
-                                                        </td>
-                                                        <td class="para">
-                                                                <mat-card-content >
+                        <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc" >
+                               
+                                        <td>
+                                        <div>
+                                        <img src="../../../assets/Unknown.jpg" fxFlex (click)="gatePic()"><br/>  
+                                        </div>      
+                                
+                                
+                                        <mat-card-content >
 
                                                                         	<!--<div fxFlex class="input-component-holder mat-elevation-z4">-->
                                                                                                 <!--<mat-toolbar class="input-header" >
@@ -93,29 +91,22 @@
                                                                                 -->
                                                                                                 <!--<div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
                                                                                                         fxFlex.xs="300" fxFlex.lg="100" fxFlex.md="50" fxFlex.sm="50" -->
-                                                                                        <div class="example-container">
-                                                                                                <mat-form-field>
-                                                                                                        <textarea matInput placeholder="Say Something About the Product?" [(ngModel)]="comment"></textarea>
-                                                                                                </mat-form-field> 
-                                                                                                <mat-form-field>
-                                                                                                        <mat-select placeholder="Design of the Product">
-                                                                                                                <mat-option *ngFor="let food of rates" [value]="food.value">
-                                                                                                                    {{food.name}}
-                                                                                                                </mat-option>
-                                                                                                        </mat-select>
-                                                                                                </mat-form-field>                                                    
-                                                                                        </div>
-                                                                                                              
-                                                                                                       
-                                                                                                <!--</div> -->
-                                                                               <!-- </div> -->
-                                                                        <!--<div>-->
-                                                                                <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>
-                                                                     <!--   </div>   -->          
-                                                                </mat-card-content>     
-                                                        </td>
-                                                </tr>
-                                        </table>
+                                        <div class="example-container">
+                                        <mat-form-field>
+                                        <textarea matInput placeholder="Say Something About the Product?" [(ngModel)]="comment"></textarea>
+                                        </mat-form-field> 
+                                        <mat-form-field>
+                                        <mat-select placeholder="Design of the Product">
+                                        <mat-option *ngFor="let food of rates" [value]="food.value">
+                                        {{food.name}}
+                                        </mat-option>
+                                        </mat-select>
+                                        </mat-form-field>                                                    
+                                        </div>             
+                                                <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>      
+                                        </mat-card-content>     
+                           
+               
                                        <!-- <button mat-button color="primary" (click)="showDetails()">MORE</button>-->
                                         <button mat-icon-button color="primary">
                                                 <mat-icon aria-label="Example icon-button with a heart icon"  (click)="showDetails()">visibility</mat-icon>
@@ -131,12 +122,8 @@
                                         
                                 </div>
                                 <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc2"  >
-                                                <table>
-                                                                <tr>
                                                                         <td>
                                                                                 <img src="../../../assets/gate2.jpg" fxFlex><br/>        
-                                                                        </td>
-                                                                        <td class="para"> 
                                                                                         <mat-card-content >
                                                                                                                 <div class="example-container">
                                                                                                                         <mat-form-field>
@@ -153,10 +140,6 @@
                                                                                                         <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>
                                                                                                       
                                                                                         </mat-card-content>  
-
-                                                                        </td>
-                                                                </tr>
-                                                        </table>
                                                         <button mat-icon-button color="primary">
                                                                         <mat-icon aria-label="Example icon-button with a heart icon"  (click)="showDetails()">visibility</mat-icon>
                                                                 </button>
@@ -168,13 +151,9 @@
                                                                 </button>
                                                         
                                 </div>
-                                <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc"  >
-                                                <table>
-                                                                <tr>
+                                <div fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex.gt-sm="32" class="mat-elevation-z4 service-card bc">
                                                                         <td>
                                                                                 <img src="../../../assets/gate3.jpg" fxFlex><br/>        
-                                                                        </td>
-                                                                        <td class="para">
                                                                                 <mat-card-content >
                                                                                         <div class="example-container">
                                                                                                 <mat-form-field>
@@ -190,10 +169,8 @@
                                                                                                                 </div>
                                                                                                         <button mat-mini-fab color="primary" (click)="hide()"><b>Say</b></button>
                                                                                                       
-                                                                                        </mat-card-content>   
-                                                                        </td>
-                                                                </tr>
-                                                        </table>
+                                                                                        </mat-card-content>     
+                                                        
                                                         <button mat-icon-button color="primary">
                                                                         <mat-icon aria-label="Example icon-button with a heart icon"  (click)="showDetails()">visibility</mat-icon>
                                                                 </button>
