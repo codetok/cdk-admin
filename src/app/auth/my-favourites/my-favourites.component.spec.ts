@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardCrmComponent } from './dashboard-crm.component';
+import { MyFavouritesComponent } from './my-favourites.component';
 
-describe('DashboardCrmComponent', () => {
-  let component: DashboardCrmComponent;
-  let fixture: ComponentFixture<DashboardCrmComponent>;
+describe('MyFavouritesComponent', () => {
+  let component: MyFavouritesComponent;
+  let fixture: ComponentFixture<MyFavouritesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardCrmComponent ]
+      declarations: [ MyFavouritesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardCrmComponent);
+    fixture = TestBed.createComponent(MyFavouritesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
