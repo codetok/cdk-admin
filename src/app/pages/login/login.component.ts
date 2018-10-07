@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // import { AuthService } from '../../core/auth.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {LoginService} from '../../auth/login.service'
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,7 +30,9 @@ export class LoginComponent implements OnInit {
   };
 
   constructor(private router: Router,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private loginService:LoginService,
+              ) {
   }
 
   ngOnInit() {
@@ -76,6 +80,7 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.router.navigate(['/']);
+    this.loginService.logInFirstTime();
   }
 }
 
