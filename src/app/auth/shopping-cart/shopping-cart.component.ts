@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
   singleItemValue = 40;
-  totalValue;
+  totalValue = 40;
 
   checkOutItemsArray = [
     {
