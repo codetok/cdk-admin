@@ -1,5 +1,4 @@
 <div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="10px"  fxFlexFill style="padding: 20px;">
-
 	<div  class="payment-back" >
 		<mat-card class="card-blocks">
 			<div class="label-header">
@@ -57,27 +56,34 @@
           <mat-form-field>
               <input matInput placeholder="Ravindulandekumbura@gmail.com" readonly>						
           </mat-form-field> 
-          <mat-checkbox formControlName="hideRequired">Shipping address is same as my address</mat-checkbox> 
+          <mat-checkbox formControlName="hideRequired" (change)="addressCheck($event)">Shipping address is same as my address</mat-checkbox> 
           <label class="block-details-key">Shipping Address</label><br/>
           <mat-form-field>
-              <input matInput placeholder= " " >						
+              <input matInput placeholder= " " [disabled]="!addressShow" ([ngModel])="add">						
           </mat-form-field>        
 				</div>
 			</div>
 		</mat-card>
-		<mat-card class="card-blocks">
+<mat-card class="card-blocks">
 			<div class="label-header">
 				<label class="block-header">Payment Details</label>
 			</div>
-			<div class="label-details">
+<div class="label-details">
 
-				<div class="example-container">
-					<label class="block-details-key">Select Payment Method</label><br/>
-					<mat-form-field>
-              <mat-select placeholder="Select">
-                <mat-option value="option">Master Card</mat-option>
+<div class="example-container">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+		<label class="block-details-key">Select Payment Method</label><br/>
+			<mat-form-field>
+              <mat-select placeholder="Select" name="category" ngModel #category="ngModel">
+                <mat-option value="master">Master Card</mat-option>
+                <mat-option value="visa">Visa Card</mat-option>
               </mat-select>
             </mat-form-field>
+            <button type="submit" mat-button color="primary">confirm</button>
+    </form>
+</div>
+<!--div *ngIf="master">-->
+<div class="example-container" *ngIf="master">
             <label class="block-details-key">Card Number</label><br/>
             <mat-form-field>
               <input matInput placeholder="" >
@@ -94,13 +100,33 @@
             <mat-form-field>
                 <input matInput placeholder="">						
             </mat-form-field>
-			</div>
-    </div>
-    </mat-card>
+</div>
+<!--</div>-->
+<div class="example-container" *ngIf="visa">
+    <label class="block-details-key">Card Number</label><br/>
+    <mat-form-field>
+      <input matInput placeholder="" >
+    </mat-form-field>
+    <label class="block-details-key">Verification Code</label><br/>
+    <mat-form-field>
+        <input matInput placeholder="" >						
+    </mat-form-field>
+    <label class="block-details-key">Name on Card</label><br/>
+    <mat-form-field>
+        <input matInput placeholder="">						
+    </mat-form-field>
+    <label class="block-details-key">Expiration Date</label><br/>
+    <mat-form-field>
+        <input matInput placeholder="">						
+    </mat-form-field>
+
+</div>
+</div>
+</mat-card>
     <div class="button-containers">
         <button id="back">Back to Cart</button>
         <button id="confirm">Confirm Order</button>
     </div>
-	</div>
+</div>
 </div>
 

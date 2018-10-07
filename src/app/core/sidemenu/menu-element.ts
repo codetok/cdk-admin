@@ -1,5 +1,11 @@
 export const menus = [
     {
+        'name': 'Login',
+        'open': true,
+        'link': '/auth/scrumboard',
+        'icon': 'account_circle',
+    }, 
+    {
         'name': 'Home',
         'icon': 'home',
         'link': '/auth/dashboard',
@@ -125,7 +131,7 @@ export const menus = [
     'link':'/auth/contactUs',
     'open':true,
   },
-
+/*
     {
         'name': 'Material Widget',
         'icon': 'widgets',
@@ -254,7 +260,7 @@ export const menus = [
                 'open': false,
             },
         ]
-    },
+    },*/
     // {
     //     'name'   : 'Forms',
     //     'icon'   : 'mode_edit',
@@ -275,6 +281,7 @@ export const menus = [
     //                     }
     //                 ]
     // },
+    /*
     {
         'name': 'Tables',
         'icon': 'list',
@@ -390,7 +397,8 @@ export const menus = [
                 'link': 'charts/nvd3-charts',
             }
         ]
-    }, {
+    }, */
+    {
         'name': 'maps',
         'icon': 'map',
         'open': false,

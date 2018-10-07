@@ -29,7 +29,11 @@
 
     <!--<cdk-toolbar-notification [notifications]="toolbarHelpers?.notifications"></cdk-toolbar-notification>-->
 
-    <cdk-user-menu [currentUser]="toolbarHelpers?.currentUser"></cdk-user-menu>
+    <cdk-user-menu [currentUser]="toolbarHelpers?.currentUser">
+    <button>login
+        <a href="http://localhost:4200/auth/scrumboard"></a>
+    </button>   
+    </cdk-user-menu>
     
     <!-- <button mat-icon-button (click)="sidebar.toggle();">
         <i class="material-icons app-toolbar-menu">menu </i>

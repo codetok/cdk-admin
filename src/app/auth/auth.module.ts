@@ -173,7 +173,9 @@ import { PayComponent } from './pay/pay.component';
       ContactComponent,
 
       AddeddialogComponent,
-      SendfaqsuccessComponent
+      SendfaqsuccessComponent,
+      MoreDetailsComponent,
+      GatePicComponent
     ],
    
 
@@ -195,6 +197,7 @@ import { PayComponent } from './pay/pay.component';
       GatePicComponent,
       MoreDetailsComponent,
       PayComponent,
+
 
       ],
     providers: [
