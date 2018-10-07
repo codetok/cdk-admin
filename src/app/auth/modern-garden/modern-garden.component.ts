@@ -8,7 +8,8 @@ import {MoreDetailsComponent} from '../more-details/more-details.component';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import swal from 'sweetalert';
-
+import {LoginService} from '../login.service';
+import { Router } from '@angular/router';
 
 export interface Rate {
   name: string;
@@ -38,7 +39,9 @@ export class ModernGardenComponent implements OnInit {
  comment:string="";
   constructor(
     public dialog: MatDialog,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    public loginService:LoginService,
+    private router: Router,
     ) { }
 
   ngOnInit() {
@@ -57,7 +60,7 @@ export class ModernGardenComponent implements OnInit {
     this.show=true;
     this.dialog.open(MoreDetailsComponent,{
       width: '500px',
-      height:'350px'
+      height:'35F0px'
     })
     
    /* this.dialog.open(GateExampleComponent,{
@@ -77,16 +80,14 @@ export class ModernGardenComponent implements OnInit {
     this.comment=null;
   }
   addToCart(e){
-    if(this.logedin)
-    {
-      this.snackBar.open(this.message1, this.action, {
-        duration: 2000,
-      });
-      this.clickedOnce=true;
-    }
     
+    if(!this.loginService.getStatus())
+    {
+     // window.location.href = "http://localhost:4200/auth/modernGarden";
+     this.router.navigate(['../login']);
+    }
     else{
-      this.snackBar.open(this.message, this.action, {
+      this.snackBar.open(this.message1, this.action, {
         duration: 2000,
       });
       
