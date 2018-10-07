@@ -2,7 +2,7 @@ export const menus = [
     {
         'name': 'Login',
         'open': true,
-        'link': '/auth/scrumboard',
+        'link': '/auth/register',
         'icon': 'account_circle',
     }, 
     {

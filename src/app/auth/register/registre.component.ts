@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-
+import {SendfaqsuccessComponent} from '../faq/sendfaqsuccess/sendfaqsuccess.component';
 import {MatDialog} from '@angular/material';
-
-
-
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -15,13 +12,16 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-scrumboard',
-  templateUrl: './scrumboard.component.html',
-  styleUrls: ['./scrumboard.component.scss']
+  selector: 'app-contact',
+  templateUrl: './registre.component.html',
+  styleUrls: ['./registre.component.scss']
 })
-export class ScrumboardComponent {
 
+
+
+export class RegistreComponent implements OnInit {
   dialogResult = '';
+  hide = true;
 
 
   emailFormControl = new FormControl('', [
@@ -31,11 +31,18 @@ export class ScrumboardComponent {
 
   matcher = new MyErrorStateMatcher();
   constructor(public dialog: MatDialog) { }
-  
-    tasks: Array<string> = ['Sugar Ray Robinson', 'Muhammad Ali', 'George Foreman', 'Joe Frazier', 'Jake LaMotta', 'Joe Louis', 'Jack Dempsey', 'Rocky Marciano', 'Mike Tyson', 'Oscar De La Hoya'];
-    developers: Array<string> = [];
-    testers: Array<string> = [];
 
+  ngOnInit() {
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(SendfaqsuccessComponent, {
+      width: '600px',
+      data: 'This text is passed'
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog closed:${result}`);
+      this.dialogResult = result;
+    })
+  }
 
 }
-

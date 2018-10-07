@@ -103,6 +103,7 @@ import { Shareproduct1Component } from './faq/shareproduct1/shareproduct1.compon
 import { Pro2dialogComponent } from './faq/pro2dialog/pro2dialog.component';
 import { Pro3dialogComponent } from './faq/pro3dialog/pro3dialog.component';
 import { ContactComponent } from './contact/contact.component';
+import { RegistreComponent } from './register/registre.component';
 import { AddeddialogComponent } from './faq/addeddialog/addeddialog.component';
 import { SendfaqsuccessComponent } from './faq/sendfaqsuccess/sendfaqsuccess.component';
 import { ContactsentsuccessComponent } from './faq/contactsentsuccess/contactsentsuccess.component';
@@ -197,6 +198,7 @@ import { PayComponent } from './pay/pay.component';
       GatePicComponent,
       MoreDetailsComponent,
       PayComponent,
+      RegistreComponent
 
 
       ],
