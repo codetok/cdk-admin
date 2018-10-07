@@ -1,6 +1,12 @@
 export const menus = [
     {
         'name': 'Login',
+        'icon': 'work',
+        'open': false,
+        'link': '../login',
+    }, 
+    {
+        'name': 'Registration',
         'open': true,
         'link': '/auth/scrumboard',
         'icon': 'account_circle',
