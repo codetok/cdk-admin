@@ -34,7 +34,7 @@ $prefix: 'toolbar-notification';
 	top: 42px;
 	right: 28px;
 	min-width: 350px;
-	z-index: 2;
+	z-index: 1000;
 	transform: translateY(0) scale(0);
 	transform-origin: top right;
 	visibility: hidden;
@@ -53,7 +53,7 @@ $prefix: 'toolbar-notification';
 	    visibility: visible;
 	}
 	.card {
-
+      
 	    .header {
 	      background: #EEEEEE;
 	      min-height: 54px;
