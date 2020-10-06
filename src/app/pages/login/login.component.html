@@ -8,7 +8,8 @@ background-size: cover; ">
         <div class=" mat-elevation-z4">
             <mat-card>
                 <mat-card-title>User login
-                    <a class="redirect" [routerLink]="['/sigup']">Register an account</a>
+                        <!--http://localhost:4200/auth/register-->
+                    <a class="redirect" [routerLink]="['/auth/register']">Register an account</a>
                 </mat-card-title>
                 <mat-card-content>
                     <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="userForm" (ngSubmit)="login()">

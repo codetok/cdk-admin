@@ -15,7 +15,7 @@ export class ChatComponent {
   @Output() onSendChat = new EventEmitter();
 
   newMessage: string;
-  avatar: string = 'assets/user-image.jpg';
+  avatar: string = 'assets/images/avatars/noavatar.png';
 
   animal: string;
   name: string;

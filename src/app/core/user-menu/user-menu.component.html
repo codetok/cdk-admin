@@ -1,8 +1,8 @@
 <div class="toolbar-user-container">
 	<button mat-button (click)="isOpen = !isOpen" class="toolbar-user-btn" [class.open]="isOpen" [ngStyle.xs]="{'min-width': '70px'}">
   		<span fxLayout="row" fxLayoutAlign="start center">
-    		<img class="avatar" [src]="currentUser?.photoURL || 'assets/images/avatars/noavatar.png'">
-    		<span class="name" fxHide fxShow.gt-xs>{{currentUser?.currentUserName || Hari}}</span>
+    		<img class="avatar" [src]="'assets/images/avatars/noavatar.png'">
+    		<span class="name" fxHide fxShow.gt-xs>User Account</span>
     		<mat-icon class="icon" fxHide fxShow.gt-xs>keyboard_arrow_down</mat-icon>
   		</span>
   	</button>

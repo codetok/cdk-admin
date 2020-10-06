@@ -2,10 +2,10 @@
 <perfect-scrollbar style="height: calc(100% - 33px);">
     <div fxLayout="column" >
         <div *ngIf="!iconOnly" fxLayoutAlign="space-around center" [style.margin]="'10px 0px'" >
-          <img width="100" [style.borderRadius]="'50%'" src="./assets/user-image.jpg">
+          <img width="100" [style.borderRadius]="'50%'" src="./assets/images/avatars/noavatar.png">
         </div>
         <div *ngIf="iconOnly" style="height: 100px;" fxLayoutAlign="space-around center"  >
-            <img width="50" [style.borderRadius]="'50%'" src="./assets/user-image.jpg">
+            <img width="50" [style.borderRadius]="'50%'" src="./assets/images/avatars/noavatar.png">
         </div>
         <cdk-sidemenu-item *ngFor="let menu of menus" [menu]="menu" [iconOnly]="iconOnly"> </cdk-sidemenu-item>
     </div>

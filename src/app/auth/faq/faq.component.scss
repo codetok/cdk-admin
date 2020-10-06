@@ -1,0 +1,64 @@
+// cdk-list {
+.list-header {
+  background-color: #327ebd;
+  color: white;
+  padding: 0 5px;
+}
+.list-container {
+  padding: 5px 15px 15px 15px;
+  // color: white;
+}
+// }
+.example-panel-red .mat-select-content {
+  background: #327ebd;
+}
+
+.example-panel-green .mat-select-content {
+  background: #327ebd;
+}
+
+.example-panel-blue .mat-select-content {
+  background: #327ebd;
+}
+.select-component-holder {
+  border: 1px solid #327ebd;
+  background-color: white;
+
+  h4 {
+    color: #327ebd;
+    margin: 14px 0;
+  }
+
+  mat-divider {
+    margin-bottom: 10px;
+  }
+}
+// cdk-cards {
+.cards-header {
+  background-color: #327ebd;
+  color: white;
+  padding: 0 5px;
+}
+.cards-container {
+  padding: 5px;
+  // color: white;
+}
+.example-header-image {
+  background-image: url('../../../assets/Unknown.jpg');
+  background-size: cover;
+}
+.ex2{
+  background-image: url('../../../assets/gate2.jpg');
+  background-size: cover;
+}
+.ex3{
+  background-image: url('../../../assets/gate3.jpg');
+  background-size: cover;
+}
+
+// }
+
+.cdk-card-holder {
+  border: 1px solid #327ebd;
+  background-color: white;
+}

@@ -1,0 +1,64 @@
+<h1 mat-dialog-title>Would you like to customize your design? Feel free to create your design
+   <!-- <mat-slide-toggle (change)="customize($event)"></mat-slide-toggle>-->
+</h1>
+<!--*ngIf="productCustomize"-->
+
+<div mat-dialog-content>
+  <canvas #canvas class="posstion" class="bc"></canvas>
+</div>
+
+<div>   
+      <!--  <button mat-fab color="primary" (click)="reloadCanvas()">Clear</button>-->
+
+<table>
+    <tr>
+        <td width="43%">
+             <button mat-fab (click)="reloadCanvas()">
+                <mat-icon class="space" >restore</mat-icon>
+        </button><br/><br/>
+        CLEAR
+        </td>
+        <td width="43%">
+                <button mat-fab (click)="saveToImage()">
+                        <mat-icon class="space">print</mat-icon>
+                    </button>
+                    <br/><br/>
+                    SAVE
+        </td>
+        <td width="43%">
+                <a mat-fab href="https://accounts.google.com/">
+                    <mat-icon class="space">https</mat-icon>
+                </a>
+                <br/><br/>
+                EMAIL
+        </td>
+        
+    </tr>
+    <br/>
+    <tr>
+                <td>
+                    You can upload an Image
+                    <br/>
+                    <input type="file">
+                </td>
+    </tr>
+    <br/>
+    <tr>
+       
+    </tr>
+</table> 
+    <button mat-button color="primary" (click)="popUp()" class="setCenter">Send the Customization</button>
+        <!--<button mat-fab color="primary" (click)="saveToImage()">save</button>-->
+</div>
+
+ 
+
+
+<!--
+<div mat-dialog-footer> 
+      <button (click)="addToCart()" class="setToCenter" [disabled]="clickedOnce">
+          <mat-icon class="space" >add_shopping_cart</mat-icon>
+    </button>
+  
+</div>
+-->

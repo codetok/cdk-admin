@@ -1,0 +1,22 @@
+.setToCenter
+{
+    position:absolute;
+    transition: .5s ease;
+    top: 50%;
+    left: 50%;
+}
+
+canvas {
+    border: 1px solid #000;
+    background-color: #d7d6d8; 
+    align-content: center;
+  }
+
+  .footer{
+      padding-right: 10px;
+  }
+
+  .setCenter{
+      padding-left: 45%;
+      padding-right: 45%;
+  }

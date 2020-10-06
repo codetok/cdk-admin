@@ -13,4 +13,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  login()
+  {
+    window.location.href = "http://localhost:4200/auth/dashboard";
+  }
 }

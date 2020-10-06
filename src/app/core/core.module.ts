@@ -21,11 +21,14 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
+import { FormsModule } from '@angular/forms';
 import {
     MatSidenavModule,
     MatSliderModule,
     MatProgressBarModule,
+    MatSelectModule,
 } from '@angular/material';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -42,7 +45,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         SearchBarComponent,
         FullscreenComponent,
         SidebarComponent,
-        UserMenuComponent
+        UserMenuComponent,
     ],
 
     imports: [
@@ -61,6 +64,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         MatTabsModule,
         MatSliderModule,
         MatProgressBarModule,
+        Ng2SearchPipeModule,
+        FormsModule,
+        MatSelectModule,
     ],
 
 
