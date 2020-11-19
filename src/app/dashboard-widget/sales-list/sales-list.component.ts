@@ -17,7 +17,7 @@ export class SalesListComponent implements OnInit {
         watch: false,
       },
       {
-        companyIcon:'https://firebase.google.com/_static/4d0ad1dc9e/images/firebase/logo.png',
+        companyIcon:'/assets/images/Firebase_Logo_Logomark.png',
         companyName:'Firebase',
         star:'2k',
         fork: false,
