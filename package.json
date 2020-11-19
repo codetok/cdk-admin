@@ -45,7 +45,6 @@
     "ngx-perfect-scrollbar": "^5.3.5",
     "ngx-quill": "^2.2.0",
     "rxjs": "^6.2.1",
-    "rxjs-compat": "^6.2.1",
     "screenfull": "^3.3.2",
     "vued3tree": "^3.5.0",
     "zone.js": "^0.8.26"
@@ -67,9 +66,10 @@
     "karma-coverage-istanbul-reporter": "^1.4.3",
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^5.0.0",
     "protractor": "^5.3.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "2.7.2"
+    "typescript": "^3.1.6"
   }
 }

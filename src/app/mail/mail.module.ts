@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { QuillModule } from 'ngx-quill';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MailComponent } from './mail/mail.component';
 import { ComposeComponent } from './compose/compose.component';
 import { DetailComponent } from './detail/detail.component';
@@ -42,7 +42,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     FormsModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    HttpModule,
+    HttpClientModule,
     CoreModule,
     CommonModule
   ],
