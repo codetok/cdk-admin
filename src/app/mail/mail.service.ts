@@ -21,7 +21,7 @@ export class MailService {
   }
 
   getMails() {
-    return this.http.get(this.apiUrl).pipe(map(res => res.json()));
+    return this.http.get(this.apiUrl).pipe(map(res => res.toString())); // .json()
     
   }
 

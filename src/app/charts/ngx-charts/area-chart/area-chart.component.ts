@@ -15,7 +15,7 @@ export class AreaChartComponent implements OnInit {
   public showXAxisLabel;
   public xAxisLabel;
   public yAxisLabel;
-  public gradient;set
+  public gradient;set;
 
   public single: any[];
   public multi: any[];
