@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayout="row wrap">
-    <div *ngFor="let dash of dashCard" fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+    <div *ngFor="let dash of dashCard" fxFlex="25" fxFlex.lt-sm="100" fxFlex.lt-md="50">
         <cdk-dashcard [dashData]="dash"></cdk-dashcard>
     </div>
 </div>
@@ -17,17 +17,17 @@
     <cdk-profile-card fxFlex="40" fxFlex.lt-sm="100" fxFlex.sm="100" fxFlex.md="30"></cdk-profile-card>
 </div>
 
-<div fxLayout="row" fxLayout="row wrap">
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+<div fxLayout="row" fxLayout.lt-md="row wrap">
+    <div fxFlex.lt-sm="100" fxFlex.lt-md="50" fxFlex="25">
         <cdk-round-progressbar [title]="'SALES'" [current]="'23'" [max]="'100'" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"></cdk-round-progressbar>
     </div>
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+    <div fxFlex.lt-sm="100" fxFlex.lt-md="50" fxFlex="25">
         <cdk-round-progressbar [title]="'LEADS'" [current]="'33'" [max]="'100'" [background]="'#FFE268'" [color]="'#A7C1FF'" [boxcolor]="'#42A5F5'"></cdk-round-progressbar>
     </div>
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+    <div fxFlex.lt-sm="100" fxFlex.lt-md="50" fxFlex="25">
         <cdk-round-progressbar [title]="'ASSETS'" [current]="'78'" [max]="'100'" [background]="'#FFC368'" [color]="'#A7F0FF'" [boxcolor]="'#26A69A'"></cdk-round-progressbar>
     </div>
-    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+    <div fxFlex.lt-sm="100" fxFlex.lt-md="50" fxFlex="25">
         <cdk-round-progressbar [title]="'BANKING'" [current]="'90'" [max]="'100'" [background]="'#FFCF68'" [color]="'#A7DEFF'" [boxcolor]="'#26C6DA'"></cdk-round-progressbar>
     </div>
 </div>

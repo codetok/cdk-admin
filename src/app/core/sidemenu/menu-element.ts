@@ -279,24 +279,25 @@ export const menus = [
                 'link': 'charts/nvd3-charts',
             }
         ]
-    }, {
-        'name': 'maps',
-        'icon': 'map',
-        'open': false,
-        'link': false,
-        'sub': [
-            {
-                'name': 'google-map',
-                'icon': 'directions',
-                'link': 'maps/googlemap',
-                'open': false,
-            },
-            {
-                'name': 'leaflet-map',
-                'icon': 'directions',
-                'link': 'maps/leafletmap',
-                'open': false,
-            }
-        ]
-    }
+    }, 
+    // {
+    //     'name': 'maps',
+    //     'icon': 'map',
+    //     'open': false,
+    //     'link': false,
+    //     'sub': [
+    //         {
+    //             'name': 'google-map',
+    //             'icon': 'directions',
+    //             'link': 'maps/googlemap',
+    //             'open': false,
+    //         },
+    //         {
+    //             'name': 'leaflet-map',
+    //             'icon': 'directions',
+    //             'link': 'maps/leafletmap',
+    //             'open': false,
+    //         }
+    //     ]
+    // }
 ];

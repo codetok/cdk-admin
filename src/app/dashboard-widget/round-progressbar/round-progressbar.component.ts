@@ -32,7 +32,9 @@ export class RoundProgressbarComponent implements OnInit {
     }
     getOverlayStyle() {
         let isSemi = this.semicircle;
-        let transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
+        // let transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
+        // This way Angular won't break trying to sanitize
+        let transform = (isSemi ? 'translateX(-50%)' : 'translate(-50%,-50%)');
 
         return {
           'top': isSemi ? 'auto' : '50%',

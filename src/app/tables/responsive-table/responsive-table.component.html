@@ -23,7 +23,9 @@
 
 									<mat-chip  (click)="findDuplicates(row)"
 									selected="true"
-									color="warn"  matTooltip="{{row['duplicate_applications'].length}} duplicate entries" matTooltipPosition="right" *ngIf="th.key=='applicationNumber' && row['duplicate_applications'] != 'undefined' && row['duplicate_applications'] && row['duplicate_applications'].length > 0" >
+									color="warn" matTooltip="{{row['duplicate_applications'].length}} duplicate entries" 
+									matTooltipPosition="right" 
+									*ngIf="th.key=='applicationNumber' && row['duplicate_applications'] != 'undefined' && row['duplicate_applications'] && row['duplicate_applications'].length > 0" >
 									{{row['duplicate_applications'].length }}
 									</mat-chip>
 
