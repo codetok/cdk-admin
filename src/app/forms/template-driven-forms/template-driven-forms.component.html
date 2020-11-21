@@ -33,15 +33,15 @@
 						number must be at least 10 characters long.
 					</div>
 				</div>
-				<mat-input-container fxFlex>
-      				<input matInput placeholder="Character count (max. 100)" maxlength="100"	#characterCountHintExample value="Hello! How are you today?">
-      				<mat-hint align="end">{{ characterCountHintExample.value.length }} / 100
-      				</mat-hint>
-    			</mat-input-container>
-    			<mat-form-field>
-    			   <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" >
-    			   <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-    			 </mat-form-field>
+				<mat-form-field fxFlex>
+						<input matInput placeholder="Character count (max. 100)" maxlength="100"	#characterCountHintExample value="Hello! How are you today?">
+						<mat-hint align="end">{{ characterCountHintExample.value.length }} / 100
+						</mat-hint>
+				</mat-form-field>
+				<mat-form-field>
+						<input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" >
+						<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+					</mat-form-field>
 				<button mat-raised-button type="submit"  [disabled]="name.invalid||number.invalid" class="mat-subheading-2 center-align button-style">Submit</button>
 			</form>
 			
