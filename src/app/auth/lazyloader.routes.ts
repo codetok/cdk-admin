@@ -5,16 +5,16 @@ import { DashboardCrmComponent } from '../dashboard-crm/dashboard-crm.component'
 export const appRoutes: Routes = [{
     path: '', component: AuthComponent, children: [
         { path: 'dashboard', component: DashboardCrmComponent },
-        { path: 'material-widgets', loadChildren: '../material-widgets/material-widgets.module#MaterialWidgetsModule' },
-        { path: 'tables', loadChildren: '../tables/tables.module#TablesModule' },
-        { path: 'maps', loadChildren: '../maps/maps.module#MapsModule' },
-        { path: 'charts', loadChildren: '../charts/charts.module#ChartsModule' },
+        { path: 'material-widgets', loadChildren: () => import('../material-widgets/material-widgets.module').then(m => m.MaterialWidgetsModule) },
+        { path: 'tables', loadChildren: () => import('../tables/tables.module').then(m => m.TablesModule) },
+        { path: 'maps', loadChildren: () => import('../maps/maps.module').then(m => m.MapsModule) },
+        { path: 'charts', loadChildren: () => import('../charts/charts.module').then(m => m.ChartsModule) },
         // { path: 'chats', loadChildren: '../chats/chat.module#ChatsModule' }, // fix this
         //{ path: 'mail', loadChildren: '../mail/mail.module#MailModule' }, // fix this
-        { path: 'pages', loadChildren: '../pages/pages.module#PagesModule' },
-        { path: 'forms', loadChildren: '../forms/forms.module#FormModule' }, //fix this
-        { path: 'guarded-routes', loadChildren: '../guarded-routes/guarded-routes.module#GuardedRoutesModule' },
+        { path: 'pages', loadChildren: () => import('../pages/pages.module').then(m => m.PagesModule) },
+        { path: 'forms', loadChildren: () => import('../forms/forms.module').then(m => m.FormModule) }, //fix this
+        { path: 'guarded-routes', loadChildren: () => import('../guarded-routes/guarded-routes.module').then(m => m.GuardedRoutesModule) },
         // { path: 'editor', loadChildren: '../editor/editor.module#EditorModule' }, 
-        { path: 'scrumboard', loadChildren: '../scrumboard/scrumboard.module#ScrumboardModule' },
+        { path: 'scrumboard', loadChildren: () => import('../scrumboard/scrumboard.module').then(m => m.ScrumboardModule) },
     ]
 }];
