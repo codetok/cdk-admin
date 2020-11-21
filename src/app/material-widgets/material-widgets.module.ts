@@ -29,9 +29,9 @@ import { MatProgressSpinnerModule,
 
 import { MaterialWidgetsRouterModule } from './material-widgets.router';
 
-import * as hljs from 'highlight.js';
-import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
-import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
+// import * as hljs from 'highlight.js';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+// import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { ListComponent } from './list/list.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { StepperComponent } from './stepper/stepper.component';
@@ -54,10 +54,10 @@ import { SelectComponent } from './select/select.component';
 
 
 
-export function highlightJsFactory(): any {
-  hljs.registerLanguage('typescript', hljsTypescript);
-  return hljs;
-}
+// export function highlightJsFactory(): any {
+//   hljs.registerLanguage('typescript', hljsTypescript);
+//   return hljs;
+// }
 
 @NgModule({
   imports: [
@@ -86,10 +86,7 @@ export function highlightJsFactory(): any {
     MatSelectModule,
     MatSlideToggleModule,
     MatProgressBarModule,
-    HighlightJsModule.forRoot({
-      provide: HIGHLIGHT_JS,
-      useFactory: highlightJsFactory
-    }),
+    HighlightModule,
     MaterialWidgetsRouterModule
   ],
   declarations: [
@@ -118,7 +115,16 @@ export function highlightJsFactory(): any {
 
 
     ],
-
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript')}
+      }
+    }
+  ],
   exports: [
     ]
       

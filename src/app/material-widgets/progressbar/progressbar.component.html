@@ -87,13 +87,15 @@
 
 			<mat-tab label="TS">
 				<div class="component-preview">
-	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="progressbarHelpers?.tsSourceProgressbar" language="typescript"></code></pre>
+								<pre
+									style="white-space:pre-line;"><code [highlight]="code" [source]="progressbarHelpers?.tsSourceProgressbar" [languages]="['typescript']"></code></pre>
 	            </div>
 	        </mat-tab>
 
 	        <mat-tab label="HTML">
 	        	<div class="component-preview">
-	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="progressbarHelpers?.htmlSourceProgressbar" language="html"></code></pre>
+								<pre
+									style="white-space:pre-line;"><code [highlight]="code" [source]="progressbarHelpers?.htmlSourceProgressbar" [languages]="['html']"></code></pre>
 	            </div>
 	        </mat-tab>
 

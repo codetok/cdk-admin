@@ -3,6 +3,6 @@
     background-color:white;
 }
 
-:host #discipline-qe /deep/ .ql-container{
+:host #discipline-qe ::ng-deep .ql-container{
   height: 500px;
 }

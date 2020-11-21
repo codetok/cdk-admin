@@ -117,12 +117,14 @@
 		<mat-tab-group fxFlexFill>
 			<mat-tab label="TS">
 				<div class="component-preview">
-	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="iconHelpers?.tsSourceIcons" language="typescript"></code></pre>
+								<pre
+									style="white-space:pre-line;"><code [highlight]="code" [source]="iconHelpers?.tsSourceIcons" [languages]="['typescript']"></code></pre>
 	            </div>
 	        </mat-tab>
 	        <mat-tab label="HTML">
 	        	<div class="component-preview">
-	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="iconHelpers?.htmlSourceIcons" language="html"></code></pre>
+								<pre
+									style="white-space:pre-line;"><code [highlight]="code" [source]="iconHelpers?.htmlSourceIcons" [languages]="['html']"></code></pre>
 	        	</div>
 	        </mat-tab>
 
