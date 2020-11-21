@@ -14,9 +14,13 @@
 					<mat-toolbar>
 							<h5 class="mat-title">Tasks</h5>
 					</mat-toolbar>
-					<div  dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="tasks">
+					<div dnd-droppable>
+						<!-- <div  dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="tasks"> -->
 						<mat-nav-list>
-							<mat-list-item  *ngFor="let item of tasks; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
+							<mat-list-item *ngFor="let item of tasks; let i = index" class="list-group-item"
+							
+							>
+							<!-- dnd-draggable [dragEnabled]="true" -->
 									
 								{{ item }}
 									
@@ -30,9 +34,11 @@
 						<h5 class="mat-title">Developers</h5>
 					</mat-toolbar>
 
-					<div dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="developers" style="height: 100%">
+					<div dnd-droppable>
+						<!-- dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="developers" style="height: 100%"> -->
 						<mat-list>
-							<mat-list-item *ngFor="let item1 of developers; let x = index" class="list-group-item" dnd-sortable [sortableIndex]="x">
+							<mat-list-item *ngFor="let item1 of developers; let x = index" class="list-group-item">
+								<!-- dnd-draggable [dragEnabled]="true" -->
 								{{item1}}			
 							</mat-list-item>
 						</mat-list>
@@ -43,9 +49,11 @@
 						<h5 class="mat-title">Testers</h5>
 					</mat-toolbar>
 
-					<div dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="testers" style="height: 100%">
+					<div dnd-droppable>
+						<!-- dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="testers" style="height: 100%"> -->
 						<mat-list>
-							<mat-list-item *ngFor="let item2 of testers; let y = index" class="list-group-item" dnd-sortable [sortableIndex]="y">
+							<mat-list-item *ngFor="let item2 of testers; let y = index" class="list-group-item">
+								<!-- dnd-draggable [dragEnabled]="true" -->
 								{{item2}}			
 							</mat-list-item>
 						</mat-list>
