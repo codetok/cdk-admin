@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule } from '@angular/router';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -21,11 +21,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
-import {
-    MatSidenavModule,
-    MatSliderModule,
-    MatProgressBarModule,
-} from '@angular/material';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {

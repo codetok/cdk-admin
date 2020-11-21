@@ -46,9 +46,9 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     CoreModule,
     CommonModule
   ],
-  entryComponents: [
-    ComposeComponent,
-  ],
+  // entryComponents: [
+  //   ComposeComponent,
+  // ],
   declarations: [
     MailComponent,
     ComposeComponent,

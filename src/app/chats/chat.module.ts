@@ -68,9 +68,9 @@ export function highlightJsFactory(): any {
     ],
     exports: [
     ],
-    entryComponents: [
-        NoticeComponent
-    ],
+    // entryComponents: [
+    //     NoticeComponent
+    // ],
     providers: [
     {
       provide: HIGHLIGHT_OPTIONS,

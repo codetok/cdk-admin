@@ -4,13 +4,12 @@ import { FormsRouterModule } from './forms.router';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {
-			MatButtonModule,
-			MatToolbarModule,
-			MatCardModule,
-			MatTabsModule,
-			MatIconModule,} from '@angular/material';
-import { MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
 import {  ReactiveFormsModule } from '@angular/forms';
 
 import { FormsModule }   from '@angular/forms';

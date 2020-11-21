@@ -4,7 +4,8 @@ import {fromEvent as observableFromEvent,  Observable } from 'rxjs';
 import {distinctUntilChanged, debounceTime} from 'rxjs/operators';
 import { Component, OnInit , ElementRef, ViewChild} from '@angular/core';
 import { TABLE_HELPERS, ExampleDatabase, ExampleDataSource } from './helpers.data';
-import { MatPaginator, MatSort } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
