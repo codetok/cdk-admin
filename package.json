@@ -49,7 +49,7 @@
     "screenfull": "^3.3.3",
     "tslib": "^1.10.0",
     "vued3tree": "^3.7.1",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular/cli": "^9.1.12",
@@ -57,8 +57,8 @@
     "@angular/language-service": "^9.1.12",
     "@types/jasmine": "^2.8.17",
     "@types/jasminewd2": "^2.0.8",
-    "@types/node": "^9.6.61",
-    "codelyzer": "^5.0.1",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
     "jasmine-core": "~2.9.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^2.0.5",
