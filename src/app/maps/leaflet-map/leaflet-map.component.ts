@@ -7,7 +7,7 @@ import * as L from 'leaflet';
   styleUrls: ['./leaflet-map.component.scss']
 })
 export class LeafletMapComponent implements OnInit {
-	@ViewChild('mapid', { static: false }) mapElement: ElementRef;
+	@ViewChild('mapid') mapElement: ElementRef;
 	@ViewChild('mapContainer', { static: true }) mapContainer: any;
 	public map: any;
 	height: string = '500px';
