@@ -34,11 +34,13 @@ import { FeatureTableComponent } from './feature-table/feature-table.component';
 import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
 import { FixedTableComponent } from './fixed-table/fixed-table.component';
 
-
-// export function highlightJsFactory(): any {
-//   hljs.registerLanguage('typescript', hljsTypescript);
-//   return hljs;
-// }
+export function highlightJsFactory(): any {
+  return {
+    coreLibraryLoader: () => import('highlight.js/lib/core'),
+    languages: {
+      typescript: () => import('highlight.js/lib/languages/typescript')}
+  }
+}
 
 @NgModule({
   imports: [
@@ -75,11 +77,7 @@ import { FixedTableComponent } from './fixed-table/fixed-table.component';
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-        languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript')}
-      }
+      useFactory: highlightJsFactory,
     }
   ],
   exports: [
