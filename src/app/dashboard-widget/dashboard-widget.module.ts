@@ -17,12 +17,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { MatListModule } from '@angular/material/list';
 import { WeatherComponent } from './weather/weather.component';
-import { Ng2OdometerModule } from 'ng2-odometer';
 import { SharePriceComponent } from './share-price/share-price.component';
 import { RoundProgressbarComponent } from './round-progressbar/round-progressbar.component'; 
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { D3UsaComponent } from './d3-usa/d3-usa.component';
+import { Ng9OdometerModule } from 'ng9-odometer';
 import { WorldMapComponent } from './world-map/world-map.component';
 
 
@@ -35,11 +35,11 @@ import { WorldMapComponent } from './world-map/world-map.component';
     MatTabsModule,
     MatToolbarModule,
     MatListModule,
-    Ng2OdometerModule.forRoot(),
-    RoundProgressModule,
     MatMenuModule,
     MatChipsModule,
     MatProgressBarModule,
+    Ng9OdometerModule.forRoot(),
+    RoundProgressModule,
     FormsModule,
     ReactiveFormsModule
   ],
