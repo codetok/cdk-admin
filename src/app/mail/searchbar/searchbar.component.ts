@@ -3,8 +3,7 @@ import {fromEvent as observableFromEvent} from 'rxjs';
 
 import {distinctUntilChanged, debounceTime, map} from 'rxjs/operators';
 import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
-import 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 
 
