@@ -12,19 +12,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material';
-import { MatProgressSpinnerModule,
-         MatRadioModule,
-         MatSliderModule,
-         MatCardModule,
-         MatAutocompleteModule,
-         MatCheckboxModule,
-         MatSlideToggleModule,
-         MatSelectModule,
-         MatProgressBarModule,
-         MatMenuModule,
-
- } from '@angular/material';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 import { MaterialWidgetsRouterModule } from './material-widgets.router';
@@ -54,13 +52,19 @@ import { SelectComponent } from './select/select.component';
 
 
 
-export function highlightJsFactory(): any {
+export const highlightJsFactory = () => {
   return {
     coreLibraryLoader: () => import('highlight.js/lib/core'),
     languages: {
       typescript: () => import('highlight.js/lib/languages/typescript')}
   }
 }
+
+export const highlightJsValue = {
+  coreLibraryLoader: () => import('highlight.js/lib/core'),
+  languages: {
+    typescript: () => import('highlight.js/lib/languages/typescript')}
+};
 
 @NgModule({
   imports: [
@@ -121,7 +125,14 @@ export function highlightJsFactory(): any {
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
+      // useValue: highlightJsValue
       useFactory: highlightJsFactory,
+      deps: []
+      // useValue: {
+      //   coreLibraryLoader: () => import('highlight.js/lib/core'),
+      //   languages: {
+      //     typescript: () => import('highlight.js/lib/languages/typescript')}
+      // }
     }
   ],
   exports: [

@@ -11,7 +11,8 @@ import { RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterDeactivateComponent } from './router-deactivate/router-deactivate.component';
-import { MatSnackBarModule, MatToolbarModule } from '@angular/material';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [

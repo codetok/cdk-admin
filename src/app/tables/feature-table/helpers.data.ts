@@ -4,7 +4,8 @@ import {merge as observableMerge, BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import {DataSource} from '@angular/cdk/collections';
-import {MatPaginator, MatSort} from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 
 

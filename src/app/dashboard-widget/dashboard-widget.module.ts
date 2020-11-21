@@ -35,7 +35,7 @@ import { WorldMapComponent } from './world-map/world-map.component';
     MatTabsModule,
     MatToolbarModule,
     MatListModule,
-    Ng2OdometerModule,
+    Ng2OdometerModule.forRoot(),
     RoundProgressModule,
     MatMenuModule,
     MatChipsModule,
