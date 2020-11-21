@@ -14,7 +14,7 @@ const routes: Routes = [
         CommonModule,
         FlexLayoutModule,
         CoreModule,
-        QuillModule,
+        QuillModule.forRoot(),
         RouterModule.forChild(routes)
     ],
     declarations: [   

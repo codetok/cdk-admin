@@ -29,7 +29,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 @NgModule({
   imports: [
     MailRoutingModule,
-    QuillModule,
+    QuillModule.forRoot(),
     FlexLayoutModule,
     MatIconModule,
     MatMenuModule,
