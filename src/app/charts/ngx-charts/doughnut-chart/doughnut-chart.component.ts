@@ -8,7 +8,7 @@ import { single, multi } from './data';
 })
 export class DoughnutChartComponent implements OnInit {
 
- @ViewChild('ele') el:ElementRef;
+ @ViewChild('ele', { static: true }) el:ElementRef;
 
   public single: any[];
   public multi: any[];

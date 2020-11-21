@@ -7,7 +7,7 @@ import { single, multi } from './data';
 })
 export class AreaChartComponent implements OnInit {
 
-  @ViewChild('ele') el:ElementRef;
+  @ViewChild('ele', { static: true }) el:ElementRef;
   public showYAxisLabel;
   public showYAxis;
   public showXAxis;

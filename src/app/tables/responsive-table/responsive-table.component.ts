@@ -15,7 +15,7 @@ export class ResponsiveTableComponent implements OnInit {
     sortedData: any[];
     showResponsiveTableCode;
 
-	@ViewChild(MatPaginator) paginator1: MatPaginator;
+	@ViewChild(MatPaginator, { static: true }) paginator1: MatPaginator;
     pageLength = 0;
     pageSize = 15;
     helpers = ResponsiveTableHelpers;

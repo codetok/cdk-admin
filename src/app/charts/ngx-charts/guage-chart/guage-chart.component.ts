@@ -8,7 +8,7 @@ import { single } from './data';
 })
 export class GuageChartComponent implements OnInit {
 
- @ViewChild('ele') el:ElementRef;
+ @ViewChild('ele', { static: true }) el:ElementRef;
 
   view: any[] = [];
   data: any[];
