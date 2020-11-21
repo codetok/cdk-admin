@@ -6,7 +6,7 @@ import { single, multi } from './data';
 	styleUrls: ['./pie-chart.component.scss']
 })
 export class PieChartComponent implements OnInit {
-	@ViewChild('ele') el: ElementRef;
+	@ViewChild('ele', { static: true }) el: ElementRef;
 
 	public single: any[];
 	public multi: any[];

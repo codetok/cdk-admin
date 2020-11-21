@@ -16,7 +16,7 @@ export class FilterTableComponent implements OnInit {
 	public exampleDatabase = new ExampleDatabase();
 	public dataSource: ExampleDataSource | null;
   	public showFilterTableCode;
-  	@ViewChild('filter') filter: ElementRef;
+  	@ViewChild('filter', { static: true }) filter: ElementRef;
   	constructor() { }
 
   	ngOnInit() {

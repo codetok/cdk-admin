@@ -14,8 +14,8 @@ export class GoogleMapComponent implements OnInit {
 	lng: number = 76.31248180688476;
 	zoom: number = 8;
 	height: string = '500px';
-	@ViewChild(AgmMap) private myMap: any;
-	@ViewChild('mapContainer') mapContainer: any;
+	@ViewChild(AgmMap, { static: true }) private myMap: any;
+	@ViewChild('mapContainer', { static: true }) mapContainer: any;
 	constructor(private mapsAPILoader: MapsAPILoader) {
 	}
 
