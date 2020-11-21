@@ -29,10 +29,14 @@ import { environment } from '../../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-// export function highlightJsFactory(): any {
-//   hljs.registerLanguage('typescript', hljsTypescript);
-//   return hljs;
-// }
+
+export function highlightJsFactory(): any {
+  return {
+    coreLibraryLoader: () => import('highlight.js/lib/core'),
+    languages: {
+      typescript: () => import('highlight.js/lib/languages/typescript')}
+  }
+}
 
 @NgModule({
     imports: [
@@ -70,12 +74,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-        lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
-        languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript')}
-      }
+      useFactory: highlightJsFactory,
     },
     {
         provide: 'ChatsService', useClass: ChatsService

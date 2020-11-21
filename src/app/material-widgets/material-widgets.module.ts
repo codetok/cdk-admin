@@ -54,10 +54,13 @@ import { SelectComponent } from './select/select.component';
 
 
 
-// export function highlightJsFactory(): any {
-//   hljs.registerLanguage('typescript', hljsTypescript);
-//   return hljs;
-// }
+export function highlightJsFactory(): any {
+  return {
+    coreLibraryLoader: () => import('highlight.js/lib/core'),
+    languages: {
+      typescript: () => import('highlight.js/lib/languages/typescript')}
+  }
+}
 
 @NgModule({
   imports: [
@@ -118,11 +121,7 @@ import { SelectComponent } from './select/select.component';
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-        languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript')}
-      }
+      useFactory: highlightJsFactory,
     }
   ],
   exports: [

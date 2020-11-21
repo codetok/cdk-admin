@@ -12,12 +12,13 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { LeafletMapComponent } from './leaflet-map/leaflet-map.component';
 
-
-
-// export function highlightJsFactory(): any {
-//   hljs.registerLanguage('typescript', hljsTypescript);
-//   return hljs;
-// }
+export function highlightJsFactory(): any {
+  return {
+    coreLibraryLoader: () => import('highlight.js/lib/core'),
+    languages: {
+      typescript: () => import('highlight.js/lib/languages/typescript')}
+  }
+}
 
 @NgModule({
   imports: [
@@ -38,11 +39,7 @@ import { LeafletMapComponent } from './leaflet-map/leaflet-map.component';
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-        languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript')}
-      }
+      useFactory: highlightJsFactory,
     }
   ],
   exports: [
