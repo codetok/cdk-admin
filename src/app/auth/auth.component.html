@@ -12,9 +12,9 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
-        <perfect-scrollbar>
+        <ng-scrollbar>
             <router-outlet></router-outlet>
-        </perfect-scrollbar>
+        </ng-scrollbar>
     </mat-sidenav-content>
     <mat-sidenav #sidenav2 position="end" mode="over">
         <cdk-sidebar></cdk-sidebar>
@@ -47,9 +47,9 @@
                 <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
 
 
-                <perfect-scrollbar  style="height: calc(100% - 33px);" >
+                <ng-scrollbar style="height: calc(100% - 33px);">
                     <router-outlet></router-outlet>
-                </perfect-scrollbar>
+                </ng-scrollbar>
 
            
             </mat-drawer-content>

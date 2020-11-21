@@ -1,7 +1,7 @@
 export const SLIDETOGGLE_HELPERS: any = {
 
 	tsSourceSlideToggle: `
-import { MatSlideToggleModule } from '@angular/material';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
 		  imports: [
 		    MatSlideToggleModule,

@@ -9,18 +9,16 @@ import { ListComponent } from './list/list.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MailService } from './mail.service';
 import { MailRoutingModule } from './mail.routing';
-import { 
-    MatIconModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatListModule,
-    MatSidenavModule,
-    MatCheckboxModule,
-    MatSnackBarModule
-       } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from '../core/core.module';
 import { CommonModule } from '@angular/common';

@@ -1,7 +1,7 @@
 export const LIST_HELPERS: any = {
 
 	tsSourceSelectionList:`
-		import { MatListModule } from '@angular/material';
+		import { MatListModule } from '@angular/material/list';
 		@NgModule({
 		  imports: [
 		   MatListModule

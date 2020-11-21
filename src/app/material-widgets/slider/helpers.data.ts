@@ -1,7 +1,7 @@
 export const SLIDER_HELPERS: any = {
 
 	tsSourceSlider: `
-import { MatSliderModule } from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 	  	@NgModule({

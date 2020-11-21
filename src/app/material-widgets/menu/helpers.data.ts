@@ -1,6 +1,6 @@
 export const MENU_HELPERS: any = {
 	tsSourceMenu: `
-import { MatMenuModule } from '@angular/material';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
       imports: [
         MatMenuModule,

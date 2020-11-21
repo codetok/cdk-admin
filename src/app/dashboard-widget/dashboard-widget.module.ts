@@ -44,33 +44,33 @@ import { WorldMapComponent } from './world-map/world-map.component';
     ReactiveFormsModule
   ],
   declarations: [
-      DashcardComponent, 
-      LineGraphComponent, 
-      BarGraphComponent, 
-      DoughnutGraphComponent, 
-      ProfileCardComponent,
-      PricingPlanComponent,
-      WeatherComponent,
-      SharePriceComponent,
-      RoundProgressbarComponent,
-      SalesListComponent,
-      D3UsaComponent,
-      WorldMapComponent
-    
-      ],
+    DashcardComponent, 
+    LineGraphComponent, 
+    BarGraphComponent, 
+    DoughnutGraphComponent, 
+    ProfileCardComponent,
+    PricingPlanComponent,
+    WeatherComponent,
+    SharePriceComponent,
+    RoundProgressbarComponent,
+    SalesListComponent,
+    D3UsaComponent,
+    WorldMapComponent
+  
+  ],
   exports: [
-      DashcardComponent, 
-      LineGraphComponent, 
-      BarGraphComponent, 
-      DoughnutGraphComponent, 
-      ProfileCardComponent,
-      PricingPlanComponent,
-      WeatherComponent,
-      SharePriceComponent,
-      RoundProgressbarComponent,
-      SalesListComponent,
-      D3UsaComponent,
-      WorldMapComponent
+    DashcardComponent, 
+    LineGraphComponent, 
+    BarGraphComponent, 
+    DoughnutGraphComponent, 
+    ProfileCardComponent,
+    PricingPlanComponent,
+    WeatherComponent,
+    SharePriceComponent,
+    RoundProgressbarComponent,
+    SalesListComponent,
+    D3UsaComponent,
+    WorldMapComponent
   ]
 })
 export class DashboardWidgetModule { }

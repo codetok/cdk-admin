@@ -1,7 +1,7 @@
 export const CHECKBOX_HELPERS: any = {
 
 	tsSourceCheckbox: `
-import { MatCheckboxModule } from '@angular/material'
+import { MatCheckboxModule } from '@angular/material/checkbox'
 	
 		@NgModule({
 		  imports: [

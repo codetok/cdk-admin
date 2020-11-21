@@ -1,7 +1,7 @@
 export const RADIO_HELPERS: any = {
 
 	tsSourceRadio: `
-import { MatRadioModule } from '@angular/material';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
       imports: [
         MatRadioModule,

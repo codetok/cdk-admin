@@ -1,7 +1,7 @@
 export const input_HELPERS: any = {
 
 	tsSourceInput:`
-import { MatInputModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 		@NgModule({
 		  imports: [
 		   MatInputModule

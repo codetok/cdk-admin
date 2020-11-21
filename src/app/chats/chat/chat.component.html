@@ -25,7 +25,7 @@
   </mat-toolbar>
 
   <div class="chat-content" fxLayout="column" fxLayoutAlign="end stretch">
-    <perfect-scrollbar >
+    <ng-scrollbar>
       <div class="messages-container" *ngIf="activeChat">
         <div class="chat-message" *ngFor="let message of activeChat.messages" [ngSwitch]="message.who" fxLayout="column"
              fxLayoutAlign="end start">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-    </perfect-scrollbar>
+    </ng-scrollbar>
     
   </div>
   <div class="chat-respond" fxLayout="row" fxLayoutAlign="start center">
