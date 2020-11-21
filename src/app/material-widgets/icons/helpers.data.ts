@@ -1,7 +1,7 @@
 export const ICON_HELPERS: any = {
 
 	tsSourceIcons: `
-import { MatIconModule} from '@angular/material';
+import { MatIconModule} from '@angular/material/icon';
 	
 		@NgModule({
 		  imports: [

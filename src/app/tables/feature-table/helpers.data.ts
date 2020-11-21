@@ -94,12 +94,12 @@ export const TABLE_HELPERS = {
   </mat-paginator>
 </div>
 `.trim(),
-  allFeaturesTabletssource:`import {Component, ElementRef, ViewChild} from '@angular/core';
-import {DataSource} from '@angular/cdk/collections';
-import {MatPaginator, MatSort} from '@angular/material';
-import {SelectionModel} from '@angular/cdk/collections';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {Observable} from 'rxjs/Observable';
+  allFeaturesTabletssource:`import { Component, ElementRef, ViewChild } from '@angular/core';
+import { DataSource } from '@angular/cdk/collections';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { SelectionModel } from '@angular/cdk/collections';
+import { BehaviorSubject, Observable} from 'rxjs';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/observable/fromEvent';

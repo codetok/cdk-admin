@@ -1,7 +1,7 @@
 export const select_HELPERS: any = {
 
 	tsSourceSelectionselect:`
-import { MatSelectModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
 
 
 	  	@NgModule({

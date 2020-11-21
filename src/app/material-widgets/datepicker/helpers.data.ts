@@ -1,7 +1,7 @@
 export const DATEPICKER_HELPERS: any = {
 
 	tsSourceDatepicker:`
-import { MatDatepickerModule } from '@angular/material';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 	
 		@NgModule({
 		  imports: [

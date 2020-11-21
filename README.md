@@ -9,6 +9,7 @@ for bugs use github issue tracker
 ## Changelog
 - Integrated sort on Responsive Tables
 - Small Flex alignments
+- Replaced ngx-perfect-scrollbar with ngx-scrollbar
 
 ## Todo
 - Chat

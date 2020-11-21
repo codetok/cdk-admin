@@ -11,19 +11,19 @@ import { ChatListComponent } from './chat-list/chat-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NoticeComponent } from './notice/notice.component';
 
-import {
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatDialogModule,
-    MatButtonModule
-} from '@angular/material';
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule} from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+// import {
+    // PerfectScrollbarModule, 
+    // PERFECT_SCROLLBAR_CONFIG,
+    // PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { ChatsService } from './chats.service';
 import { environment } from '../../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -48,7 +48,8 @@ export function highlightJsFactory(): any {
     MatInputModule,
     MatDialogModule,
     MatButtonModule,
-    PerfectScrollbarModule,
+    // PerfectScrollbarModule,
+    NgScrollbarModule,
     ReactiveFormsModule,
     FormsModule,
     CommonModule,

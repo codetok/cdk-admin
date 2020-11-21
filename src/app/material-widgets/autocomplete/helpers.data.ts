@@ -1,7 +1,7 @@
 export const AUTOCOMPLETE_HELPERS: any = {
 
 	tsSourceAutocomplete: `
-import { MatAutocompleteModule } from '@angular/material';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
   
     @NgModule({
       imports: [

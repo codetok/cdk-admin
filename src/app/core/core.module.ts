@@ -11,9 +11,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule } from '@angular/router';
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+// import {
+//     PerfectScrollbarModule, 
+//     PERFECT_SCROLLBAR_CONFIG,
+//     PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ToolbarNotificationComponent } from './toolbar-notification/toolbar-notification.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -26,9 +28,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 
 
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-    suppressScrollX: true
-};
+// const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+//     suppressScrollX: true
+// };
 
 @NgModule({
 
@@ -51,7 +53,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         MatIconModule,
         MatChipsModule,
         RouterModule,
-        PerfectScrollbarModule,
+        // PerfectScrollbarModule,
+        NgScrollbarModule,
         FlexLayoutModule,
         MatToolbarModule,
         MatFormFieldModule,
@@ -74,10 +77,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ],
 
     providers: [
-        {
-            provide: PERFECT_SCROLLBAR_CONFIG,
-            useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-        }
+        // {
+        //     provide: PERFECT_SCROLLBAR_CONFIG,
+        //     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+        // }
     ]
 })
 export class CoreModule { }

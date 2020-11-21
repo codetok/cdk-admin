@@ -1,7 +1,7 @@
 export const SPINNER_HELPERS: any = {
 
 	tsSourceProgressSpinner: `
-import { MatProgressSpinnerModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     @NgModule({
       imports: [
        MatProgressSpinnerModule]
