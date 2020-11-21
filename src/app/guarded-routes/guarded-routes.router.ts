@@ -8,6 +8,7 @@ import { CanActivate } from '@angular/router';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { CanDeactivate } from '@angular/router';
 import { RouterDeactivateComponent } from './router-deactivate/router-deactivate.component';
+@Injectable()
 export class UserToken { }
 export class Permission {
 	canActivated(user: UserToken, id: string): boolean {
@@ -15,6 +16,7 @@ export class Permission {
 	}
 }
 
+@Injectable()
 export class Permissions {
 	canActivate(user: UserToken, id: string): boolean {
 		return false;
