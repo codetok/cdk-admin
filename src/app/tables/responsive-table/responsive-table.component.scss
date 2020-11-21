@@ -36,7 +36,7 @@ table tr:nth-child(even) td{
     background:rgba(145, 151, 187, 0.34);
     font-family:Roboto,"Helvetica Neue",sans-serif;
 }
-/deep/ .mat-sort-header-container{
+::ng-deep .mat-sort-header-container{
         justify-content: center;
 }
 

@@ -35,7 +35,10 @@
                 }
               ]
             }
-          }
+          },
+          "allowedCommonJsDependencies": [
+            "highlight.js"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

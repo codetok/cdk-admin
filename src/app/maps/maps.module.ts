@@ -6,18 +6,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MapsRouterModule } from './maps.router';
 import { AgmCoreModule } from '@agm/core';
 
-import * as hljs from 'highlight.js';
-import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
-import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
+// import * as hljs from 'highlight.js';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+// import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { LeafletMapComponent } from './leaflet-map/leaflet-map.component';
 
 
 
-export function highlightJsFactory(): any {
-  hljs.registerLanguage('typescript', hljsTypescript);
-  return hljs;
-}
+// export function highlightJsFactory(): any {
+//   hljs.registerLanguage('typescript', hljsTypescript);
+//   return hljs;
+// }
 
 @NgModule({
   imports: [
@@ -28,16 +28,23 @@ export function highlightJsFactory(): any {
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAXTJwhYqJ6Pc7VXGRMTv40N1WRLqzuSNs'
     }),
-    HighlightJsModule.forRoot({
-      provide: HIGHLIGHT_JS,
-      useFactory: highlightJsFactory
-    }),
+    HighlightModule,
     MapsRouterModule
   ],
   declarations: [
     GoogleMapComponent,
-    LeafletMapComponent],
-
+    LeafletMapComponent
+  ],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript')}
+      }
+    }
+  ],
   exports: [
     ]
       

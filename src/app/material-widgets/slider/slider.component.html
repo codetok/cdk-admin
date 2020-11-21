@@ -90,12 +90,14 @@
 		<mat-tab-group fxFlexFill>
 			<mat-tab label="TS">
                 <div class="component-preview">
-	               <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="sliderHelpers?.tsSourceSlider" language="typescript"></code></pre>
+                <pre
+                    style="white-space:pre-line;"><code [highlight]="code" [source]="sliderHelpers?.tsSourceSlider" [languages]="['typescript']"></code></pre>
                 </div>
 	        </mat-tab>
 	        <mat-tab label="HTML">
                 <div class="component-preview">
-	               <pre style="white-space:pre-line;"><code mwlHighlightJs [source]="sliderHelpers?.htmlSourceSlider" language="html"></code></pre>
+                <pre
+                    style="white-space:pre-line;"><code [highlight]="code" [source]="sliderHelpers?.htmlSourceSlider" [languages]="['html']"></code></pre>
                 </div>
 	        </mat-tab>
 

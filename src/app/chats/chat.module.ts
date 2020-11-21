@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ChatRouterModule } from './chat.router';
-import * as hljs from 'highlight.js';
-import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
-import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
+// import * as hljs from 'highlight.js';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+// import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { ChatComponent } from './chat/chat.component';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -29,10 +29,10 @@ import { environment } from '../../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-export function highlightJsFactory(): any {
-  hljs.registerLanguage('typescript', hljsTypescript);
-  return hljs;
-}
+// export function highlightJsFactory(): any {
+//   hljs.registerLanguage('typescript', hljsTypescript);
+//   return hljs;
+// }
 
 @NgModule({
     imports: [
@@ -50,10 +50,7 @@ export function highlightJsFactory(): any {
     CommonModule,
     FlexLayoutModule,
     FormsModule,
-    HighlightJsModule.forRoot({
-        provide: HIGHLIGHT_JS,
-        useFactory: highlightJsFactory
-    }),
+    HighlightModule,
     ChatRouterModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
@@ -71,7 +68,18 @@ export function highlightJsFactory(): any {
         NoticeComponent
     ],
     providers: [
-    {provide: 'ChatsService', useClass: ChatsService},
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript')}
+      }
+    },
+    {
+        provide: 'ChatsService', useClass: ChatsService
+    },
   ]
 
 })

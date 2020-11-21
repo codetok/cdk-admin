@@ -77,13 +77,15 @@
 		<mat-tab-group fxFlexFill>
 			<mat-tab label="TS">
 				<div class="component-preview">
-	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="spinnerHelpers?.tsSourceProgressSpinner" language="typescript"></code></pre>
+								<pre
+									style="white-space:pre-line;"><code [highlight]="code" [source]="spinnerHelpers?.tsSourceProgressSpinner" [languages]="['typescript']"></code></pre>
 	            </div>
 	        </mat-tab>
 
 	        <mat-tab label="HTML">
 	        	<div class="component-preview">
-	            	<pre style="white-space:pre-line;"><code mwlHighlightJs [source]="spinnerHelpers?.htmlSourceProgressSpinner" language="html"></code></pre>
+								<pre
+									style="white-space:pre-line;"><code [highlight]="code" [source]="spinnerHelpers?.htmlSourceProgressSpinner" [languages]="['html']"></code></pre>
 	            </div>
 	        </mat-tab>
 

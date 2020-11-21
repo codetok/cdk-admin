@@ -26,19 +26,19 @@ import { MatPaginatorModule,
          MatButtonToggleModule } from '@angular/material';
 
 
-import * as hljs from 'highlight.js';
-import { HighlightJsModule, HIGHLIGHT_JS } from 'angular-highlight-js';
-import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
+// import * as hljs from 'highlight.js';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+// import * as hljsTypescript from 'highlight.js/lib/languages/typescript';
 import { FilterTableComponent } from './filter-table/filter-table.component';
 import { FeatureTableComponent } from './feature-table/feature-table.component';
 import { ResponsiveTableComponent } from './responsive-table/responsive-table.component';
 import { FixedTableComponent } from './fixed-table/fixed-table.component';
 
 
-export function highlightJsFactory(): any {
-  hljs.registerLanguage('typescript', hljsTypescript);
-  return hljs;
-}
+// export function highlightJsFactory(): any {
+//   hljs.registerLanguage('typescript', hljsTypescript);
+//   return hljs;
+// }
 
 @NgModule({
   imports: [
@@ -64,10 +64,7 @@ export function highlightJsFactory(): any {
     MatTooltipModule,
     MatChipsModule,
     MatButtonToggleModule,
-    HighlightJsModule.forRoot({
-      provide: HIGHLIGHT_JS,
-      useFactory: highlightJsFactory
-    }),
+    HighlightModule,
     TablesRouterModule
   ],
   declarations: [
@@ -75,7 +72,16 @@ export function highlightJsFactory(): any {
    FeatureTableComponent,
    ResponsiveTableComponent,
    FixedTableComponent],
-
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript')}
+      }
+    }
+  ],
   exports: [
     ]
       
