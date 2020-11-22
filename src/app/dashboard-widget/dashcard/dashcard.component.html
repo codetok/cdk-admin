@@ -5,7 +5,7 @@
     <div  fxFlex="60" fxLayout="column" fxLayoutAlign="center center" [style.background]="dashData?.colorDark" >
          
         <div style="color: white;font-size: 40px">
-            <ng9-odometer [number]="dashData?.number" [config]="{ }"></ng9-odometer>
+            {{ dashData?.number }}
         </div>
         <p class="mat-body-1 border-top">
             {{dashData?.title}}
