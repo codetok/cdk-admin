@@ -8,6 +8,17 @@ import { Observable ,  Observer } from 'rxjs';
 export class DashcardComponent implements OnInit {
      
     @Input() dashData: any;
+
+    // options
+    gradient: boolean = true;
+    showLegend: boolean = true;
+    showLabels: boolean = true;
+    isDoughnut: boolean = true;
+    legendPosition: string = 'below';
+
+    colorScheme = {
+        domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    };
     
     constructor() {
 
