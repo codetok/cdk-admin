@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<mat-form-field>
-					<input matInput type="number"  [(ngModel)]="model.number"  name="number" #number="ngModel" required minlength="10">
+					<input matInput type="number" [(ngModel)]="model.number" name="number" #number="ngModel" required minlength="10">
 				</mat-form-field>
 				<div  style="color:red" *ngIf="number.invalid && (number.dirty || number.touched)"
 				>
