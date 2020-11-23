@@ -7,7 +7,7 @@ import { ChartsRouterModule } from './charts.router';
 
 import { ChartjsModule } from './chartjs/chartjs.module';
 import { NgxChartModule } from './ngx-charts/ngx-charts.module';
-import { Nvd3ChartsModule } from './nvd3-charts/nvd3-charts.module';
+// import { Nvd3ChartsModule } from './nvd3-charts/nvd3-charts.module';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { Nvd3ChartsModule } from './nvd3-charts/nvd3-charts.module';
     NgxChartModule,
     FlexLayoutModule,
     ChartjsModule,
-    Nvd3ChartsModule
+    // Nvd3ChartsModule
   ],
   declarations: []
 })
