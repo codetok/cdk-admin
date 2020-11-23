@@ -23,7 +23,7 @@ import { PricingPlanComponent } from './pricing-plan/pricing-plan.component';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { D3UsaComponent } from './d3-usa/d3-usa.component';
-// import { Ng9OdometerModule } from 'ng9-odometer';
+import { Ng9OdometerModule } from 'ng9-odometer';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { WorldMapComponent } from './world-map/world-map.component';
 
@@ -41,7 +41,7 @@ import { WorldMapComponent } from './world-map/world-map.component';
     MatMenuModule,
     MatChipsModule,
     MatProgressBarModule,
-    // Ng9OdometerModule.forRoot(),
+    Ng9OdometerModule.forRoot(),
     NgxChartsModule,
     RoundProgressModule,
     FormsModule,

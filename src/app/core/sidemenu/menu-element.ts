@@ -272,12 +272,12 @@ export const menus = [
                 'open': false,
                 'link': 'charts/ngx-charts',
             },
-            {
-                'name': 'nvd3',
-                'icon': 'pie_chart',
-                'open': false,
-                'link': 'charts/nvd3-charts',
-            }
+            // {
+            //     'name': 'nvd3',
+            //     'icon': 'pie_chart',
+            //     'open': false,
+            //     'link': 'charts/nvd3-charts',
+            // }
         ]
     }, 
     // {
