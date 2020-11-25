@@ -11,8 +11,9 @@ jobs:
       - run: npm ci && npm run build --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          repoToken: '${{ secrets.PERSONAL_GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CDK_ADMIN }}'
+          channelId: live
           projectId: cdk-admin
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
