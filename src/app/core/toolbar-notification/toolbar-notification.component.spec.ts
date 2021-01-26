@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ToolbarNotificationComponent } from './toolbar-notification.component';
 
@@ -6,7 +6,7 @@ describe('ToolbarNotificationComponent', () => {
   let component: ToolbarNotificationComponent;
   let fixture: ComponentFixture<ToolbarNotificationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ToolbarNotificationComponent ]
     })
