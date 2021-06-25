@@ -1,4 +1,4 @@
-# CdK Admin - FREE PREMIUM ANGULAR 6 MATERIAL DESIGN+FLEX LAYOUT ADMIN PANEL
+# CdK Admin - FREE PREMIUM ANGULAR 6+ MATERIAL DESIGN+FLEX LAYOUT ADMIN PANEL
 
 Upgrade to latest angular - ongoing
 DEMO: https://cdk-admin.web.app
