@@ -18,15 +18,15 @@
     mat-nav-list {
         overflow: hidden;
         padding-top: 0px;
-        
+
     }
     .primary{
-        transition: max-height .4s cubic-bezier(.35, 0, .25, 1);  
+        transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
         padding-top: 0px;
     }
     .secondaryMenu {
-        background:  mat.get-color-from-palette($primary, 500); ;
-        transition: max-height .4s cubic-bezier(.35, 0, .25, 1);  
+       // background:  mat.get-color-from-palette($primary, 500); ;
+        transition: max-height .4s cubic-bezier(.35, 0, .25, 1);
         padding-top: 0px;
     }
 
@@ -40,6 +40,6 @@
         font-size: 14px;
     }
 
-  
+
 }
 

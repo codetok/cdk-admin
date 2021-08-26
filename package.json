@@ -53,7 +53,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular/cli": "^10.2.0",
+    "@angular/cli": "^12.2.2",
     "@angular/compiler-cli": "^13.0.0-next.3",
     "@angular/language-service": "^13.0.0-next.3",
     "@types/googlemaps": "^3.40.3",
@@ -69,7 +69,6 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "node-sass": "^4.14.1",
     "protractor": "~7.0.0",
     "ts-node": "~4.1.0",
     "tslint": "~6.1.0",

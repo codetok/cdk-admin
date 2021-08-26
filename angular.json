@@ -22,6 +22,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/theme/theme.scss",
               "src/theme/typography.scss"
             ],
@@ -73,6 +74,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/theme/theme.scss",
               "src/theme/typography.scss"
             ],

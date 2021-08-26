@@ -6,12 +6,12 @@
         min-height: 300px;
         box-sizing: border-box;
         color:#f5f0f0f2;
-        
+
         .profile-details{
-            background-image: -webkit-linear-gradient(45deg, mat.get-color-from-palette($primary,400) 45%, mat.get-color-from-palette($primary,300)  45%);
+            // background-image: -webkit-linear-gradient(45deg, mat.get-color-from-palette($primary,400) 45%, mat.get-color-from-palette($primary,300)  45%);
             margin-top:-50px;
             min-height: 242px;
-            
+
             & .profile-details-holder{
                 margin-top: 70px;
             }

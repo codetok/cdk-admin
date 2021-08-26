@@ -5,15 +5,15 @@
     $accent: map-get($theme, accent);
     $warn: map-get($theme, warn);
 
-    
+
     .sidenav{
-        background: mat.get-color-from-palette($primary,400);    
+       background: mat.get-color-from-palette($primary,400);
         overflow: hidden;
         position: relative;
         width: 250px;
     }
     .drawer{
-        background: mat.get-color-from-palette($primary,400);    
+       background: mat.get-color-from-palette($primary,400);
         overflow: hidden;
         position: relative;
         width: 80px;

@@ -1,18 +1,18 @@
 @use '~@angular/material' as mat;
 
-$custom-typography: mat.define-typography-config(
-    $font-family:   'Roboto, "Helvetica Neue", sans-serif',
-    $display-4:     mat.define-typography-level(112px, 112px, 300),
-    $display-3:     mat.define-typography-level(56px, 56px, 300),
-    $display-2:     mat.define-typography-level(45px, 48px, 300),
-    $display-1:     mat.define-typography-level(34px, 40px, 300),
-    $headline:      mat.define-typography-level(14px, 32px, 300),
-    $title:         mat.define-typography-level(20px, 32px, 300),
-    $subheading-2:  mat.define-typography-level(22px, 28px, 300),
-    $subheading-1:  mat.define-typography-level(15px, 24px, 300),
-    $body-2:        mat.define-typography-level(14px, 24px, 300),
-    $body-1:        mat.define-typography-level(14px, 20px, 300),
-    $caption:       mat.define-typography-level(12px, 20px, 300),
-    $button:        mat.define-typography-level(14px, 14px, 300),
-    $input:         mat.define-typography-level(16px, 1.125, 300)
-);
+//$custom-typography: mat.define-typography-config(
+//    $font-family:   'Roboto, "Helvetica Neue", sans-serif',
+//    $display-4:     mat.define-typography-level(112px, 112px, 300),
+//    $display-3:     mat.define-typography-level(56px, 56px, 300),
+//    $display-2:     mat.define-typography-level(45px, 48px, 300),
+//    $display-1:     mat.define-typography-level(34px, 40px, 300),
+//    $headline:      mat.define-typography-level(14px, 32px, 300),
+//    $title:         mat.define-typography-level(20px, 32px, 300),
+//    $subheading-2:  mat.define-typography-level(22px, 28px, 300),
+//    $subheading-1:  mat.define-typography-level(15px, 24px, 300),
+//    $body-2:        mat.define-typography-level(14px, 24px, 300),
+//    $body-1:        mat.define-typography-level(14px, 20px, 300),
+//    $caption:       mat.define-typography-level(12px, 20px, 300),
+//    $button:        mat.define-typography-level(14px, 14px, 300),
+//    $input:         mat.define-typography-level(16px, 1.125, 300)
+//);

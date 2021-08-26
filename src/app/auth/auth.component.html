@@ -20,7 +20,7 @@
         <cdk-sidebar></cdk-sidebar>
     </mat-sidenav>
 </mat-sidenav-container> -->
-        
+
  <!-- Below is another example of the home page that has a smaller menu that shows up when the main menu is hidden -->
 
 <mat-sidenav-container class="container" fullscreen>
@@ -43,15 +43,10 @@
                 <cdk-sidemenu [iconOnly]="true"></cdk-sidemenu>
             </mat-drawer>
             <mat-drawer-content style="overflow: hidden;">
-
                 <cdk-toolbar [sidenav]="sidenav" [drawer]="drawer" [sidebar]="sidenav2" [matDrawerShow]="matDrawerShow" style="z-index: 500"></cdk-toolbar>
-
-
                 <ng-scrollbar style="height: calc(100% - 33px);">
                     <router-outlet></router-outlet>
                 </ng-scrollbar>
-
-           
             </mat-drawer-content>
         </mat-drawer-container>
     </mat-sidenav-content>
@@ -61,11 +56,11 @@
     </mat-sidenav>
 
 </mat-sidenav-container>
-                 
-            
-            
-    
-    
+
+
+
+
+
 
 
 

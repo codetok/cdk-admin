@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '~@angular/material' as mat;
 @import '../app/auth/auth.component.scss';
 @import '../app/core/sidemenu/sidemenu.component.scss';
@@ -7,22 +8,22 @@
 @import '../app/dashboard-widget/round-progressbar/round-progressbar.component.scss';
 @import '../app/dashboard-widget/sales-list/sales-list.component.scss';
 
-mat.$light-theme-background-palette: (
-  status-bar: map_get(mat.$grey-palette, 300),
-  app-bar:    map_get(mat.$grey-palette, 100),
-  background: map_get(mat.$indigo-palette, 50),
-  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
-  card:       white,
-  dialog:     white,
-  disabled-button: rgba(black, 0.12),
-  raised-button: white,
-  focused-button: rgba(black, 0.06),
-  selected-button: map_get(mat.$grey-palette, 300),
-  selected-disabled-button: map_get(mat.$grey-palette, 400),
-  disabled-button-toggle: map_get(mat.$grey-palette, 200),
-  unselected-chip: map_get(mat.$grey-palette, 300),
-  disabled-list-option: map_get(mat.$grey-palette, 200),
-);
+//mat.$light-theme-background-palette:(
+//  status-bar:map_get(mat.$grey-palette, 300),
+//  app-bar:map_get(mat.$grey-palette, 100),
+//  background: map_get(mat.$indigo-palette, 50),
+//  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+//  card:       white,
+//  dialog:     white,
+//  disabled-button: rgba(black, 0.12),
+//  raised-button: white,
+//  focused-button: rgba(black, 0.06),
+//  selected-button: map_get(mat.$grey-palette, 300),
+//  selected-disabled-button: map_get(mat.$grey-palette, 400),
+//  disabled-button-toggle: map_get(mat.$grey-palette, 200),
+//  unselected-chip: map_get(mat.$grey-palette, 300),
+//  disabled-list-option: map_get(mat.$grey-palette, 200),
+//);
 
 @include mat.core();
 
