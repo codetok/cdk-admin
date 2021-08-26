@@ -25,7 +25,7 @@
     "@angular/fire": "^7.0.0",
     "@angular/flex-layout": "^10.0.0-beta.32",
     "@angular/forms": "^13.0.0-next.3",
-    "@angular/material": "^10.2.7",
+    "@angular/material": "^12.2.3",
     "@angular/platform-browser": "^13.0.0-next.3",
     "@angular/platform-browser-dynamic": "^13.0.0-next.3",
     "@angular/router": "^13.0.0-next.3",

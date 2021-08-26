@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @mixin dashboard-profile($theme) {
 
     .profile-card-holder{
@@ -7,7 +8,7 @@
         color:#f5f0f0f2;
         
         .profile-details{
-            background-image: -webkit-linear-gradient(45deg, mat-color($primary,400) 45%, mat-color($primary,300)  45%);
+            background-image: -webkit-linear-gradient(45deg, mat.get-color-from-palette($primary,400) 45%, mat.get-color-from-palette($primary,300)  45%);
             margin-top:-50px;
             min-height: 242px;
             

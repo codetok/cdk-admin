@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 
 @mixin auth($theme) {
     $primary: map-get($theme, primary);
@@ -6,13 +7,13 @@
 
     
     .sidenav{
-        background: mat-color($primary,400);    
+        background: mat.get-color-from-palette($primary,400);    
         overflow: hidden;
         position: relative;
         width: 250px;
     }
     .drawer{
-        background: mat-color($primary,400);    
+        background: mat.get-color-from-palette($primary,400);    
         overflow: hidden;
         position: relative;
         width: 80px;
