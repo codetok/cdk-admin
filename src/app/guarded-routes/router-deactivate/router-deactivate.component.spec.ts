@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RouterDeactivateComponent } from './router-deactivate.component';
 
@@ -6,7 +6,7 @@ describe('RouterDeactivateComponent', () => {
   let component: RouterDeactivateComponent;
   let fixture: ComponentFixture<RouterDeactivateComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RouterDeactivateComponent ]
     })

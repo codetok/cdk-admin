@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ReactiveFormsComponent } from './reactive-forms.component';
 
@@ -6,7 +6,7 @@ describe('ReactiveFormsComponent', () => {
   let component: ReactiveFormsComponent;
   let fixture: ComponentFixture<ReactiveFormsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ReactiveFormsComponent ]
     })

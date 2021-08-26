@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DoughnutChartComponent } from './doughnut-chart.component';
 
@@ -6,7 +6,7 @@ describe('DoughnutChartComponent', () => {
   let component: DoughnutChartComponent;
   let fixture: ComponentFixture<DoughnutChartComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DoughnutChartComponent ]
     })
